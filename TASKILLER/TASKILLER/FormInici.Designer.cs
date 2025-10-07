@@ -1,6 +1,6 @@
 ﻿namespace TASKILLER
 {
-    partial class Form1
+    partial class FormInici
     {
         /// <summary>
         /// Variable del diseñador necesaria.
