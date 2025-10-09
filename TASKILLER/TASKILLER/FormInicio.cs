@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TASKILLER
 {
-    public partial class FormInici : Form
+    public partial class FormInicio : Form
     {
-        public FormInici()
+        public FormInicio()
         {
             InitializeComponent();
         }
