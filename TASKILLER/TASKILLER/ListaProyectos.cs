@@ -1,15 +1,6 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Drawing.Drawing2D;
-using System.Drawing.Text;
-using System.IO;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TASKILLER
@@ -19,20 +10,49 @@ namespace TASKILLER
         public ListaProyectos()
         {
             InitializeComponent();
-            comboBoxOrdenar.Text = "Ordenar por ";
+
+            labelListaProyectos.Font = new Font("Montserrat", 30, FontStyle.Bold);
+            labelListaProyectos.Dock = DockStyle.Top;
+            labelListaProyectos.AutoSize = false;
+            labelListaProyectos.Height = 90;
+            labelListaProyectos.Padding = new Padding(0, 20, 0, 0);
+
+            flowLayoutPanelBotonesOrdFil.Dock = DockStyle.Top;  // on tens els botons
+            flowLayoutPanelBotonesOrdFil.Height = 60;
+            flowLayoutPanelBotonesOrdFil.Padding = new Padding(0,0,30,0);
             
+            flowLayoutPanelListaProyectos.Dock = DockStyle.Fill;
+            flowLayoutPanelListaProyectos.Padding = new Padding(20,70, 20, 0);
+            flowLayoutPanelListaProyectos.WrapContents = true;
+            flowLayoutPanelListaProyectos.FlowDirection = FlowDirection.LeftToRight;
+            flowLayoutPanelListaProyectos.AutoScroll = true;
 
-            PrivateFontCollection pfc = new PrivateFontCollection();
-            string fontPath = Path.Combine(Application.StartupPath, "res", "Montserrat-Light.ttf");
-            pfc.AddFontFile(fontPath);
 
-            labelListaProyectos.Font = new Font(pfc.Families[0], 30, FontStyle.Regular);
+            List<Proyecto> ListProyectos = new List<Proyecto>();
 
-            labelListaProyectos.TextAlign = ContentAlignment.MiddleCenter;
+            ListProyectos.Add(new Proyecto("Desarrollo App Móvil", 2025, 2026));
+            ListProyectos.Add(new Proyecto("Página Web Corporativa", 2024, 2025));
+            ListProyectos.Add(new Proyecto("Migración a la Nube", 2023, 2024));
+            ListProyectos.Add(new Proyecto("Implementación ERP", 2025, 2027));
+            ListProyectos.Add(new Proyecto("Desarrollo App Móvil", 2025, 2026));
+            ListProyectos.Add(new Proyecto("Página Web Corporativa", 2024, 2025));
+            ListProyectos.Add(new Proyecto("Migración a la Nube", 2023, 2024));
+            ListProyectos.Add(new Proyecto("Implementación ERP", 2025, 2027));
+            ListProyectos.Add(new Proyecto("Desarrollo App Móvil", 2025, 2026));
+            ListProyectos.Add(new Proyecto("Página Web Corporativa", 2024, 2025));
+            ListProyectos.Add(new Proyecto("Migración a la Nube", 2023, 2024));
+            ListProyectos.Add(new Proyecto("Implementación ERP", 2025, 2027));
 
+            foreach (var p in ListProyectos)
+            {
+                ProyectoControl tarjeta = new ProyectoControl();
+                tarjeta.SetDatos(p);
+                tarjeta.Margin = new Padding(20);
+                flowLayoutPanelListaProyectos.Controls.Add(tarjeta);
+            }
         }
 
-        private void labelListaProyectos_Click(object sender, EventArgs e)
+        private void buttonFiltro_Click(object sender, System.EventArgs e)
         {
 
         }
