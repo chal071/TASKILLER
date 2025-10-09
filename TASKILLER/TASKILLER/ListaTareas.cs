@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TASKILLER
 {
@@ -15,6 +16,13 @@ namespace TASKILLER
         public ListaTareas()
         {
             InitializeComponent();
+            flowLayoutPanelListaTareas.Resize += flowLayoutPanelListasTarea_Resize;
         }
+
+        private void flowLayoutPanelListasTarea_Resize(object sender, EventArgs e)
+        {
+            dataGridViewListasTarea.Width = flowLayoutPanelListaTareas.ClientSize.Width - dataGridViewListasTarea.Margin.Horizontal;
+        }
+
     }
 }

@@ -79,6 +79,9 @@
     <EmbeddedResource Include="ListaProyectos.resx">
       <DependentUpon>ListaProyectos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListaTareas.resx">
+      <DependentUpon>ListaTareas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
