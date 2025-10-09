@@ -39,7 +39,7 @@
             // 
             // labelListaProyectos
             // 
-            this.labelListaProyectos.BackColor = System.Drawing.SystemColors.Control;
+            this.labelListaProyectos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.labelListaProyectos.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelListaProyectos.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.labelListaProyectos.Location = new System.Drawing.Point(0, 0);
@@ -52,7 +52,7 @@
             // flowLayoutPanelListaProyectos
             // 
             this.flowLayoutPanelListaProyectos.AutoScroll = true;
-            this.flowLayoutPanelListaProyectos.BackColor = System.Drawing.SystemColors.Control;
+            this.flowLayoutPanelListaProyectos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.flowLayoutPanelListaProyectos.Location = new System.Drawing.Point(12, 268);
             this.flowLayoutPanelListaProyectos.Name = "flowLayoutPanelListaProyectos";
             this.flowLayoutPanelListaProyectos.Size = new System.Drawing.Size(1163, 371);
@@ -60,15 +60,15 @@
             // 
             // buttonFiltro
             // 
+            this.buttonFiltro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonFiltro.BackgroundImage")));
             this.buttonFiltro.Font = new System.Drawing.Font("Sans Serif Collection", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonFiltro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(17)))), ((int)(((byte)(92)))));
+            this.buttonFiltro.Image = ((System.Drawing.Image)(resources.GetObject("buttonFiltro.Image")));
             this.buttonFiltro.Location = new System.Drawing.Point(1001, 3);
             this.buttonFiltro.Name = "buttonFiltro";
             this.buttonFiltro.Size = new System.Drawing.Size(159, 60);
             this.buttonFiltro.TabIndex = 2;
-            this.buttonFiltro.Text = "Filtrar";
             this.buttonFiltro.UseVisualStyleBackColor = true;
-            this.buttonFiltro.Click += new System.EventHandler(this.buttonFiltro_Click);
             // 
             // comboBoxOrdenar
             // 
@@ -96,6 +96,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.ClientSize = new System.Drawing.Size(1187, 660);
             this.Controls.Add(this.flowLayoutPanelBotonesOrdFil);
             this.Controls.Add(this.flowLayoutPanelListaProyectos);

@@ -51,10 +51,5 @@ namespace TASKILLER
                 flowLayoutPanelListaProyectos.Controls.Add(tarjeta);
             }
         }
-
-        private void buttonFiltro_Click(object sender, System.EventArgs e)
-        {
-
-        }
     }
 }
