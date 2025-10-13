@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormInici.cs">
+    <Compile Include="FormInicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormInici.Designer.cs">
-      <DependentUpon>FormInici.cs</DependentUpon>
+    <Compile Include="FormInicio.Designer.cs">
+      <DependentUpon>FormInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="ListaProyectos.cs">
       <SubType>Form</SubType>
@@ -73,8 +79,11 @@
     <Compile Include="ProyectoControl.Designer.cs">
       <DependentUpon>ProyectoControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FormInici.resx">
-      <DependentUpon>FormInici.cs</DependentUpon>
+    <EmbeddedResource Include="FormInicio.resx">
+      <DependentUpon>FormInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListaProyectos.resx">
       <DependentUpon>ListaProyectos.cs</DependentUpon>
@@ -110,8 +119,9 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="resources\icons\icon_taskiller.ico" />
-    <Content Include="resources\img\filtro.png" />
-    <None Include="resources\menu-de-tres-puntos.png" />
+    <Content Include="resources\icons\filtro.png" />
+    <Content Include="resources\icons\menu.png" />
+    <Content Include="resources\img\LOGO.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
