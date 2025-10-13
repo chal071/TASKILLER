@@ -121,6 +121,7 @@
     <Content Include="resources\icons\filtro.png" />
     <Content Include="resources\icons\menu.png" />
     <Content Include="resources\img\LOGO.png" />
+    <Content Include="resources\img\LOGOTIPO_slogan.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
