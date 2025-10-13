@@ -61,7 +61,6 @@
             this.flowLayoutPanelListaProyectos.Name = "flowLayoutPanelListaProyectos";
             this.flowLayoutPanelListaProyectos.Size = new System.Drawing.Size(1172, 371);
             this.flowLayoutPanelListaProyectos.TabIndex = 1;
-            this.flowLayoutPanelListaProyectos.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelListaProyectos_Paint);
             // 
             // buttonFiltro
             // 
@@ -84,7 +83,6 @@
             this.comboBoxOrdenar.Size = new System.Drawing.Size(263, 39);
             this.comboBoxOrdenar.TabIndex = 3;
             this.comboBoxOrdenar.Text = "Ordenar por ";
-            this.comboBoxOrdenar.SelectedIndexChanged += new System.EventHandler(this.comboBoxOrdenar_SelectedIndexChanged);
             // 
             // flowLayoutPanelBotonesOrdFil
             // 
@@ -98,7 +96,6 @@
             this.flowLayoutPanelBotonesOrdFil.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.flowLayoutPanelBotonesOrdFil.Size = new System.Drawing.Size(1163, 88);
             this.flowLayoutPanelBotonesOrdFil.TabIndex = 4;
-            this.flowLayoutPanelBotonesOrdFil.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelBotonesOrdFil_Paint);
             // 
             // ListaProyectos
             // 

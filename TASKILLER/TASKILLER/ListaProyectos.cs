@@ -18,18 +18,23 @@ namespace TASKILLER
             labelListaProyectos.Height = 90;
             labelListaProyectos.Padding = new Padding(0, 20, 0, 0);
 
-            flowLayoutPanelBotonesOrdFil.Dock = DockStyle.Top;  // on tens els botons
             flowLayoutPanelBotonesOrdFil.Height = 60;
-            flowLayoutPanelBotonesOrdFil.Padding = new Padding(0,0,30,0);
-            flowLayoutPanelBotonesOrdFil.Margin = new Padding(0, 0, 0, 50);
+            flowLayoutPanelBotonesOrdFil.Padding = new Padding(0,0,30,10);
 
             flowLayoutPanelListaProyectos.Dock = DockStyle.Fill;
-            flowLayoutPanelListaProyectos.Padding = new Padding(20); // menos padding
+            flowLayoutPanelListaProyectos.Padding = new Padding(20);
             flowLayoutPanelListaProyectos.WrapContents = true;
             flowLayoutPanelListaProyectos.AutoScroll = true;
             flowLayoutPanelListaProyectos.Margin = new Padding(0, 0, 0, 30);
 
             buttonFiltro.BackgroundImageLayout = ImageLayout.Zoom;
+
+            Controls.SetChildIndex(labelListaProyectos, 0);
+            Controls.SetChildIndex(flowLayoutPanelBotonesOrdFil, 1);
+            Controls.SetChildIndex(flowLayoutPanelListaProyectos, 2);
+            labelListaProyectos.Dock = DockStyle.Top;
+            flowLayoutPanelBotonesOrdFil.Dock = DockStyle.Top;
+            flowLayoutPanelListaProyectos.Dock = DockStyle.Fill;
 
             List<Proyecto> ListProyectos = new List<Proyecto>();
 
@@ -54,21 +59,6 @@ namespace TASKILLER
                 tarjeta.Margin = new Padding(20);
                 flowLayoutPanelListaProyectos.Controls.Add(tarjeta);
             }
-
-        }
-
-        private void comboBoxOrdenar_SelectedIndexChanged(object sender, System.EventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanelBotonesOrdFil_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanelListaProyectos_Paint(object sender, PaintEventArgs e)
-        {
 
         }
     }

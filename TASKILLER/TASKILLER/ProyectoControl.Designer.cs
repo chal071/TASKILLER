@@ -47,7 +47,7 @@
             // 
             this.flowLayoutPanelListaTareas.BackColor = System.Drawing.SystemColors.ControlDark;
             this.flowLayoutPanelListaTareas.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelListaTareas.Location = new System.Drawing.Point(26, 67);
+            this.flowLayoutPanelListaTareas.Location = new System.Drawing.Point(26, 68);
             this.flowLayoutPanelListaTareas.Name = "flowLayoutPanelListaTareas";
             this.flowLayoutPanelListaTareas.Size = new System.Drawing.Size(368, 334);
             this.flowLayoutPanelListaTareas.TabIndex = 2;
