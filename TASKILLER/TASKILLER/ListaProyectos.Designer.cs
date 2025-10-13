@@ -44,41 +44,47 @@
             this.labelListaProyectos.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.labelListaProyectos.Location = new System.Drawing.Point(0, 0);
             this.labelListaProyectos.Name = "labelListaProyectos";
-            this.labelListaProyectos.Size = new System.Drawing.Size(1187, 16);
+            this.labelListaProyectos.Size = new System.Drawing.Size(1179, 16);
             this.labelListaProyectos.TabIndex = 0;
             this.labelListaProyectos.Text = "LISTA DE PROYECTOS";
             this.labelListaProyectos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // flowLayoutPanelListaProyectos
             // 
+            this.flowLayoutPanelListaProyectos.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.flowLayoutPanelListaProyectos.AutoScroll = true;
-            this.flowLayoutPanelListaProyectos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.flowLayoutPanelListaProyectos.Location = new System.Drawing.Point(12, 268);
+            this.flowLayoutPanelListaProyectos.AutoScrollMargin = new System.Drawing.Size(30, 30);
+            this.flowLayoutPanelListaProyectos.AutoSize = true;
+            this.flowLayoutPanelListaProyectos.BackColor = System.Drawing.Color.Blue;
+            this.flowLayoutPanelListaProyectos.Location = new System.Drawing.Point(3, 139);
+            this.flowLayoutPanelListaProyectos.Margin = new System.Windows.Forms.Padding(40, 3, 3, 3);
             this.flowLayoutPanelListaProyectos.Name = "flowLayoutPanelListaProyectos";
-            this.flowLayoutPanelListaProyectos.Size = new System.Drawing.Size(1163, 371);
+            this.flowLayoutPanelListaProyectos.Size = new System.Drawing.Size(1172, 371);
             this.flowLayoutPanelListaProyectos.TabIndex = 1;
+            this.flowLayoutPanelListaProyectos.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelListaProyectos_Paint);
             // 
             // buttonFiltro
             // 
             this.buttonFiltro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonFiltro.BackgroundImage")));
             this.buttonFiltro.Font = new System.Drawing.Font("Sans Serif Collection", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonFiltro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(17)))), ((int)(((byte)(92)))));
-            this.buttonFiltro.Image = ((System.Drawing.Image)(resources.GetObject("buttonFiltro.Image")));
-            this.buttonFiltro.Location = new System.Drawing.Point(1001, 3);
+            this.buttonFiltro.Location = new System.Drawing.Point(1090, 3);
             this.buttonFiltro.Name = "buttonFiltro";
-            this.buttonFiltro.Size = new System.Drawing.Size(159, 60);
+            this.buttonFiltro.Size = new System.Drawing.Size(70, 60);
             this.buttonFiltro.TabIndex = 2;
             this.buttonFiltro.UseVisualStyleBackColor = true;
             // 
             // comboBoxOrdenar
             // 
-            this.comboBoxOrdenar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(17)))), ((int)(((byte)(92)))));
+            this.comboBoxOrdenar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
+            this.comboBoxOrdenar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxOrdenar.FormattingEnabled = true;
-            this.comboBoxOrdenar.Location = new System.Drawing.Point(817, 3);
+            this.comboBoxOrdenar.Location = new System.Drawing.Point(821, 3);
             this.comboBoxOrdenar.Name = "comboBoxOrdenar";
-            this.comboBoxOrdenar.Size = new System.Drawing.Size(178, 24);
+            this.comboBoxOrdenar.Size = new System.Drawing.Size(263, 39);
             this.comboBoxOrdenar.TabIndex = 3;
             this.comboBoxOrdenar.Text = "Ordenar por ";
+            this.comboBoxOrdenar.SelectedIndexChanged += new System.EventHandler(this.comboBoxOrdenar_SelectedIndexChanged);
             // 
             // flowLayoutPanelBotonesOrdFil
             // 
@@ -86,10 +92,13 @@
             this.flowLayoutPanelBotonesOrdFil.Controls.Add(this.buttonFiltro);
             this.flowLayoutPanelBotonesOrdFil.Controls.Add(this.comboBoxOrdenar);
             this.flowLayoutPanelBotonesOrdFil.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanelBotonesOrdFil.Location = new System.Drawing.Point(12, 103);
+            this.flowLayoutPanelBotonesOrdFil.Location = new System.Drawing.Point(4, 33);
+            this.flowLayoutPanelBotonesOrdFil.Margin = new System.Windows.Forms.Padding(0, 0, 0, 100);
             this.flowLayoutPanelBotonesOrdFil.Name = "flowLayoutPanelBotonesOrdFil";
+            this.flowLayoutPanelBotonesOrdFil.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.flowLayoutPanelBotonesOrdFil.Size = new System.Drawing.Size(1163, 88);
             this.flowLayoutPanelBotonesOrdFil.TabIndex = 4;
+            this.flowLayoutPanelBotonesOrdFil.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelBotonesOrdFil_Paint);
             // 
             // ListaProyectos
             // 
@@ -97,7 +106,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.ClientSize = new System.Drawing.Size(1187, 660);
+            this.ClientSize = new System.Drawing.Size(1179, 520);
             this.Controls.Add(this.flowLayoutPanelBotonesOrdFil);
             this.Controls.Add(this.flowLayoutPanelListaProyectos);
             this.Controls.Add(this.labelListaProyectos);
@@ -108,6 +117,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.flowLayoutPanelBotonesOrdFil.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

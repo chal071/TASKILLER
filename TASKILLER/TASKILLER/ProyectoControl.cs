@@ -23,8 +23,10 @@ namespace TASKILLER
             labelFechas.Text = p.FechaInicio + " - " + p.FechaFinal;
             
             labelNombre.Font = new Font("Montserrat", 9, FontStyle.Bold);
+            labelFechas.Font = new Font("Montserrat", 9, FontStyle.Regular);
             labelNombre.MaximumSize = new Size(250, 150);
             labelNombre.BackColor = Color.Pink;
+            buttonEditar.BackgroundImageLayout = ImageLayout.Zoom;
 
 
         }

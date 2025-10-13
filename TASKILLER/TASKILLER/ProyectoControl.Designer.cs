@@ -55,7 +55,7 @@
             // labelFechas
             // 
             this.labelFechas.AutoSize = true;
-            this.labelFechas.Location = new System.Drawing.Point(168, 414);
+            this.labelFechas.Location = new System.Drawing.Point(156, 414);
             this.labelFechas.Name = "labelFechas";
             this.labelFechas.Size = new System.Drawing.Size(159, 16);
             this.labelFechas.TabIndex = 3;
@@ -63,6 +63,7 @@
             // 
             // buttonEditar
             // 
+            this.buttonEditar.BackgroundImage = global::TASKILLER.Properties.Resources.menu_de_tres_puntos;
             this.buttonEditar.Location = new System.Drawing.Point(355, 21);
             this.buttonEditar.Name = "buttonEditar";
             this.buttonEditar.Size = new System.Drawing.Size(39, 35);
