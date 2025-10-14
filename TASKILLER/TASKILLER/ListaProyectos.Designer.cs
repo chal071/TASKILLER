@@ -1,4 +1,6 @@
-﻿namespace TASKILLER
+﻿using System.Windows.Forms;
+
+namespace TASKILLER
 {
     partial class ListaProyectos
     {
@@ -44,22 +46,18 @@
             this.labelListaProyectos.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.labelListaProyectos.Location = new System.Drawing.Point(0, 0);
             this.labelListaProyectos.Name = "labelListaProyectos";
-            this.labelListaProyectos.Size = new System.Drawing.Size(1179, 16);
+            this.labelListaProyectos.Size = new System.Drawing.Size(1187, 16);
             this.labelListaProyectos.TabIndex = 0;
             this.labelListaProyectos.Text = "LISTA DE PROYECTOS";
             this.labelListaProyectos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // flowLayoutPanelListaProyectos
             // 
-            this.flowLayoutPanelListaProyectos.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.flowLayoutPanelListaProyectos.AutoScroll = true;
-            this.flowLayoutPanelListaProyectos.AutoScrollMargin = new System.Drawing.Size(30, 30);
-            this.flowLayoutPanelListaProyectos.AutoSize = true;
-            this.flowLayoutPanelListaProyectos.BackColor = System.Drawing.Color.Blue;
-            this.flowLayoutPanelListaProyectos.Location = new System.Drawing.Point(3, 139);
-            this.flowLayoutPanelListaProyectos.Margin = new System.Windows.Forms.Padding(40, 3, 3, 3);
+            this.flowLayoutPanelListaProyectos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelListaProyectos.Location = new System.Drawing.Point(0, 104);
             this.flowLayoutPanelListaProyectos.Name = "flowLayoutPanelListaProyectos";
-            this.flowLayoutPanelListaProyectos.Size = new System.Drawing.Size(1172, 371);
+            this.flowLayoutPanelListaProyectos.Size = new System.Drawing.Size(1187, 593);
             this.flowLayoutPanelListaProyectos.TabIndex = 1;
             // 
             // buttonFiltro
@@ -67,7 +65,7 @@
             this.buttonFiltro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonFiltro.BackgroundImage")));
             this.buttonFiltro.Font = new System.Drawing.Font("Sans Serif Collection", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonFiltro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(17)))), ((int)(((byte)(92)))));
-            this.buttonFiltro.Location = new System.Drawing.Point(1090, 3);
+            this.buttonFiltro.Location = new System.Drawing.Point(1114, 3);
             this.buttonFiltro.Name = "buttonFiltro";
             this.buttonFiltro.Size = new System.Drawing.Size(70, 60);
             this.buttonFiltro.TabIndex = 2;
@@ -78,7 +76,7 @@
             this.comboBoxOrdenar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.comboBoxOrdenar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxOrdenar.FormattingEnabled = true;
-            this.comboBoxOrdenar.Location = new System.Drawing.Point(821, 3);
+            this.comboBoxOrdenar.Location = new System.Drawing.Point(845, 3);
             this.comboBoxOrdenar.Name = "comboBoxOrdenar";
             this.comboBoxOrdenar.Size = new System.Drawing.Size(263, 39);
             this.comboBoxOrdenar.TabIndex = 3;
@@ -86,15 +84,15 @@
             // 
             // flowLayoutPanelBotonesOrdFil
             // 
-            this.flowLayoutPanelBotonesOrdFil.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.flowLayoutPanelBotonesOrdFil.Controls.Add(this.buttonFiltro);
             this.flowLayoutPanelBotonesOrdFil.Controls.Add(this.comboBoxOrdenar);
+            this.flowLayoutPanelBotonesOrdFil.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanelBotonesOrdFil.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanelBotonesOrdFil.Location = new System.Drawing.Point(4, 33);
+            this.flowLayoutPanelBotonesOrdFil.Location = new System.Drawing.Point(0, 16);
             this.flowLayoutPanelBotonesOrdFil.Margin = new System.Windows.Forms.Padding(0, 0, 0, 100);
             this.flowLayoutPanelBotonesOrdFil.Name = "flowLayoutPanelBotonesOrdFil";
             this.flowLayoutPanelBotonesOrdFil.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.flowLayoutPanelBotonesOrdFil.Size = new System.Drawing.Size(1163, 88);
+            this.flowLayoutPanelBotonesOrdFil.Size = new System.Drawing.Size(1187, 88);
             this.flowLayoutPanelBotonesOrdFil.TabIndex = 4;
             // 
             // ListaProyectos
@@ -103,9 +101,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.ClientSize = new System.Drawing.Size(1179, 520);
-            this.Controls.Add(this.flowLayoutPanelBotonesOrdFil);
+            this.ClientSize = new System.Drawing.Size(1187, 697);
             this.Controls.Add(this.flowLayoutPanelListaProyectos);
+            this.Controls.Add(this.flowLayoutPanelBotonesOrdFil);
             this.Controls.Add(this.labelListaProyectos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ListaProyectos";
@@ -114,7 +112,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.flowLayoutPanelBotonesOrdFil.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

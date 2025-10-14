@@ -11,6 +11,12 @@ namespace TASKILLER
         public ListaProyectos()
         {
             InitializeComponent();
+            flowLayoutPanelListaProyectos.AutoScroll = true;
+            flowLayoutPanelListaProyectos.Dock = DockStyle.Fill;
+            flowLayoutPanelListaProyectos.Padding = new Padding(30);
+            flowLayoutPanelListaProyectos.AutoScrollMargin = new Size(0, 40);
+         
+
 
             labelListaProyectos.Font = new Font("Montserrat", 30, FontStyle.Bold);
             labelListaProyectos.Dock = DockStyle.Top;
@@ -18,23 +24,12 @@ namespace TASKILLER
             labelListaProyectos.Height = 90;
             labelListaProyectos.Padding = new Padding(0, 20, 0, 0);
 
+            buttonFiltro.BackgroundImageLayout = ImageLayout.Zoom;
+
+            flowLayoutPanelBotonesOrdFil.Dock = DockStyle.Top;
             flowLayoutPanelBotonesOrdFil.Height = 60;
             flowLayoutPanelBotonesOrdFil.Padding = new Padding(0,0,30,10);
 
-            flowLayoutPanelListaProyectos.Dock = DockStyle.Fill;
-            flowLayoutPanelListaProyectos.Padding = new Padding(20);
-            flowLayoutPanelListaProyectos.WrapContents = true;
-            flowLayoutPanelListaProyectos.AutoScroll = true;
-            flowLayoutPanelListaProyectos.Margin = new Padding(0, 0, 0, 30);
-
-            buttonFiltro.BackgroundImageLayout = ImageLayout.Zoom;
-
-            Controls.SetChildIndex(labelListaProyectos, 0);
-            Controls.SetChildIndex(flowLayoutPanelBotonesOrdFil, 1);
-            Controls.SetChildIndex(flowLayoutPanelListaProyectos, 2);
-            labelListaProyectos.Dock = DockStyle.Top;
-            flowLayoutPanelBotonesOrdFil.Dock = DockStyle.Top;
-            flowLayoutPanelListaProyectos.Dock = DockStyle.Fill;
 
             List<Proyecto> ListProyectos = new List<Proyecto>();
 

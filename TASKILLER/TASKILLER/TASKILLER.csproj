@@ -46,10 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormInici.cs" />
-    <Compile Include="FormInici.Designer.cs">
-      <DependentUpon>FormInici.cs</DependentUpon>
-    </Compile>
     <Compile Include="ListaProyectos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,9 +67,6 @@
     <Compile Include="ProyectoControl.Designer.cs">
       <DependentUpon>ProyectoControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FormInici.resx">
-      <DependentUpon>FormInici.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ListaProyectos.resx">
       <DependentUpon>ListaProyectos.cs</DependentUpon>
     </EmbeddedResource>
