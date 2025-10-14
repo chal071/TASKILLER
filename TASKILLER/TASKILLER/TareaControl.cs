@@ -15,6 +15,16 @@ namespace TASKILLER
         public TareaControl()
         {
             InitializeComponent();
+            labelNombreTarea.Font = new Font("Montserrat", 9, FontStyle.Regular);
+            labelFechasTarea.Font = new Font("Montserrat", 9, FontStyle.Regular);
+            dataGridViewUsuarioDeTarea.Font = new Font("Montserrat", 8, FontStyle.Regular);
+        }
+
+        public void SetDatos(Tarea t)
+        {
+            labelNombreTarea.Text = t.Nombre;
+            dataGridViewUsuarioDeTarea.DataSource = t.UsuariosAsignados.ToList();
+            labelFechasTarea.Text = t.FechaInicio + " - " + t.FechaFinal;
         }
     }
 }
