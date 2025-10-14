@@ -23,11 +23,6 @@ namespace TASKILLER
 
         }
 
-        private void TextBoxMail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void ButtonIniciarSesion_Click(object sender, EventArgs e)
         {
             String mail = textBoxMail.Text;
