@@ -28,20 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBoxNombreRol1 = new System.Windows.Forms.TextBox();
             this.buttonPuntos1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
-            // 
-            // textBoxNombreRol1
-            // 
-            this.textBoxNombreRol1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNombreRol1.Location = new System.Drawing.Point(14, 6);
-            this.textBoxNombreRol1.Name = "textBoxNombreRol1";
-            this.textBoxNombreRol1.Size = new System.Drawing.Size(135, 26);
-            this.textBoxNombreRol1.TabIndex = 2;
-            this.textBoxNombreRol1.Text = "Nombre del rol...";
             // 
             // buttonPuntos1
             // 
@@ -56,29 +46,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(99, 123);
+            this.label1.Location = new System.Drawing.Point(12, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "label1";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(114, 160);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "label2";
-            // 
             // TarjetaRol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonPuntos1);
-            this.Controls.Add(this.textBoxNombreRol1);
             this.Name = "TarjetaRol";
             this.Size = new System.Drawing.Size(242, 261);
             this.ResumeLayout(false);
@@ -87,10 +66,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBoxNombreRol1;
         private System.Windows.Forms.Button buttonPuntos1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
