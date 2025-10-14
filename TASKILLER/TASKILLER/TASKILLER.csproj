@@ -90,6 +90,7 @@
     <Compile Include="ProyectoControl.Designer.cs">
       <DependentUpon>ProyectoControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Rol.cs" />
     <Compile Include="Usuario.cs" />
     <EmbeddedResource Include="FormCrearProyecto.resx">
       <DependentUpon>FormCrearProyecto.cs</DependentUpon>
