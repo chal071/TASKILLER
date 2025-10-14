@@ -15,6 +15,7 @@ namespace TASKILLER
         public FormListaRoles()
         {
             InitializeComponent();
+            labelListaRoles.Font = new Font("Montserrat", 30, FontStyle.Bold);
         }
 
         private void button1_Click(object sender, EventArgs e)

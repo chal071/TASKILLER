@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListaRoles));
             this.flowLayoutPanelListaRoles = new System.Windows.Forms.FlowLayoutPanel();
             this.labelListaRoles = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -56,6 +57,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.labelListaRoles);
             this.Controls.Add(this.flowLayoutPanelListaRoles);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormListaRoles";
             this.Text = "FormListaRoles";
             this.ResumeLayout(false);
