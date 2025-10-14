@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrearTarea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearTarea.Designer.cs">
+      <DependentUpon>CrearTarea.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,15 @@
     <Compile Include="ProyectoControl.Designer.cs">
       <DependentUpon>ProyectoControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="TareaControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TareaControl.Designer.cs">
+      <DependentUpon>TareaControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CrearTarea.resx">
+      <DependentUpon>CrearTarea.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +117,9 @@
     </Compile>
     <EmbeddedResource Include="ProyectoControl.resx">
       <DependentUpon>ProyectoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TareaControl.resx">
+      <DependentUpon>TareaControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
