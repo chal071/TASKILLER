@@ -52,6 +52,12 @@
     <Compile Include="FormInicio.Designer.cs">
       <DependentUpon>FormInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormListaRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListaRoles.Designer.cs">
+      <DependentUpon>FormListaRoles.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,8 +85,17 @@
     <Compile Include="ProyectoControl.Designer.cs">
       <DependentUpon>ProyectoControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="TarjetaRol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TarjetaRol.Designer.cs">
+      <DependentUpon>TarjetaRol.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListaRoles.resx">
+      <DependentUpon>FormListaRoles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -99,6 +114,9 @@
     </Compile>
     <EmbeddedResource Include="ProyectoControl.resx">
       <DependentUpon>ProyectoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TarjetaRol.resx">
+      <DependentUpon>TarjetaRol.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

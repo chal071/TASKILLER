@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace TASKILLER
 {
-    public partial class FormListaRoles : Form
+    public partial class TarjetaRol : UserControl
     {
-        public FormListaRoles()
+        public TarjetaRol()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
