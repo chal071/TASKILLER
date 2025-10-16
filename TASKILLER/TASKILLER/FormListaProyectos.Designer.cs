@@ -2,7 +2,7 @@
 
 namespace TASKILLER
 {
-    partial class ListaProyectos
+    partial class FormListaProyectos
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace TASKILLER
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListaProyectos));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListaProyectos));
             this.labelListaProyectos = new System.Windows.Forms.Label();
             this.flowLayoutPanelListaProyectos = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonFiltro = new System.Windows.Forms.Button();

@@ -1,6 +1,6 @@
 ﻿namespace TASKILLER
 {
-    partial class ListaTareas
+    partial class FormListaTareas
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListaTareas));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListaTareas));
             this.flowLayoutPanelListaTareas = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBoxTarea = new System.Windows.Forms.GroupBox();
             this.buttonAñadirMasTarea = new System.Windows.Forms.Button();
