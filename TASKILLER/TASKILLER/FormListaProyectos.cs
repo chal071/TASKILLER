@@ -6,9 +6,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TASKILLER
 {
-    public partial class ListaProyectos : Form
+    public partial class FormListaProyectos : Form
     {
-        public ListaProyectos()
+        public FormListaProyectos()
         {
             InitializeComponent();
             flowLayoutPanelListaProyectos.AutoScroll = true;
