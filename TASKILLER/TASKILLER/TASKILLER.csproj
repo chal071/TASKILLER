@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EditarEliminarProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarEliminarProyecto.Designer.cs">
+      <DependentUpon>EditarEliminarProyecto.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCrearProyecto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </Compile>
     <Compile Include="Rol.cs" />
     <Compile Include="Usuario.cs" />
+    <EmbeddedResource Include="EditarEliminarProyecto.resx">
+      <DependentUpon>EditarEliminarProyecto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCrearProyecto.resx">
       <DependentUpon>FormCrearProyecto.cs</DependentUpon>
     </EmbeddedResource>

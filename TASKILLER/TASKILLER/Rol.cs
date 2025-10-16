@@ -6,12 +6,18 @@ using System.Threading.Tasks;
 
 namespace TASKILLER
 {
-    internal class Rol
+    public class Rol
     {
         public Guid IdRol { get; set; }
         public String Nombre { get; set; }
-
         public List<String> Acceso { get;set; }
+
+        public Rol(String nombre, List<String> acceso) { 
+            this.IdRol = Guid.NewGuid();
+            this.Nombre = nombre;
+            this.Acceso = acceso;
+        }
+
 
     }
 }

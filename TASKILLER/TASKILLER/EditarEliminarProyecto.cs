@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TASKILLER
 {
-    public partial class FormCrearProyecto : Form
+    public partial class EditarEliminarProyecto : Form
     {
-        public FormCrearProyecto()
+        public EditarEliminarProyecto()
         {
             InitializeComponent();
             this.Resize += Form1_Resize;
@@ -30,30 +30,14 @@ namespace TASKILLER
             dateTimePickerFechaFinal.Font = new Font("Montserrat", 12, FontStyle.Bold);
             labelEstado.Font = new Font("Montserrat", 15, FontStyle.Bold);
             comboBoxEstado.Font = new Font("Montserrat", 12, FontStyle.Bold);
-            buttonCrearProyecto.Font = new Font("Montserrat", 15, FontStyle.Bold);
-
-
+            buttonEliminarProyecto.Font = new Font("Montserrat", 15, FontStyle.Bold);
+            buttonEditarProyecto.Font = new Font("Montserrat", 15, FontStyle.Bold);
 
         }
         private void Form1_Resize(object sender, EventArgs e)
         {
             panelInfo.Left = (this.ClientSize.Width - panelInfo.Width) / 2;
             panelInfo.Top = (this.ClientSize.Height - panelInfo.Height) / 2;
-        }
-
-        private void comboBoxEstado_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void labelCuentanosProyecto_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

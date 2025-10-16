@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TASKILLER
 {
-    internal class Usuario
+    public class Usuario
     {
         public Guid IdUsuario  { get; set; }
         public String Nombre { get; set; }
