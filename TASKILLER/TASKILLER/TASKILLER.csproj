@@ -120,6 +120,7 @@
     <Compile Include="ProyectoControl.Designer.cs">
       <DependentUpon>ProyectoControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tarea.cs" />
     <Compile Include="TarjetaRol.cs">
       <SubType>UserControl</SubType>
     </Compile>

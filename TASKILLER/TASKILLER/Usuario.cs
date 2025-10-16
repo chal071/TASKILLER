@@ -14,6 +14,16 @@ namespace TASKILLER
         public String Contrasena { get; set; }
         public Rol Rol { get; set; }
 
+        public Usuario() { }
+
+        public Usuario(String Nombre, String Mail, String Contrasena, Rol Rol)
+        {
+            this.IdUsuario = Guid.NewGuid();
+            this.Nombre = Nombre;
+            this.Mail = Mail;
+            this.Contrasena = Contrasena;
+            this.Rol = Rol;
+        }
     }
 }
 

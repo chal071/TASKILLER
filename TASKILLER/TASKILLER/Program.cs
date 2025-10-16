@@ -11,12 +11,19 @@ namespace TASKILLER
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
+        public static List<Usuario> usuarios = new List<Usuario>();
+        public static List<Rol> roles = new List<Rol>();
+        public static Usuario usuarioActual;
+
         [STAThread]
-        static void Main()
+        private static void Main()
         {
+            Rol admin = new Rol("admin", new List<string> { "CrearUsuario", "EliminarUsuario", "ModificarUsuario", "VerUsuarios", "CrearTarea", "EliminarTarea", "ModificarTarea", "VerTareas" });
+            roles.Add(admin);
+            usuarios.Add(new Usuario("admin", "admin@taskiller.com", "admin123", admin));
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormCreaciónUsuario());
+            Application.Run(new FormLogin());
         }
     }
 }
