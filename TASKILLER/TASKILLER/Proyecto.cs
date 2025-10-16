@@ -1,25 +1,37 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace TASKILLER
 {
+    public enum Estado
+    {
+        Por_Comenzar = 1,
+        En_Progreso = 2,
+        Entregado = 3,
+        Revisado = 4,
+        Bloqueado = 5
+    }
     public class Proyecto
     {
         public string Titulo { get; set; }
-        public int FechaInicio { get; set; }
-        public int FechaFinal { get; set; }
-        public Proyecto() { }
+        public String Descripcion { get; set; }
+        public DateTime FechaInicio { get; set; }
+        public DateTime FechaFinal { get; set; }
+        public Estado Estado { get; set; }
+        public  List<Usuario> usuarios { get; set; }
 
-        public Proyecto (string Titulo, int FechaInicio, int FechaFinal)
+        public Proyecto (string titulo, String descripcion, DateTime fechaInicio, DateTime fechaFinal, Estado estado)
         {
-            this.Titulo = Titulo;
-            this.FechaInicio = FechaInicio;
-            this.FechaFinal = FechaFinal;
+            this.Titulo = titulo;
+            this.Descripcion = descripcion;
+            this.FechaInicio = fechaInicio;
+            this.FechaFinal = fechaFinal;
+            this.Estado = estado;
         }
-
-       
     }
 }

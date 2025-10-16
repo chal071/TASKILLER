@@ -51,21 +51,20 @@
             // 
             this.pictureBoxLogo.BackgroundImage = global::TASKILLER.Properties.Resources.LOGO;
             this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(2, 2);
-            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(3, 2);
+            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(143, 154);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(191, 190);
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
             // 
             // labelCuentanosProyecto
             // 
             this.labelCuentanosProyecto.AutoSize = true;
-            this.labelCuentanosProyecto.Location = new System.Drawing.Point(209, 2);
-            this.labelCuentanosProyecto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelCuentanosProyecto.MaximumSize = new System.Drawing.Size(450, 0);
+            this.labelCuentanosProyecto.Location = new System.Drawing.Point(279, 2);
+            this.labelCuentanosProyecto.MaximumSize = new System.Drawing.Size(600, 0);
             this.labelCuentanosProyecto.Name = "labelCuentanosProyecto";
-            this.labelCuentanosProyecto.Size = new System.Drawing.Size(185, 13);
+            this.labelCuentanosProyecto.Size = new System.Drawing.Size(227, 16);
             this.labelCuentanosProyecto.TabIndex = 1;
             this.labelCuentanosProyecto.Text = "Cuéntanos sobre tu nuevo proyecto...";
             this.labelCuentanosProyecto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -73,28 +72,29 @@
             // 
             // textBoxTitulo
             // 
-            this.textBoxTitulo.Location = new System.Drawing.Point(1, 241);
-            this.textBoxTitulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxTitulo.Location = new System.Drawing.Point(1, 297);
+            this.textBoxTitulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxTitulo.Name = "textBoxTitulo";
-            this.textBoxTitulo.Size = new System.Drawing.Size(312, 20);
+            this.textBoxTitulo.Size = new System.Drawing.Size(415, 22);
             this.textBoxTitulo.TabIndex = 2;
             // 
             // comboBoxEstado
             // 
+            this.comboBoxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxEstado.FormattingEnabled = true;
-            this.comboBoxEstado.Location = new System.Drawing.Point(478, 467);
-            this.comboBoxEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxEstado.Location = new System.Drawing.Point(637, 575);
+            this.comboBoxEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxEstado.Name = "comboBoxEstado";
-            this.comboBoxEstado.Size = new System.Drawing.Size(303, 21);
+            this.comboBoxEstado.Size = new System.Drawing.Size(403, 24);
             this.comboBoxEstado.TabIndex = 5;
             this.comboBoxEstado.SelectedIndexChanged += new System.EventHandler(this.comboBoxEstado_SelectedIndexChanged);
             // 
             // buttonCrearProyecto
             // 
-            this.buttonCrearProyecto.Location = new System.Drawing.Point(535, 567);
-            this.buttonCrearProyecto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCrearProyecto.Location = new System.Drawing.Point(713, 698);
+            this.buttonCrearProyecto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCrearProyecto.Name = "buttonCrearProyecto";
-            this.buttonCrearProyecto.Size = new System.Drawing.Size(246, 63);
+            this.buttonCrearProyecto.Size = new System.Drawing.Size(328, 78);
             this.buttonCrearProyecto.TabIndex = 6;
             this.buttonCrearProyecto.Text = "Crear proyecto";
             this.buttonCrearProyecto.UseVisualStyleBackColor = true;
@@ -102,59 +102,54 @@
             // labelTitulo
             // 
             this.labelTitulo.AutoSize = true;
-            this.labelTitulo.Location = new System.Drawing.Point(-2, 202);
-            this.labelTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTitulo.Location = new System.Drawing.Point(-3, 249);
             this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(38, 13);
+            this.labelTitulo.Size = new System.Drawing.Size(43, 16);
             this.labelTitulo.TabIndex = 7;
             this.labelTitulo.Text = "Título:";
             // 
             // labelFechaInicio
             // 
             this.labelFechaInicio.AutoSize = true;
-            this.labelFechaInicio.Location = new System.Drawing.Point(476, 202);
-            this.labelFechaInicio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelFechaInicio.Location = new System.Drawing.Point(635, 249);
             this.labelFechaInicio.Name = "labelFechaInicio";
-            this.labelFechaInicio.Size = new System.Drawing.Size(82, 13);
+            this.labelFechaInicio.Size = new System.Drawing.Size(101, 16);
             this.labelFechaInicio.TabIndex = 8;
             this.labelFechaInicio.Text = "Fecha de inicio:";
             // 
             // labelEstado
             // 
             this.labelEstado.AutoSize = true;
-            this.labelEstado.Location = new System.Drawing.Point(476, 431);
-            this.labelEstado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelEstado.Location = new System.Drawing.Point(635, 530);
             this.labelEstado.Name = "labelEstado";
-            this.labelEstado.Size = new System.Drawing.Size(43, 13);
+            this.labelEstado.Size = new System.Drawing.Size(53, 16);
             this.labelEstado.TabIndex = 9;
             this.labelEstado.Text = "Estado:";
             // 
             // labelFechaFinal
             // 
             this.labelFechaFinal.AutoSize = true;
-            this.labelFechaFinal.Location = new System.Drawing.Point(476, 311);
-            this.labelFechaFinal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelFechaFinal.Location = new System.Drawing.Point(635, 383);
             this.labelFechaFinal.Name = "labelFechaFinal";
-            this.labelFechaFinal.Size = new System.Drawing.Size(62, 13);
+            this.labelFechaFinal.Size = new System.Drawing.Size(75, 16);
             this.labelFechaFinal.TabIndex = 10;
             this.labelFechaFinal.Text = "Fecha final:";
             // 
             // richTextBoxDescripcion
             // 
-            this.richTextBoxDescripcion.Location = new System.Drawing.Point(1, 379);
-            this.richTextBoxDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBoxDescripcion.Location = new System.Drawing.Point(1, 466);
+            this.richTextBoxDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBoxDescripcion.Name = "richTextBoxDescripcion";
-            this.richTextBoxDescripcion.Size = new System.Drawing.Size(312, 212);
+            this.richTextBoxDescripcion.Size = new System.Drawing.Size(415, 260);
             this.richTextBoxDescripcion.TabIndex = 11;
             this.richTextBoxDescripcion.Text = "";
             // 
             // labelDescripcion
             // 
             this.labelDescripcion.AutoSize = true;
-            this.labelDescripcion.Location = new System.Drawing.Point(-2, 335);
-            this.labelDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelDescripcion.Location = new System.Drawing.Point(-3, 412);
             this.labelDescripcion.Name = "labelDescripcion";
-            this.labelDescripcion.Size = new System.Drawing.Size(66, 13);
+            this.labelDescripcion.Size = new System.Drawing.Size(82, 16);
             this.labelDescripcion.TabIndex = 12;
             this.labelDescripcion.Text = "Descripción:";
             // 
@@ -173,38 +168,38 @@
             this.panelInfo.Controls.Add(this.comboBoxEstado);
             this.panelInfo.Controls.Add(this.labelTitulo);
             this.panelInfo.Controls.Add(this.labelCuentanosProyecto);
-            this.panelInfo.Location = new System.Drawing.Point(9, 10);
-            this.panelInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelInfo.Location = new System.Drawing.Point(12, 12);
+            this.panelInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelInfo.Name = "panelInfo";
-            this.panelInfo.Size = new System.Drawing.Size(783, 633);
+            this.panelInfo.Size = new System.Drawing.Size(1044, 779);
             this.panelInfo.TabIndex = 13;
             this.panelInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // dateTimePickerFechaFinal
             // 
-            this.dateTimePickerFechaFinal.Location = new System.Drawing.Point(478, 356);
-            this.dateTimePickerFechaFinal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePickerFechaFinal.Location = new System.Drawing.Point(637, 438);
+            this.dateTimePickerFechaFinal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerFechaFinal.Name = "dateTimePickerFechaFinal";
-            this.dateTimePickerFechaFinal.Size = new System.Drawing.Size(303, 20);
+            this.dateTimePickerFechaFinal.Size = new System.Drawing.Size(403, 22);
             this.dateTimePickerFechaFinal.TabIndex = 14;
             // 
             // dateTimePickerFechaInicio
             // 
-            this.dateTimePickerFechaInicio.Location = new System.Drawing.Point(478, 244);
-            this.dateTimePickerFechaInicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePickerFechaInicio.Location = new System.Drawing.Point(637, 300);
+            this.dateTimePickerFechaInicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerFechaInicio.Name = "dateTimePickerFechaInicio";
-            this.dateTimePickerFechaInicio.Size = new System.Drawing.Size(303, 20);
+            this.dateTimePickerFechaInicio.Size = new System.Drawing.Size(403, 22);
             this.dateTimePickerFechaInicio.TabIndex = 13;
             // 
             // FormCrearProyecto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.ClientSize = new System.Drawing.Size(971, 668);
+            this.ClientSize = new System.Drawing.Size(1070, 800);
             this.Controls.Add(this.panelInfo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormCrearProyecto";
             this.Text = "Crea tu proyecto!";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

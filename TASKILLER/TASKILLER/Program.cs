@@ -16,7 +16,8 @@ namespace TASKILLER
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormCreaciónUsuario());
+            Fuentes.CargarFuentes();
+            Application.Run(new EditarEliminarProyecto());
         }
     }
 }

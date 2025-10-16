@@ -94,6 +94,8 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fuentes.cs" />
+    <Compile Include="Helpers.cs" />
     <Compile Include="ListaProyectos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +122,7 @@
     <Compile Include="ProyectoControl.Designer.cs">
       <DependentUpon>ProyectoControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tarea.cs" />
     <Compile Include="TarjetaRol.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -187,8 +190,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="resources\fonts\etna-free-font.otf" />
-    <None Include="resources\fonts\Montserrat-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -200,6 +201,9 @@
     <Content Include="resources\img\LOGO.png" />
     <Content Include="resources\img\LOGOTIPO_slogan.png" />
     <Content Include="resources\img\TresPuntos.png" />
+    <Content Include="resources\fonts\Montserrat-Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="resources\img\menu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

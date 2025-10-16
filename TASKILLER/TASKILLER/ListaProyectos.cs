@@ -33,20 +33,6 @@ namespace TASKILLER
 
             List<Proyecto> ListProyectos = new List<Proyecto>();
 
-            ListProyectos.Add(new Proyecto("Desarrollo App Móvil", 2025, 2026));
-            ListProyectos.Add(new Proyecto("Página Web Corporativa", 2024, 2025));
-            ListProyectos.Add(new Proyecto("Migración a la Nube", 2023, 2024));
-            ListProyectos.Add(new Proyecto("Implementación ERP", 2025, 2027));
-            ListProyectos.Add(new Proyecto("Desarrollo App Móvil", 2025, 2026));
-            ListProyectos.Add(new Proyecto("Página Web Corporativa", 2024, 2025));
-            ListProyectos.Add(new Proyecto("Migración a la Nube", 2023, 2024));
-            ListProyectos.Add(new Proyecto("Implementación ERP", 2025, 2027));
-            ListProyectos.Add(new Proyecto("Desarrollo App Móvil", 2025, 2026));
-            ListProyectos.Add(new Proyecto("Página Web Corporativa", 2024, 2025));
-            ListProyectos.Add(new Proyecto("Migración a la Nube", 2023, 2024));
-            ListProyectos.Add(new Proyecto("Implementación ERP", 2025, 2027));
-            ListProyectos.Add(new Proyecto("Implementación ERP", 2025, 2027));
-
             foreach (var p in ListProyectos)
             {
                 ProyectoControl tarjeta = new ProyectoControl();

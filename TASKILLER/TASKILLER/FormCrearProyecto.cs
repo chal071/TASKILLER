@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TASKILLER
 {
@@ -32,7 +33,7 @@ namespace TASKILLER
             comboBoxEstado.Font = new Font("Montserrat", 12, FontStyle.Bold);
             buttonCrearProyecto.Font = new Font("Montserrat", 15, FontStyle.Bold);
 
-
+            comboBoxEstado.DataSource = Enum.GetValues(typeof(Estado));
 
         }
         private void Form1_Resize(object sender, EventArgs e)
