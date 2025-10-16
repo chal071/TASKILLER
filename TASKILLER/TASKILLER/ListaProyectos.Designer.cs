@@ -63,11 +63,12 @@ namespace TASKILLER
             // buttonFiltro
             // 
             this.buttonFiltro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonFiltro.BackgroundImage")));
+            this.buttonFiltro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonFiltro.Font = new System.Drawing.Font("Sans Serif Collection", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonFiltro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(17)))), ((int)(((byte)(92)))));
             this.buttonFiltro.Location = new System.Drawing.Point(1114, 3);
             this.buttonFiltro.Name = "buttonFiltro";
-            this.buttonFiltro.Size = new System.Drawing.Size(70, 60);
+            this.buttonFiltro.Size = new System.Drawing.Size(70, 67);
             this.buttonFiltro.TabIndex = 2;
             this.buttonFiltro.UseVisualStyleBackColor = true;
             // 

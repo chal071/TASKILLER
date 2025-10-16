@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProyectoControl));
             this.labelNombre = new System.Windows.Forms.Label();
             this.flowLayoutPanelListaTareas = new System.Windows.Forms.FlowLayoutPanel();
             this.labelFechas = new System.Windows.Forms.Label();
@@ -63,7 +64,7 @@
             // 
             // buttonEditar
             // 
-            this.buttonEditar.BackgroundImage = global::TASKILLER.Properties.Resources.menu_de_tres_puntos;
+            this.buttonEditar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonEditar.BackgroundImage")));
             this.buttonEditar.Location = new System.Drawing.Point(355, 21);
             this.buttonEditar.Name = "buttonEditar";
             this.buttonEditar.Size = new System.Drawing.Size(39, 35);

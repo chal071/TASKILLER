@@ -51,6 +51,17 @@
     </Compile>
     <Compile Include="CrearTarea.Designer.cs">
       <DependentUpon>CrearTarea.cs</DependentUpon>
+    <Compile Include="EditarEliminarProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarEliminarProyecto.Designer.cs">
+      <DependentUpon>EditarEliminarProyecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCrearProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCrearProyecto.Designer.cs">
+      <DependentUpon>FormCrearProyecto.cs</DependentUpon>
     </Compile>
     <Compile Include="FormInicio.cs">
       <SubType>Form</SubType>
@@ -78,6 +89,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Proyecto.cs" />
     <Compile Include="ProyectoControl.cs">
       <SubType>UserControl</SubType>
@@ -93,6 +109,13 @@
     </Compile>
     <EmbeddedResource Include="CrearTarea.resx">
       <DependentUpon>CrearTarea.cs</DependentUpon>
+    <Compile Include="Rol.cs" />
+    <Compile Include="Usuario.cs" />
+    <EmbeddedResource Include="EditarEliminarProyecto.resx">
+      <DependentUpon>EditarEliminarProyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCrearProyecto.resx">
+      <DependentUpon>FormCrearProyecto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.cs</DependentUpon>
@@ -108,14 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="ProyectoControl.resx">
       <DependentUpon>ProyectoControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,9 +158,11 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="resources\icons\icon_taskiller.ico" />
+    <Content Include="resources\img\filtro.png" />
     <Content Include="resources\img\LOGO.png" />
     <Content Include="resources\img\LOGOTIPO_slogan.png" />
-    <None Include="resources\menu-de-tres-puntos.png" />
+    <Content Include="resources\img\TresPuntos.png" />
+    <None Include="resources\img\menu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

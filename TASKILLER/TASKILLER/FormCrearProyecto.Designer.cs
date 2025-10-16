@@ -1,0 +1,220 @@
+﻿namespace TASKILLER
+{
+    partial class FormCrearProyecto
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCrearProyecto));
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.labelCuentanosProyecto = new System.Windows.Forms.Label();
+            this.textBoxTitulo = new System.Windows.Forms.TextBox();
+            this.comboBoxEstado = new System.Windows.Forms.ComboBox();
+            this.buttonCrearProyecto = new System.Windows.Forms.Button();
+            this.labelTitulo = new System.Windows.Forms.Label();
+            this.labelFechaInicio = new System.Windows.Forms.Label();
+            this.labelEstado = new System.Windows.Forms.Label();
+            this.labelFechaFinal = new System.Windows.Forms.Label();
+            this.richTextBoxDescripcion = new System.Windows.Forms.RichTextBox();
+            this.labelDescripcion = new System.Windows.Forms.Label();
+            this.panelInfo = new System.Windows.Forms.Panel();
+            this.dateTimePickerFechaInicio = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerFechaFinal = new System.Windows.Forms.DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            this.panelInfo.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.BackgroundImage = global::TASKILLER.Properties.Resources.LOGO;
+            this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(191, 190);
+            this.pictureBoxLogo.TabIndex = 0;
+            this.pictureBoxLogo.TabStop = false;
+            // 
+            // labelCuentanosProyecto
+            // 
+            this.labelCuentanosProyecto.AutoSize = true;
+            this.labelCuentanosProyecto.Location = new System.Drawing.Point(279, 3);
+            this.labelCuentanosProyecto.MaximumSize = new System.Drawing.Size(600, 0);
+            this.labelCuentanosProyecto.Name = "labelCuentanosProyecto";
+            this.labelCuentanosProyecto.Size = new System.Drawing.Size(227, 16);
+            this.labelCuentanosProyecto.TabIndex = 1;
+            this.labelCuentanosProyecto.Text = "Cuéntanos sobre tu nuevo proyecto...";
+            this.labelCuentanosProyecto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelCuentanosProyecto.Click += new System.EventHandler(this.labelCuentanosProyecto_Click);
+            // 
+            // textBoxTitulo
+            // 
+            this.textBoxTitulo.Location = new System.Drawing.Point(1, 297);
+            this.textBoxTitulo.Name = "textBoxTitulo";
+            this.textBoxTitulo.Size = new System.Drawing.Size(415, 22);
+            this.textBoxTitulo.TabIndex = 2;
+            // 
+            // comboBoxEstado
+            // 
+            this.comboBoxEstado.FormattingEnabled = true;
+            this.comboBoxEstado.Location = new System.Drawing.Point(638, 575);
+            this.comboBoxEstado.Name = "comboBoxEstado";
+            this.comboBoxEstado.Size = new System.Drawing.Size(403, 24);
+            this.comboBoxEstado.TabIndex = 5;
+            this.comboBoxEstado.SelectedIndexChanged += new System.EventHandler(this.comboBoxEstado_SelectedIndexChanged);
+            // 
+            // buttonCrearProyecto
+            // 
+            this.buttonCrearProyecto.Location = new System.Drawing.Point(713, 698);
+            this.buttonCrearProyecto.Name = "buttonCrearProyecto";
+            this.buttonCrearProyecto.Size = new System.Drawing.Size(328, 77);
+            this.buttonCrearProyecto.TabIndex = 6;
+            this.buttonCrearProyecto.Text = "Crear proyecto";
+            this.buttonCrearProyecto.UseVisualStyleBackColor = true;
+            // 
+            // labelTitulo
+            // 
+            this.labelTitulo.AutoSize = true;
+            this.labelTitulo.Location = new System.Drawing.Point(-2, 249);
+            this.labelTitulo.Name = "labelTitulo";
+            this.labelTitulo.Size = new System.Drawing.Size(43, 16);
+            this.labelTitulo.TabIndex = 7;
+            this.labelTitulo.Text = "Título:";
+            // 
+            // labelFechaInicio
+            // 
+            this.labelFechaInicio.AutoSize = true;
+            this.labelFechaInicio.Location = new System.Drawing.Point(635, 249);
+            this.labelFechaInicio.Name = "labelFechaInicio";
+            this.labelFechaInicio.Size = new System.Drawing.Size(101, 16);
+            this.labelFechaInicio.TabIndex = 8;
+            this.labelFechaInicio.Text = "Fecha de inicio:";
+            // 
+            // labelEstado
+            // 
+            this.labelEstado.AutoSize = true;
+            this.labelEstado.Location = new System.Drawing.Point(635, 531);
+            this.labelEstado.Name = "labelEstado";
+            this.labelEstado.Size = new System.Drawing.Size(53, 16);
+            this.labelEstado.TabIndex = 9;
+            this.labelEstado.Text = "Estado:";
+            // 
+            // labelFechaFinal
+            // 
+            this.labelFechaFinal.AutoSize = true;
+            this.labelFechaFinal.Location = new System.Drawing.Point(635, 383);
+            this.labelFechaFinal.Name = "labelFechaFinal";
+            this.labelFechaFinal.Size = new System.Drawing.Size(75, 16);
+            this.labelFechaFinal.TabIndex = 10;
+            this.labelFechaFinal.Text = "Fecha final:";
+            // 
+            // richTextBoxDescripcion
+            // 
+            this.richTextBoxDescripcion.Location = new System.Drawing.Point(1, 466);
+            this.richTextBoxDescripcion.Name = "richTextBoxDescripcion";
+            this.richTextBoxDescripcion.Size = new System.Drawing.Size(415, 260);
+            this.richTextBoxDescripcion.TabIndex = 11;
+            this.richTextBoxDescripcion.Text = "";
+            // 
+            // labelDescripcion
+            // 
+            this.labelDescripcion.AutoSize = true;
+            this.labelDescripcion.Location = new System.Drawing.Point(-2, 412);
+            this.labelDescripcion.Name = "labelDescripcion";
+            this.labelDescripcion.Size = new System.Drawing.Size(82, 16);
+            this.labelDescripcion.TabIndex = 12;
+            this.labelDescripcion.Text = "Descripción:";
+            // 
+            // panelInfo
+            // 
+            this.panelInfo.Controls.Add(this.dateTimePickerFechaFinal);
+            this.panelInfo.Controls.Add(this.dateTimePickerFechaInicio);
+            this.panelInfo.Controls.Add(this.labelEstado);
+            this.panelInfo.Controls.Add(this.labelDescripcion);
+            this.panelInfo.Controls.Add(this.textBoxTitulo);
+            this.panelInfo.Controls.Add(this.pictureBoxLogo);
+            this.panelInfo.Controls.Add(this.labelFechaInicio);
+            this.panelInfo.Controls.Add(this.buttonCrearProyecto);
+            this.panelInfo.Controls.Add(this.labelFechaFinal);
+            this.panelInfo.Controls.Add(this.richTextBoxDescripcion);
+            this.panelInfo.Controls.Add(this.comboBoxEstado);
+            this.panelInfo.Controls.Add(this.labelTitulo);
+            this.panelInfo.Controls.Add(this.labelCuentanosProyecto);
+            this.panelInfo.Location = new System.Drawing.Point(12, 12);
+            this.panelInfo.Name = "panelInfo";
+            this.panelInfo.Size = new System.Drawing.Size(1044, 779);
+            this.panelInfo.TabIndex = 13;
+            this.panelInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // dateTimePickerFechaInicio
+            // 
+            this.dateTimePickerFechaInicio.Location = new System.Drawing.Point(638, 300);
+            this.dateTimePickerFechaInicio.Name = "dateTimePickerFechaInicio";
+            this.dateTimePickerFechaInicio.Size = new System.Drawing.Size(403, 22);
+            this.dateTimePickerFechaInicio.TabIndex = 13;
+            // 
+            // dateTimePickerFechaFinal
+            // 
+            this.dateTimePickerFechaFinal.Location = new System.Drawing.Point(638, 438);
+            this.dateTimePickerFechaFinal.Name = "dateTimePickerFechaFinal";
+            this.dateTimePickerFechaFinal.Size = new System.Drawing.Size(403, 22);
+            this.dateTimePickerFechaFinal.TabIndex = 14;
+            // 
+            // FormCrearProyecto
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
+            this.ClientSize = new System.Drawing.Size(1295, 822);
+            this.Controls.Add(this.panelInfo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FormCrearProyecto";
+            this.Text = "Crea tu proyecto!";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
+            this.panelInfo.ResumeLayout(false);
+            this.panelInfo.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
+        private System.Windows.Forms.Label labelCuentanosProyecto;
+        private System.Windows.Forms.TextBox textBoxTitulo;
+        private System.Windows.Forms.ComboBox comboBoxEstado;
+        private System.Windows.Forms.Button buttonCrearProyecto;
+        private System.Windows.Forms.Label labelTitulo;
+        private System.Windows.Forms.Label labelFechaInicio;
+        private System.Windows.Forms.Label labelEstado;
+        private System.Windows.Forms.Label labelFechaFinal;
+        private System.Windows.Forms.RichTextBox richTextBoxDescripcion;
+        private System.Windows.Forms.Label labelDescripcion;
+        private System.Windows.Forms.Panel panelInfo;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFechaFinal;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFechaInicio;
+    }
+}
