@@ -61,8 +61,9 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.labelEditarRol);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormEdicionRoles";
-            this.Text = "FormEdicionRoles";
+            this.Text = "Editar Roles";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

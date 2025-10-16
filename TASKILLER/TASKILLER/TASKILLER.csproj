@@ -46,17 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormCreaciónUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreaciónUsuario.Designer.cs">
+      <DependentUpon>FormCreaciónUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEdicionRoles.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormEdicionRoles.Designer.cs">
       <DependentUpon>FormEdicionRoles.cs</DependentUpon>
+    </Compile>
     <Compile Include="CrearTarea.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CrearTarea.Designer.cs">
       <DependentUpon>CrearTarea.cs</DependentUpon>
-	</Compile>
+    </Compile>
     <Compile Include="EditarEliminarProyecto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,8 +126,12 @@
     <Compile Include="TarjetaRol.Designer.cs">
       <DependentUpon>TarjetaRol.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormCreaciónUsuario.resx">
+      <DependentUpon>FormCreaciónUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEdicionRoles.resx">
       <DependentUpon>FormEdicionRoles.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="TareaControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -163,6 +174,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TarjetaRol.resx">
       <DependentUpon>TarjetaRol.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TareaControl.resx">
       <DependentUpon>TareaControl.cs</DependentUpon>
     </EmbeddedResource>
