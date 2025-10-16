@@ -30,6 +30,7 @@
         {
             this.labelNombreTarea = new System.Windows.Forms.Label();
             this.dataGridViewUsuarioDeTarea = new System.Windows.Forms.DataGridView();
+            this.labelFechasTarea = new System.Windows.Forms.Label();
             this.IconoUsuario = new System.Windows.Forms.DataGridViewImageColumn();
             this.NombreUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuarioDeTarea)).BeginInit();
@@ -38,7 +39,7 @@
             // labelNombreTarea
             // 
             this.labelNombreTarea.AutoSize = true;
-            this.labelNombreTarea.Location = new System.Drawing.Point(30, 51);
+            this.labelNombreTarea.Location = new System.Drawing.Point(30, 39);
             this.labelNombreTarea.Name = "labelNombreTarea";
             this.labelNombreTarea.Size = new System.Drawing.Size(163, 25);
             this.labelNombreTarea.TabIndex = 0;
@@ -51,13 +52,22 @@
             this.dataGridViewUsuarioDeTarea.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IconoUsuario,
             this.NombreUsuario});
-            this.dataGridViewUsuarioDeTarea.Location = new System.Drawing.Point(35, 106);
+            this.dataGridViewUsuarioDeTarea.Location = new System.Drawing.Point(35, 104);
             this.dataGridViewUsuarioDeTarea.Name = "dataGridViewUsuarioDeTarea";
             this.dataGridViewUsuarioDeTarea.RowHeadersVisible = false;
             this.dataGridViewUsuarioDeTarea.RowHeadersWidth = 82;
             this.dataGridViewUsuarioDeTarea.RowTemplate.Height = 33;
             this.dataGridViewUsuarioDeTarea.Size = new System.Drawing.Size(505, 265);
             this.dataGridViewUsuarioDeTarea.TabIndex = 1;
+            // 
+            // labelFechasTarea
+            // 
+            this.labelFechasTarea.AutoSize = true;
+            this.labelFechasTarea.Location = new System.Drawing.Point(161, 431);
+            this.labelFechasTarea.Name = "labelFechasTarea";
+            this.labelFechasTarea.Size = new System.Drawing.Size(239, 25);
+            this.labelFechasTarea.TabIndex = 2;
+            this.labelFechasTarea.Text = "fecha inicio - fecha final";
             // 
             // IconoUsuario
             // 
@@ -72,6 +82,7 @@
             // NombreUsuario
             // 
             this.NombreUsuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NombreUsuario.DataPropertyName = "Nombre";
             this.NombreUsuario.HeaderText = "Nombre";
             this.NombreUsuario.MinimumWidth = 10;
             this.NombreUsuario.Name = "NombreUsuario";
@@ -80,10 +91,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelFechasTarea);
             this.Controls.Add(this.dataGridViewUsuarioDeTarea);
             this.Controls.Add(this.labelNombreTarea);
             this.Name = "TareaControl";
-            this.Size = new System.Drawing.Size(572, 553);
+            this.Size = new System.Drawing.Size(586, 513);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuarioDeTarea)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -94,6 +106,7 @@
 
         private System.Windows.Forms.Label labelNombreTarea;
         private System.Windows.Forms.DataGridView dataGridViewUsuarioDeTarea;
+        private System.Windows.Forms.Label labelFechasTarea;
         private System.Windows.Forms.DataGridViewImageColumn IconoUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreUsuario;
     }
