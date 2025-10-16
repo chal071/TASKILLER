@@ -51,6 +51,7 @@
     </Compile>
     <Compile Include="CrearTarea.Designer.cs">
       <DependentUpon>CrearTarea.cs</DependentUpon>
+	</Compile>
     <Compile Include="EditarEliminarProyecto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +110,7 @@
     </Compile>
     <EmbeddedResource Include="CrearTarea.resx">
       <DependentUpon>CrearTarea.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="Rol.cs" />
     <Compile Include="Usuario.cs" />
     <EmbeddedResource Include="EditarEliminarProyecto.resx">
