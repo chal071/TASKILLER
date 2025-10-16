@@ -1,4 +1,6 @@
-﻿namespace TASKILLER
+﻿using System.Windows.Forms;
+
+namespace TASKILLER
 {
     partial class ListaProyectos
     {
@@ -52,43 +54,46 @@
             // flowLayoutPanelListaProyectos
             // 
             this.flowLayoutPanelListaProyectos.AutoScroll = true;
-            this.flowLayoutPanelListaProyectos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.flowLayoutPanelListaProyectos.Location = new System.Drawing.Point(12, 268);
+            this.flowLayoutPanelListaProyectos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelListaProyectos.Location = new System.Drawing.Point(0, 104);
             this.flowLayoutPanelListaProyectos.Name = "flowLayoutPanelListaProyectos";
-            this.flowLayoutPanelListaProyectos.Size = new System.Drawing.Size(1163, 371);
+            this.flowLayoutPanelListaProyectos.Size = new System.Drawing.Size(1187, 593);
             this.flowLayoutPanelListaProyectos.TabIndex = 1;
             // 
             // buttonFiltro
             // 
             this.buttonFiltro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonFiltro.BackgroundImage")));
+            this.buttonFiltro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonFiltro.Font = new System.Drawing.Font("Sans Serif Collection", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonFiltro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(17)))), ((int)(((byte)(92)))));
-            this.buttonFiltro.Image = ((System.Drawing.Image)(resources.GetObject("buttonFiltro.Image")));
-            this.buttonFiltro.Location = new System.Drawing.Point(1001, 3);
+            this.buttonFiltro.Location = new System.Drawing.Point(1114, 3);
             this.buttonFiltro.Name = "buttonFiltro";
-            this.buttonFiltro.Size = new System.Drawing.Size(159, 60);
+            this.buttonFiltro.Size = new System.Drawing.Size(70, 67);
             this.buttonFiltro.TabIndex = 2;
             this.buttonFiltro.UseVisualStyleBackColor = true;
             // 
             // comboBoxOrdenar
             // 
-            this.comboBoxOrdenar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(17)))), ((int)(((byte)(92)))));
+            this.comboBoxOrdenar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
+            this.comboBoxOrdenar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxOrdenar.FormattingEnabled = true;
-            this.comboBoxOrdenar.Location = new System.Drawing.Point(817, 3);
+            this.comboBoxOrdenar.Location = new System.Drawing.Point(845, 3);
             this.comboBoxOrdenar.Name = "comboBoxOrdenar";
-            this.comboBoxOrdenar.Size = new System.Drawing.Size(178, 24);
+            this.comboBoxOrdenar.Size = new System.Drawing.Size(263, 39);
             this.comboBoxOrdenar.TabIndex = 3;
             this.comboBoxOrdenar.Text = "Ordenar por ";
             // 
             // flowLayoutPanelBotonesOrdFil
             // 
-            this.flowLayoutPanelBotonesOrdFil.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.flowLayoutPanelBotonesOrdFil.Controls.Add(this.buttonFiltro);
             this.flowLayoutPanelBotonesOrdFil.Controls.Add(this.comboBoxOrdenar);
+            this.flowLayoutPanelBotonesOrdFil.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanelBotonesOrdFil.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanelBotonesOrdFil.Location = new System.Drawing.Point(12, 103);
+            this.flowLayoutPanelBotonesOrdFil.Location = new System.Drawing.Point(0, 16);
+            this.flowLayoutPanelBotonesOrdFil.Margin = new System.Windows.Forms.Padding(0, 0, 0, 100);
             this.flowLayoutPanelBotonesOrdFil.Name = "flowLayoutPanelBotonesOrdFil";
-            this.flowLayoutPanelBotonesOrdFil.Size = new System.Drawing.Size(1163, 88);
+            this.flowLayoutPanelBotonesOrdFil.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.flowLayoutPanelBotonesOrdFil.Size = new System.Drawing.Size(1187, 88);
             this.flowLayoutPanelBotonesOrdFil.TabIndex = 4;
             // 
             // ListaProyectos
@@ -97,9 +102,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.ClientSize = new System.Drawing.Size(1187, 660);
-            this.Controls.Add(this.flowLayoutPanelBotonesOrdFil);
+            this.ClientSize = new System.Drawing.Size(1187, 697);
             this.Controls.Add(this.flowLayoutPanelListaProyectos);
+            this.Controls.Add(this.flowLayoutPanelBotonesOrdFil);
             this.Controls.Add(this.labelListaProyectos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ListaProyectos";

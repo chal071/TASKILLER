@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProyectoControl));
             this.labelNombre = new System.Windows.Forms.Label();
             this.flowLayoutPanelListaTareas = new System.Windows.Forms.FlowLayoutPanel();
             this.labelFechas = new System.Windows.Forms.Label();
@@ -47,7 +48,7 @@
             // 
             this.flowLayoutPanelListaTareas.BackColor = System.Drawing.SystemColors.ControlDark;
             this.flowLayoutPanelListaTareas.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelListaTareas.Location = new System.Drawing.Point(26, 67);
+            this.flowLayoutPanelListaTareas.Location = new System.Drawing.Point(26, 68);
             this.flowLayoutPanelListaTareas.Name = "flowLayoutPanelListaTareas";
             this.flowLayoutPanelListaTareas.Size = new System.Drawing.Size(368, 334);
             this.flowLayoutPanelListaTareas.TabIndex = 2;
@@ -55,7 +56,7 @@
             // labelFechas
             // 
             this.labelFechas.AutoSize = true;
-            this.labelFechas.Location = new System.Drawing.Point(168, 414);
+            this.labelFechas.Location = new System.Drawing.Point(156, 414);
             this.labelFechas.Name = "labelFechas";
             this.labelFechas.Size = new System.Drawing.Size(159, 16);
             this.labelFechas.TabIndex = 3;
@@ -63,6 +64,7 @@
             // 
             // buttonEditar
             // 
+            this.buttonEditar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonEditar.BackgroundImage")));
             this.buttonEditar.Location = new System.Drawing.Point(355, 21);
             this.buttonEditar.Name = "buttonEditar";
             this.buttonEditar.Size = new System.Drawing.Size(39, 35);
