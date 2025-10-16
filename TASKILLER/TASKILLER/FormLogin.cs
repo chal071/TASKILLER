@@ -29,7 +29,7 @@ namespace TASKILLER
             String password = textBoxPassword.Text;
             if (mail.Equals("") || password.Equals(""))
             {
-                MessageBox.Show("Por favor, rellena todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor, rellena todos los campos.", "Error de credenciales", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             /*else
             {

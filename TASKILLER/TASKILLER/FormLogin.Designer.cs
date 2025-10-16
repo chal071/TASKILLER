@@ -40,7 +40,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabelCredenciales = new System.Windows.Forms.LinkLabel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -113,7 +115,7 @@
             this.buttonIniciarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.buttonIniciarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonIniciarSesion.Location = new System.Drawing.Point(398, 316);
+            this.buttonIniciarSesion.Location = new System.Drawing.Point(398, 302);
             this.buttonIniciarSesion.Name = "buttonIniciarSesion";
             this.buttonIniciarSesion.Size = new System.Drawing.Size(119, 40);
             this.buttonIniciarSesion.TabIndex = 7;
@@ -124,18 +126,20 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(255, 154);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(120, 16);
+            this.label5.Size = new System.Drawing.Size(139, 16);
             this.label5.TabIndex = 8;
             this.label5.Text = "Correo electrónico:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(255, 211);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 16);
+            this.label6.Size = new System.Drawing.Size(90, 16);
             this.label6.TabIndex = 9;
             this.label6.Text = "Contraseña:";
             // 
@@ -149,15 +153,26 @@
             this.linkLabelCredenciales.TabStop = true;
             this.linkLabelCredenciales.Text = "¿Has olvidado tu contraseña?";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(12, 366);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(534, 267);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(558, 386);
+            this.ClientSize = new System.Drawing.Size(558, 646);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.buttonIniciarSesion);
             this.Controls.Add(this.linkLabelCredenciales);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.buttonIniciarSesion);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxMail);
             this.Controls.Add(this.label4);
@@ -170,6 +185,7 @@
             this.Text = "TASKILLER - Login";
             this.Load += new System.EventHandler(this.FormLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,5 +204,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.LinkLabel linkLabelCredenciales;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
