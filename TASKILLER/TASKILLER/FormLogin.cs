@@ -18,19 +18,33 @@ namespace TASKILLER
             InitializeComponent();
         }
 
-        private void TextBoxMail_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-        
         private void FormLogin_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void ButtonIniciarSesion_Click(object sender, EventArgs e)
         {
-
+            String mail = textBoxMail.Text;
+            String password = textBoxPassword.Text;
+            if (mail.Equals("") || password.Equals(""))
+            {
+                MessageBox.Show("Por favor, rellena todos los campos.", "Error de credenciales", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            /*else
+            {
+                foreach (Usuario user in Program.usuarios)
+                {
+                    if (user.getMail().Equals(mail) && user.getPassword().Equals(password))
+                    {
+                        Program.usuarioActual = user;
+                        FormInicio formInicio = new FormInicio();
+                        formInicio.Show();
+                        this.Hide();
+                        return;
+                    }
+                }
+            }*/
         }
     }
 }
