@@ -74,6 +74,7 @@
             // 
             // buttonEditarProyecto
             // 
+            this.buttonEditarProyecto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonEditarProyecto.Location = new System.Drawing.Point(487, 743);
             this.buttonEditarProyecto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEditarProyecto.Name = "buttonEditarProyecto";
@@ -146,6 +147,7 @@
             // 
             // buttonEliminarProyecto
             // 
+            this.buttonEliminarProyecto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonEliminarProyecto.Location = new System.Drawing.Point(863, 743);
             this.buttonEliminarProyecto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEliminarProyecto.Name = "buttonEliminarProyecto";
@@ -218,7 +220,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "EditarEliminarProyecto";
-            this.Text = "Edita tu proyecto!";
+            this.Text = "¡Edita tu proyecto!";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelInfo.ResumeLayout(false);
             this.panelInfo.PerformLayout();
