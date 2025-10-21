@@ -18,13 +18,10 @@ namespace TASKILLER
         [STAThread]
         private static void Main()
         {
-            Rol admin = new Rol("admin", new List<string> { "CrearUsuario", "EliminarUsuario", "ModificarUsuario", "VerUsuarios", "CrearTarea", "EliminarTarea", "ModificarTarea", "VerTareas" });
-            roles.Add(admin);
-            usuarios.Add(new Usuario("admin", "admin@taskiller.com", "admin123", admin));
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Fuentes.CargarFuentes();
-            Application.Run(new EditarEliminarProyecto());
+            Application.Run(new FormLogin());
         }
     }
 }

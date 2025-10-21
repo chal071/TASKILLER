@@ -89,5 +89,15 @@ namespace TASKILLER.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] TaskillerData {
+            get {
+                object obj = ResourceManager.GetObject("TaskillerData", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

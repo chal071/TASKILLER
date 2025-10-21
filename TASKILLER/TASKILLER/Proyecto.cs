@@ -18,20 +18,26 @@ namespace TASKILLER
     }
     public class Proyecto
     {
+        public Guid Id { get; set; }
         public string Titulo { get; set; }
         public String Descripcion { get; set; }
         public DateTime FechaInicio { get; set; }
         public DateTime FechaFinal { get; set; }
         public Estado Estado { get; set; }
-        public  List<Usuario> usuarios { get; set; }
+        public  List<Guid> Usuarios { get; set; }
 
-        public Proyecto (string titulo, String descripcion, DateTime fechaInicio, DateTime fechaFinal, Estado estado)
+        public Proyecto() { }
+
+        public Proyecto (string titulo, String descripcion, DateTime fechaInicio, DateTime fechaFinal, 
+            Estado estado, List<Guid> usuarios)
         {
+            this.Id = Guid.NewGuid();
             this.Titulo = titulo;
             this.Descripcion = descripcion;
             this.FechaInicio = fechaInicio;
             this.FechaFinal = fechaFinal;
             this.Estado = estado;
+            this.Usuarios = usuarios;
         }
     }
 }

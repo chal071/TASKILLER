@@ -1,0 +1,185 @@
+{
+    "listaProyectos": [
+        {
+            "id": "d7e34c1a-6b84-4f22-bd3e-2e3b0f6a1234",
+            "titulo": "App de Gestión de Tareas",
+            "descripcion": "Aplicación para organizar proyectos personales y laborales.",
+            "fechaInicio": "2025-01-10",
+            "fechaFinal": "2025-03-30",
+            "estado": 2,
+            "listaUsuarios": [
+                "c1a1e2f3-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
+                "c2b2f3a4-5c6d-7e8f-9a0b-1c2d3e4f5a6b"
+            ]
+        },
+        {
+            "id": "a1b2c3d4-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+            "titulo": "Sitio Web Corporativo",
+            "descripcion": "Desarrollo del nuevo portal de la empresa.",
+            "fechaInicio": "2025-02-01",
+            "fechaFinal": "2025-04-15",
+            "estado": 1,
+            "listaUsuarios": [
+                "c2b2f3a4-5c6d-7e8f-9a0b-1c2d3e4f5a6b",
+                "c3c3f4a5-6d7e-8f9a-0b1c-2d3e4f5a6b7c"
+            ]
+        },
+        {
+            "id": "b2c3d4e5-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+            "titulo": "Sistema de Inventario",
+            "descripcion": "Gestión interna de productos y stock.",
+            "fechaInicio": "2025-03-01",
+            "fechaFinal": "2025-06-01",
+            "estado": 1,
+            "listaUsuarios": [
+                "c3c3f4a5-6d7e-8f9a-0b1c-2d3e4f5a6b7c",
+                "c4d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f"
+            ]
+        },
+        {
+            "id": "c3d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
+            "titulo": "Plataforma Educativa",
+            "descripcion": "Portal para cursos en línea y gestión de estudiantes.",
+            "fechaInicio": "2025-01-15",
+            "fechaFinal": "2025-05-30",
+            "estado": 2,
+            "listaUsuarios": [
+                "c1a1e2f3-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
+                "c5e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a"
+            ]
+        },
+        {
+            "id": "d4e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
+            "titulo": "Dashboard Analítico",
+            "descripcion": "Herramienta de visualización de datos empresariales.",
+            "fechaInicio": "2025-04-01",
+            "fechaFinal": "2025-08-01",
+            "estado": 1,
+            "listaUsuarios": [
+                "c2b2f3a4-5c6d-7e8f-9a0b-1c2d3e4f5a6b",
+                "c5e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a"
+            ]
+        }
+    ],
+    "listaTareas": [
+        {
+            "id": "e5f6a7b8-9c0d-1e2f-3a4b-5c6d7e8f9a0b",
+            "idProyecto": "d7e34c1a-6b84-4f22-bd3e-2e3b0f6a1234",
+            "idTareaPadre": null,
+            "titulo": "Diseño de la interfaz",
+            "descripcion": "Creación del prototipo visual en Figma.",
+            "fechaInicio": "2025-01-10",
+            "fechaFinal": "2025-01-25",
+            "estado": 3,
+            "prioridad": 3,
+            "listaUsuarios": [ "c1a1e2f3-4b5c-6d7e-8f9a-0b1c2d3e4f5a" ]
+        },
+        {
+            "id": "f6a7b8c9-0d1e-2f3a-4b5c-6d7e8f9a0b1c",
+            "idProyecto": "d7e34c1a-6b84-4f22-bd3e-2e3b0f6a1234",
+            "idTareaPadre": "e5f6a7b8-9c0d-1e2f-3a4b-5c6d7e8f9a0b",
+            "titulo": "Implementar frontend",
+            "descripcion": "Desarrollar la interfaz en React.",
+            "fechaInicio": "2025-01-26",
+            "fechaFinal": "2025-02-15",
+            "estado": 2,
+            "prioridad": 2,
+            "listaUsuarios": [ "c2b2f3a4-5c6d-7e8f-9a0b-1c2d3e4f5a6b" ]
+        },
+        {
+            "id": "a7b8c9d0-1e2f-3a4b-5c6d-7e8f9a0b1c2d",
+            "idProyecto": "a1b2c3d4-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+            "idTareaPadre": null,
+            "titulo": "Configuración del servidor",
+            "descripcion": "Preparar el entorno de producción en AWS.",
+            "fechaInicio": "2025-02-01",
+            "fechaFinal": "2025-02-10",
+            "estado": 1,
+            "prioridad": 3,
+            "listaUsuarios": [ "c3c3f4a5-6d7e-8f9a-0b1c-2d3e4f5a6b7c" ]
+        },
+        {
+            "id": "b8c9d0e1-2f3a-4b5c-6d7e-8f9a0b1c2d3e",
+            "idProyecto": "b2c3d4e5-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+            "idTareaPadre": null,
+            "titulo": "Diseñar base de datos",
+            "descripcion": "Crear estructura y relaciones en MySQL.",
+            "fechaInicio": "2025-03-01",
+            "fechaFinal": "2025-03-15",
+            "estado": 1,
+            "prioridad": 3,
+            "listaUsuarios": [ "c4d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f" ]
+        },
+        {
+            "id": "c9d0e1f2-3a4b-5c6d-7e8f-9a0b1c2d3e4f",
+            "idProyecto": "c3d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
+            "idTareaPadre": null,
+            "titulo": "Integrar pasarela de pago",
+            "descripcion": "Implementar Stripe para las suscripciones.",
+            "fechaInicio": "2025-04-01",
+            "fechaFinal": "2025-04-20",
+            "estado": 1,
+            "prioridad": 2,
+            "listaUsuarios": [ "c5e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a" ]
+        }
+    ],
+    "listaUsuarios": [
+        {
+            "id": "c1a1e2f3-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
+            "nombre": "Laura",
+            "apellido": "Pepita",
+            "mail": "laura@empresa.com",
+            "contrasena": "1234",
+            "rol": "d0e1f2a3-4b5c-6d7e-8f9a-0b1c2d3e4f5b"
+        },
+        {
+            "id": "c2b2f3a4-5c6d-7e8f-9a0b-1c2d3e4f5a6b",
+            "nombre": "Carlos",
+            "apellido": "Pepita",
+            "mail": "carlos@empresa.com",
+            "contrasena": "abcd",
+            "rol": "d1e2f3a4-5b6c-7d8e-9f0a-1b2c3d4e5f6a"
+        },
+        {
+            "id": "c3c3f4a5-6d7e-8f9a-0b1c-2d3e4f5a6b7c",
+            "nombre": "Marta",
+            "apellido": "Pepita",
+            "mail": "marta@empresa.com",
+            "contrasena": "pass",
+            "rol": "d1e2f3a4-5b6c-7d8e-9f0a-1b2c3d4e5f6a"
+        },
+        {
+            "id": "c4d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
+            "nombre": "Andrés",
+            "apellido": "Pepita",
+            "mail": "andres@empresa.com",
+            "contrasena": "5678",
+            "rol": "d2e3f4a5-6b7c-8d9e-0f1a-2b3c4d5e6f7a"
+        },
+        {
+            "id": "c5e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
+            "nombre": "Sofía",
+            "apellido": "Pepita",
+            "mail": "sofia@empresa.com",
+            "contrasena": "qwerty",
+            "rol": "d2e3f4a5-6b7c-8d9e-0f1a-2b3c4d5e6f7a"
+        }
+    ],
+    "listaRoles": [
+        {
+            "id": "d0e1f2a3-4b5c-6d7e-8f9a-0b1c2d3e4f5b",
+            "nombre": "Administrador",
+            "acceso": [ "Crear proyectos", "Editar proyectos", "Eliminar proyectos", "Crear usuarios", "Editar usuarios", "Eliminar usuarios", "Crear Tareas", "Editar Tareas", "EliminarTarea" ]
+        },
+        {
+            "id": "d1e2f3a4-5b6c-7d8e-9f0a-1b2c3d4e5f6a",
+            "nombre": "Gestor",
+            "acceso": [ "Crear proyectos", "Editar proyectos", "Crear Tareas", "Editar usuarios", "Crear Tareas", "Editar Tareas", "EliminarTarea" ]
+        },
+        {
+            "id": "d2e3f4a5-6b7c-8d9e-0f1a-2b3c4d5e6f7a",
+            "nombre": "Base",
+            "acceso": [ "Ver Tareas", "Actualizar Estado" ]
+        }
+    ]
+}

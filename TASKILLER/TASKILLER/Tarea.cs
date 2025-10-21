@@ -17,23 +17,24 @@ namespace TASKILLER
 
     public class Tarea
     {
-        public Guid IdTarea { get; set; }
+        public Guid Id { get; set; }
         public String Nombre { get; set; }
         public String Descripcion { get; set; }
         public Prioridad Prioridad { get; set; } 
         public DateTime FechaInicio { get; set; }
         public DateTime FechaFinal { get; set; }
-        public List<Usuario> UsuariosAsignados { get; set; }
+        public List<Guid> UsuariosAsignados { get; set; }
         public Guid IdProyecto { get; set; }
         public int Estado { get; set; } // 1: Por comenzar 2: En progreso 3: Entregado 4: Revisado 5: Bloqueado
-        public Guid IdTareaPadre { get; set; }
+        public Guid? IdTareaPadre { get; set; }
         public List<Tarea> Subtareas { get; set; }
 
         public Tarea() { }
 
-        public Tarea(Guid IdTarea, String Nombre, String Descripcion, Prioridad Prioridad, DateTime FechaInicio, DateTime FechaFinal, List<Usuario> UsuariosAsignados, Guid IdProyecto, int Estado)
+        public Tarea(Guid IdTarea, String Nombre, String Descripcion, Prioridad Prioridad, DateTime 
+            FechaInicio, DateTime FechaFinal, List<Guid> UsuariosAsignados, Guid IdProyecto, int Estado)
         {
-            this.IdTarea = Guid.NewGuid();
+            this.Id = Guid.NewGuid();
             this.Nombre = Nombre;
             this.Descripcion = Descripcion;
             this.Prioridad = Prioridad;
@@ -44,9 +45,11 @@ namespace TASKILLER
             this.Estado = Estado;
         }
 
-        public Tarea(Guid IdTarea, String Nombre, String Descripcion, Prioridad Prioridad, DateTime FechaInicio, DateTime FechaFinal, List<Usuario> UsuariosAsignados, Guid IdProyecto, int Estado, Guid IdTareaPadre, List<Tarea> Subtareas)
+        public Tarea(Guid IdTarea, String Nombre, String Descripcion, Prioridad Prioridad, DateTime 
+            FechaInicio, DateTime FechaFinal, List<Guid> UsuariosAsignados, Guid IdProyecto, int Estado,
+            Guid IdTareaPadre, List<Tarea> Subtareas)
         {
-            this.IdTarea = Guid.NewGuid();
+            this.Id = Guid.NewGuid();
             this.Nombre = Nombre;
             this.Descripcion = Descripcion;
             this.Prioridad = Prioridad;
@@ -58,6 +61,5 @@ namespace TASKILLER
             this.IdTareaPadre = IdTareaPadre;
             this.Subtareas = Subtareas;
         }
-
     }
 }
