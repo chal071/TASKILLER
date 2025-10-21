@@ -15,25 +15,44 @@ namespace TASKILLER
         public FormCrearTarea()
         {
             InitializeComponent();
-            this.Resize += Form_ReSize;
+            ConfigurarLayout();
         }
 
-        public void Form_ReSize(object sender, EventArgs e)
+        private void ConfigurarLayout ()
         {
-            int totalWidth = this.ClientSize.Width;
-            int totalHeight = this.ClientSize.Height;
 
-            flowLayoutPanelLogo.Width = (int)(totalWidth - flowLayoutPanelLogo.Margin.Horizontal);
-            flowLayoutPanelLogo.Height = (int)((totalHeight * 0.2) - flowLayoutPanelLogo.Margin.Vertical);
+            var table = new TableLayoutPanel
+            {
+                Dock = DockStyle.Fill,
+                ColumnCount = 2,
+                RowCount = 3,
+                Padding = new Padding(0),
+                Margin = new Padding(0)
+            };
 
-            flowLayoutPanelTituloDescrip.Width = (int)((totalWidth * 0.5) - flowLayoutPanelTituloDescrip.Margin.Horizontal);
-            flowLayoutPanelTituloDescrip.Height = (int)((totalHeight * 0.7) - flowLayoutPanelTituloDescrip.Margin.Vertical);
+            table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50));
+            table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50));
 
-            flowLayoutPanelFechaEstado.Width = (int)((totalWidth * 0.5) - flowLayoutPanelFechaEstado.Margin.Horizontal);
-            flowLayoutPanelFechaEstado.Height = (int)((totalHeight * 0.7) - flowLayoutPanelFechaEstado.Margin.Vertical);
+            table.RowStyles.Add(new RowStyle(SizeType.Percent, 20));
+            table.RowStyles.Add(new RowStyle(SizeType.Percent, 70));
+            table.RowStyles.Add(new RowStyle(SizeType.Percent, 10));
 
-            flowLayoutPanelButtonCrear.Width = (int)(totalWidth - flowLayoutPanelButtonCrear.Margin.Horizontal);
-            flowLayoutPanelButtonCrear.Height = (int)((totalHeight * 0.1) - flowLayoutPanelButtonCrear.Margin.Vertical);
+            table.Controls.Add(flowLayoutPanelLogo, 0, 0);
+            table.SetColumnSpan(flowLayoutPanelLogo, 2);
+
+            table.Controls.Add(flowLayoutPanelTituloDescrip, 0, 1);
+            table.Controls.Add(flowLayoutPanelFechaEstado, 1, 1);
+
+            table.Controls.Add(flowLayoutPanelButtonCrear, 0, 2);
+            table.SetColumnSpan(flowLayoutPanelButtonCrear, 2);
+
+            flowLayoutPanelLogo.Dock = DockStyle.Fill;
+            flowLayoutPanelTituloDescrip.Dock = DockStyle.Fill;
+            flowLayoutPanelFechaEstado.Dock = DockStyle.Fill;
+            flowLayoutPanelButtonCrear.Dock = DockStyle.Fill;
+
+            this.Controls.Add(table);
         }
     }
+
 }

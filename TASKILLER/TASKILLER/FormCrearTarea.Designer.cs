@@ -33,21 +33,21 @@
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.labelCuentanosTarea = new System.Windows.Forms.Label();
             this.flowLayoutPanelTituloDescrip = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanelFechaEstado = new System.Windows.Forms.FlowLayoutPanel();
-            this.textBoxTitulo = new System.Windows.Forms.TextBox();
-            this.textBoxDescripcion = new System.Windows.Forms.TextBox();
             this.labelTitulo = new System.Windows.Forms.Label();
+            this.textBoxTitulo = new System.Windows.Forms.TextBox();
             this.labelDescripcion = new System.Windows.Forms.Label();
-            this.labelFechaInicio = new System.Windows.Forms.Label();
-            this.labelFinal = new System.Windows.Forms.Label();
-            this.dateTimePickerFechaInicio = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerFechaFinal = new System.Windows.Forms.DateTimePicker();
-            this.comboBoxEstado = new System.Windows.Forms.ComboBox();
-            this.labelEstado = new System.Windows.Forms.Label();
-            this.labelUsuariosAsignado = new System.Windows.Forms.Label();
-            this.checkedListBoxUsuarioAsignado = new System.Windows.Forms.CheckedListBox();
+            this.textBoxDescripcion = new System.Windows.Forms.TextBox();
             this.labelPrioridad = new System.Windows.Forms.Label();
             this.comboBoxPrioridad = new System.Windows.Forms.ComboBox();
+            this.flowLayoutPanelFechaEstado = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelFechaInicio = new System.Windows.Forms.Label();
+            this.dateTimePickerFechaInicio = new System.Windows.Forms.DateTimePicker();
+            this.labelFinal = new System.Windows.Forms.Label();
+            this.dateTimePickerFechaFinal = new System.Windows.Forms.DateTimePicker();
+            this.labelEstado = new System.Windows.Forms.Label();
+            this.comboBoxEstado = new System.Windows.Forms.ComboBox();
+            this.labelUsuariosAsignado = new System.Windows.Forms.Label();
+            this.checkedListBoxUsuarioAsignado = new System.Windows.Forms.CheckedListBox();
             this.flowLayoutPanelButtonCrear = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonCrearTarea = new System.Windows.Forms.Button();
             this.flowLayoutPanelLogo.SuspendLayout();
@@ -59,11 +59,13 @@
             // 
             // flowLayoutPanelLogo
             // 
+            this.flowLayoutPanelLogo.AutoSize = true;
+            this.flowLayoutPanelLogo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flowLayoutPanelLogo.Controls.Add(this.pictureBoxLogo);
             this.flowLayoutPanelLogo.Controls.Add(this.labelCuentanosTarea);
             this.flowLayoutPanelLogo.Location = new System.Drawing.Point(-1, 3);
             this.flowLayoutPanelLogo.Name = "flowLayoutPanelLogo";
-            this.flowLayoutPanelLogo.Size = new System.Drawing.Size(1638, 215);
+            this.flowLayoutPanelLogo.Size = new System.Drawing.Size(531, 218);
             this.flowLayoutPanelLogo.TabIndex = 0;
             // 
             // pictureBoxLogo
@@ -90,6 +92,8 @@
             // 
             // flowLayoutPanelTituloDescrip
             // 
+            this.flowLayoutPanelTituloDescrip.AutoSize = true;
+            this.flowLayoutPanelTituloDescrip.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flowLayoutPanelTituloDescrip.Controls.Add(this.labelTitulo);
             this.flowLayoutPanelTituloDescrip.Controls.Add(this.textBoxTitulo);
             this.flowLayoutPanelTituloDescrip.Controls.Add(this.labelDescripcion);
@@ -99,40 +103,8 @@
             this.flowLayoutPanelTituloDescrip.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanelTituloDescrip.Location = new System.Drawing.Point(2, 224);
             this.flowLayoutPanelTituloDescrip.Name = "flowLayoutPanelTituloDescrip";
-            this.flowLayoutPanelTituloDescrip.Size = new System.Drawing.Size(762, 547);
+            this.flowLayoutPanelTituloDescrip.Size = new System.Drawing.Size(581, 440);
             this.flowLayoutPanelTituloDescrip.TabIndex = 1;
-            // 
-            // flowLayoutPanelFechaEstado
-            // 
-            this.flowLayoutPanelFechaEstado.AutoScroll = true;
-            this.flowLayoutPanelFechaEstado.Controls.Add(this.labelFechaInicio);
-            this.flowLayoutPanelFechaEstado.Controls.Add(this.dateTimePickerFechaInicio);
-            this.flowLayoutPanelFechaEstado.Controls.Add(this.labelFinal);
-            this.flowLayoutPanelFechaEstado.Controls.Add(this.dateTimePickerFechaFinal);
-            this.flowLayoutPanelFechaEstado.Controls.Add(this.labelEstado);
-            this.flowLayoutPanelFechaEstado.Controls.Add(this.comboBoxEstado);
-            this.flowLayoutPanelFechaEstado.Controls.Add(this.labelUsuariosAsignado);
-            this.flowLayoutPanelFechaEstado.Controls.Add(this.checkedListBoxUsuarioAsignado);
-            this.flowLayoutPanelFechaEstado.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelFechaEstado.Location = new System.Drawing.Point(770, 224);
-            this.flowLayoutPanelFechaEstado.Name = "flowLayoutPanelFechaEstado";
-            this.flowLayoutPanelFechaEstado.Size = new System.Drawing.Size(867, 547);
-            this.flowLayoutPanelFechaEstado.TabIndex = 2;
-            // 
-            // textBoxTitulo
-            // 
-            this.textBoxTitulo.Location = new System.Drawing.Point(3, 28);
-            this.textBoxTitulo.Name = "textBoxTitulo";
-            this.textBoxTitulo.Size = new System.Drawing.Size(323, 31);
-            this.textBoxTitulo.TabIndex = 0;
-            // 
-            // textBoxDescripcion
-            // 
-            this.textBoxDescripcion.Location = new System.Drawing.Point(3, 90);
-            this.textBoxDescripcion.Multiline = true;
-            this.textBoxDescripcion.Name = "textBoxDescripcion";
-            this.textBoxDescripcion.Size = new System.Drawing.Size(575, 283);
-            this.textBoxDescripcion.TabIndex = 1;
             // 
             // labelTitulo
             // 
@@ -143,6 +115,13 @@
             this.labelTitulo.TabIndex = 2;
             this.labelTitulo.Text = "TÍTULO:";
             // 
+            // textBoxTitulo
+            // 
+            this.textBoxTitulo.Location = new System.Drawing.Point(3, 28);
+            this.textBoxTitulo.Name = "textBoxTitulo";
+            this.textBoxTitulo.Size = new System.Drawing.Size(323, 31);
+            this.textBoxTitulo.TabIndex = 0;
+            // 
             // labelDescripcion
             // 
             this.labelDescripcion.AutoSize = true;
@@ -152,71 +131,13 @@
             this.labelDescripcion.TabIndex = 3;
             this.labelDescripcion.Text = "DESCRIPCIÓN:";
             // 
-            // labelFechaInicio
+            // textBoxDescripcion
             // 
-            this.labelFechaInicio.AutoSize = true;
-            this.labelFechaInicio.Location = new System.Drawing.Point(3, 0);
-            this.labelFechaInicio.Name = "labelFechaInicio";
-            this.labelFechaInicio.Size = new System.Drawing.Size(156, 25);
-            this.labelFechaInicio.TabIndex = 0;
-            this.labelFechaInicio.Text = "FECHA INICIO:";
-            // 
-            // labelFinal
-            // 
-            this.labelFinal.AutoSize = true;
-            this.labelFinal.Location = new System.Drawing.Point(3, 62);
-            this.labelFinal.Name = "labelFinal";
-            this.labelFinal.Size = new System.Drawing.Size(154, 25);
-            this.labelFinal.TabIndex = 1;
-            this.labelFinal.Text = "FECHA FINAL:";
-            // 
-            // dateTimePickerFechaInicio
-            // 
-            this.dateTimePickerFechaInicio.Location = new System.Drawing.Point(3, 28);
-            this.dateTimePickerFechaInicio.Name = "dateTimePickerFechaInicio";
-            this.dateTimePickerFechaInicio.Size = new System.Drawing.Size(683, 31);
-            this.dateTimePickerFechaInicio.TabIndex = 2;
-            // 
-            // dateTimePickerFechaFinal
-            // 
-            this.dateTimePickerFechaFinal.Location = new System.Drawing.Point(3, 90);
-            this.dateTimePickerFechaFinal.Name = "dateTimePickerFechaFinal";
-            this.dateTimePickerFechaFinal.Size = new System.Drawing.Size(683, 31);
-            this.dateTimePickerFechaFinal.TabIndex = 3;
-            // 
-            // comboBoxEstado
-            // 
-            this.comboBoxEstado.FormattingEnabled = true;
-            this.comboBoxEstado.Location = new System.Drawing.Point(3, 152);
-            this.comboBoxEstado.Name = "comboBoxEstado";
-            this.comboBoxEstado.Size = new System.Drawing.Size(683, 33);
-            this.comboBoxEstado.TabIndex = 4;
-            // 
-            // labelEstado
-            // 
-            this.labelEstado.AutoSize = true;
-            this.labelEstado.Location = new System.Drawing.Point(3, 124);
-            this.labelEstado.Name = "labelEstado";
-            this.labelEstado.Size = new System.Drawing.Size(104, 25);
-            this.labelEstado.TabIndex = 5;
-            this.labelEstado.Text = "ESTADO:";
-            // 
-            // labelUsuariosAsignado
-            // 
-            this.labelUsuariosAsignado.AutoSize = true;
-            this.labelUsuariosAsignado.Location = new System.Drawing.Point(3, 188);
-            this.labelUsuariosAsignado.Name = "labelUsuariosAsignado";
-            this.labelUsuariosAsignado.Size = new System.Drawing.Size(227, 25);
-            this.labelUsuariosAsignado.TabIndex = 7;
-            this.labelUsuariosAsignado.Text = "USUARIO ASIGNADO:";
-            // 
-            // checkedListBoxUsuarioAsignado
-            // 
-            this.checkedListBoxUsuarioAsignado.FormattingEnabled = true;
-            this.checkedListBoxUsuarioAsignado.Location = new System.Drawing.Point(3, 216);
-            this.checkedListBoxUsuarioAsignado.Name = "checkedListBoxUsuarioAsignado";
-            this.checkedListBoxUsuarioAsignado.Size = new System.Drawing.Size(683, 256);
-            this.checkedListBoxUsuarioAsignado.TabIndex = 8;
+            this.textBoxDescripcion.Location = new System.Drawing.Point(3, 90);
+            this.textBoxDescripcion.Multiline = true;
+            this.textBoxDescripcion.Name = "textBoxDescripcion";
+            this.textBoxDescripcion.Size = new System.Drawing.Size(575, 283);
+            this.textBoxDescripcion.TabIndex = 1;
             // 
             // labelPrioridad
             // 
@@ -235,25 +156,112 @@
             this.comboBoxPrioridad.Size = new System.Drawing.Size(575, 33);
             this.comboBoxPrioridad.TabIndex = 5;
             // 
+            // flowLayoutPanelFechaEstado
+            // 
+            this.flowLayoutPanelFechaEstado.AutoScroll = true;
+            this.flowLayoutPanelFechaEstado.AutoSize = true;
+            this.flowLayoutPanelFechaEstado.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanelFechaEstado.Controls.Add(this.labelFechaInicio);
+            this.flowLayoutPanelFechaEstado.Controls.Add(this.dateTimePickerFechaInicio);
+            this.flowLayoutPanelFechaEstado.Controls.Add(this.labelFinal);
+            this.flowLayoutPanelFechaEstado.Controls.Add(this.dateTimePickerFechaFinal);
+            this.flowLayoutPanelFechaEstado.Controls.Add(this.labelEstado);
+            this.flowLayoutPanelFechaEstado.Controls.Add(this.comboBoxEstado);
+            this.flowLayoutPanelFechaEstado.Controls.Add(this.labelUsuariosAsignado);
+            this.flowLayoutPanelFechaEstado.Controls.Add(this.checkedListBoxUsuarioAsignado);
+            this.flowLayoutPanelFechaEstado.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanelFechaEstado.Location = new System.Drawing.Point(770, 224);
+            this.flowLayoutPanelFechaEstado.Name = "flowLayoutPanelFechaEstado";
+            this.flowLayoutPanelFechaEstado.Size = new System.Drawing.Size(689, 475);
+            this.flowLayoutPanelFechaEstado.TabIndex = 2;
+            // 
+            // labelFechaInicio
+            // 
+            this.labelFechaInicio.AutoSize = true;
+            this.labelFechaInicio.Location = new System.Drawing.Point(3, 0);
+            this.labelFechaInicio.Name = "labelFechaInicio";
+            this.labelFechaInicio.Size = new System.Drawing.Size(156, 25);
+            this.labelFechaInicio.TabIndex = 0;
+            this.labelFechaInicio.Text = "FECHA INICIO:";
+            // 
+            // dateTimePickerFechaInicio
+            // 
+            this.dateTimePickerFechaInicio.Location = new System.Drawing.Point(3, 28);
+            this.dateTimePickerFechaInicio.Name = "dateTimePickerFechaInicio";
+            this.dateTimePickerFechaInicio.Size = new System.Drawing.Size(683, 31);
+            this.dateTimePickerFechaInicio.TabIndex = 2;
+            // 
+            // labelFinal
+            // 
+            this.labelFinal.AutoSize = true;
+            this.labelFinal.Location = new System.Drawing.Point(3, 62);
+            this.labelFinal.Name = "labelFinal";
+            this.labelFinal.Size = new System.Drawing.Size(154, 25);
+            this.labelFinal.TabIndex = 1;
+            this.labelFinal.Text = "FECHA FINAL:";
+            // 
+            // dateTimePickerFechaFinal
+            // 
+            this.dateTimePickerFechaFinal.Location = new System.Drawing.Point(3, 90);
+            this.dateTimePickerFechaFinal.Name = "dateTimePickerFechaFinal";
+            this.dateTimePickerFechaFinal.Size = new System.Drawing.Size(683, 31);
+            this.dateTimePickerFechaFinal.TabIndex = 3;
+            // 
+            // labelEstado
+            // 
+            this.labelEstado.AutoSize = true;
+            this.labelEstado.Location = new System.Drawing.Point(3, 124);
+            this.labelEstado.Name = "labelEstado";
+            this.labelEstado.Size = new System.Drawing.Size(104, 25);
+            this.labelEstado.TabIndex = 5;
+            this.labelEstado.Text = "ESTADO:";
+            // 
+            // comboBoxEstado
+            // 
+            this.comboBoxEstado.FormattingEnabled = true;
+            this.comboBoxEstado.Location = new System.Drawing.Point(3, 152);
+            this.comboBoxEstado.Name = "comboBoxEstado";
+            this.comboBoxEstado.Size = new System.Drawing.Size(683, 33);
+            this.comboBoxEstado.TabIndex = 4;
+            // 
+            // labelUsuariosAsignado
+            // 
+            this.labelUsuariosAsignado.AutoSize = true;
+            this.labelUsuariosAsignado.Location = new System.Drawing.Point(3, 188);
+            this.labelUsuariosAsignado.Name = "labelUsuariosAsignado";
+            this.labelUsuariosAsignado.Size = new System.Drawing.Size(227, 25);
+            this.labelUsuariosAsignado.TabIndex = 7;
+            this.labelUsuariosAsignado.Text = "USUARIO ASIGNADO:";
+            // 
+            // checkedListBoxUsuarioAsignado
+            // 
+            this.checkedListBoxUsuarioAsignado.FormattingEnabled = true;
+            this.checkedListBoxUsuarioAsignado.Location = new System.Drawing.Point(3, 216);
+            this.checkedListBoxUsuarioAsignado.Name = "checkedListBoxUsuarioAsignado";
+            this.checkedListBoxUsuarioAsignado.Size = new System.Drawing.Size(683, 256);
+            this.checkedListBoxUsuarioAsignado.TabIndex = 8;
+            // 
             // flowLayoutPanelButtonCrear
             // 
+            this.flowLayoutPanelButtonCrear.AutoSize = true;
+            this.flowLayoutPanelButtonCrear.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flowLayoutPanelButtonCrear.Controls.Add(this.buttonCrearTarea);
             this.flowLayoutPanelButtonCrear.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanelButtonCrear.Location = new System.Drawing.Point(5, 777);
             this.flowLayoutPanelButtonCrear.Name = "flowLayoutPanelButtonCrear";
-            this.flowLayoutPanelButtonCrear.Size = new System.Drawing.Size(1632, 72);
+            this.flowLayoutPanelButtonCrear.Size = new System.Drawing.Size(184, 74);
             this.flowLayoutPanelButtonCrear.TabIndex = 3;
             // 
             // buttonCrearTarea
             // 
-            this.buttonCrearTarea.Location = new System.Drawing.Point(1451, 3);
+            this.buttonCrearTarea.Location = new System.Drawing.Point(3, 3);
             this.buttonCrearTarea.Name = "buttonCrearTarea";
             this.buttonCrearTarea.Size = new System.Drawing.Size(178, 68);
             this.buttonCrearTarea.TabIndex = 0;
             this.buttonCrearTarea.Text = "Crear Tarea";
             this.buttonCrearTarea.UseVisualStyleBackColor = true;
             // 
-            // CrearTarea
+            // FormCrearTarea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -264,7 +272,7 @@
             this.Controls.Add(this.flowLayoutPanelLogo);
             this.Controls.Add(this.flowLayoutPanelButtonCrear);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "CrearTarea";
+            this.Name = "FormCrearTarea";
             this.Text = "Crear nueva tarea";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.flowLayoutPanelLogo.ResumeLayout(false);
@@ -276,6 +284,7 @@
             this.flowLayoutPanelFechaEstado.PerformLayout();
             this.flowLayoutPanelButtonCrear.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
