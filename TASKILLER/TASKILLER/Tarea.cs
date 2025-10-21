@@ -8,12 +8,19 @@ using System.Threading.Tasks;
 
 namespace TASKILLER
 {
+    public enum Prioridad
+    {
+        Alta = 1,
+        Media = 2,
+        Baja = 3
+    }
+
     public class Tarea
     {
         public Guid IdTarea { get; set; }
         public String Nombre { get; set; }
         public String Descripcion { get; set; }
-        public int Prioridad { get; set; } // 1: Alta 2: Media 3: Baja
+        public Prioridad Prioridad { get; set; } 
         public DateTime FechaInicio { get; set; }
         public DateTime FechaFinal { get; set; }
         public List<Usuario> UsuariosAsignados { get; set; }
@@ -24,7 +31,7 @@ namespace TASKILLER
 
         public Tarea() { }
 
-        public Tarea(Guid IdTarea, String Nombre, String Descripcion, int Prioridad, DateTime FechaInicio, DateTime FechaFinal, List<Usuario> UsuariosAsignados, Guid IdProyecto, int Estado)
+        public Tarea(Guid IdTarea, String Nombre, String Descripcion, Prioridad Prioridad, DateTime FechaInicio, DateTime FechaFinal, List<Usuario> UsuariosAsignados, Guid IdProyecto, int Estado)
         {
             this.IdTarea = Guid.NewGuid();
             this.Nombre = Nombre;
@@ -37,7 +44,7 @@ namespace TASKILLER
             this.Estado = Estado;
         }
 
-        public Tarea(Guid IdTarea, String Nombre, String Descripcion, int Prioridad, DateTime FechaInicio, DateTime FechaFinal, List<Usuario> UsuariosAsignados, Guid IdProyecto, int Estado, Guid IdTareaPadre, List<Tarea> Subtareas)
+        public Tarea(Guid IdTarea, String Nombre, String Descripcion, Prioridad Prioridad, DateTime FechaInicio, DateTime FechaFinal, List<Usuario> UsuariosAsignados, Guid IdProyecto, int Estado, Guid IdTareaPadre, List<Tarea> Subtareas)
         {
             this.IdTarea = Guid.NewGuid();
             this.Nombre = Nombre;

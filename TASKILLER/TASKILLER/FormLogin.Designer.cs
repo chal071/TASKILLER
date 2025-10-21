@@ -30,16 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelIniciaSesion = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelConTuCuenta = new System.Windows.Forms.Label();
+            this.labelTaskiller = new System.Windows.Forms.Label();
             this.textBoxMail = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.buttonIniciarSesion = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelMail = new System.Windows.Forms.Label();
+            this.labelPassword = new System.Windows.Forms.Label();
+            this.linkLabelCredenciales = new System.Windows.Forms.LinkLabel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -53,16 +56,16 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // labelIniciaSesion
             // 
-            this.label1.AutoSize = true;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 155);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Inicia sesión";
+            this.labelIniciaSesion.AutoSize = true;
+            this.labelIniciaSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelIniciaSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIniciaSesion.Location = new System.Drawing.Point(39, 154);
+            this.labelIniciaSesion.Name = "labelIniciaSesion";
+            this.labelIniciaSesion.Size = new System.Drawing.Size(132, 25);
+            this.labelIniciaSesion.TabIndex = 1;
+            this.labelIniciaSesion.Text = "Inicia sesión";
             // 
             // label2
             // 
@@ -72,39 +75,40 @@
             this.label2.Size = new System.Drawing.Size(0, 16);
             this.label2.TabIndex = 2;
             // 
-            // label3
+            // labelConTuCuenta
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(39, 191);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(156, 25);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "con tu cuenta de";
+            this.labelConTuCuenta.AutoSize = true;
+            this.labelConTuCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelConTuCuenta.Location = new System.Drawing.Point(39, 190);
+            this.labelConTuCuenta.Name = "labelConTuCuenta";
+            this.labelConTuCuenta.Size = new System.Drawing.Size(156, 25);
+            this.labelConTuCuenta.TabIndex = 3;
+            this.labelConTuCuenta.Text = "con tu cuenta de";
             // 
-            // label4
+            // labelTaskiller
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(39, 227);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(129, 25);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "TASKILLER";
+            this.labelTaskiller.AutoSize = true;
+            this.labelTaskiller.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTaskiller.Location = new System.Drawing.Point(39, 226);
+            this.labelTaskiller.Name = "labelTaskiller";
+            this.labelTaskiller.Size = new System.Drawing.Size(129, 25);
+            this.labelTaskiller.TabIndex = 4;
+            this.labelTaskiller.Text = "TASKILLER";
             // 
             // textBoxMail
             // 
-            this.textBoxMail.Location = new System.Drawing.Point(243, 178);
+            this.textBoxMail.Location = new System.Drawing.Point(258, 177);
             this.textBoxMail.Name = "textBoxMail";
             this.textBoxMail.Size = new System.Drawing.Size(259, 22);
             this.textBoxMail.TabIndex = 5;
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(243, 230);
+            this.textBoxPassword.Location = new System.Drawing.Point(258, 234);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(259, 22);
             this.textBoxPassword.TabIndex = 6;
+            this.textBoxPassword.UseSystemPasswordChar = true;
             // 
             // buttonIniciarSesion
             // 
@@ -112,7 +116,7 @@
             this.buttonIniciarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.buttonIniciarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonIniciarSesion.Location = new System.Drawing.Point(383, 282);
+            this.buttonIniciarSesion.Location = new System.Drawing.Point(398, 306);
             this.buttonIniciarSesion.Name = "buttonIniciarSesion";
             this.buttonIniciarSesion.Size = new System.Drawing.Size(119, 40);
             this.buttonIniciarSesion.TabIndex = 7;
@@ -120,44 +124,69 @@
             this.buttonIniciarSesion.UseVisualStyleBackColor = false;
             this.buttonIniciarSesion.Click += new System.EventHandler(this.ButtonIniciarSesion_Click);
             // 
-            // label5
+            // labelMail
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(240, 155);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 16);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Cuenta de mail:";
+            this.labelMail.AutoSize = true;
+            this.labelMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMail.Location = new System.Drawing.Point(255, 154);
+            this.labelMail.Name = "labelMail";
+            this.labelMail.Size = new System.Drawing.Size(139, 16);
+            this.labelMail.TabIndex = 8;
+            this.labelMail.Text = "Correo electrónico:";
             // 
-            // label6
+            // labelPassword
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(240, 207);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 16);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Contraseña:";
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPassword.Location = new System.Drawing.Point(255, 211);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(90, 16);
+            this.labelPassword.TabIndex = 9;
+            this.labelPassword.Text = "Contraseña:";
+            // 
+            // linkLabelCredenciales
+            // 
+            this.linkLabelCredenciales.AutoSize = true;
+            this.linkLabelCredenciales.Location = new System.Drawing.Point(255, 271);
+            this.linkLabelCredenciales.Name = "linkLabelCredenciales";
+            this.linkLabelCredenciales.Size = new System.Drawing.Size(185, 16);
+            this.linkLabelCredenciales.TabIndex = 10;
+            this.linkLabelCredenciales.TabStop = true;
+            this.linkLabelCredenciales.Text = "¿Has olvidado tu contraseña?";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(12, 366);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(534, 267);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
             // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(558, 346);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.ClientSize = new System.Drawing.Size(558, 646);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.buttonIniciarSesion);
+            this.Controls.Add(this.linkLabelCredenciales);
+            this.Controls.Add(this.labelPassword);
+            this.Controls.Add(this.labelMail);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxMail);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelTaskiller);
+            this.Controls.Add(this.labelConTuCuenta);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelIniciaSesion);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormLogin";
             this.Text = "TASKILLER - Login";
             this.Load += new System.EventHandler(this.FormLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,14 +195,16 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelIniciaSesion;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelConTuCuenta;
+        private System.Windows.Forms.Label labelTaskiller;
         private System.Windows.Forms.TextBox textBoxMail;
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Button buttonIniciarSesion;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelMail;
+        private System.Windows.Forms.Label labelPassword;
+        private System.Windows.Forms.LinkLabel linkLabelCredenciales;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

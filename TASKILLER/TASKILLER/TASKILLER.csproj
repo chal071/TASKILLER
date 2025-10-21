@@ -58,17 +58,17 @@
     <Compile Include="FormEdicionRoles.Designer.cs">
       <DependentUpon>FormEdicionRoles.cs</DependentUpon>
     </Compile>
-    <Compile Include="CrearTarea.cs">
+    <Compile Include="FormCrearTarea.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CrearTarea.Designer.cs">
-      <DependentUpon>CrearTarea.cs</DependentUpon>
+    <Compile Include="FormCrearTarea.Designer.cs">
+      <DependentUpon>FormCrearTarea.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditarEliminarProyecto.cs">
+    <Compile Include="FormEditarEliminarProyecto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditarEliminarProyecto.Designer.cs">
-      <DependentUpon>EditarEliminarProyecto.cs</DependentUpon>
+    <Compile Include="FormEditarEliminarProyecto.Designer.cs">
+      <DependentUpon>FormEditarEliminarProyecto.cs</DependentUpon>
     </Compile>
     <Compile Include="FormCrearProyecto.cs">
       <SubType>Form</SubType>
@@ -96,17 +96,17 @@
     </Compile>
     <Compile Include="Fuentes.cs" />
     <Compile Include="Helpers.cs" />
-    <Compile Include="ListaProyectos.cs">
+    <Compile Include="FormListaProyectos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListaProyectos.Designer.cs">
-      <DependentUpon>ListaProyectos.cs</DependentUpon>
+    <Compile Include="FormListaProyectos.Designer.cs">
+      <DependentUpon>FormListaProyectos.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListaTareas.cs">
+    <Compile Include="FormListaTareas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListaTareas.Designer.cs">
-      <DependentUpon>ListaTareas.cs</DependentUpon>
+    <Compile Include="FormListaTareas.Designer.cs">
+      <DependentUpon>FormListaTareas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -141,13 +141,13 @@
     <Compile Include="TareaControl.Designer.cs">
       <DependentUpon>TareaControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CrearTarea.resx">
-      <DependentUpon>CrearTarea.cs</DependentUpon>
+    <EmbeddedResource Include="FormCrearTarea.resx">
+      <DependentUpon>FormCrearTarea.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="Rol.cs" />
     <Compile Include="Usuario.cs" />
-    <EmbeddedResource Include="EditarEliminarProyecto.resx">
-      <DependentUpon>EditarEliminarProyecto.cs</DependentUpon>
+    <EmbeddedResource Include="FormEditarEliminarProyecto.resx">
+      <DependentUpon>FormEditarEliminarProyecto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCrearProyecto.resx">
       <DependentUpon>FormCrearProyecto.cs</DependentUpon>
@@ -161,11 +161,11 @@
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListaProyectos.resx">
-      <DependentUpon>ListaProyectos.cs</DependentUpon>
+    <EmbeddedResource Include="FormListaProyectos.resx">
+      <DependentUpon>FormListaProyectos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListaTareas.resx">
-      <DependentUpon>ListaTareas.cs</DependentUpon>
+    <EmbeddedResource Include="FormListaTareas.resx">
+      <DependentUpon>FormListaTareas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

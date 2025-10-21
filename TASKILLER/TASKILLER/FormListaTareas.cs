@@ -11,16 +11,16 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TASKILLER
 {
-    public partial class ListaTareas : Form
+    public partial class FormListaTareas : Form
     {
-        public ListaTareas()
+        public FormListaTareas()
         {
             InitializeComponent();
             AplicarFontALabels();
-            this.Resize += FlowLayoutPanels_Resize;
+            this.Resize += Form_Resize;
         }
 
-        private void FlowLayoutPanels_Resize(object sender, EventArgs e)
+        private void Form_Resize(object sender, EventArgs e)
         {
             int totalWidth = this.ClientSize.Width;
             int totalHeight = this.ClientSize.Height;

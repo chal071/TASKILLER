@@ -1,6 +1,6 @@
 ﻿namespace TASKILLER
 {
-    partial class EditarEliminarProyecto
+    partial class FormEditarEliminarProyecto
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditarEliminarProyecto));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditarEliminarProyecto));
             this.panelInfo = new System.Windows.Forms.Panel();
             this.buttonEditarProyecto = new System.Windows.Forms.Button();
             this.dateTimePickerFechaFinal = new System.Windows.Forms.DateTimePicker();

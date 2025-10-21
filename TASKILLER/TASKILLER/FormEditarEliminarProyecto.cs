@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TASKILLER
 {
-    public partial class EditarEliminarProyecto : Form
+    public partial class FormEditarEliminarProyecto : Form
     {
-        public EditarEliminarProyecto()
+        public FormEditarEliminarProyecto()
         {
             InitializeComponent();
             Helpers.AplicarFuente(this, Fuentes.Montserrat);
