@@ -47,7 +47,6 @@ namespace TASKILLER
                 {
                     if (user.Mail.Equals(email) && user.Contrasena.Equals(password))
                     {
-                        Program.usuarioActual = user;
                         FormInicio formInicio = new FormInicio();
                         formInicio.Show();
                         this.Hide();

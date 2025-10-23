@@ -68,7 +68,6 @@
             this.labelCuentanosProyecto.TabIndex = 1;
             this.labelCuentanosProyecto.Text = "Cuéntanos sobre tu nuevo proyecto...";
             this.labelCuentanosProyecto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelCuentanosProyecto.Click += new System.EventHandler(this.labelCuentanosProyecto_Click);
             // 
             // textBoxTitulo
             // 
@@ -87,7 +86,6 @@
             this.comboBoxEstado.Name = "comboBoxEstado";
             this.comboBoxEstado.Size = new System.Drawing.Size(403, 24);
             this.comboBoxEstado.TabIndex = 5;
-            this.comboBoxEstado.SelectedIndexChanged += new System.EventHandler(this.comboBoxEstado_SelectedIndexChanged);
             // 
             // buttonCrearProyecto
             // 
@@ -98,6 +96,7 @@
             this.buttonCrearProyecto.TabIndex = 6;
             this.buttonCrearProyecto.Text = "Crear proyecto";
             this.buttonCrearProyecto.UseVisualStyleBackColor = true;
+            this.buttonCrearProyecto.Click += new System.EventHandler(this.buttonCrearProyecto_Click);
             // 
             // labelTitulo
             // 
@@ -173,7 +172,6 @@
             this.panelInfo.Name = "panelInfo";
             this.panelInfo.Size = new System.Drawing.Size(1044, 779);
             this.panelInfo.TabIndex = 13;
-            this.panelInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // dateTimePickerFechaFinal
             // 

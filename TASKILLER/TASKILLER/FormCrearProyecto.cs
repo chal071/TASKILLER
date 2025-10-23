@@ -13,9 +13,18 @@ namespace TASKILLER
 {
     public partial class FormCrearProyecto : Form
     {
-        public FormCrearProyecto()
+        private List<Proyecto> _proyectos;
+        private List<Tarea> _tareas;
+        private List<Usuario> _usuarios;
+        private List<Rol> _roles;
+
+        public FormCrearProyecto(List<Proyecto> proyectos, List<Tarea> tareas, List<Usuario> usuarios, List<Rol> roles)
         {
             InitializeComponent();
+            _proyectos = proyectos;
+            _tareas = tareas;
+            _usuarios = usuarios;
+            _roles = roles;
             this.Resize += Form1_Resize;
             panelInfo.Left = (this.ClientSize.Width - panelInfo.Width) / 2;
             panelInfo.Top = (this.ClientSize.Height - panelInfo.Height) / 2;
@@ -42,19 +51,10 @@ namespace TASKILLER
             panelInfo.Top = (this.ClientSize.Height - panelInfo.Height) / 2;
         }
 
-        private void comboBoxEstado_SelectedIndexChanged(object sender, EventArgs e)
+        private void buttonCrearProyecto_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void labelCuentanosProyecto_Click(object sender, EventArgs e)
-        {
-
+            GestionDatos.GuardarDatos(_proyectos, _tareas, _usuarios, _roles);
+            MessageBox.Show("Datos guardados y cifrados correctamente!");
         }
     }
 }
