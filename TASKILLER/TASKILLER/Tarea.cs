@@ -18,7 +18,7 @@ namespace TASKILLER
     public class Tarea
     {
         public Guid Id { get; set; }
-        public String Nombre { get; set; }
+        public String Titulo { get; set; }
         public String Descripcion { get; set; }
         public Prioridad Prioridad { get; set; } 
         public DateTime FechaInicio { get; set; }
@@ -35,7 +35,7 @@ namespace TASKILLER
             FechaInicio, DateTime FechaFinal, List<Guid> UsuariosAsignados, Guid IdProyecto, int Estado)
         {
             this.Id = Guid.NewGuid();
-            this.Nombre = Nombre;
+            this.Titulo = Nombre;
             this.Descripcion = Descripcion;
             this.Prioridad = Prioridad;
             this.FechaInicio = FechaInicio;
@@ -50,7 +50,7 @@ namespace TASKILLER
             Guid IdTareaPadre, List<Tarea> Subtareas)
         {
             this.Id = Guid.NewGuid();
-            this.Nombre = Nombre;
+            this.Titulo = Nombre;
             this.Descripcion = Descripcion;
             this.Prioridad = Prioridad;
             this.FechaInicio = FechaInicio;

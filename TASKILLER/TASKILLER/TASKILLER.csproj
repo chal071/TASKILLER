@@ -220,6 +220,7 @@
     <None Include="resources\Data\TaskillerData.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="resources\fonts\Montserrat-SemiBold.ttf" />
     <None Include="resources\img\menu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

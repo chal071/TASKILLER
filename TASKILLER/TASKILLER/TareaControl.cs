@@ -22,7 +22,7 @@ namespace TASKILLER
 
         public void SetDatos(Tarea t)
         {
-            labelNombreTarea.Text = t.Nombre;
+            labelNombreTarea.Text = t.Titulo;
             dataGridViewUsuarioDeTarea.DataSource = t.UsuariosAsignados.ToList();
             labelFechasTarea.Text = t.FechaInicio + " - " + t.FechaFinal;
         }

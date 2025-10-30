@@ -56,7 +56,7 @@ namespace TASKILLER
 
             Console.WriteLine("Tareas:");
             foreach (var t in tareas)
-                Console.WriteLine($"- {t.Nombre} ({t.Id})");
+                Console.WriteLine($"- {t.Titulo} ({t.Id})");
 
             Console.WriteLine("Usuarios:");
             foreach (var u in usuarios)
