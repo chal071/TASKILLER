@@ -12,14 +12,13 @@ namespace TASKILLER
 {
     public partial class FormEditarEliminarProyecto : Form
     {
-        public FormEditarEliminarProyecto()
+        private Datos d;
+        public FormEditarEliminarProyecto(Datos datos)
         {
             InitializeComponent();
             Helpers.AplicarFuente(this, Fuentes.MontserratRegular);
             this.Resize += Form1_Resize;
-            panelInfo.Left = (this.ClientSize.Width - panelInfo.Width) / 2;
-            panelInfo.Top = (this.ClientSize.Height - panelInfo.Height) / 2;
-
+            this.d = datos;
             
 
         }

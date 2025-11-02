@@ -23,7 +23,7 @@ namespace TASKILLER
         public Prioridad Prioridad { get; set; } 
         public DateTime FechaInicio { get; set; }
         public DateTime FechaFinal { get; set; }
-        public List<Guid> UsuariosAsignados { get; set; }
+        public List<Guid> listaUsuarios { get; set; }
         public Guid IdProyecto { get; set; }
         public int Estado { get; set; } // 1: Por comenzar 2: En progreso 3: Entregado 4: Revisado 5: Bloqueado
         public Guid? IdTareaPadre { get; set; }
@@ -40,7 +40,7 @@ namespace TASKILLER
             this.Prioridad = Prioridad;
             this.FechaInicio = FechaInicio;
             this.FechaFinal = FechaFinal;
-            this.UsuariosAsignados = UsuariosAsignados;
+            this.listaUsuarios = UsuariosAsignados;
             this.IdProyecto = IdProyecto;
             this.Estado = Estado;
         }
@@ -55,7 +55,7 @@ namespace TASKILLER
             this.Prioridad = Prioridad;
             this.FechaInicio = FechaInicio;
             this.FechaFinal = FechaFinal;
-            this.UsuariosAsignados = UsuariosAsignados;
+            this.listaUsuarios = UsuariosAsignados;
             this.IdProyecto = IdProyecto;
             this.Estado = Estado;
             this.IdTareaPadre = IdTareaPadre;

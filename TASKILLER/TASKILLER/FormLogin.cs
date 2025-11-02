@@ -1,73 +1,53 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using Newtonsoft.Json.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TASKILLER
 {
     public partial class FormLogin : Form
     {
-        public FormLogin()
+        private Datos d;
+        public FormLogin(Datos datos)
         {
             InitializeComponent();
+            this.d = datos;
 
-            labelIniciaSesion.Font = new Font("Montserrat", 12, FontStyle.Bold);
-            labelConTuCuenta.Font = new Font("Montserrat", 12, FontStyle.Regular);
-            labelTaskiller.Font = new Font("Montserrat", 12, FontStyle.Bold);
-            labelMail.Font = new Font("Montserrat", 8, FontStyle.Bold);
-            labelPassword.Font = new Font("Montserrat", 8, FontStyle.Bold);
-            linkLabelCredenciales.Font = new Font("Montserrat", 8, FontStyle.Regular);
+            labelIniciaSesion.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12, FontStyle.Bold);
+            labelConTuCuenta.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12, FontStyle.Regular);
+            labelTaskiller.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12, FontStyle.Bold);
+            labelMail.Font = new Font(Fuentes.MontserratRegular.FontFamily, 8, FontStyle.Bold);
+            labelPassword.Font = new Font(Fuentes.MontserratRegular.FontFamily, 8, FontStyle.Bold);
+            linkLabelCredenciales.Font = new Font(Fuentes.MontserratRegular.FontFamily, 8, FontStyle.Regular);
         }
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-            CargarDatos();
         }
 
         private void ButtonIniciarSesion_Click(object sender, EventArgs e)
         {
             String email = textBoxMail.Text;
             String password = textBoxPassword.Text;
+
             if (email.Equals("") || password.Equals(""))
             {
                 MessageBox.Show("Por favor, rellena todos los campos.", "Error de credenciales", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                foreach (Usuario user in Program.usuarios)
+                foreach (Usuario u in d.listaUsuarios)
                 {
-                    if (user.Mail.Equals(email) && user.Contrasena.Equals(password))
+                    if (u.Mail == email && u.Contrasena == password)
                     {
-                        FormInicio formInicio = new FormInicio();
-                        formInicio.Show();
+                        FormInicio f = new FormInicio(d);
+                        f.Show();
                         this.Hide();
-                        return;
                     }
                 }
             }
-        }
-
-        private void CargarDatos()
-        {
-            string ruta = Path.Combine(Application.StartupPath, "resources", "Data", "TaskillerData.json");
-            string json = File.ReadAllText(ruta);
-
-            JObject obj = JObject.Parse(json);
-
-            List<Proyecto> proyectos = obj["listaProyectos"].ToObject<List<Proyecto>>();
-            List<Tarea> tareas = obj["listaTareas"].ToObject<List<Tarea>>();
-            List<Usuario> usuarios = obj["listaUsuarios"].ToObject<List<Usuario>>();
-            List<Rol> roles = obj["listaRoles"].ToObject<List<Rol>>();
-
         }
     }
 }

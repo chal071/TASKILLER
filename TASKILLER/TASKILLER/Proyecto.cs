@@ -24,7 +24,7 @@ namespace TASKILLER
         public DateTime FechaInicio { get; set; }
         public DateTime FechaFinal { get; set; }
         public Estado Estado { get; set; }
-        public  List<Guid> Usuarios { get; set; }
+        public  List<Guid> listaUsuarios { get; set; }
 
         public Proyecto() { }
 
@@ -37,7 +37,7 @@ namespace TASKILLER
             this.FechaInicio = fechaInicio;
             this.FechaFinal = fechaFinal;
             this.Estado = estado;
-            this.Usuarios = usuarios;
+            this.listaUsuarios = usuarios;
         }
     }
 }

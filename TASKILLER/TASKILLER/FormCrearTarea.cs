@@ -12,10 +12,12 @@ namespace TASKILLER
 {
     public partial class FormCrearTarea : Form
     {
-        public FormCrearTarea()
+        private Datos d;
+        public FormCrearTarea(Datos datos)
         {
             InitializeComponent();
             ConfigurarLayout();
+            this.d = datos;
         }
 
         private void ConfigurarLayout ()

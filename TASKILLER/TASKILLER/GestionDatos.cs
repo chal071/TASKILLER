@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using Newtonsoft.Json;
+using System.Net.NetworkInformation;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 
 
@@ -9,28 +11,31 @@ namespace TASKILLER
 {
     public class GestionDatos
     {
-        private static string clave = "MiClaveSecreta123";
-        private static string rutaCifrada = Path.Combine(Application.StartupPath, "resources", "Data", "TaskillerData.enc");
+       private static string path = Path.Combine(Application.StartupPath, "resources", "Data", "TaskillerData.json");
 
-        public static void GuardarDatos(
-            List<Proyecto> proyectos,
-            List<Tarea> tareas,
-            List<Usuario> usuarios,
-            List<Rol> roles)
+        public static Datos CargarDatos()
         {
-            var obj = new
+            if (!File.Exists(path))
             {
-                listaProyectos = proyectos,
-                listaTareas = tareas,
-                listaUsuarios = usuarios,
-                listaRoles = roles
+                return new Datos(new List<Proyecto>(), new List<Tarea>(), new List<Usuario>(), new List<Rol>());
+            }
+
+            string json = File.ReadAllText(path);
+            JObject jDatos = JObject.Parse(json);
+            Datos datos = jDatos.ToObject<Datos>();
+
+            return datos;
+        }
+
+        public static void GuardarDatos(Datos d)
+        {
+            JObject jDatos = new JObject
+            {
+                ["Proyectos"] = JArray.FromObject(d.listaProyectos), ["Tareas"] = JArray.FromObject(d.listaTareas),
+                ["Usuarios"] = JArray.FromObject(d.listaUsuarios), ["Roles"] = JArray.FromObject(d.listaRoles)
             };
 
-            string json = JsonConvert.SerializeObject(obj, Formatting.Indented);
-
-            byte[] cifrado = BlowfishHelper.Cifrar(json, clave);
-
-            File.WriteAllBytes(rutaCifrada, cifrado);
+            File.WriteAllText(path, jDatos.ToString(Formatting.Indented));
         }
     }
 }

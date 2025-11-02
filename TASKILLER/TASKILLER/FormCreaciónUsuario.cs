@@ -12,13 +12,12 @@ namespace TASKILLER
 {
     public partial class FormCreaciónUsuario : Form
     {
-        public FormCreaciónUsuario()
+        private Datos d;
+        public FormCreaciónUsuario(Datos datos)
         {
             InitializeComponent();
             this.Resize += Form1_Resize;
-            panelCreacionUser.Left = (this.ClientSize.Width - panelCreacionUser.Width) / 2;
-            panelCreacionUser.Top = (this.ClientSize.Height - panelCreacionUser.Height) / 2;
-
+            this.d = datos;
 
             labelCreaUsuario.Font = new Font("Montserrat", 20, FontStyle.Bold);
             labelNombreUsuario.Font = new Font("Montserrat", 15, FontStyle.Bold);
