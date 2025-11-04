@@ -18,12 +18,12 @@ namespace TASKILLER
     public class Tarea
     {
         public Guid Id { get; set; }
-        public String Nombre { get; set; }
+        public String Titulo { get; set; }
         public String Descripcion { get; set; }
         public Prioridad Prioridad { get; set; } 
         public DateTime FechaInicio { get; set; }
         public DateTime FechaFinal { get; set; }
-        public List<Guid> UsuariosAsignados { get; set; }
+        public List<Guid> listaUsuarios { get; set; }
         public Guid IdProyecto { get; set; }
         public int Estado { get; set; } // 1: Por comenzar 2: En progreso 3: Entregado 4: Revisado 5: Bloqueado
         public Guid? IdTareaPadre { get; set; }
@@ -35,12 +35,12 @@ namespace TASKILLER
             FechaInicio, DateTime FechaFinal, List<Guid> UsuariosAsignados, Guid IdProyecto, int Estado)
         {
             this.Id = Guid.NewGuid();
-            this.Nombre = Nombre;
+            this.Titulo = Nombre;
             this.Descripcion = Descripcion;
             this.Prioridad = Prioridad;
             this.FechaInicio = FechaInicio;
             this.FechaFinal = FechaFinal;
-            this.UsuariosAsignados = UsuariosAsignados;
+            this.listaUsuarios = UsuariosAsignados;
             this.IdProyecto = IdProyecto;
             this.Estado = Estado;
         }
@@ -50,12 +50,12 @@ namespace TASKILLER
             Guid IdTareaPadre, List<Tarea> Subtareas)
         {
             this.Id = Guid.NewGuid();
-            this.Nombre = Nombre;
+            this.Titulo = Nombre;
             this.Descripcion = Descripcion;
             this.Prioridad = Prioridad;
             this.FechaInicio = FechaInicio;
             this.FechaFinal = FechaFinal;
-            this.UsuariosAsignados = UsuariosAsignados;
+            this.listaUsuarios = UsuariosAsignados;
             this.IdProyecto = IdProyecto;
             this.Estado = Estado;
             this.IdTareaPadre = IdTareaPadre;

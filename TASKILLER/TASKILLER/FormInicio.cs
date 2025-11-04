@@ -12,9 +12,11 @@ namespace TASKILLER
 {
     public partial class FormInicio : Form
     {
-        public FormInicio()
+        private Datos d;
+        public FormInicio(Datos datos)
         {
             InitializeComponent();
+            this.d = datos;
         }
     }
 }

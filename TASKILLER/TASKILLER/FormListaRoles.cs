@@ -12,10 +12,12 @@ namespace TASKILLER
 {
     public partial class FormListaRoles : Form
     {
-        public FormListaRoles()
+        private Datos d;
+        public FormListaRoles(Datos datos)
         {
             InitializeComponent();
             labelListaRoles.Font = new Font("Montserrat", 30, FontStyle.Bold);
+            this.d = datos;
         }
 
         private void button1_Click(object sender, EventArgs e)

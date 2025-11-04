@@ -96,7 +96,6 @@
             this.buttonCrearProyecto.TabIndex = 6;
             this.buttonCrearProyecto.Text = "Crear proyecto";
             this.buttonCrearProyecto.UseVisualStyleBackColor = true;
-            this.buttonCrearProyecto.Click += new System.EventHandler(this.buttonCrearProyecto_Click);
             // 
             // labelTitulo
             // 

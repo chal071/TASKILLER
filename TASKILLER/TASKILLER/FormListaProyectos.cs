@@ -8,9 +8,11 @@ namespace TASKILLER
 {
     public partial class FormListaProyectos : Form
     {
-        public FormListaProyectos()
+        private Datos d;
+        public FormListaProyectos(Datos datos)
         {
             InitializeComponent();
+            this.d = datos;
             flowLayoutPanelListaProyectos.AutoScroll = true;
             flowLayoutPanelListaProyectos.Dock = DockStyle.Fill;
             flowLayoutPanelListaProyectos.Padding = new Padding(30);

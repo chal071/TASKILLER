@@ -13,11 +13,13 @@ namespace TASKILLER
 {
     public partial class FormListaTareas : Form
     {
-        public FormListaTareas()
+        private Datos d;
+        public FormListaTareas(Datos datos)
         {
             InitializeComponent();
             AplicarFontALabels();
             this.Resize += Form_Resize;
+            this.d = datos;
         }
 
         private void Form_Resize(object sender, EventArgs e)
