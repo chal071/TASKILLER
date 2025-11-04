@@ -21,7 +21,9 @@ namespace TASKILLER
             Application.SetCompatibleTextRenderingDefault(false);
             Fuentes.CargarFuentes();
             CargarDatos();
-            Application.Run(new FormCrearProyecto(proyectos, tareas, usuarios, roles));
+            roles.Add(new Rol("admin", new List<string> {}));
+            usuarios.Add(new Usuario("admin", "admin", "admin@taskiller.com", "admin123", );
+            Application.Run(new FormLogin());
         }
         private static void CargarDatos()
         {
