@@ -42,7 +42,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.labelIniciaSesion = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panelLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -50,18 +49,6 @@
             // panelLogin
             // 
             this.panelLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelLogin.Controls.Add(this.pictureBox2);
-            this.panelLogin.Controls.Add(this.buttonIniciarSesion);
-            this.panelLogin.Controls.Add(this.linkLabelCredenciales);
-            this.panelLogin.Controls.Add(this.labelPassword);
-            this.panelLogin.Controls.Add(this.labelMail);
-            this.panelLogin.Controls.Add(this.textBoxPassword);
-            this.panelLogin.Controls.Add(this.textBoxMail);
-            this.panelLogin.Controls.Add(this.labelTaskiller);
-            this.panelLogin.Controls.Add(this.labelConTuCuenta);
-            this.panelLogin.Controls.Add(this.label2);
-            this.panelLogin.Controls.Add(this.labelIniciaSesion);
-            this.panelLogin.Controls.Add(this.pictureBox1);
             this.panelLogin.Location = new System.Drawing.Point(12, 12);
             this.panelLogin.Name = "panelLogin";
             this.panelLogin.Size = new System.Drawing.Size(534, 622);
@@ -89,6 +76,7 @@
             this.buttonIniciarSesion.TabIndex = 19;
             this.buttonIniciarSesion.Text = "Iniciar sesión";
             this.buttonIniciarSesion.UseVisualStyleBackColor = false;
+            this.buttonIniciarSesion.Click += new System.EventHandler(this.ButtonIniciarSesion_Click);
             // 
             // linkLabelCredenciales
             // 
@@ -210,11 +198,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TASKILLER - Login";
             this.Load += new System.EventHandler(this.FormLogin_Load);
-            this.panelLogin.ResumeLayout(false);
-            this.panelLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
