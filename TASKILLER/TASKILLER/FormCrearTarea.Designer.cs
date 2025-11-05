@@ -29,237 +29,273 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCrearTarea));
-            this.flowLayoutPanelLogo = new System.Windows.Forms.FlowLayoutPanel();
+            this.grid = new System.Windows.Forms.TableLayoutPanel();
+            this.flowLayoutPanelTop = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.labelCuentanosTarea = new System.Windows.Forms.Label();
-            this.flowLayoutPanelTituloDescrip = new System.Windows.Forms.FlowLayoutPanel();
-            this.labelTitulo = new System.Windows.Forms.Label();
-            this.textBoxTitulo = new System.Windows.Forms.TextBox();
-            this.labelDescripcion = new System.Windows.Forms.Label();
-            this.textBoxDescripcion = new System.Windows.Forms.TextBox();
-            this.labelPrioridad = new System.Windows.Forms.Label();
-            this.comboBoxPrioridad = new System.Windows.Forms.ComboBox();
-            this.flowLayoutPanelFechaEstado = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelCuentanos = new System.Windows.Forms.Label();
             this.labelFechaInicio = new System.Windows.Forms.Label();
             this.dateTimePickerFechaInicio = new System.Windows.Forms.DateTimePicker();
-            this.labelFinal = new System.Windows.Forms.Label();
+            this.labelFechaFinal = new System.Windows.Forms.Label();
             this.dateTimePickerFechaFinal = new System.Windows.Forms.DateTimePicker();
             this.labelEstado = new System.Windows.Forms.Label();
             this.comboBoxEstado = new System.Windows.Forms.ComboBox();
-            this.labelUsuariosAsignado = new System.Windows.Forms.Label();
-            this.checkedListBoxUsuarioAsignado = new System.Windows.Forms.CheckedListBox();
-            this.flowLayoutPanelButtonCrear = new System.Windows.Forms.FlowLayoutPanel();
-            this.buttonCrearTarea = new System.Windows.Forms.Button();
-            this.flowLayoutPanelLogo.SuspendLayout();
+            this.labelUsuarioAsignado = new System.Windows.Forms.Label();
+            this.buttonCrear = new System.Windows.Forms.Button();
+            this.tableLayoutPanelLeft = new System.Windows.Forms.TableLayoutPanel();
+            this.labelPrioridad = new System.Windows.Forms.Label();
+            this.richTextBoxDescripcion = new System.Windows.Forms.RichTextBox();
+            this.labelTitulo = new System.Windows.Forms.Label();
+            this.labelDescripcion = new System.Windows.Forms.Label();
+            this.textBoxTitulo = new System.Windows.Forms.TextBox();
+            this.comboBoxPrioridad = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanelRight = new System.Windows.Forms.TableLayoutPanel();
+            this.checkedListBoxUsuario = new System.Windows.Forms.CheckedListBox();
+            this.grid.SuspendLayout();
+            this.flowLayoutPanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
-            this.flowLayoutPanelTituloDescrip.SuspendLayout();
-            this.flowLayoutPanelFechaEstado.SuspendLayout();
-            this.flowLayoutPanelButtonCrear.SuspendLayout();
+            this.tableLayoutPanelLeft.SuspendLayout();
+            this.tableLayoutPanelRight.SuspendLayout();
             this.SuspendLayout();
             // 
-            // flowLayoutPanelLogo
+            // grid
             // 
-            this.flowLayoutPanelLogo.AutoSize = true;
-            this.flowLayoutPanelLogo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanelLogo.Controls.Add(this.pictureBoxLogo);
-            this.flowLayoutPanelLogo.Controls.Add(this.labelCuentanosTarea);
-            this.flowLayoutPanelLogo.Location = new System.Drawing.Point(-1, 3);
-            this.flowLayoutPanelLogo.Name = "flowLayoutPanelLogo";
-            this.flowLayoutPanelLogo.Size = new System.Drawing.Size(531, 218);
-            this.flowLayoutPanelLogo.TabIndex = 0;
+            this.grid.ColumnCount = 2;
+            this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.grid.Controls.Add(this.flowLayoutPanelTop, 0, 0);
+            this.grid.Controls.Add(this.buttonCrear, 1, 2);
+            this.grid.Controls.Add(this.tableLayoutPanelLeft, 0, 1);
+            this.grid.Controls.Add(this.tableLayoutPanelRight, 1, 1);
+            this.grid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grid.Location = new System.Drawing.Point(0, 0);
+            this.grid.Margin = new System.Windows.Forms.Padding(0);
+            this.grid.Name = "grid";
+            this.grid.RowCount = 3;
+            this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.grid.Size = new System.Drawing.Size(1634, 969);
+            this.grid.TabIndex = 0;
+            // 
+            // flowLayoutPanelTop
+            // 
+            this.grid.SetColumnSpan(this.flowLayoutPanelTop, 2);
+            this.flowLayoutPanelTop.Controls.Add(this.pictureBoxLogo);
+            this.flowLayoutPanelTop.Controls.Add(this.labelCuentanos);
+            this.flowLayoutPanelTop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelTop.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanelTop.Name = "flowLayoutPanelTop";
+            this.flowLayoutPanelTop.Size = new System.Drawing.Size(1628, 187);
+            this.flowLayoutPanelTop.TabIndex = 0;
             // 
             // pictureBoxLogo
             // 
+            this.pictureBoxLogo.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureBoxLogo.Image = global::TASKILLER.Properties.Resources.LOGO;
             this.pictureBoxLogo.Location = new System.Drawing.Point(3, 3);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(326, 212);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(312, 233);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
             // 
-            // labelCuentanosTarea
+            // labelCuentanos
             // 
-            this.labelCuentanosTarea.AutoSize = true;
-            this.labelCuentanosTarea.Location = new System.Drawing.Point(336, 0);
-            this.labelCuentanosTarea.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelCuentanosTarea.MaximumSize = new System.Drawing.Size(900, 0);
-            this.labelCuentanosTarea.Name = "labelCuentanosTarea";
-            this.labelCuentanosTarea.Size = new System.Drawing.Size(191, 50);
-            this.labelCuentanosTarea.TabIndex = 2;
-            this.labelCuentanosTarea.Text = "Cuéntanos sobre \r\nesta nueva tarea...";
-            this.labelCuentanosTarea.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // flowLayoutPanelTituloDescrip
-            // 
-            this.flowLayoutPanelTituloDescrip.AutoSize = true;
-            this.flowLayoutPanelTituloDescrip.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanelTituloDescrip.Controls.Add(this.labelTitulo);
-            this.flowLayoutPanelTituloDescrip.Controls.Add(this.textBoxTitulo);
-            this.flowLayoutPanelTituloDescrip.Controls.Add(this.labelDescripcion);
-            this.flowLayoutPanelTituloDescrip.Controls.Add(this.textBoxDescripcion);
-            this.flowLayoutPanelTituloDescrip.Controls.Add(this.labelPrioridad);
-            this.flowLayoutPanelTituloDescrip.Controls.Add(this.comboBoxPrioridad);
-            this.flowLayoutPanelTituloDescrip.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelTituloDescrip.Location = new System.Drawing.Point(2, 224);
-            this.flowLayoutPanelTituloDescrip.Name = "flowLayoutPanelTituloDescrip";
-            this.flowLayoutPanelTituloDescrip.Size = new System.Drawing.Size(581, 440);
-            this.flowLayoutPanelTituloDescrip.TabIndex = 1;
-            // 
-            // labelTitulo
-            // 
-            this.labelTitulo.AutoSize = true;
-            this.labelTitulo.Location = new System.Drawing.Point(3, 0);
-            this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(92, 25);
-            this.labelTitulo.TabIndex = 2;
-            this.labelTitulo.Text = "TÍTULO:";
-            // 
-            // textBoxTitulo
-            // 
-            this.textBoxTitulo.Location = new System.Drawing.Point(3, 28);
-            this.textBoxTitulo.Name = "textBoxTitulo";
-            this.textBoxTitulo.Size = new System.Drawing.Size(323, 31);
-            this.textBoxTitulo.TabIndex = 0;
-            // 
-            // labelDescripcion
-            // 
-            this.labelDescripcion.AutoSize = true;
-            this.labelDescripcion.Location = new System.Drawing.Point(3, 62);
-            this.labelDescripcion.Name = "labelDescripcion";
-            this.labelDescripcion.Size = new System.Drawing.Size(161, 25);
-            this.labelDescripcion.TabIndex = 3;
-            this.labelDescripcion.Text = "DESCRIPCIÓN:";
-            // 
-            // textBoxDescripcion
-            // 
-            this.textBoxDescripcion.Location = new System.Drawing.Point(3, 90);
-            this.textBoxDescripcion.Multiline = true;
-            this.textBoxDescripcion.Name = "textBoxDescripcion";
-            this.textBoxDescripcion.Size = new System.Drawing.Size(575, 283);
-            this.textBoxDescripcion.TabIndex = 1;
-            // 
-            // labelPrioridad
-            // 
-            this.labelPrioridad.AutoSize = true;
-            this.labelPrioridad.Location = new System.Drawing.Point(3, 376);
-            this.labelPrioridad.Name = "labelPrioridad";
-            this.labelPrioridad.Size = new System.Drawing.Size(104, 25);
-            this.labelPrioridad.TabIndex = 4;
-            this.labelPrioridad.Text = "Prioridad:";
-            // 
-            // comboBoxPrioridad
-            // 
-            this.comboBoxPrioridad.FormattingEnabled = true;
-            this.comboBoxPrioridad.Location = new System.Drawing.Point(3, 404);
-            this.comboBoxPrioridad.Name = "comboBoxPrioridad";
-            this.comboBoxPrioridad.Size = new System.Drawing.Size(575, 33);
-            this.comboBoxPrioridad.TabIndex = 5;
-            // 
-            // flowLayoutPanelFechaEstado
-            // 
-            this.flowLayoutPanelFechaEstado.AutoScroll = true;
-            this.flowLayoutPanelFechaEstado.AutoSize = true;
-            this.flowLayoutPanelFechaEstado.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanelFechaEstado.Controls.Add(this.labelFechaInicio);
-            this.flowLayoutPanelFechaEstado.Controls.Add(this.dateTimePickerFechaInicio);
-            this.flowLayoutPanelFechaEstado.Controls.Add(this.labelFinal);
-            this.flowLayoutPanelFechaEstado.Controls.Add(this.dateTimePickerFechaFinal);
-            this.flowLayoutPanelFechaEstado.Controls.Add(this.labelEstado);
-            this.flowLayoutPanelFechaEstado.Controls.Add(this.comboBoxEstado);
-            this.flowLayoutPanelFechaEstado.Controls.Add(this.labelUsuariosAsignado);
-            this.flowLayoutPanelFechaEstado.Controls.Add(this.checkedListBoxUsuarioAsignado);
-            this.flowLayoutPanelFechaEstado.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelFechaEstado.Location = new System.Drawing.Point(770, 224);
-            this.flowLayoutPanelFechaEstado.Name = "flowLayoutPanelFechaEstado";
-            this.flowLayoutPanelFechaEstado.Size = new System.Drawing.Size(689, 475);
-            this.flowLayoutPanelFechaEstado.TabIndex = 2;
+            this.labelCuentanos.AutoSize = true;
+            this.labelCuentanos.Location = new System.Drawing.Point(321, 0);
+            this.labelCuentanos.Name = "labelCuentanos";
+            this.labelCuentanos.Size = new System.Drawing.Size(191, 50);
+            this.labelCuentanos.TabIndex = 1;
+            this.labelCuentanos.Text = "Cuéntanos sobre \r\nesta nueva tarea...";
             // 
             // labelFechaInicio
             // 
             this.labelFechaInicio.AutoSize = true;
+            this.labelFechaInicio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelFechaInicio.Location = new System.Drawing.Point(3, 0);
             this.labelFechaInicio.Name = "labelFechaInicio";
-            this.labelFechaInicio.Size = new System.Drawing.Size(156, 25);
+            this.labelFechaInicio.Size = new System.Drawing.Size(805, 62);
             this.labelFechaInicio.TabIndex = 0;
-            this.labelFechaInicio.Text = "FECHA INICIO:";
+            this.labelFechaInicio.Text = "FECHA INICIO";
             // 
             // dateTimePickerFechaInicio
             // 
-            this.dateTimePickerFechaInicio.Location = new System.Drawing.Point(3, 28);
+            this.dateTimePickerFechaInicio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dateTimePickerFechaInicio.Location = new System.Drawing.Point(3, 65);
             this.dateTimePickerFechaInicio.Name = "dateTimePickerFechaInicio";
-            this.dateTimePickerFechaInicio.Size = new System.Drawing.Size(683, 31);
-            this.dateTimePickerFechaInicio.TabIndex = 2;
+            this.dateTimePickerFechaInicio.Size = new System.Drawing.Size(805, 31);
+            this.dateTimePickerFechaInicio.TabIndex = 1;
             // 
-            // labelFinal
+            // labelFechaFinal
             // 
-            this.labelFinal.AutoSize = true;
-            this.labelFinal.Location = new System.Drawing.Point(3, 62);
-            this.labelFinal.Name = "labelFinal";
-            this.labelFinal.Size = new System.Drawing.Size(154, 25);
-            this.labelFinal.TabIndex = 1;
-            this.labelFinal.Text = "FECHA FINAL:";
+            this.labelFechaFinal.AutoSize = true;
+            this.labelFechaFinal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelFechaFinal.Location = new System.Drawing.Point(3, 124);
+            this.labelFechaFinal.Name = "labelFechaFinal";
+            this.labelFechaFinal.Size = new System.Drawing.Size(805, 62);
+            this.labelFechaFinal.TabIndex = 2;
+            this.labelFechaFinal.Text = "FECHA FINAL";
             // 
             // dateTimePickerFechaFinal
             // 
-            this.dateTimePickerFechaFinal.Location = new System.Drawing.Point(3, 90);
+            this.dateTimePickerFechaFinal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dateTimePickerFechaFinal.Location = new System.Drawing.Point(3, 189);
             this.dateTimePickerFechaFinal.Name = "dateTimePickerFechaFinal";
-            this.dateTimePickerFechaFinal.Size = new System.Drawing.Size(683, 31);
+            this.dateTimePickerFechaFinal.Size = new System.Drawing.Size(805, 31);
             this.dateTimePickerFechaFinal.TabIndex = 3;
             // 
             // labelEstado
             // 
             this.labelEstado.AutoSize = true;
-            this.labelEstado.Location = new System.Drawing.Point(3, 124);
+            this.labelEstado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelEstado.Location = new System.Drawing.Point(3, 248);
             this.labelEstado.Name = "labelEstado";
-            this.labelEstado.Size = new System.Drawing.Size(104, 25);
+            this.labelEstado.Size = new System.Drawing.Size(805, 62);
             this.labelEstado.TabIndex = 5;
-            this.labelEstado.Text = "ESTADO:";
+            this.labelEstado.Text = "ESTADO";
             // 
             // comboBoxEstado
             // 
+            this.comboBoxEstado.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxEstado.FormattingEnabled = true;
-            this.comboBoxEstado.Location = new System.Drawing.Point(3, 152);
+            this.comboBoxEstado.Location = new System.Drawing.Point(3, 313);
             this.comboBoxEstado.Name = "comboBoxEstado";
-            this.comboBoxEstado.Size = new System.Drawing.Size(683, 33);
+            this.comboBoxEstado.Size = new System.Drawing.Size(805, 33);
             this.comboBoxEstado.TabIndex = 4;
             // 
-            // labelUsuariosAsignado
+            // labelUsuarioAsignado
             // 
-            this.labelUsuariosAsignado.AutoSize = true;
-            this.labelUsuariosAsignado.Location = new System.Drawing.Point(3, 188);
-            this.labelUsuariosAsignado.Name = "labelUsuariosAsignado";
-            this.labelUsuariosAsignado.Size = new System.Drawing.Size(227, 25);
-            this.labelUsuariosAsignado.TabIndex = 7;
-            this.labelUsuariosAsignado.Text = "USUARIO ASIGNADO:";
+            this.labelUsuarioAsignado.AutoSize = true;
+            this.labelUsuarioAsignado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelUsuarioAsignado.Location = new System.Drawing.Point(3, 372);
+            this.labelUsuarioAsignado.Name = "labelUsuarioAsignado";
+            this.labelUsuarioAsignado.Size = new System.Drawing.Size(805, 62);
+            this.labelUsuarioAsignado.TabIndex = 6;
+            this.labelUsuarioAsignado.Text = "USUARIO ASIGNADO";
             // 
-            // checkedListBoxUsuarioAsignado
+            // buttonCrear
             // 
-            this.checkedListBoxUsuarioAsignado.FormattingEnabled = true;
-            this.checkedListBoxUsuarioAsignado.Location = new System.Drawing.Point(3, 216);
-            this.checkedListBoxUsuarioAsignado.Name = "checkedListBoxUsuarioAsignado";
-            this.checkedListBoxUsuarioAsignado.Size = new System.Drawing.Size(683, 256);
-            this.checkedListBoxUsuarioAsignado.TabIndex = 8;
+            this.buttonCrear.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buttonCrear.Location = new System.Drawing.Point(1378, 848);
+            this.buttonCrear.Name = "buttonCrear";
+            this.buttonCrear.Size = new System.Drawing.Size(253, 94);
+            this.buttonCrear.TabIndex = 3;
+            this.buttonCrear.Text = "Crear";
+            this.buttonCrear.UseVisualStyleBackColor = true;
             // 
-            // flowLayoutPanelButtonCrear
+            // tableLayoutPanelLeft
             // 
-            this.flowLayoutPanelButtonCrear.AutoSize = true;
-            this.flowLayoutPanelButtonCrear.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanelButtonCrear.Controls.Add(this.buttonCrearTarea);
-            this.flowLayoutPanelButtonCrear.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanelButtonCrear.Location = new System.Drawing.Point(5, 777);
-            this.flowLayoutPanelButtonCrear.Name = "flowLayoutPanelButtonCrear";
-            this.flowLayoutPanelButtonCrear.Size = new System.Drawing.Size(184, 74);
-            this.flowLayoutPanelButtonCrear.TabIndex = 3;
+            this.tableLayoutPanelLeft.ColumnCount = 1;
+            this.tableLayoutPanelLeft.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelLeft.Controls.Add(this.labelPrioridad, 0, 4);
+            this.tableLayoutPanelLeft.Controls.Add(this.richTextBoxDescripcion, 0, 3);
+            this.tableLayoutPanelLeft.Controls.Add(this.labelTitulo, 0, 0);
+            this.tableLayoutPanelLeft.Controls.Add(this.labelDescripcion, 0, 2);
+            this.tableLayoutPanelLeft.Controls.Add(this.textBoxTitulo, 0, 1);
+            this.tableLayoutPanelLeft.Controls.Add(this.comboBoxPrioridad, 0, 5);
+            this.tableLayoutPanelLeft.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanelLeft.Location = new System.Drawing.Point(3, 196);
+            this.tableLayoutPanelLeft.Name = "tableLayoutPanelLeft";
+            this.tableLayoutPanelLeft.RowCount = 6;
+            this.tableLayoutPanelLeft.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
+            this.tableLayoutPanelLeft.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanelLeft.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
+            this.tableLayoutPanelLeft.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46F));
+            this.tableLayoutPanelLeft.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
+            this.tableLayoutPanelLeft.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanelLeft.Size = new System.Drawing.Size(811, 623);
+            this.tableLayoutPanelLeft.TabIndex = 4;
             // 
-            // buttonCrearTarea
+            // labelPrioridad
             // 
-            this.buttonCrearTarea.Location = new System.Drawing.Point(3, 3);
-            this.buttonCrearTarea.Name = "buttonCrearTarea";
-            this.buttonCrearTarea.Size = new System.Drawing.Size(178, 68);
-            this.buttonCrearTarea.TabIndex = 0;
-            this.buttonCrearTarea.Text = "Crear Tarea";
-            this.buttonCrearTarea.UseVisualStyleBackColor = true;
+            this.labelPrioridad.AutoSize = true;
+            this.labelPrioridad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelPrioridad.Location = new System.Drawing.Point(3, 446);
+            this.labelPrioridad.Name = "labelPrioridad";
+            this.labelPrioridad.Size = new System.Drawing.Size(805, 49);
+            this.labelPrioridad.TabIndex = 4;
+            this.labelPrioridad.Text = "PRIORIDAD";
+            // 
+            // richTextBoxDescripcion
+            // 
+            this.richTextBoxDescripcion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBoxDescripcion.Location = new System.Drawing.Point(3, 163);
+            this.richTextBoxDescripcion.Name = "richTextBoxDescripcion";
+            this.richTextBoxDescripcion.Size = new System.Drawing.Size(805, 280);
+            this.richTextBoxDescripcion.TabIndex = 3;
+            this.richTextBoxDescripcion.Text = "";
+            // 
+            // labelTitulo
+            // 
+            this.labelTitulo.AutoSize = true;
+            this.labelTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelTitulo.Location = new System.Drawing.Point(3, 0);
+            this.labelTitulo.Name = "labelTitulo";
+            this.labelTitulo.Size = new System.Drawing.Size(805, 49);
+            this.labelTitulo.TabIndex = 0;
+            this.labelTitulo.Text = "TÍTULO";
+            // 
+            // labelDescripcion
+            // 
+            this.labelDescripcion.AutoSize = true;
+            this.labelDescripcion.Location = new System.Drawing.Point(3, 111);
+            this.labelDescripcion.Name = "labelDescripcion";
+            this.labelDescripcion.Size = new System.Drawing.Size(155, 25);
+            this.labelDescripcion.TabIndex = 2;
+            this.labelDescripcion.Text = "DESCRIPCIÓN";
+            // 
+            // textBoxTitulo
+            // 
+            this.textBoxTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxTitulo.Location = new System.Drawing.Point(3, 52);
+            this.textBoxTitulo.Name = "textBoxTitulo";
+            this.textBoxTitulo.Size = new System.Drawing.Size(805, 31);
+            this.textBoxTitulo.TabIndex = 1;
+            // 
+            // comboBoxPrioridad
+            // 
+            this.comboBoxPrioridad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBoxPrioridad.FormattingEnabled = true;
+            this.comboBoxPrioridad.Location = new System.Drawing.Point(3, 498);
+            this.comboBoxPrioridad.Name = "comboBoxPrioridad";
+            this.comboBoxPrioridad.Size = new System.Drawing.Size(805, 33);
+            this.comboBoxPrioridad.TabIndex = 5;
+            // 
+            // tableLayoutPanelRight
+            // 
+            this.tableLayoutPanelRight.ColumnCount = 1;
+            this.tableLayoutPanelRight.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelRight.Controls.Add(this.labelUsuarioAsignado, 0, 6);
+            this.tableLayoutPanelRight.Controls.Add(this.comboBoxEstado, 0, 5);
+            this.tableLayoutPanelRight.Controls.Add(this.labelEstado, 0, 4);
+            this.tableLayoutPanelRight.Controls.Add(this.dateTimePickerFechaFinal, 0, 3);
+            this.tableLayoutPanelRight.Controls.Add(this.labelFechaFinal, 0, 2);
+            this.tableLayoutPanelRight.Controls.Add(this.dateTimePickerFechaInicio, 0, 1);
+            this.tableLayoutPanelRight.Controls.Add(this.labelFechaInicio, 0, 0);
+            this.tableLayoutPanelRight.Controls.Add(this.checkedListBoxUsuario, 0, 7);
+            this.tableLayoutPanelRight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanelRight.Location = new System.Drawing.Point(820, 196);
+            this.tableLayoutPanelRight.Name = "tableLayoutPanelRight";
+            this.tableLayoutPanelRight.RowCount = 8;
+            this.tableLayoutPanelRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanelRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanelRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanelRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanelRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanelRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanelRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanelRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanelRight.Size = new System.Drawing.Size(811, 623);
+            this.tableLayoutPanelRight.TabIndex = 5;
+            // 
+            // checkedListBoxUsuario
+            // 
+            this.checkedListBoxUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.checkedListBoxUsuario.FormattingEnabled = true;
+            this.checkedListBoxUsuario.Location = new System.Drawing.Point(3, 437);
+            this.checkedListBoxUsuario.Name = "checkedListBoxUsuario";
+            this.checkedListBoxUsuario.Size = new System.Drawing.Size(805, 183);
+            this.checkedListBoxUsuario.TabIndex = 7;
             // 
             // FormCrearTarea
             // 
@@ -267,49 +303,45 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.ClientSize = new System.Drawing.Size(1634, 969);
-            this.Controls.Add(this.flowLayoutPanelFechaEstado);
-            this.Controls.Add(this.flowLayoutPanelTituloDescrip);
-            this.Controls.Add(this.flowLayoutPanelLogo);
-            this.Controls.Add(this.flowLayoutPanelButtonCrear);
+            this.Controls.Add(this.grid);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCrearTarea";
             this.Text = "Crear nueva tarea";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.flowLayoutPanelLogo.ResumeLayout(false);
-            this.flowLayoutPanelLogo.PerformLayout();
+            this.grid.ResumeLayout(false);
+            this.flowLayoutPanelTop.ResumeLayout(false);
+            this.flowLayoutPanelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
-            this.flowLayoutPanelTituloDescrip.ResumeLayout(false);
-            this.flowLayoutPanelTituloDescrip.PerformLayout();
-            this.flowLayoutPanelFechaEstado.ResumeLayout(false);
-            this.flowLayoutPanelFechaEstado.PerformLayout();
-            this.flowLayoutPanelButtonCrear.ResumeLayout(false);
+            this.tableLayoutPanelLeft.ResumeLayout(false);
+            this.tableLayoutPanelLeft.PerformLayout();
+            this.tableLayoutPanelRight.ResumeLayout(false);
+            this.tableLayoutPanelRight.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelLogo;
+        private System.Windows.Forms.TableLayoutPanel grid;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelTop;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
-        private System.Windows.Forms.Label labelCuentanosTarea;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelTituloDescrip;
-        private System.Windows.Forms.TextBox textBoxTitulo;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelFechaEstado;
-        private System.Windows.Forms.TextBox textBoxDescripcion;
+        private System.Windows.Forms.Label labelCuentanos;
         private System.Windows.Forms.Label labelTitulo;
+        private System.Windows.Forms.TextBox textBoxTitulo;
         private System.Windows.Forms.Label labelDescripcion;
+        private System.Windows.Forms.RichTextBox richTextBoxDescripcion;
+        private System.Windows.Forms.Label labelPrioridad;
         private System.Windows.Forms.Label labelFechaInicio;
         private System.Windows.Forms.DateTimePicker dateTimePickerFechaInicio;
-        private System.Windows.Forms.Label labelFinal;
+        private System.Windows.Forms.Label labelFechaFinal;
         private System.Windows.Forms.DateTimePicker dateTimePickerFechaFinal;
         private System.Windows.Forms.Label labelEstado;
         private System.Windows.Forms.ComboBox comboBoxEstado;
-        private System.Windows.Forms.Label labelUsuariosAsignado;
-        private System.Windows.Forms.CheckedListBox checkedListBoxUsuarioAsignado;
-        private System.Windows.Forms.Label labelPrioridad;
+        private System.Windows.Forms.Label labelUsuarioAsignado;
+        private System.Windows.Forms.Button buttonCrear;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelLeft;
         private System.Windows.Forms.ComboBox comboBoxPrioridad;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelButtonCrear;
-        private System.Windows.Forms.Button buttonCrearTarea;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelRight;
+        private System.Windows.Forms.CheckedListBox checkedListBoxUsuario;
     }
 }

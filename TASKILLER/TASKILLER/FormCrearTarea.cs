@@ -16,45 +16,40 @@ namespace TASKILLER
         public FormCrearTarea(Datos datos)
         {
             InitializeComponent();
-            ConfigurarLayout();
             this.d = datos;
+            SetFontSize();
         }
-
-        private void ConfigurarLayout ()
+        
+        public void SetFontSize()
         {
+            labelCuentanos.Font = new Font(Fuentes.MontserratBold.FontFamily, 30);
+            labelTitulo.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
+            textBoxTitulo.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
+            labelDescripcion.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
+            richTextBoxDescripcion.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
+            labelPrioridad.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
+            comboBoxPrioridad.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
+            labelFechaInicio.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
+            dateTimePickerFechaInicio.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
+            labelFechaFinal.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
+            dateTimePickerFechaFinal.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
+            labelEstado.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
+            comboBoxEstado.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
+            labelUsuarioAsignado.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
+            checkedListBoxUsuario.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
+            buttonCrear.Font = new Font(Fuentes.MontserratBold.FontFamily, 20);
 
-            var table = new TableLayoutPanel
+            checkedListBoxUsuario.Items.Clear();
+            foreach (Usuario usuario in d.listaUsuarios)
             {
-                Dock = DockStyle.Fill,
-                ColumnCount = 2,
-                RowCount = 3,
-                Padding = new Padding(0),
-                Margin = new Padding(0)
-            };
+                checkedListBoxUsuario.Items.Add(usuario.Nombre);
+            }
+            comboBoxPrioridad.DataSource = Enum.GetValues(typeof(Prioridad));
+            comboBoxEstado.DataSource = Enum.GetValues(typeof(Estado));
 
-            table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50));
-            table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50));
-
-            table.RowStyles.Add(new RowStyle(SizeType.Percent, 20));
-            table.RowStyles.Add(new RowStyle(SizeType.Percent, 70));
-            table.RowStyles.Add(new RowStyle(SizeType.Percent, 10));
-
-            table.Controls.Add(flowLayoutPanelLogo, 0, 0);
-            table.SetColumnSpan(flowLayoutPanelLogo, 2);
-
-            table.Controls.Add(flowLayoutPanelTituloDescrip, 0, 1);
-            table.Controls.Add(flowLayoutPanelFechaEstado, 1, 1);
-
-            table.Controls.Add(flowLayoutPanelButtonCrear, 0, 2);
-            table.SetColumnSpan(flowLayoutPanelButtonCrear, 2);
-
-            flowLayoutPanelLogo.Dock = DockStyle.Fill;
-            flowLayoutPanelTituloDescrip.Dock = DockStyle.Fill;
-            flowLayoutPanelFechaEstado.Dock = DockStyle.Fill;
-            flowLayoutPanelButtonCrear.Dock = DockStyle.Fill;
-
-            this.Controls.Add(table);
         }
     }
+
+   
 
 }
