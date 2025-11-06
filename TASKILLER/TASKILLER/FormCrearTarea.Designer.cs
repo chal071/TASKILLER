@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCrearTarea));
             this.grid = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanelTop = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.labelCuentanos = new System.Windows.Forms.Label();
             this.buttonCrear = new System.Windows.Forms.Button();
             this.tableLayoutPanelLeft = new System.Windows.Forms.TableLayoutPanel();
@@ -49,12 +50,11 @@
             this.dateTimePickerFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.labelFechaInicio = new System.Windows.Forms.Label();
             this.checkedListBoxUsuario = new System.Windows.Forms.CheckedListBox();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.grid.SuspendLayout();
             this.flowLayoutPanelTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.tableLayoutPanelLeft.SuspendLayout();
             this.tableLayoutPanelRight.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // grid
@@ -87,6 +87,17 @@
             this.flowLayoutPanelTop.Name = "flowLayoutPanelTop";
             this.flowLayoutPanelTop.Size = new System.Drawing.Size(1628, 187);
             this.flowLayoutPanelTop.TabIndex = 0;
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBoxLogo.Image = global::TASKILLER.Properties.Resources.LOGO;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(312, 233);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLogo.TabIndex = 0;
+            this.pictureBoxLogo.TabStop = false;
             // 
             // labelCuentanos
             // 
@@ -286,17 +297,6 @@
             this.checkedListBoxUsuario.Size = new System.Drawing.Size(805, 183);
             this.checkedListBoxUsuario.TabIndex = 7;
             // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBoxLogo.Image = global::TASKILLER.Properties.Resources.LOGO;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(3, 3);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(312, 233);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxLogo.TabIndex = 0;
-            this.pictureBoxLogo.TabStop = false;
-            // 
             // FormCrearTarea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -311,11 +311,11 @@
             this.grid.ResumeLayout(false);
             this.flowLayoutPanelTop.ResumeLayout(false);
             this.flowLayoutPanelTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.tableLayoutPanelLeft.ResumeLayout(false);
             this.tableLayoutPanelLeft.PerformLayout();
             this.tableLayoutPanelRight.ResumeLayout(false);
             this.tableLayoutPanelRight.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
