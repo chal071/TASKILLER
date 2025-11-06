@@ -104,6 +104,12 @@
     <Compile Include="FormListaRoles.Designer.cs">
       <DependentUpon>FormListaRoles.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormListaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListaUsuarios.Designer.cs">
+      <DependentUpon>FormListaUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormListaRoles.resx">
       <DependentUpon>FormListaRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListaUsuarios.resx">
+      <DependentUpon>FormListaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
