@@ -86,6 +86,12 @@
     <Compile Include="FormCrearProyecto.Designer.cs">
       <DependentUpon>FormCrearProyecto.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEditarTarea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditarTarea.Designer.cs">
+      <DependentUpon>FormEditarTarea.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCrearProyecto.resx">
       <DependentUpon>FormCrearProyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditarTarea.resx">
+      <DependentUpon>FormEditarTarea.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.cs</DependentUpon>
