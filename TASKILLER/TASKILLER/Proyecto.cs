@@ -8,14 +8,7 @@ using System.Threading.Tasks;
 
 namespace TASKILLER
 {
-    public enum Estado
-    {
-        Por_Comenzar = 1,
-        En_Progreso = 2,
-        Entregado = 3,
-        Revisado = 4,
-        Bloqueado = 5
-    }
+
     public class Proyecto
     {
         public Guid Id { get; set; }

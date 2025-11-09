@@ -28,7 +28,6 @@ namespace TASKILLER
             labelNombre.BackColor = Color.Pink;
             buttonEditar.BackgroundImageLayout = ImageLayout.Zoom;
 
-
         }
     }
 }

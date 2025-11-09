@@ -145,7 +145,8 @@
       "Apellido": "Pepita",
       "Mail": "laura@empresa.com",
       "Contrasena": "1234",
-      "Rol": "d0e1f2a3-4b5c-6d7e-8f9a-0b1c2d3e4f5b"
+      "Rol": "d0e1f2a3-4b5c-6d7e-8f9a-0b1c2d3e4f5b",
+      "img":"logo_user_azu"
     },
     {
       "Id": "c2b2f3a4-5c6d-7e8f-9a0b-1c2d3e4f5a6b",
@@ -153,7 +154,8 @@
       "Apellido": "Pepita",
       "Mail": "carlos@empresa.com",
       "Contrasena": "abcd",
-      "Rol": "d1e2f3a4-5b6c-7d8e-9f0a-1b2c3d4e5f6a"
+      "Rol": "d1e2f3a4-5b6c-7d8e-9f0a-1b2c3d4e5f6a",
+      "img":"logo_user_ros"
     },
     {
       "Id": "c3c3f4a5-6d7e-8f9a-0b1c-2d3e4f5a6b7c",
@@ -161,7 +163,8 @@
       "Apellido": "Pepita",
       "Mail": "marta@empresa.com",
       "Contrasena": "pass",
-      "Rol": "d1e2f3a4-5b6c-7d8e-9f0a-1b2c3d4e5f6a"
+      "Rol": "d1e2f3a4-5b6c-7d8e-9f0a-1b2c3d4e5f6a",
+      "img":"logo_user_nar"
     },
     {
       "Id": "c4d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
@@ -169,7 +172,8 @@
       "Apellido": "Pepita",
       "Mail": "andres@empresa.com",
       "Contrasena": "5678",
-      "Rol": "d2e3f4a5-6b7c-8d9e-0f1a-2b3c4d5e6f7a"
+      "Rol": "d2e3f4a5-6b7c-8d9e-0f1a-2b3c4d5e6f7a",
+      "img":"logo_user_ver"
     },
     {
       "Id": "c5e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
@@ -177,7 +181,8 @@
       "Apellido": "Pepita",
       "Mail": "sofia@empresa.com",
       "Contrasena": "qwerty",
-      "Rol": "d2e3f4a5-6b7c-8d9e-0f1a-2b3c4d5e6f7a"
+      "Rol": "d2e3f4a5-6b7c-8d9e-0f1a-2b3c4d5e6f7a",
+      "img":"logo_user_azu"
     }
   ],
   "listaRoles": [
@@ -193,7 +198,7 @@
         "Eliminar usuarios",
         "Crear Tareas",
         "Editar Tareas",
-        "EliminarTarea"
+        "Eliminar Tarea"
       ]
     },
     {
@@ -206,7 +211,7 @@
         "Editar usuarios",
         "Crear Tareas",
         "Editar Tareas",
-        "EliminarTarea"
+        "Eliminar Tarea"
       ]
     },
     {
