@@ -16,7 +16,7 @@ namespace TASKILLER
             Application.SetCompatibleTextRenderingDefault(false);
             Fuentes.CargarFuentes();
             Datos d = GestionDatos.CargarDatos();
-            Application.Run(new FormEditarEliminarProyecto(d));
+            Application.Run(new FormListaUsuarios(d));
         }
        
     }

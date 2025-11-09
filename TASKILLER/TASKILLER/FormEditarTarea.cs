@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace TASKILLER
 {
-    public partial class FormCrearTarea : Form
+    public partial class FormEditarTarea : Form
     {
         private Datos d;
-        public FormCrearTarea(Datos datos)
+        public FormEditarTarea(Datos datos)
         {
-            InitializeComponent();
             this.d = datos;
+            InitializeComponent();
             SetFontSize();
         }
-        
+
         public void SetFontSize()
         {
             labelCuentanos.Font = new Font(Fuentes.MontserratBold.FontFamily, 30);
@@ -50,6 +50,5 @@ namespace TASKILLER
         }
     }
 
-   
 
 }
