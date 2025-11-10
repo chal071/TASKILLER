@@ -33,12 +33,14 @@ namespace TASKILLER
             flowLayoutPanelBotonesOrdFil.Padding = new Padding(0,0,30,10);
 
 
-            List<Proyecto> ListProyectos = new List<Proyecto>();
 
-            foreach (var p in ListProyectos)
+            foreach (var p in d.listaProyectos)
             {
                 ProyectoControl tarjeta = new ProyectoControl();
                 tarjeta.SetDatos(p);
+
+                tarjeta.AgregarTareas(d.listaTareas, p);
+
                 tarjeta.Margin = new Padding(20);
                 flowLayoutPanelListaProyectos.Controls.Add(tarjeta);
             }

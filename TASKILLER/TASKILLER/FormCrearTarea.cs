@@ -23,6 +23,7 @@ namespace TASKILLER
         public void SetFontSize()
         {
             labelCuentanos.Font = new Font(Fuentes.MontserratBold.FontFamily, 30);
+
             labelTitulo.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
             textBoxTitulo.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
             labelDescripcion.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);

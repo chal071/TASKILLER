@@ -146,6 +146,12 @@
       <DependentUpon>ProyectoControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Tarea.cs" />
+    <Compile Include="TareaProyectoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TareaProyectoControl.Designer.cs">
+      <DependentUpon>TareaProyectoControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="TarjetaRol.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -203,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ProyectoControl.resx">
       <DependentUpon>ProyectoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TareaProyectoControl.resx">
+      <DependentUpon>TareaProyectoControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TarjetaRol.resx">
       <DependentUpon>TarjetaRol.cs</DependentUpon>
