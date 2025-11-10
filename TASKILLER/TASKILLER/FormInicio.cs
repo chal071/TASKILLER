@@ -8,7 +8,7 @@ namespace TASKILLER
         public FormInicio(Datos datos)
         {
             InitializeComponent();
-            this.d = datos;
+            //this.d = datos;
         }
 
         private void inicioToolStripMenuItem_Click(object sender, System.EventArgs e)
@@ -39,6 +39,32 @@ namespace TASKILLER
             this.Hide();
         }
 
+        private void crearNuevoProyectoToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            FormCrearProyecto f = new FormCrearProyecto(d);
+            f.Show();
+            this.Hide();
+        }
+        private void crearNuevoUsuarioToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            FormCreacionUsuario f = new FormCreacionUsuario(d);
+            f.Show();
+            this.Hide();
+        }
+
+        private void modificarUnRolToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            FormEdicionRoles f = new FormEdicionRoles(d);
+            f.Show();
+            this.Hide();
+        }
+
+        private void modificarEliminarProyectoToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            FormEditarEliminarProyecto f = new FormEditarEliminarProyecto(d);
+            f.Show();
+            this.Hide();
+        }
         private void salirToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             Application.Exit();

@@ -42,7 +42,6 @@ namespace TASKILLER
                 tarjeta.Margin = new Padding(20);
                 flowLayoutPanelListaProyectos.Controls.Add(tarjeta);
             }
-
         }
     }
 }
