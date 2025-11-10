@@ -55,7 +55,6 @@
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearNuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarUnRolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnUsuario = new System.Windows.Forms.ToolStripButton();
             this.btnTaskiller = new System.Windows.Forms.ToolStripButton();
@@ -312,24 +311,15 @@
             // crearNuevoUsuarioToolStripMenuItem
             // 
             this.crearNuevoUsuarioToolStripMenuItem.Name = "crearNuevoUsuarioToolStripMenuItem";
-            this.crearNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.crearNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
             this.crearNuevoUsuarioToolStripMenuItem.Text = "Crear nuevo usuario";
             this.crearNuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.crearNuevoUsuarioToolStripMenuItem_Click);
             // 
             // rolesToolStripMenuItem
             // 
-            this.rolesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.modificarUnRolToolStripMenuItem});
             this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
             this.rolesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.rolesToolStripMenuItem.Text = "Roles";
-            // 
-            // modificarUnRolToolStripMenuItem
-            // 
-            this.modificarUnRolToolStripMenuItem.Name = "modificarUnRolToolStripMenuItem";
-            this.modificarUnRolToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.modificarUnRolToolStripMenuItem.Text = "Modificar un rol";
-            this.modificarUnRolToolStripMenuItem.Click += new System.EventHandler(this.modificarUnRolToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
@@ -408,7 +398,6 @@
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem crearNuevoUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rolesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarUnRolToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton btnUsuario;
         private System.Windows.Forms.ToolStripButton btnTaskiller;
