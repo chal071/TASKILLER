@@ -36,17 +36,26 @@ namespace TASKILLER
             this.buttonFiltro = new System.Windows.Forms.Button();
             this.comboBoxOrdenar = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanelBotonesOrdFil = new System.Windows.Forms.FlowLayoutPanel();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.proyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnUsuario = new System.Windows.Forms.ToolStripButton();
+            this.btnTaskiller = new System.Windows.Forms.ToolStripButton();
             this.flowLayoutPanelBotonesOrdFil.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelListaProyectos
             // 
             this.labelListaProyectos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.labelListaProyectos.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelListaProyectos.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.labelListaProyectos.Location = new System.Drawing.Point(0, 0);
+            this.labelListaProyectos.Location = new System.Drawing.Point(0, 27);
             this.labelListaProyectos.Name = "labelListaProyectos";
-            this.labelListaProyectos.Size = new System.Drawing.Size(1187, 16);
+            this.labelListaProyectos.Size = new System.Drawing.Size(1187, 15);
             this.labelListaProyectos.TabIndex = 0;
             this.labelListaProyectos.Text = "LISTA DE PROYECTOS";
             this.labelListaProyectos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -54,10 +63,9 @@ namespace TASKILLER
             // flowLayoutPanelListaProyectos
             // 
             this.flowLayoutPanelListaProyectos.AutoScroll = true;
-            this.flowLayoutPanelListaProyectos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelListaProyectos.Location = new System.Drawing.Point(0, 104);
+            this.flowLayoutPanelListaProyectos.Location = new System.Drawing.Point(0, 118);
             this.flowLayoutPanelListaProyectos.Name = "flowLayoutPanelListaProyectos";
-            this.flowLayoutPanelListaProyectos.Size = new System.Drawing.Size(1187, 593);
+            this.flowLayoutPanelListaProyectos.Size = new System.Drawing.Size(1187, 579);
             this.flowLayoutPanelListaProyectos.TabIndex = 1;
             // 
             // buttonFiltro
@@ -87,32 +95,115 @@ namespace TASKILLER
             // 
             this.flowLayoutPanelBotonesOrdFil.Controls.Add(this.buttonFiltro);
             this.flowLayoutPanelBotonesOrdFil.Controls.Add(this.comboBoxOrdenar);
-            this.flowLayoutPanelBotonesOrdFil.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanelBotonesOrdFil.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanelBotonesOrdFil.Location = new System.Drawing.Point(0, 16);
+            this.flowLayoutPanelBotonesOrdFil.Location = new System.Drawing.Point(0, 42);
             this.flowLayoutPanelBotonesOrdFil.Margin = new System.Windows.Forms.Padding(0, 0, 0, 100);
             this.flowLayoutPanelBotonesOrdFil.Name = "flowLayoutPanelBotonesOrdFil";
             this.flowLayoutPanelBotonesOrdFil.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.flowLayoutPanelBotonesOrdFil.Size = new System.Drawing.Size(1187, 88);
+            this.flowLayoutPanelBotonesOrdFil.Size = new System.Drawing.Size(1187, 74);
             this.flowLayoutPanelBotonesOrdFil.TabIndex = 4;
             // 
-            // ListaProyectos
+            // toolStrip1
+            // 
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButton1,
+            this.btnUsuario,
+            this.btnTaskiller});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1187, 27);
+            this.toolStrip1.TabIndex = 6;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.inicioToolStripMenuItem,
+            this.proyectosToolStripMenuItem,
+            this.usuariosToolStripMenuItem,
+            this.rolesToolStripMenuItem,
+            this.salirToolStripMenuItem});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(34, 24);
+            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            // 
+            // inicioToolStripMenuItem
+            // 
+            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.inicioToolStripMenuItem.Text = "Inicio";
+            // 
+            // proyectosToolStripMenuItem
+            // 
+            this.proyectosToolStripMenuItem.Name = "proyectosToolStripMenuItem";
+            this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.proyectosToolStripMenuItem.Text = "Proyectos";
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            // 
+            // rolesToolStripMenuItem
+            // 
+            this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.rolesToolStripMenuItem.Text = "Roles";
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("salirToolStripMenuItem.Image")));
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.salirToolStripMenuItem.Text = "Salir";
+            // 
+            // btnUsuario
+            // 
+            this.btnUsuario.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnUsuario.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.Image")));
+            this.btnUsuario.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnUsuario.Name = "btnUsuario";
+            this.btnUsuario.Size = new System.Drawing.Size(29, 24);
+            this.btnUsuario.Text = "Usuario";
+            // 
+            // btnTaskiller
+            // 
+            this.btnTaskiller.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnTaskiller.Image = ((System.Drawing.Image)(resources.GetObject("btnTaskiller.Image")));
+            this.btnTaskiller.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnTaskiller.Name = "btnTaskiller";
+            this.btnTaskiller.Size = new System.Drawing.Size(29, 24);
+            this.btnTaskiller.Text = "TaskillerLogo";
+            // 
+            // FormListaProyectos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.ClientSize = new System.Drawing.Size(1187, 697);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.flowLayoutPanelListaProyectos);
             this.Controls.Add(this.flowLayoutPanelBotonesOrdFil);
             this.Controls.Add(this.labelListaProyectos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "ListaProyectos";
+            this.Name = "FormListaProyectos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de proyectos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.flowLayoutPanelBotonesOrdFil.ResumeLayout(false);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -123,5 +214,14 @@ namespace TASKILLER
         private System.Windows.Forms.Button buttonFiltro;
         private System.Windows.Forms.ComboBox comboBoxOrdenar;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelBotonesOrdFil;
+        private ToolStrip toolStrip1;
+        private ToolStripDropDownButton toolStripDropDownButton1;
+        private ToolStripMenuItem inicioToolStripMenuItem;
+        private ToolStripMenuItem proyectosToolStripMenuItem;
+        private ToolStripMenuItem usuariosToolStripMenuItem;
+        private ToolStripMenuItem rolesToolStripMenuItem;
+        private ToolStripMenuItem salirToolStripMenuItem;
+        private ToolStripButton btnUsuario;
+        private ToolStripButton btnTaskiller;
     }
 }
