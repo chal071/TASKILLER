@@ -23,9 +23,15 @@ namespace TASKILLER
             LIstBoxAccesoRol.Items.Clear();
             LIstBoxAccesoRol.Items.AddRange(r.Acceso.ToArray());
 
+            
 
 
 
+
+        }
+
+        private void LIstBoxAccesoRol_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

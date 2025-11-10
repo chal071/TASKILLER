@@ -16,7 +16,7 @@ namespace TASKILLER
         public FormListaRoles(Datos datos)
         {
             InitializeComponent();
-            this.Resize = Form1_Resize();
+            this.Resize += Form1_Resize;
             labelListaRoles.Font = new Font("Montserrat", 30, FontStyle.Bold);
             this.d = datos;
             foreach (Rol r in d.listaRoles) 
