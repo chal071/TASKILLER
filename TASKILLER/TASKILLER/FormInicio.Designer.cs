@@ -208,7 +208,7 @@
             this.modificarEliminarProyectoToolStripMenuItem.Name = "modificarEliminarProyectoToolStripMenuItem";
             this.modificarEliminarProyectoToolStripMenuItem.Size = new System.Drawing.Size(279, 26);
             this.modificarEliminarProyectoToolStripMenuItem.Text = "Modificar/Eliminar proyecto";
-            this.modificarEliminarProyectoToolStripMenuItem.Click += new System.EventHandler(this.modificareliminarProyectoToolStripMenuItem_Click);
+            this.modificarEliminarProyectoToolStripMenuItem.Click += new System.EventHandler(this.modificarEliminarProyectoToolStripMenuItem_Click);
             // 
             // FormInicio
             // 
