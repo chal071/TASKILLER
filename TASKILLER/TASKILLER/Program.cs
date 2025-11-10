@@ -16,7 +16,11 @@ namespace TASKILLER
             Application.SetCompatibleTextRenderingDefault(false);
             Fuentes.CargarFuentes();
             Datos d = GestionDatos.CargarDatos();
+<<<<<<< Updated upstream
             Application.Run(new FormListaUsuarios(d));
+=======
+            Application.Run(new FormListaRoles(d));
+>>>>>>> Stashed changes
         }
        
     }

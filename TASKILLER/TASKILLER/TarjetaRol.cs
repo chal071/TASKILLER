@@ -17,8 +17,15 @@ namespace TASKILLER
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        public void SetDatos(Rol r)
         {
+            labelRol.Text = r.Nombre;
+            LIstBoxAccesoRol.Items.Clear();
+            LIstBoxAccesoRol.Items.AddRange(r.Acceso.ToArray());
+
+
+
+
 
         }
     }
