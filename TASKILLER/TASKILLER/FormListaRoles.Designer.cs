@@ -52,6 +52,7 @@
             this.labelListaRoles.Size = new System.Drawing.Size(309, 55);
             this.labelListaRoles.TabIndex = 1;
             this.labelListaRoles.Text = "Lista de roles";
+            this.labelListaRoles.Click += new System.EventHandler(this.labelListaRoles_Click);
             // 
             // panelListaRolesResp
             // 

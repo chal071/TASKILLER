@@ -37,5 +37,10 @@ namespace TASKILLER
         {
 
         }
+
+        private void labelListaRoles_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
