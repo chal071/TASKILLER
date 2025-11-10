@@ -38,36 +38,37 @@
             // 
             // flowLayoutPanelListaRoles
             // 
-            this.flowLayoutPanelListaRoles.AutoScroll = true;
             this.flowLayoutPanelListaRoles.Location = new System.Drawing.Point(44, 121);
             this.flowLayoutPanelListaRoles.Name = "flowLayoutPanelListaRoles";
-            this.flowLayoutPanelListaRoles.Size = new System.Drawing.Size(733, 260);
+            this.flowLayoutPanelListaRoles.Size = new System.Drawing.Size(878, 260);
             this.flowLayoutPanelListaRoles.TabIndex = 0;
             // 
             // labelListaRoles
             // 
             this.labelListaRoles.AutoSize = true;
             this.labelListaRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelListaRoles.Location = new System.Drawing.Point(261, 50);
+            this.labelListaRoles.Location = new System.Drawing.Point(352, 52);
             this.labelListaRoles.Name = "labelListaRoles";
             this.labelListaRoles.Size = new System.Drawing.Size(309, 55);
             this.labelListaRoles.TabIndex = 1;
             this.labelListaRoles.Text = "Lista de roles";
+            this.labelListaRoles.Click += new System.EventHandler(this.labelListaRoles_Click);
             // 
             // panelListaRolesResp
             // 
+            this.panelListaRolesResp.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelListaRolesResp.Controls.Add(this.labelListaRoles);
             this.panelListaRolesResp.Controls.Add(this.flowLayoutPanelListaRoles);
-            this.panelListaRolesResp.Location = new System.Drawing.Point(46, 47);
+            this.panelListaRolesResp.Location = new System.Drawing.Point(40, 142);
             this.panelListaRolesResp.Name = "panelListaRolesResp";
-            this.panelListaRolesResp.Size = new System.Drawing.Size(824, 419);
+            this.panelListaRolesResp.Size = new System.Drawing.Size(978, 434);
             this.panelListaRolesResp.TabIndex = 2;
             // 
             // FormListaRoles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1248, 630);
+            this.ClientSize = new System.Drawing.Size(1232, 722);
             this.Controls.Add(this.panelListaRolesResp);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormListaRoles";

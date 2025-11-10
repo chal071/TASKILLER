@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace TASKILLER
 {
-    public partial class FormCreaciónUsuario : Form
+    public partial class FormCreacionUsuario : Form
     {
         private Datos d;
-        public FormCreaciónUsuario(Datos datos)
+        public FormCreacionUsuario(Datos datos)
         {
             InitializeComponent();
             this.Resize += Form1_Resize;

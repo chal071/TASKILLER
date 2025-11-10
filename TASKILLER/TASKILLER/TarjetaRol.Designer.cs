@@ -48,8 +48,9 @@
             this.LIstBoxAccesoRol.FormattingEnabled = true;
             this.LIstBoxAccesoRol.Location = new System.Drawing.Point(18, 52);
             this.LIstBoxAccesoRol.Name = "LIstBoxAccesoRol";
-            this.LIstBoxAccesoRol.Size = new System.Drawing.Size(207, 186);
+            this.LIstBoxAccesoRol.Size = new System.Drawing.Size(249, 251);
             this.LIstBoxAccesoRol.TabIndex = 5;
+            this.LIstBoxAccesoRol.SelectedIndexChanged += new System.EventHandler(this.LIstBoxAccesoRol_SelectedIndexChanged);
             // 
             // TarjetaRol
             // 
@@ -58,7 +59,7 @@
             this.Controls.Add(this.LIstBoxAccesoRol);
             this.Controls.Add(this.labelRol);
             this.Name = "TarjetaRol";
-            this.Size = new System.Drawing.Size(242, 261);
+            this.Size = new System.Drawing.Size(283, 318);
             this.ResumeLayout(false);
             this.PerformLayout();
 
