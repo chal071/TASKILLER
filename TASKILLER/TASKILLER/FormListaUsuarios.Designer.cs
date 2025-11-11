@@ -41,7 +41,6 @@
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearNuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarUnRolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnUsuario = new System.Windows.Forms.ToolStripButton();
             this.btnTaskiller = new System.Windows.Forms.ToolStripButton();
@@ -103,7 +102,7 @@
             this.toolStripInicio.Location = new System.Drawing.Point(0, 0);
             this.toolStripInicio.Name = "toolStripInicio";
             this.toolStripInicio.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.toolStripInicio.Size = new System.Drawing.Size(1635, 30);
+            this.toolStripInicio.Size = new System.Drawing.Size(1635, 38);
             this.toolStripInicio.TabIndex = 5;
             this.toolStripInicio.Text = "toolStrip1";
             // 
@@ -119,7 +118,7 @@
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(42, 24);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(42, 32);
             this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
             // 
             // inicioToolStripMenuItem
@@ -165,17 +164,9 @@
             // 
             // rolesToolStripMenuItem
             // 
-            this.rolesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.modificarUnRolToolStripMenuItem});
             this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
             this.rolesToolStripMenuItem.Size = new System.Drawing.Size(277, 44);
             this.rolesToolStripMenuItem.Text = "Roles";
-            // 
-            // modificarUnRolToolStripMenuItem
-            // 
-            this.modificarUnRolToolStripMenuItem.Name = "modificarUnRolToolStripMenuItem";
-            this.modificarUnRolToolStripMenuItem.Size = new System.Drawing.Size(318, 44);
-            this.modificarUnRolToolStripMenuItem.Text = "Modificar un rol";
             // 
             // salirToolStripMenuItem
             // 
@@ -192,7 +183,7 @@
             this.btnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.Image")));
             this.btnUsuario.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnUsuario.Name = "btnUsuario";
-            this.btnUsuario.Size = new System.Drawing.Size(46, 24);
+            this.btnUsuario.Size = new System.Drawing.Size(46, 32);
             this.btnUsuario.Text = "Usuario";
             // 
             // btnTaskiller
@@ -201,7 +192,7 @@
             this.btnTaskiller.Image = ((System.Drawing.Image)(resources.GetObject("btnTaskiller.Image")));
             this.btnTaskiller.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnTaskiller.Name = "btnTaskiller";
-            this.btnTaskiller.Size = new System.Drawing.Size(46, 24);
+            this.btnTaskiller.Size = new System.Drawing.Size(46, 32);
             this.btnTaskiller.Text = "TaskillerLogo";
             // 
             // FormListaUsuarios
@@ -237,7 +228,6 @@
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem crearNuevoUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rolesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarUnRolToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton btnUsuario;
         private System.Windows.Forms.ToolStripButton btnTaskiller;
