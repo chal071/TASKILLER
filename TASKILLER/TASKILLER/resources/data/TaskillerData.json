@@ -75,7 +75,7 @@
       "IdProyecto": "c3d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
       "Estado": "Bloqueado",
       "IdTareaPadre": null,
-      "Subtareas": null
+      "Subtareas": ["f6a7b8c9-0d1e-2f3a-4b5c-6d7e8f9a0b1c", "a7b8c9d0-1e2f-3a4b-5c6d-7e8f9a0b1c2d"]
     },
     {
       "Id": "f6a7b8c9-0d1e-2f3a-4b5c-6d7e8f9a0b1c",
@@ -104,7 +104,7 @@
       ],
       "IdProyecto": "a1b2c3d4-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
       "Estado": "Entregado",
-      "IdTareaPadre": null,
+      "IdTareaPadre": "e5f6a7b8-9c0d-1e2f-3a4b-5c6d7e8f9a0b",
       "Subtareas": null
     },
     {
