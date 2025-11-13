@@ -66,16 +66,16 @@
             this.panelInfo.Controls.Add(this.comboBoxEstado);
             this.panelInfo.Controls.Add(this.labelTitulo);
             this.panelInfo.Controls.Add(this.labelCuentanosProyecto);
-            this.panelInfo.Location = new System.Drawing.Point(12, 12);
+            this.panelInfo.Location = new System.Drawing.Point(12, 61);
             this.panelInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelInfo.Name = "panelInfo";
-            this.panelInfo.Size = new System.Drawing.Size(1195, 823);
+            this.panelInfo.Size = new System.Drawing.Size(1085, 774);
             this.panelInfo.TabIndex = 14;
             // 
             // buttonEditarProyecto
             // 
             this.buttonEditarProyecto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonEditarProyecto.Location = new System.Drawing.Point(487, 743);
+            this.buttonEditarProyecto.Location = new System.Drawing.Point(424, 598);
             this.buttonEditarProyecto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEditarProyecto.Name = "buttonEditarProyecto";
             this.buttonEditarProyecto.Size = new System.Drawing.Size(328, 78);
@@ -85,7 +85,7 @@
             // 
             // dateTimePickerFechaFinal
             // 
-            this.dateTimePickerFechaFinal.Location = new System.Drawing.Point(721, 434);
+            this.dateTimePickerFechaFinal.Location = new System.Drawing.Point(587, 313);
             this.dateTimePickerFechaFinal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerFechaFinal.Name = "dateTimePickerFechaFinal";
             this.dateTimePickerFechaFinal.Size = new System.Drawing.Size(471, 22);
@@ -93,7 +93,7 @@
             // 
             // dateTimePickerFechaInicio
             // 
-            this.dateTimePickerFechaInicio.Location = new System.Drawing.Point(721, 295);
+            this.dateTimePickerFechaInicio.Location = new System.Drawing.Point(587, 174);
             this.dateTimePickerFechaInicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerFechaInicio.Name = "dateTimePickerFechaInicio";
             this.dateTimePickerFechaInicio.Size = new System.Drawing.Size(471, 22);
@@ -102,7 +102,7 @@
             // labelEstado
             // 
             this.labelEstado.AutoSize = true;
-            this.labelEstado.Location = new System.Drawing.Point(717, 526);
+            this.labelEstado.Location = new System.Drawing.Point(583, 405);
             this.labelEstado.Name = "labelEstado";
             this.labelEstado.Size = new System.Drawing.Size(53, 16);
             this.labelEstado.TabIndex = 9;
@@ -111,7 +111,7 @@
             // labelDescripcion
             // 
             this.labelDescripcion.AutoSize = true;
-            this.labelDescripcion.Location = new System.Drawing.Point(-3, 412);
+            this.labelDescripcion.Location = new System.Drawing.Point(-1, 362);
             this.labelDescripcion.Name = "labelDescripcion";
             this.labelDescripcion.Size = new System.Drawing.Size(82, 16);
             this.labelDescripcion.TabIndex = 12;
@@ -129,17 +129,17 @@
             // 
             this.pictureBoxLogo.BackgroundImage = global::TASKILLER.Properties.Resources.LOGO;
             this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(3, 2);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(4, 58);
             this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(191, 190);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(176, 157);
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
             // 
             // labelFechaInicio
             // 
             this.labelFechaInicio.AutoSize = true;
-            this.labelFechaInicio.Location = new System.Drawing.Point(717, 242);
+            this.labelFechaInicio.Location = new System.Drawing.Point(583, 121);
             this.labelFechaInicio.Name = "labelFechaInicio";
             this.labelFechaInicio.Size = new System.Drawing.Size(101, 16);
             this.labelFechaInicio.TabIndex = 8;
@@ -148,7 +148,7 @@
             // buttonEliminarProyecto
             // 
             this.buttonEliminarProyecto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonEliminarProyecto.Location = new System.Drawing.Point(863, 743);
+            this.buttonEliminarProyecto.Location = new System.Drawing.Point(730, 744);
             this.buttonEliminarProyecto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEliminarProyecto.Name = "buttonEliminarProyecto";
             this.buttonEliminarProyecto.Size = new System.Drawing.Size(328, 78);
@@ -159,7 +159,7 @@
             // labelFechaFinal
             // 
             this.labelFechaFinal.AutoSize = true;
-            this.labelFechaFinal.Location = new System.Drawing.Point(717, 377);
+            this.labelFechaFinal.Location = new System.Drawing.Point(583, 256);
             this.labelFechaFinal.Name = "labelFechaFinal";
             this.labelFechaFinal.Size = new System.Drawing.Size(75, 16);
             this.labelFechaFinal.TabIndex = 10;
@@ -167,7 +167,7 @@
             // 
             // richTextBoxDescripcion
             // 
-            this.richTextBoxDescripcion.Location = new System.Drawing.Point(1, 466);
+            this.richTextBoxDescripcion.Location = new System.Drawing.Point(3, 416);
             this.richTextBoxDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBoxDescripcion.Name = "richTextBoxDescripcion";
             this.richTextBoxDescripcion.Size = new System.Drawing.Size(415, 260);
@@ -178,7 +178,7 @@
             // 
             this.comboBoxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxEstado.FormattingEnabled = true;
-            this.comboBoxEstado.Location = new System.Drawing.Point(721, 571);
+            this.comboBoxEstado.Location = new System.Drawing.Point(587, 450);
             this.comboBoxEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxEstado.Name = "comboBoxEstado";
             this.comboBoxEstado.Size = new System.Drawing.Size(471, 24);
@@ -196,7 +196,7 @@
             // labelCuentanosProyecto
             // 
             this.labelCuentanosProyecto.AutoSize = true;
-            this.labelCuentanosProyecto.Location = new System.Drawing.Point(279, 2);
+            this.labelCuentanosProyecto.Location = new System.Drawing.Point(280, 58);
             this.labelCuentanosProyecto.MaximumSize = new System.Drawing.Size(600, 0);
             this.labelCuentanosProyecto.Name = "labelCuentanosProyecto";
             this.labelCuentanosProyecto.Size = new System.Drawing.Size(187, 16);
@@ -210,7 +210,7 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // EditarEliminarProyecto
+            // FormEditarEliminarProyecto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -219,7 +219,7 @@
             this.Controls.Add(this.panelInfo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "EditarEliminarProyecto";
+            this.Name = "FormEditarEliminarProyecto";
             this.Text = "¡Edita tu proyecto!";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelInfo.ResumeLayout(false);
