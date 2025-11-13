@@ -10,11 +10,18 @@ namespace TASKILLER
 {
     public enum Prioridad
     {
-        Alta = 1,
-        Media = 2,
-        Baja = 3
+        Alta,
+        Media,
+        Baja
     }
-
+    public enum Estado
+    {
+        Por_Comenzar,
+        En_Progreso,
+        Entregado,
+        Revisado,
+        Bloqueado
+    }
     public class Tarea
     {
         public Guid Id { get; set; }
@@ -25,14 +32,14 @@ namespace TASKILLER
         public DateTime FechaFinal { get; set; }
         public List<Guid> listaUsuarios { get; set; }
         public Guid IdProyecto { get; set; }
-        public int Estado { get; set; } // 1: Por comenzar 2: En progreso 3: Entregado 4: Revisado 5: Bloqueado
+        public Estado Estado { get; set; }
         public Guid? IdTareaPadre { get; set; }
         public List<Tarea> Subtareas { get; set; }
 
         public Tarea() { }
 
         public Tarea(Guid IdTarea, String Nombre, String Descripcion, Prioridad Prioridad, DateTime 
-            FechaInicio, DateTime FechaFinal, List<Guid> UsuariosAsignados, Guid IdProyecto, int Estado)
+            FechaInicio, DateTime FechaFinal, List<Guid> UsuariosAsignados, Guid IdProyecto, Estado Estado)
         {
             this.Id = Guid.NewGuid();
             this.Titulo = Nombre;
@@ -46,7 +53,7 @@ namespace TASKILLER
         }
 
         public Tarea(Guid IdTarea, String Nombre, String Descripcion, Prioridad Prioridad, DateTime 
-            FechaInicio, DateTime FechaFinal, List<Guid> UsuariosAsignados, Guid IdProyecto, int Estado,
+            FechaInicio, DateTime FechaFinal, List<Guid> UsuariosAsignados, Guid IdProyecto, Estado Estado,
             Guid IdTareaPadre, List<Tarea> Subtareas)
         {
             this.Id = Guid.NewGuid();

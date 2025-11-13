@@ -200,6 +200,33 @@
             this.btnTaskiller.Size = new System.Drawing.Size(29, 24);
             this.btnTaskiller.Text = "TaskillerLogo";
             // 
+            // crearNuevoProyectoToolStripMenuItem
+            // 
+            this.crearNuevoProyectoToolStripMenuItem.Name = "crearNuevoProyectoToolStripMenuItem";
+            this.crearNuevoProyectoToolStripMenuItem.Size = new System.Drawing.Size(279, 26);
+            this.crearNuevoProyectoToolStripMenuItem.Text = "Crear nuevo proyecto";
+            this.crearNuevoProyectoToolStripMenuItem.Click += new System.EventHandler(this.crearNuevoProyectoToolStripMenuItem_Click);
+            // 
+            // crearNuevoUsuarioToolStripMenuItem
+            // 
+            this.crearNuevoUsuarioToolStripMenuItem.Name = "crearNuevoUsuarioToolStripMenuItem";
+            this.crearNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.crearNuevoUsuarioToolStripMenuItem.Text = "Crear nuevo usuario";
+            this.crearNuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.crearNuevoUsuarioToolStripMenuItem_Click);
+            // 
+            // modificarUnRolToolStripMenuItem
+            // 
+            this.modificarUnRolToolStripMenuItem.Name = "modificarUnRolToolStripMenuItem";
+            this.modificarUnRolToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.modificarUnRolToolStripMenuItem.Text = "Modificar un rol";
+            // 
+            // modificarEliminarProyectoToolStripMenuItem
+            // 
+            this.modificarEliminarProyectoToolStripMenuItem.Name = "modificarEliminarProyectoToolStripMenuItem";
+            this.modificarEliminarProyectoToolStripMenuItem.Size = new System.Drawing.Size(279, 26);
+            this.modificarEliminarProyectoToolStripMenuItem.Text = "Modificar/Eliminar proyecto";
+            this.modificarEliminarProyectoToolStripMenuItem.Click += new System.EventHandler(this.modificarEliminarProyectoToolStripMenuItem_Click);
+            // 
             // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);

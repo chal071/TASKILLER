@@ -17,7 +17,7 @@ namespace TASKILLER
             Fuentes.CargarFuentes();
             Datos d = GestionDatos.CargarDatos();
 
-            Application.Run(new FormInicio(d));
+            Application.Run(new FormListaRoles(d));
         }
        
     }
