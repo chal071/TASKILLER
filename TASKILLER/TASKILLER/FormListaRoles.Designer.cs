@@ -52,7 +52,7 @@
             // flowLayoutPanelListaRoles
             // 
             this.flowLayoutPanelListaRoles.Location = new System.Drawing.Point(59, 149);
-            this.flowLayoutPanelListaRoles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanelListaRoles.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanelListaRoles.Name = "flowLayoutPanelListaRoles";
             this.flowLayoutPanelListaRoles.Size = new System.Drawing.Size(1171, 320);
             this.flowLayoutPanelListaRoles.TabIndex = 0;
@@ -75,7 +75,7 @@
             this.panelListaRolesResp.Controls.Add(this.labelListaRoles);
             this.panelListaRolesResp.Controls.Add(this.flowLayoutPanelListaRoles);
             this.panelListaRolesResp.Location = new System.Drawing.Point(53, 175);
-            this.panelListaRolesResp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelListaRolesResp.Margin = new System.Windows.Forms.Padding(4);
             this.panelListaRolesResp.Name = "panelListaRolesResp";
             this.panelListaRolesResp.Size = new System.Drawing.Size(1304, 534);
             this.panelListaRolesResp.TabIndex = 2;
@@ -191,7 +191,7 @@
             this.Controls.Add(this.toolStripInicio);
             this.Controls.Add(this.panelListaRolesResp);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormListaRoles";
             this.Text = "FormListaRoles";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
