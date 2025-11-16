@@ -17,55 +17,22 @@ namespace TASKILLER
         public FormListaTareas(Datos datos)
         {
             InitializeComponent();
-            AplicarFontALabels();
-            this.Resize += Form_Resize;
+            setFontSize();
             this.d = datos;
         }
 
-        private void Form_Resize(object sender, EventArgs e)
+
+
+
+        private void setFontSize() 
         {
-            int totalWidth = this.ClientSize.Width;
-            int totalHeight = this.ClientSize.Height;
-
-            flowLayoutPanelListaTareas.Width = (int)(totalWidth * 0.25);
-            flowLayoutPanelListaTareas.Height = totalHeight;
-
-            flowLayoutPanelListaEstadoTareas.Width = (int)(totalWidth * 0.75);
-            flowLayoutPanelListaEstadoTareas.Height = totalHeight;
-
-            flowLayoutPanelListaEstadoTareas.Left = flowLayoutPanelListaTareas.Right;
-
-            dataGridViewListasTarea.Width = flowLayoutPanelListaTareas.ClientSize.Width - dataGridViewListasTarea.Margin.Horizontal;
-
-            labelNombreProyecto.Width = flowLayoutPanelListaEstadoTareas.ClientSize.Width - labelNombreProyecto.Margin.Horizontal;
-            labelNombreProyecto.Height = (int)(flowLayoutPanelListaEstadoTareas.ClientSize.Height * 0.1) - labelNombreProyecto.Margin.Vertical;
-            int ancho = flowLayoutPanelListaEstadoTareas.ClientSize.Width / 5;
-            int alto = flowLayoutPanelListaEstadoTareas.ClientSize.Height - labelNombreProyecto.ClientSize.Height;
-
-            AjustarGroupBox(groupBoxTareasPorComenzar, ancho, alto);
-            AjustarGroupBox(groupBoxEnProgreso, ancho, alto);
-            AjustarGroupBox(groupBoxEntregado, ancho, alto);
-            AjustarGroupBox(groupBoxRevisado, ancho, alto);
-            AjustarGroupBox(groupBoxBloqueado, ancho, alto);
-        }
-
-        private void AjustarGroupBox(GroupBox g, int ancho, int alto)
-        {
-            g.Width = ancho - g.Margin.Horizontal;
-            g.Height = alto - g.Margin.Vertical;
-        }
-
-
-        private void AplicarFontALabels() 
-        {
-            labelTareas.Font = new Font("Montserrat", 18, FontStyle.Regular);
-            labelNombreProyecto.Font = new Font("Montserrat", 25, FontStyle.Regular);
-            dataGridViewListasTarea.Font = new Font("Montserrat", 12, FontStyle.Regular);
-            groupBoxTareasPorComenzar.Font = new Font("Montserrat", 14, FontStyle.Regular);
-            groupBoxEnProgreso.Font = new Font("Montserrat", 14, FontStyle.Regular);
-            groupBoxEntregado.Font = new Font("Montserrat", 14, FontStyle.Regular);
-            groupBoxRevisado.Font = new Font("Montserrat", 14, FontStyle.Regular);
-            groupBoxBloqueado.Font = new Font("Montserrat", 14, FontStyle.Regular);
+            labelTarea.Font = new Font(Fuentes.MontserratBold.FontFamily, 30);
+            dataGridViewTareas.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
+            labelPorComenzar.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
+            labelEnProgreso.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
+            labelEntregado.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
+            labelRevisado.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
+            labelBloqueado.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
         }
     }
 }

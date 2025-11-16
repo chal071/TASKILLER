@@ -214,10 +214,6 @@
             this.crearNuevoUsuarioToolStripMenuItem.Text = "Crear nuevo usuario";
             this.crearNuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.crearNuevoUsuarioToolStripMenuItem_Click);
             // 
-            // modificarUnRolToolStripMenuItem
-            // 
-            //
-            // 
             // modificarEliminarProyectoToolStripMenuItem
             // 
             this.modificarEliminarProyectoToolStripMenuItem.Name = "modificarEliminarProyectoToolStripMenuItem";
