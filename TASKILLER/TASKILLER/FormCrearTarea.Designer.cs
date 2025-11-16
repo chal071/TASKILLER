@@ -30,6 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCrearTarea));
             this.grid = new System.Windows.Forms.TableLayoutPanel();
+            this.toolStripInicio = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.proyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearNuevoProyectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarEliminarProyectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearNuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnUsuario = new System.Windows.Forms.ToolStripButton();
+            this.btnTaskiller = new System.Windows.Forms.ToolStripButton();
             this.flowLayoutPanelTop = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.labelCuentanos = new System.Windows.Forms.Label();
@@ -50,24 +62,12 @@
             this.dateTimePickerFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.labelFechaInicio = new System.Windows.Forms.Label();
             this.checkedListBoxUsuario = new System.Windows.Forms.CheckedListBox();
-            this.toolStripInicio = new System.Windows.Forms.ToolStrip();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.proyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.crearNuevoProyectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarEliminarProyectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.crearNuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnUsuario = new System.Windows.Forms.ToolStripButton();
-            this.btnTaskiller = new System.Windows.Forms.ToolStripButton();
             this.grid.SuspendLayout();
+            this.toolStripInicio.SuspendLayout();
             this.flowLayoutPanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.tableLayoutPanelLeft.SuspendLayout();
             this.tableLayoutPanelRight.SuspendLayout();
-            this.toolStripInicio.SuspendLayout();
             this.SuspendLayout();
             // 
             // grid
@@ -92,6 +92,111 @@
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.grid.Size = new System.Drawing.Size(1634, 969);
             this.grid.TabIndex = 0;
+            // 
+            // toolStripInicio
+            // 
+            this.grid.SetColumnSpan(this.toolStripInicio, 2);
+            this.toolStripInicio.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripInicio.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStripInicio.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButton1,
+            this.btnUsuario,
+            this.btnTaskiller});
+            this.toolStripInicio.Location = new System.Drawing.Point(0, 0);
+            this.toolStripInicio.Name = "toolStripInicio";
+            this.toolStripInicio.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.toolStripInicio.Size = new System.Drawing.Size(1634, 30);
+            this.toolStripInicio.TabIndex = 6;
+            this.toolStripInicio.Text = "toolStrip1";
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.inicioToolStripMenuItem,
+            this.proyectosToolStripMenuItem,
+            this.usuariosToolStripMenuItem,
+            this.rolesToolStripMenuItem,
+            this.salirToolStripMenuItem});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(42, 24);
+            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            // 
+            // inicioToolStripMenuItem
+            // 
+            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(277, 44);
+            this.inicioToolStripMenuItem.Text = "Inicio";
+            // 
+            // proyectosToolStripMenuItem
+            // 
+            this.proyectosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearNuevoProyectoToolStripMenuItem,
+            this.modificarEliminarProyectoToolStripMenuItem});
+            this.proyectosToolStripMenuItem.Name = "proyectosToolStripMenuItem";
+            this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(277, 44);
+            this.proyectosToolStripMenuItem.Text = "Proyectos";
+            // 
+            // crearNuevoProyectoToolStripMenuItem
+            // 
+            this.crearNuevoProyectoToolStripMenuItem.Name = "crearNuevoProyectoToolStripMenuItem";
+            this.crearNuevoProyectoToolStripMenuItem.Size = new System.Drawing.Size(443, 44);
+            this.crearNuevoProyectoToolStripMenuItem.Text = "Crear nuevo proyecto";
+            // 
+            // modificarEliminarProyectoToolStripMenuItem
+            // 
+            this.modificarEliminarProyectoToolStripMenuItem.Name = "modificarEliminarProyectoToolStripMenuItem";
+            this.modificarEliminarProyectoToolStripMenuItem.Size = new System.Drawing.Size(443, 44);
+            this.modificarEliminarProyectoToolStripMenuItem.Text = "Modificar/Eliminar proyecto";
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearNuevoUsuarioToolStripMenuItem});
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(277, 44);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            // 
+            // crearNuevoUsuarioToolStripMenuItem
+            // 
+            this.crearNuevoUsuarioToolStripMenuItem.Name = "crearNuevoUsuarioToolStripMenuItem";
+            this.crearNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(362, 44);
+            this.crearNuevoUsuarioToolStripMenuItem.Text = "Crear nuevo usuario";
+            // 
+            // rolesToolStripMenuItem
+            // 
+            this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(277, 44);
+            this.rolesToolStripMenuItem.Text = "Roles";
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("salirToolStripMenuItem.Image")));
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(277, 44);
+            this.salirToolStripMenuItem.Text = "Salir";
+            // 
+            // btnUsuario
+            // 
+            this.btnUsuario.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnUsuario.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.Image")));
+            this.btnUsuario.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnUsuario.Name = "btnUsuario";
+            this.btnUsuario.Size = new System.Drawing.Size(46, 24);
+            this.btnUsuario.Text = "Usuario";
+            // 
+            // btnTaskiller
+            // 
+            this.btnTaskiller.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnTaskiller.Image = ((System.Drawing.Image)(resources.GetObject("btnTaskiller.Image")));
+            this.btnTaskiller.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnTaskiller.Name = "btnTaskiller";
+            this.btnTaskiller.Size = new System.Drawing.Size(46, 24);
+            this.btnTaskiller.Text = "TaskillerLogo";
             // 
             // flowLayoutPanelTop
             // 
@@ -313,111 +418,6 @@
             this.checkedListBoxUsuario.Size = new System.Drawing.Size(805, 170);
             this.checkedListBoxUsuario.TabIndex = 7;
             // 
-            // toolStripInicio
-            // 
-            this.grid.SetColumnSpan(this.toolStripInicio, 2);
-            this.toolStripInicio.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStripInicio.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStripInicio.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton1,
-            this.btnUsuario,
-            this.btnTaskiller});
-            this.toolStripInicio.Location = new System.Drawing.Point(0, 0);
-            this.toolStripInicio.Name = "toolStripInicio";
-            this.toolStripInicio.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.toolStripInicio.Size = new System.Drawing.Size(1634, 48);
-            this.toolStripInicio.TabIndex = 6;
-            this.toolStripInicio.Text = "toolStrip1";
-            // 
-            // toolStripDropDownButton1
-            // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.inicioToolStripMenuItem,
-            this.proyectosToolStripMenuItem,
-            this.usuariosToolStripMenuItem,
-            this.rolesToolStripMenuItem,
-            this.salirToolStripMenuItem});
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(42, 42);
-            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
-            // 
-            // inicioToolStripMenuItem
-            // 
-            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(277, 44);
-            this.inicioToolStripMenuItem.Text = "Inicio";
-            // 
-            // proyectosToolStripMenuItem
-            // 
-            this.proyectosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearNuevoProyectoToolStripMenuItem,
-            this.modificarEliminarProyectoToolStripMenuItem});
-            this.proyectosToolStripMenuItem.Name = "proyectosToolStripMenuItem";
-            this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(277, 44);
-            this.proyectosToolStripMenuItem.Text = "Proyectos";
-            // 
-            // crearNuevoProyectoToolStripMenuItem
-            // 
-            this.crearNuevoProyectoToolStripMenuItem.Name = "crearNuevoProyectoToolStripMenuItem";
-            this.crearNuevoProyectoToolStripMenuItem.Size = new System.Drawing.Size(443, 44);
-            this.crearNuevoProyectoToolStripMenuItem.Text = "Crear nuevo proyecto";
-            // 
-            // modificarEliminarProyectoToolStripMenuItem
-            // 
-            this.modificarEliminarProyectoToolStripMenuItem.Name = "modificarEliminarProyectoToolStripMenuItem";
-            this.modificarEliminarProyectoToolStripMenuItem.Size = new System.Drawing.Size(443, 44);
-            this.modificarEliminarProyectoToolStripMenuItem.Text = "Modificar/Eliminar proyecto";
-            // 
-            // usuariosToolStripMenuItem
-            // 
-            this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearNuevoUsuarioToolStripMenuItem});
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(277, 44);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
-            // 
-            // crearNuevoUsuarioToolStripMenuItem
-            // 
-            this.crearNuevoUsuarioToolStripMenuItem.Name = "crearNuevoUsuarioToolStripMenuItem";
-            this.crearNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(362, 44);
-            this.crearNuevoUsuarioToolStripMenuItem.Text = "Crear nuevo usuario";
-            // 
-            // rolesToolStripMenuItem
-            // 
-            this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
-            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(277, 44);
-            this.rolesToolStripMenuItem.Text = "Roles";
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("salirToolStripMenuItem.Image")));
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(277, 44);
-            this.salirToolStripMenuItem.Text = "Salir";
-            // 
-            // btnUsuario
-            // 
-            this.btnUsuario.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnUsuario.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.Image")));
-            this.btnUsuario.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnUsuario.Name = "btnUsuario";
-            this.btnUsuario.Size = new System.Drawing.Size(46, 42);
-            this.btnUsuario.Text = "Usuario";
-            // 
-            // btnTaskiller
-            // 
-            this.btnTaskiller.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnTaskiller.Image = ((System.Drawing.Image)(resources.GetObject("btnTaskiller.Image")));
-            this.btnTaskiller.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnTaskiller.Name = "btnTaskiller";
-            this.btnTaskiller.Size = new System.Drawing.Size(46, 42);
-            this.btnTaskiller.Text = "TaskillerLogo";
-            // 
             // FormCrearTarea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -431,6 +431,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.grid.ResumeLayout(false);
             this.grid.PerformLayout();
+            this.toolStripInicio.ResumeLayout(false);
+            this.toolStripInicio.PerformLayout();
             this.flowLayoutPanelTop.ResumeLayout(false);
             this.flowLayoutPanelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
@@ -438,8 +440,6 @@
             this.tableLayoutPanelLeft.PerformLayout();
             this.tableLayoutPanelRight.ResumeLayout(false);
             this.tableLayoutPanelRight.PerformLayout();
-            this.toolStripInicio.ResumeLayout(false);
-            this.toolStripInicio.PerformLayout();
             this.ResumeLayout(false);
 
         }
