@@ -216,9 +216,7 @@
             // 
             // modificarUnRolToolStripMenuItem
             // 
-            this.modificarUnRolToolStripMenuItem.Name = "modificarUnRolToolStripMenuItem";
-            this.modificarUnRolToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.modificarUnRolToolStripMenuItem.Text = "Modificar un rol";
+            //
             // 
             // modificarEliminarProyectoToolStripMenuItem
             // 

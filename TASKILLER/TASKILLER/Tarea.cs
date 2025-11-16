@@ -34,7 +34,7 @@ namespace TASKILLER
         public Guid IdProyecto { get; set; }
         public Estado Estado { get; set; }
         public Guid? IdTareaPadre { get; set; }
-        public List<Tarea> Subtareas { get; set; }
+        public List<Guid> Subtareas { get; set; }
 
         public Tarea() { }
 
@@ -54,7 +54,7 @@ namespace TASKILLER
 
         public Tarea(Guid IdTarea, String Nombre, String Descripcion, Prioridad Prioridad, DateTime 
             FechaInicio, DateTime FechaFinal, List<Guid> UsuariosAsignados, Guid IdProyecto, Estado Estado,
-            Guid IdTareaPadre, List<Tarea> Subtareas)
+            Guid IdTareaPadre, List<Guid> Subtareas)
         {
             this.Id = Guid.NewGuid();
             this.Titulo = Nombre;
