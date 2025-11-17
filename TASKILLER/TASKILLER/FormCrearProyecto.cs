@@ -98,13 +98,26 @@ namespace TASKILLER
 
         private void buttonCrearProyecto_Click(object sender, EventArgs e)
         {
-            Proyecto p = new Proyecto();
+            Proyecto p = new Proyecto
+            {
+                Titulo = textBoxTitulo.Text,
+                Descripcion = richTextBoxDescripcion.Text,
+                FechaInicio = dateTimePickerFechaInicio.Value,
+                FechaFinal = dateTimePickerFechaFinal.Value,
+                Estado = (Estado)comboBoxEstado.SelectedItem,
+                listaUsuarios = new List<Guid>()
+            };
 
-            p.Titulo = textBoxTitulo.Text;
-            p.Descripcion = richTextBoxDescripcion.Text;
-            p.FechaInicio = dateTimePickerFechaInicio.Value;
-            p.FechaFinal = dateTimePickerFechaFinal.Value;
-            p.Estado = (Estado)comboBoxEstado.SelectedItem;
+            if (string.IsNullOrEmpty(p.Titulo))
+            {
+                MessageBox.Show("Título y descripción son obligatorios.");
+                return;
+            }
+
+            d.listaProyectos.Add(p);
+            FormListaProyectos f = new FormListaProyectos(d);
+            f.Show();
+            this.Hide();
         }
     }
 }

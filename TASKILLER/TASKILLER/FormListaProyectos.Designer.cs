@@ -239,10 +239,10 @@ namespace TASKILLER
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.ClientSize = new System.Drawing.Size(1187, 697);
-            this.Controls.Add(this.toolStripInicio);
             this.Controls.Add(this.flowLayoutPanelListaProyectos);
             this.Controls.Add(this.flowLayoutPanelBotonesOrdFil);
             this.Controls.Add(this.labelListaProyectos);
+            this.Controls.Add(this.toolStripInicio);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormListaProyectos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
