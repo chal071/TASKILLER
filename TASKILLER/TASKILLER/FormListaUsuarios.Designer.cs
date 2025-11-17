@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListaUsuarios));
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.labelListaDeUsuarios = new System.Windows.Forms.Label();
-            this.dataGridViewListaUsuarios = new System.Windows.Forms.DataGridView();
             this.toolStripInicio = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,9 +43,11 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnUsuario = new System.Windows.Forms.ToolStripButton();
             this.btnTaskiller = new System.Windows.Forms.ToolStripButton();
+            this.labelListaDeUsuarios = new System.Windows.Forms.Label();
+            this.dataGridViewListaUsuarios = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaUsuarios)).BeginInit();
             this.toolStripInicio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel
@@ -59,7 +59,7 @@
             this.tableLayoutPanel.Controls.Add(this.dataGridViewListaUsuarios, 0, 2);
             this.tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel.Name = "tableLayoutPanel";
             this.tableLayoutPanel.RowCount = 3;
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -67,33 +67,6 @@
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel.Size = new System.Drawing.Size(1090, 596);
             this.tableLayoutPanel.TabIndex = 0;
-            // 
-            // labelListaDeUsuarios
-            // 
-            this.labelListaDeUsuarios.AutoSize = true;
-            this.labelListaDeUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelListaDeUsuarios.Location = new System.Drawing.Point(2, 59);
-            this.labelListaDeUsuarios.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelListaDeUsuarios.Name = "labelListaDeUsuarios";
-            this.labelListaDeUsuarios.Size = new System.Drawing.Size(1086, 59);
-            this.labelListaDeUsuarios.TabIndex = 0;
-            this.labelListaDeUsuarios.Text = "Lista de Usuarios";
-            this.labelListaDeUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dataGridViewListaUsuarios
-            // 
-            this.dataGridViewListaUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewListaUsuarios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dataGridViewListaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewListaUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewListaUsuarios.Location = new System.Drawing.Point(2, 120);
-            this.dataGridViewListaUsuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridViewListaUsuarios.Name = "dataGridViewListaUsuarios";
-            this.dataGridViewListaUsuarios.RowHeadersVisible = false;
-            this.dataGridViewListaUsuarios.RowHeadersWidth = 82;
-            this.dataGridViewListaUsuarios.RowTemplate.Height = 33;
-            this.dataGridViewListaUsuarios.Size = new System.Drawing.Size(1086, 474);
-            this.dataGridViewListaUsuarios.TabIndex = 1;
             // 
             // toolStripInicio
             // 
@@ -220,6 +193,33 @@
             this.btnTaskiller.Size = new System.Drawing.Size(29, 24);
             this.btnTaskiller.Text = "TaskillerLogo";
             // 
+            // labelListaDeUsuarios
+            // 
+            this.labelListaDeUsuarios.AutoSize = true;
+            this.labelListaDeUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelListaDeUsuarios.Location = new System.Drawing.Point(2, 59);
+            this.labelListaDeUsuarios.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelListaDeUsuarios.Name = "labelListaDeUsuarios";
+            this.labelListaDeUsuarios.Size = new System.Drawing.Size(1086, 59);
+            this.labelListaDeUsuarios.TabIndex = 0;
+            this.labelListaDeUsuarios.Text = "Lista de Usuarios";
+            this.labelListaDeUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dataGridViewListaUsuarios
+            // 
+            this.dataGridViewListaUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewListaUsuarios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridViewListaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewListaUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewListaUsuarios.Location = new System.Drawing.Point(2, 120);
+            this.dataGridViewListaUsuarios.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewListaUsuarios.Name = "dataGridViewListaUsuarios";
+            this.dataGridViewListaUsuarios.RowHeadersVisible = false;
+            this.dataGridViewListaUsuarios.RowHeadersWidth = 82;
+            this.dataGridViewListaUsuarios.RowTemplate.Height = 33;
+            this.dataGridViewListaUsuarios.Size = new System.Drawing.Size(1086, 474);
+            this.dataGridViewListaUsuarios.TabIndex = 1;
+            // 
             // FormListaUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -227,15 +227,15 @@
             this.ClientSize = new System.Drawing.Size(1090, 596);
             this.Controls.Add(this.tableLayoutPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormListaUsuarios";
             this.Text = "FormListaUsuarios";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaUsuarios)).EndInit();
             this.toolStripInicio.ResumeLayout(false);
             this.toolStripInicio.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaUsuarios)).EndInit();
             this.ResumeLayout(false);
 
         }
