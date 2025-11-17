@@ -115,13 +115,6 @@ namespace TASKILLER
             f.Show();
             this.Hide();
         }
-
-        private void modificarEliminarProyectoToolStripMenuItem_Click(object sender, System.EventArgs e)
-        {
-            FormEditarEliminarProyecto f = new FormEditarEliminarProyecto(d);
-            f.Show();
-            this.Hide();
-        }
         private void salirToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             Application.Exit();

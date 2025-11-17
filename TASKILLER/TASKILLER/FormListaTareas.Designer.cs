@@ -30,19 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListaTareas));
             this.grid = new System.Windows.Forms.TableLayoutPanel();
-            this.flowLayoutPanelBloqueado = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanelRevisado = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanelEntregado = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanelEnProgreso = new System.Windows.Forms.FlowLayoutPanel();
-            this.labelBloqueado = new System.Windows.Forms.Label();
-            this.labelRevisado = new System.Windows.Forms.Label();
-            this.labelEntregado = new System.Windows.Forms.Label();
-            this.labelEnProgreso = new System.Windows.Forms.Label();
-            this.labelTarea = new System.Windows.Forms.Label();
-            this.buttonAnadirTarea = new System.Windows.Forms.Button();
-            this.dataGridViewTareas = new System.Windows.Forms.DataGridView();
-            this.labelPorComenzar = new System.Windows.Forms.Label();
-            this.flowLayoutPanelPorComenzar = new System.Windows.Forms.FlowLayoutPanel();
+            this.toolStripInicio = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.proyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearNuevoProyectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearNuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnUsuario = new System.Windows.Forms.ToolStripButton();
+            this.btnTaskiller = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,23 +55,23 @@
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripInicio = new System.Windows.Forms.ToolStrip();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.proyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.crearNuevoProyectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarEliminarProyectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.crearNuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnUsuario = new System.Windows.Forms.ToolStripButton();
-            this.btnTaskiller = new System.Windows.Forms.ToolStripButton();
+            this.flowLayoutPanelBloqueado = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanelRevisado = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanelEntregado = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanelEnProgreso = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelBloqueado = new System.Windows.Forms.Label();
+            this.labelRevisado = new System.Windows.Forms.Label();
+            this.labelEntregado = new System.Windows.Forms.Label();
+            this.labelEnProgreso = new System.Windows.Forms.Label();
+            this.labelTarea = new System.Windows.Forms.Label();
+            this.buttonAnadirTarea = new System.Windows.Forms.Button();
+            this.dataGridViewTareas = new System.Windows.Forms.DataGridView();
+            this.labelPorComenzar = new System.Windows.Forms.Label();
+            this.flowLayoutPanelPorComenzar = new System.Windows.Forms.FlowLayoutPanel();
             this.grid.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTareas)).BeginInit();
-            this.toolStrip1.SuspendLayout();
             this.toolStripInicio.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTareas)).BeginInit();
             this.SuspendLayout();
             // 
             // grid
@@ -102,7 +101,7 @@
             this.grid.Controls.Add(this.flowLayoutPanelPorComenzar, 2, 2);
             this.grid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grid.Location = new System.Drawing.Point(0, 0);
-            this.grid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grid.Margin = new System.Windows.Forms.Padding(2);
             this.grid.Name = "grid";
             this.grid.RowCount = 4;
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.997679F));
@@ -112,150 +111,123 @@
             this.grid.Size = new System.Drawing.Size(1089, 620);
             this.grid.TabIndex = 0;
             // 
-            // flowLayoutPanelBloqueado
+            // toolStripInicio
             // 
-            this.flowLayoutPanelBloqueado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelBloqueado.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelBloqueado.Location = new System.Drawing.Point(936, 89);
-            this.flowLayoutPanelBloqueado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.flowLayoutPanelBloqueado.Name = "flowLayoutPanelBloqueado";
-            this.flowLayoutPanelBloqueado.Size = new System.Drawing.Size(151, 507);
-            this.flowLayoutPanelBloqueado.TabIndex = 18;
+            this.grid.SetColumnSpan(this.toolStripInicio, 7);
+            this.toolStripInicio.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripInicio.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStripInicio.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButton1,
+            this.btnUsuario,
+            this.btnTaskiller});
+            this.toolStripInicio.Location = new System.Drawing.Point(0, 0);
+            this.toolStripInicio.Name = "toolStripInicio";
+            this.toolStripInicio.Size = new System.Drawing.Size(1089, 27);
+            this.toolStripInicio.TabIndex = 20;
+            this.toolStripInicio.Text = "toolStrip1";
             // 
-            // flowLayoutPanelRevisado
+            // toolStripDropDownButton1
             // 
-            this.flowLayoutPanelRevisado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelRevisado.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelRevisado.Location = new System.Drawing.Point(784, 89);
-            this.flowLayoutPanelRevisado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.flowLayoutPanelRevisado.Name = "flowLayoutPanelRevisado";
-            this.flowLayoutPanelRevisado.Size = new System.Drawing.Size(148, 507);
-            this.flowLayoutPanelRevisado.TabIndex = 17;
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.inicioToolStripMenuItem,
+            this.proyectosToolStripMenuItem,
+            this.usuariosToolStripMenuItem,
+            this.rolesToolStripMenuItem,
+            this.toolStripMenuItem9,
+            this.salirToolStripMenuItem});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(34, 24);
+            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
             // 
-            // flowLayoutPanelEntregado
+            // inicioToolStripMenuItem
             // 
-            this.flowLayoutPanelEntregado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelEntregado.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelEntregado.Location = new System.Drawing.Point(632, 89);
-            this.flowLayoutPanelEntregado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.flowLayoutPanelEntregado.Name = "flowLayoutPanelEntregado";
-            this.flowLayoutPanelEntregado.Size = new System.Drawing.Size(148, 507);
-            this.flowLayoutPanelEntregado.TabIndex = 16;
+            this.inicioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("inicioToolStripMenuItem.Image")));
+            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
+            this.inicioToolStripMenuItem.Text = "Inicio";
+            this.inicioToolStripMenuItem.Click += new System.EventHandler(this.inicioToolStripMenuItem_Click);
             // 
-            // flowLayoutPanelEnProgreso
+            // proyectosToolStripMenuItem
             // 
-            this.flowLayoutPanelEnProgreso.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelEnProgreso.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelEnProgreso.Location = new System.Drawing.Point(480, 89);
-            this.flowLayoutPanelEnProgreso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.flowLayoutPanelEnProgreso.Name = "flowLayoutPanelEnProgreso";
-            this.flowLayoutPanelEnProgreso.Size = new System.Drawing.Size(148, 507);
-            this.flowLayoutPanelEnProgreso.TabIndex = 15;
+            this.proyectosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearNuevoProyectoToolStripMenuItem});
+            this.proyectosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("proyectosToolStripMenuItem.Image")));
+            this.proyectosToolStripMenuItem.Name = "proyectosToolStripMenuItem";
+            this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
+            this.proyectosToolStripMenuItem.Text = "Proyectos";
+            this.proyectosToolStripMenuItem.Click += new System.EventHandler(this.proyectosToolStripMenuItem_Click);
             // 
-            // labelBloqueado
+            // crearNuevoProyectoToolStripMenuItem
             // 
-            this.labelBloqueado.AutoSize = true;
-            this.labelBloqueado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelBloqueado.Location = new System.Drawing.Point(936, 29);
-            this.labelBloqueado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelBloqueado.Name = "labelBloqueado";
-            this.labelBloqueado.Size = new System.Drawing.Size(151, 58);
-            this.labelBloqueado.TabIndex = 13;
-            this.labelBloqueado.Text = "Bloqueado";
-            this.labelBloqueado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.crearNuevoProyectoToolStripMenuItem.Name = "crearNuevoProyectoToolStripMenuItem";
+            this.crearNuevoProyectoToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
+            this.crearNuevoProyectoToolStripMenuItem.Text = "Crear nuevo proyecto";
+            this.crearNuevoProyectoToolStripMenuItem.Click += new System.EventHandler(this.crearNuevoProyectoToolStripMenuItem_Click);
             // 
-            // labelRevisado
+            // usuariosToolStripMenuItem
             // 
-            this.labelRevisado.AutoSize = true;
-            this.labelRevisado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelRevisado.Location = new System.Drawing.Point(784, 29);
-            this.labelRevisado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelRevisado.Name = "labelRevisado";
-            this.labelRevisado.Size = new System.Drawing.Size(148, 58);
-            this.labelRevisado.TabIndex = 12;
-            this.labelRevisado.Text = "Revisado";
-            this.labelRevisado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearNuevoUsuarioToolStripMenuItem});
+            this.usuariosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("usuariosToolStripMenuItem.Image")));
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
-            // labelEntregado
+            // crearNuevoUsuarioToolStripMenuItem
             // 
-            this.labelEntregado.AutoSize = true;
-            this.labelEntregado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelEntregado.Location = new System.Drawing.Point(632, 29);
-            this.labelEntregado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelEntregado.Name = "labelEntregado";
-            this.labelEntregado.Size = new System.Drawing.Size(148, 58);
-            this.labelEntregado.TabIndex = 11;
-            this.labelEntregado.Text = "Entregado";
-            this.labelEntregado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.crearNuevoUsuarioToolStripMenuItem.Name = "crearNuevoUsuarioToolStripMenuItem";
+            this.crearNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
+            this.crearNuevoUsuarioToolStripMenuItem.Text = "Crear nuevo usuario";
+            this.crearNuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.crearNuevoUsuarioToolStripMenuItem_Click);
             // 
-            // labelEnProgreso
+            // rolesToolStripMenuItem
             // 
-            this.labelEnProgreso.AutoSize = true;
-            this.labelEnProgreso.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelEnProgreso.Location = new System.Drawing.Point(480, 29);
-            this.labelEnProgreso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelEnProgreso.Name = "labelEnProgreso";
-            this.labelEnProgreso.Size = new System.Drawing.Size(148, 58);
-            this.labelEnProgreso.TabIndex = 10;
-            this.labelEnProgreso.Text = "En Progreso";
-            this.labelEnProgreso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rolesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("rolesToolStripMenuItem.Image")));
+            this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
+            this.rolesToolStripMenuItem.Text = "Roles";
+            this.rolesToolStripMenuItem.Click += new System.EventHandler(this.rolesToolStripMenuItem_Click);
             // 
-            // labelTarea
+            // toolStripMenuItem9
             // 
-            this.labelTarea.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelTarea.Location = new System.Drawing.Point(2, 29);
-            this.labelTarea.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelTarea.Name = "labelTarea";
-            this.labelTarea.Size = new System.Drawing.Size(268, 58);
-            this.labelTarea.TabIndex = 6;
-            this.labelTarea.Text = "TAREA";
-            this.labelTarea.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.toolStripMenuItem9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem9.Image")));
+            this.toolStripMenuItem9.Name = "toolStripMenuItem9";
+            this.toolStripMenuItem9.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(236, 26);
+            this.toolStripMenuItem9.Text = "Guardar datos";
+            this.toolStripMenuItem9.Click += new System.EventHandler(this.guardarDatosToolStripMenuItem_Click);
             // 
-            // buttonAnadirTarea
+            // salirToolStripMenuItem
             // 
-            this.buttonAnadirTarea.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonAnadirTarea.Location = new System.Drawing.Point(274, 31);
-            this.buttonAnadirTarea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.buttonAnadirTarea.Name = "buttonAnadirTarea";
-            this.buttonAnadirTarea.Size = new System.Drawing.Size(50, 54);
-            this.buttonAnadirTarea.TabIndex = 7;
-            this.buttonAnadirTarea.Text = "+";
-            this.buttonAnadirTarea.UseVisualStyleBackColor = true;
+            this.salirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("salirToolStripMenuItem.Image")));
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // dataGridViewTareas
+            // btnUsuario
             // 
-            this.dataGridViewTareas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid.SetColumnSpan(this.dataGridViewTareas, 2);
-            this.dataGridViewTareas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewTareas.Location = new System.Drawing.Point(2, 89);
-            this.dataGridViewTareas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridViewTareas.Name = "dataGridViewTareas";
-            this.dataGridViewTareas.RowHeadersWidth = 82;
-            this.dataGridViewTareas.RowTemplate.Height = 33;
-            this.dataGridViewTareas.Size = new System.Drawing.Size(322, 507);
-            this.dataGridViewTareas.TabIndex = 8;
+            this.btnUsuario.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnUsuario.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.Image")));
+            this.btnUsuario.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnUsuario.Name = "btnUsuario";
+            this.btnUsuario.Size = new System.Drawing.Size(29, 24);
+            this.btnUsuario.Text = "Usuario";
             // 
-            // labelPorComenzar
+            // btnTaskiller
             // 
-            this.labelPorComenzar.AutoSize = true;
-            this.labelPorComenzar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelPorComenzar.Location = new System.Drawing.Point(328, 29);
-            this.labelPorComenzar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelPorComenzar.Name = "labelPorComenzar";
-            this.labelPorComenzar.Size = new System.Drawing.Size(148, 58);
-            this.labelPorComenzar.TabIndex = 9;
-            this.labelPorComenzar.Text = "Por Comenzar";
-            this.labelPorComenzar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // flowLayoutPanelPorComenzar
-            // 
-            this.flowLayoutPanelPorComenzar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelPorComenzar.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelPorComenzar.Location = new System.Drawing.Point(328, 89);
-            this.flowLayoutPanelPorComenzar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.flowLayoutPanelPorComenzar.Name = "flowLayoutPanelPorComenzar";
-            this.flowLayoutPanelPorComenzar.Size = new System.Drawing.Size(148, 507);
-            this.flowLayoutPanelPorComenzar.TabIndex = 14;
+            this.btnTaskiller.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnTaskiller.Image = ((System.Drawing.Image)(resources.GetObject("btnTaskiller.Image")));
+            this.btnTaskiller.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnTaskiller.Name = "btnTaskiller";
+            this.btnTaskiller.Size = new System.Drawing.Size(29, 24);
+            this.btnTaskiller.Text = "TaskillerLogo";
             // 
             // toolStrip1
             // 
@@ -373,131 +345,150 @@
             this.toolStripButton2.Size = new System.Drawing.Size(29, 19);
             this.toolStripButton2.Text = "TaskillerLogo";
             // 
-            // toolStripInicio
+            // flowLayoutPanelBloqueado
             // 
-            this.grid.SetColumnSpan(this.toolStripInicio, 7);
-            this.toolStripInicio.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStripInicio.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStripInicio.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton1,
-            this.btnUsuario,
-            this.btnTaskiller});
-            this.toolStripInicio.Location = new System.Drawing.Point(0, 0);
-            this.toolStripInicio.Name = "toolStripInicio";
-            this.toolStripInicio.Size = new System.Drawing.Size(1089, 27);
-            this.toolStripInicio.TabIndex = 20;
-            this.toolStripInicio.Text = "toolStrip1";
+            this.flowLayoutPanelBloqueado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelBloqueado.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanelBloqueado.Location = new System.Drawing.Point(936, 89);
+            this.flowLayoutPanelBloqueado.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanelBloqueado.Name = "flowLayoutPanelBloqueado";
+            this.flowLayoutPanelBloqueado.Size = new System.Drawing.Size(151, 507);
+            this.flowLayoutPanelBloqueado.TabIndex = 18;
             // 
-            // toolStripDropDownButton1
+            // flowLayoutPanelRevisado
             // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.inicioToolStripMenuItem,
-            this.proyectosToolStripMenuItem,
-            this.usuariosToolStripMenuItem,
-            this.rolesToolStripMenuItem,
-            this.toolStripMenuItem9,
-            this.salirToolStripMenuItem});
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(34, 24);
-            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            this.flowLayoutPanelRevisado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelRevisado.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanelRevisado.Location = new System.Drawing.Point(784, 89);
+            this.flowLayoutPanelRevisado.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanelRevisado.Name = "flowLayoutPanelRevisado";
+            this.flowLayoutPanelRevisado.Size = new System.Drawing.Size(148, 507);
+            this.flowLayoutPanelRevisado.TabIndex = 17;
             // 
-            // inicioToolStripMenuItem
+            // flowLayoutPanelEntregado
             // 
-            this.inicioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("inicioToolStripMenuItem.Image")));
-            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
-            this.inicioToolStripMenuItem.Text = "Inicio";
-            this.inicioToolStripMenuItem.Click += new System.EventHandler(this.inicioToolStripMenuItem_Click);
+            this.flowLayoutPanelEntregado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelEntregado.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanelEntregado.Location = new System.Drawing.Point(632, 89);
+            this.flowLayoutPanelEntregado.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanelEntregado.Name = "flowLayoutPanelEntregado";
+            this.flowLayoutPanelEntregado.Size = new System.Drawing.Size(148, 507);
+            this.flowLayoutPanelEntregado.TabIndex = 16;
             // 
-            // proyectosToolStripMenuItem
+            // flowLayoutPanelEnProgreso
             // 
-            this.proyectosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearNuevoProyectoToolStripMenuItem,
-            this.modificarEliminarProyectoToolStripMenuItem});
-            this.proyectosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("proyectosToolStripMenuItem.Image")));
-            this.proyectosToolStripMenuItem.Name = "proyectosToolStripMenuItem";
-            this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
-            this.proyectosToolStripMenuItem.Text = "Proyectos";
-            this.proyectosToolStripMenuItem.Click += new System.EventHandler(this.proyectosToolStripMenuItem_Click);
+            this.flowLayoutPanelEnProgreso.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelEnProgreso.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanelEnProgreso.Location = new System.Drawing.Point(480, 89);
+            this.flowLayoutPanelEnProgreso.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanelEnProgreso.Name = "flowLayoutPanelEnProgreso";
+            this.flowLayoutPanelEnProgreso.Size = new System.Drawing.Size(148, 507);
+            this.flowLayoutPanelEnProgreso.TabIndex = 15;
             // 
-            // crearNuevoProyectoToolStripMenuItem
+            // labelBloqueado
             // 
-            this.crearNuevoProyectoToolStripMenuItem.Name = "crearNuevoProyectoToolStripMenuItem";
-            this.crearNuevoProyectoToolStripMenuItem.Size = new System.Drawing.Size(279, 26);
-            this.crearNuevoProyectoToolStripMenuItem.Text = "Crear nuevo proyecto";
-            this.crearNuevoProyectoToolStripMenuItem.Click += new System.EventHandler(this.crearNuevoProyectoToolStripMenuItem_Click);
+            this.labelBloqueado.AutoSize = true;
+            this.labelBloqueado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelBloqueado.Location = new System.Drawing.Point(936, 29);
+            this.labelBloqueado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelBloqueado.Name = "labelBloqueado";
+            this.labelBloqueado.Size = new System.Drawing.Size(151, 58);
+            this.labelBloqueado.TabIndex = 13;
+            this.labelBloqueado.Text = "Bloqueado";
+            this.labelBloqueado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // modificarEliminarProyectoToolStripMenuItem
+            // labelRevisado
             // 
-            this.modificarEliminarProyectoToolStripMenuItem.Name = "modificarEliminarProyectoToolStripMenuItem";
-            this.modificarEliminarProyectoToolStripMenuItem.Size = new System.Drawing.Size(279, 26);
-            this.modificarEliminarProyectoToolStripMenuItem.Text = "Modificar/Eliminar proyecto";
-            this.modificarEliminarProyectoToolStripMenuItem.Click += new System.EventHandler(this.modificarEliminarProyectoToolStripMenuItem_Click);
+            this.labelRevisado.AutoSize = true;
+            this.labelRevisado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelRevisado.Location = new System.Drawing.Point(784, 29);
+            this.labelRevisado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelRevisado.Name = "labelRevisado";
+            this.labelRevisado.Size = new System.Drawing.Size(148, 58);
+            this.labelRevisado.TabIndex = 12;
+            this.labelRevisado.Text = "Revisado";
+            this.labelRevisado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // usuariosToolStripMenuItem
+            // labelEntregado
             // 
-            this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearNuevoUsuarioToolStripMenuItem});
-            this.usuariosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("usuariosToolStripMenuItem.Image")));
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
-            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+            this.labelEntregado.AutoSize = true;
+            this.labelEntregado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelEntregado.Location = new System.Drawing.Point(632, 29);
+            this.labelEntregado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelEntregado.Name = "labelEntregado";
+            this.labelEntregado.Size = new System.Drawing.Size(148, 58);
+            this.labelEntregado.TabIndex = 11;
+            this.labelEntregado.Text = "Entregado";
+            this.labelEntregado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // crearNuevoUsuarioToolStripMenuItem
+            // labelEnProgreso
             // 
-            this.crearNuevoUsuarioToolStripMenuItem.Name = "crearNuevoUsuarioToolStripMenuItem";
-            this.crearNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.crearNuevoUsuarioToolStripMenuItem.Text = "Crear nuevo usuario";
-            this.crearNuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.crearNuevoUsuarioToolStripMenuItem_Click);
+            this.labelEnProgreso.AutoSize = true;
+            this.labelEnProgreso.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelEnProgreso.Location = new System.Drawing.Point(480, 29);
+            this.labelEnProgreso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelEnProgreso.Name = "labelEnProgreso";
+            this.labelEnProgreso.Size = new System.Drawing.Size(148, 58);
+            this.labelEnProgreso.TabIndex = 10;
+            this.labelEnProgreso.Text = "En Progreso";
+            this.labelEnProgreso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // rolesToolStripMenuItem
+            // labelTarea
             // 
-            this.rolesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("rolesToolStripMenuItem.Image")));
-            this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
-            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
-            this.rolesToolStripMenuItem.Text = "Roles";
-            this.rolesToolStripMenuItem.Click += new System.EventHandler(this.rolesToolStripMenuItem_Click);
+            this.labelTarea.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelTarea.Location = new System.Drawing.Point(2, 29);
+            this.labelTarea.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTarea.Name = "labelTarea";
+            this.labelTarea.Size = new System.Drawing.Size(268, 58);
+            this.labelTarea.TabIndex = 6;
+            this.labelTarea.Text = "TAREA";
+            this.labelTarea.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // toolStripMenuItem9
+            // buttonAnadirTarea
             // 
-            this.toolStripMenuItem9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem9.Image")));
-            this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(236, 26);
-            this.toolStripMenuItem9.Text = "Guardar datos";
-            this.toolStripMenuItem9.Click += new System.EventHandler(this.guardarDatosToolStripMenuItem_Click);
+            this.buttonAnadirTarea.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonAnadirTarea.Location = new System.Drawing.Point(274, 31);
+            this.buttonAnadirTarea.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAnadirTarea.Name = "buttonAnadirTarea";
+            this.buttonAnadirTarea.Size = new System.Drawing.Size(50, 54);
+            this.buttonAnadirTarea.TabIndex = 7;
+            this.buttonAnadirTarea.Text = "+";
+            this.buttonAnadirTarea.UseVisualStyleBackColor = true;
             // 
-            // salirToolStripMenuItem
+            // dataGridViewTareas
             // 
-            this.salirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("salirToolStripMenuItem.Image")));
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
-            this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            this.dataGridViewTareas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid.SetColumnSpan(this.dataGridViewTareas, 2);
+            this.dataGridViewTareas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewTareas.Location = new System.Drawing.Point(2, 89);
+            this.dataGridViewTareas.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewTareas.Name = "dataGridViewTareas";
+            this.dataGridViewTareas.RowHeadersWidth = 82;
+            this.dataGridViewTareas.RowTemplate.Height = 33;
+            this.dataGridViewTareas.Size = new System.Drawing.Size(322, 507);
+            this.dataGridViewTareas.TabIndex = 8;
             // 
-            // btnUsuario
+            // labelPorComenzar
             // 
-            this.btnUsuario.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnUsuario.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.Image")));
-            this.btnUsuario.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnUsuario.Name = "btnUsuario";
-            this.btnUsuario.Size = new System.Drawing.Size(29, 24);
-            this.btnUsuario.Text = "Usuario";
+            this.labelPorComenzar.AutoSize = true;
+            this.labelPorComenzar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelPorComenzar.Location = new System.Drawing.Point(328, 29);
+            this.labelPorComenzar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelPorComenzar.Name = "labelPorComenzar";
+            this.labelPorComenzar.Size = new System.Drawing.Size(148, 58);
+            this.labelPorComenzar.TabIndex = 9;
+            this.labelPorComenzar.Text = "Por Comenzar";
+            this.labelPorComenzar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnTaskiller
+            // flowLayoutPanelPorComenzar
             // 
-            this.btnTaskiller.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnTaskiller.Image = ((System.Drawing.Image)(resources.GetObject("btnTaskiller.Image")));
-            this.btnTaskiller.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnTaskiller.Name = "btnTaskiller";
-            this.btnTaskiller.Size = new System.Drawing.Size(29, 24);
-            this.btnTaskiller.Text = "TaskillerLogo";
+            this.flowLayoutPanelPorComenzar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelPorComenzar.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanelPorComenzar.Location = new System.Drawing.Point(328, 89);
+            this.flowLayoutPanelPorComenzar.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanelPorComenzar.Name = "flowLayoutPanelPorComenzar";
+            this.flowLayoutPanelPorComenzar.Size = new System.Drawing.Size(148, 507);
+            this.flowLayoutPanelPorComenzar.TabIndex = 14;
             // 
             // FormListaTareas
             // 
@@ -508,17 +499,17 @@
             this.Controls.Add(this.grid);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormListaTareas";
             this.Text = "Tareas";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.grid.ResumeLayout(false);
             this.grid.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTareas)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             this.toolStripInicio.ResumeLayout(false);
             this.toolStripInicio.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTareas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -544,7 +535,6 @@
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem proyectosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem crearNuevoProyectoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarEliminarProyectoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem crearNuevoUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rolesToolStripMenuItem;
