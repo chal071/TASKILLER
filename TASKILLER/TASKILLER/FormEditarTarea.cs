@@ -100,6 +100,11 @@ namespace TASKILLER
         {
             Application.Exit();
         }
+
+        private void guardarDatosToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            GestionDatos.GuardarDatos(d);
+        }
     }
 
 
