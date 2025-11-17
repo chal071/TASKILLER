@@ -30,6 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListaTareas));
             this.grid = new System.Windows.Forms.TableLayoutPanel();
+            this.flowLayoutPanelBloqueado = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanelRevisado = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanelEntregado = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanelEnProgreso = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelBloqueado = new System.Windows.Forms.Label();
+            this.labelRevisado = new System.Windows.Forms.Label();
+            this.labelEntregado = new System.Windows.Forms.Label();
+            this.labelEnProgreso = new System.Windows.Forms.Label();
             this.toolStripInicio = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,15 +54,7 @@
             this.buttonAnadirTarea = new System.Windows.Forms.Button();
             this.dataGridViewTareas = new System.Windows.Forms.DataGridView();
             this.labelPorComenzar = new System.Windows.Forms.Label();
-            this.labelEnProgreso = new System.Windows.Forms.Label();
-            this.labelEntregado = new System.Windows.Forms.Label();
-            this.labelRevisado = new System.Windows.Forms.Label();
-            this.labelBloqueado = new System.Windows.Forms.Label();
             this.flowLayoutPanelPorComenzar = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanelEnProgreso = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanelEntregado = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanelRevisado = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanelBloqueado = new System.Windows.Forms.FlowLayoutPanel();
             this.grid.SuspendLayout();
             this.toolStripInicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTareas)).BeginInit();
@@ -93,6 +93,86 @@
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.20295F));
             this.grid.Size = new System.Drawing.Size(1634, 969);
             this.grid.TabIndex = 0;
+            // 
+            // flowLayoutPanelBloqueado
+            // 
+            this.flowLayoutPanelBloqueado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelBloqueado.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanelBloqueado.Location = new System.Drawing.Point(1404, 145);
+            this.flowLayoutPanelBloqueado.Name = "flowLayoutPanelBloqueado";
+            this.flowLayoutPanelBloqueado.Size = new System.Drawing.Size(227, 821);
+            this.flowLayoutPanelBloqueado.TabIndex = 18;
+            // 
+            // flowLayoutPanelRevisado
+            // 
+            this.flowLayoutPanelRevisado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelRevisado.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanelRevisado.Location = new System.Drawing.Point(1176, 145);
+            this.flowLayoutPanelRevisado.Name = "flowLayoutPanelRevisado";
+            this.flowLayoutPanelRevisado.Size = new System.Drawing.Size(222, 821);
+            this.flowLayoutPanelRevisado.TabIndex = 17;
+            // 
+            // flowLayoutPanelEntregado
+            // 
+            this.flowLayoutPanelEntregado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelEntregado.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanelEntregado.Location = new System.Drawing.Point(948, 145);
+            this.flowLayoutPanelEntregado.Name = "flowLayoutPanelEntregado";
+            this.flowLayoutPanelEntregado.Size = new System.Drawing.Size(222, 821);
+            this.flowLayoutPanelEntregado.TabIndex = 16;
+            // 
+            // flowLayoutPanelEnProgreso
+            // 
+            this.flowLayoutPanelEnProgreso.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelEnProgreso.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanelEnProgreso.Location = new System.Drawing.Point(720, 145);
+            this.flowLayoutPanelEnProgreso.Name = "flowLayoutPanelEnProgreso";
+            this.flowLayoutPanelEnProgreso.Size = new System.Drawing.Size(222, 821);
+            this.flowLayoutPanelEnProgreso.TabIndex = 15;
+            // 
+            // labelBloqueado
+            // 
+            this.labelBloqueado.AutoSize = true;
+            this.labelBloqueado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelBloqueado.Location = new System.Drawing.Point(1404, 48);
+            this.labelBloqueado.Name = "labelBloqueado";
+            this.labelBloqueado.Size = new System.Drawing.Size(227, 94);
+            this.labelBloqueado.TabIndex = 13;
+            this.labelBloqueado.Text = "Bloqueado";
+            this.labelBloqueado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelRevisado
+            // 
+            this.labelRevisado.AutoSize = true;
+            this.labelRevisado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelRevisado.Location = new System.Drawing.Point(1176, 48);
+            this.labelRevisado.Name = "labelRevisado";
+            this.labelRevisado.Size = new System.Drawing.Size(222, 94);
+            this.labelRevisado.TabIndex = 12;
+            this.labelRevisado.Text = "Revisado";
+            this.labelRevisado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelEntregado
+            // 
+            this.labelEntregado.AutoSize = true;
+            this.labelEntregado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelEntregado.Location = new System.Drawing.Point(948, 48);
+            this.labelEntregado.Name = "labelEntregado";
+            this.labelEntregado.Size = new System.Drawing.Size(222, 94);
+            this.labelEntregado.TabIndex = 11;
+            this.labelEntregado.Text = "Entregado";
+            this.labelEntregado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelEnProgreso
+            // 
+            this.labelEnProgreso.AutoSize = true;
+            this.labelEnProgreso.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelEnProgreso.Location = new System.Drawing.Point(720, 48);
+            this.labelEnProgreso.Name = "labelEnProgreso";
+            this.labelEnProgreso.Size = new System.Drawing.Size(222, 94);
+            this.labelEnProgreso.TabIndex = 10;
+            this.labelEnProgreso.Text = "En Progreso";
+            this.labelEnProgreso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // toolStripInicio
             // 
@@ -222,10 +302,12 @@
             // dataGridViewTareas
             // 
             this.dataGridViewTareas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTareas.ColumnHeadersVisible = false;
             this.grid.SetColumnSpan(this.dataGridViewTareas, 2);
             this.dataGridViewTareas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewTareas.Location = new System.Drawing.Point(3, 145);
             this.dataGridViewTareas.Name = "dataGridViewTareas";
+            this.dataGridViewTareas.RowHeadersVisible = false;
             this.dataGridViewTareas.RowHeadersWidth = 82;
             this.dataGridViewTareas.RowTemplate.Height = 33;
             this.dataGridViewTareas.Size = new System.Drawing.Size(483, 821);
@@ -242,50 +324,6 @@
             this.labelPorComenzar.Text = "Por Comenzar";
             this.labelPorComenzar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelEnProgreso
-            // 
-            this.labelEnProgreso.AutoSize = true;
-            this.labelEnProgreso.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelEnProgreso.Location = new System.Drawing.Point(720, 48);
-            this.labelEnProgreso.Name = "labelEnProgreso";
-            this.labelEnProgreso.Size = new System.Drawing.Size(222, 94);
-            this.labelEnProgreso.TabIndex = 10;
-            this.labelEnProgreso.Text = "En Progreso";
-            this.labelEnProgreso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelEntregado
-            // 
-            this.labelEntregado.AutoSize = true;
-            this.labelEntregado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelEntregado.Location = new System.Drawing.Point(948, 48);
-            this.labelEntregado.Name = "labelEntregado";
-            this.labelEntregado.Size = new System.Drawing.Size(222, 94);
-            this.labelEntregado.TabIndex = 11;
-            this.labelEntregado.Text = "Entregado";
-            this.labelEntregado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelRevisado
-            // 
-            this.labelRevisado.AutoSize = true;
-            this.labelRevisado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelRevisado.Location = new System.Drawing.Point(1176, 48);
-            this.labelRevisado.Name = "labelRevisado";
-            this.labelRevisado.Size = new System.Drawing.Size(222, 94);
-            this.labelRevisado.TabIndex = 12;
-            this.labelRevisado.Text = "Revisado";
-            this.labelRevisado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelBloqueado
-            // 
-            this.labelBloqueado.AutoSize = true;
-            this.labelBloqueado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelBloqueado.Location = new System.Drawing.Point(1404, 48);
-            this.labelBloqueado.Name = "labelBloqueado";
-            this.labelBloqueado.Size = new System.Drawing.Size(227, 94);
-            this.labelBloqueado.TabIndex = 13;
-            this.labelBloqueado.Text = "Bloqueado";
-            this.labelBloqueado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // flowLayoutPanelPorComenzar
             // 
             this.flowLayoutPanelPorComenzar.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -294,42 +332,6 @@
             this.flowLayoutPanelPorComenzar.Name = "flowLayoutPanelPorComenzar";
             this.flowLayoutPanelPorComenzar.Size = new System.Drawing.Size(222, 821);
             this.flowLayoutPanelPorComenzar.TabIndex = 14;
-            // 
-            // flowLayoutPanelEnProgreso
-            // 
-            this.flowLayoutPanelEnProgreso.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelEnProgreso.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelEnProgreso.Location = new System.Drawing.Point(720, 145);
-            this.flowLayoutPanelEnProgreso.Name = "flowLayoutPanelEnProgreso";
-            this.flowLayoutPanelEnProgreso.Size = new System.Drawing.Size(222, 821);
-            this.flowLayoutPanelEnProgreso.TabIndex = 15;
-            // 
-            // flowLayoutPanelEntregado
-            // 
-            this.flowLayoutPanelEntregado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelEntregado.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelEntregado.Location = new System.Drawing.Point(948, 145);
-            this.flowLayoutPanelEntregado.Name = "flowLayoutPanelEntregado";
-            this.flowLayoutPanelEntregado.Size = new System.Drawing.Size(222, 821);
-            this.flowLayoutPanelEntregado.TabIndex = 16;
-            // 
-            // flowLayoutPanelRevisado
-            // 
-            this.flowLayoutPanelRevisado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelRevisado.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelRevisado.Location = new System.Drawing.Point(1176, 145);
-            this.flowLayoutPanelRevisado.Name = "flowLayoutPanelRevisado";
-            this.flowLayoutPanelRevisado.Size = new System.Drawing.Size(222, 821);
-            this.flowLayoutPanelRevisado.TabIndex = 17;
-            // 
-            // flowLayoutPanelBloqueado
-            // 
-            this.flowLayoutPanelBloqueado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelBloqueado.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelBloqueado.Location = new System.Drawing.Point(1404, 145);
-            this.flowLayoutPanelBloqueado.Name = "flowLayoutPanelBloqueado";
-            this.flowLayoutPanelBloqueado.Size = new System.Drawing.Size(227, 821);
-            this.flowLayoutPanelBloqueado.TabIndex = 18;
             // 
             // FormListaTareas
             // 
