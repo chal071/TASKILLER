@@ -41,7 +41,6 @@ namespace TASKILLER
 
                 tarjeta.AgregarTareas(d.listaTareas, p);
 
-                tarjeta.Margin = new Padding(20);
                 flowLayoutPanelListaProyectos.Controls.Add(tarjeta);
             }
         }

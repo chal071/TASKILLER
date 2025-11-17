@@ -85,12 +85,6 @@ namespace TASKILLER
             f.Show();
             this.Hide();
         }
-        private void modificarEliminarProyectoToolStripMenuItem_Click(object sender, System.EventArgs e)
-        {
-            FormEditarEliminarProyecto f = new FormEditarEliminarProyecto(d);
-            f.Show();
-            this.Hide();
-        }
         private void salirToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             Application.Exit();
@@ -111,6 +105,18 @@ namespace TASKILLER
             if (string.IsNullOrEmpty(p.Titulo))
             {
                 MessageBox.Show("Título y descripción son obligatorios.");
+                return;
+            }
+
+            if (p.FechaInicio >= p.FechaFinal)
+            {
+                MessageBox.Show("La fecha de inicio debe ser anterior a la fecha final.");
+                return;
+            }
+
+            if (comboBoxEstado.SelectedItem == null)
+            {
+                MessageBox.Show("Debe seleccionar un estado para el proyecto.");
                 return;
             }
 
