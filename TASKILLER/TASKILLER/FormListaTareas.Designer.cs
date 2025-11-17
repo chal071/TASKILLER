@@ -29,286 +29,356 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListaTareas));
-            this.flowLayoutPanelListaTareas = new System.Windows.Forms.FlowLayoutPanel();
-            this.groupBoxTarea = new System.Windows.Forms.GroupBox();
-            this.buttonAñadirMasTarea = new System.Windows.Forms.Button();
-            this.labelTareas = new System.Windows.Forms.Label();
-            this.dataGridViewListasTarea = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.labelNombreProyecto = new System.Windows.Forms.Label();
-            this.groupBoxTareasPorComenzar = new System.Windows.Forms.GroupBox();
-            this.groupBoxEnProgreso = new System.Windows.Forms.GroupBox();
-            this.groupBoxEntregado = new System.Windows.Forms.GroupBox();
-            this.groupBoxRevisado = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanelListaEstadoTareas = new System.Windows.Forms.FlowLayoutPanel();
-            this.groupBoxBloqueado = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanelTareasPorComenzar = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanelTareasEnProgreso = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanelTareasEntregado = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanelTareaRevisado = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanelTareasBloqueado = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanelListaTareas.SuspendLayout();
-            this.groupBoxTarea.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListasTarea)).BeginInit();
-            this.groupBoxTareasPorComenzar.SuspendLayout();
-            this.groupBoxEnProgreso.SuspendLayout();
-            this.groupBoxEntregado.SuspendLayout();
-            this.groupBoxRevisado.SuspendLayout();
-            this.flowLayoutPanelListaEstadoTareas.SuspendLayout();
-            this.groupBoxBloqueado.SuspendLayout();
+            this.grid = new System.Windows.Forms.TableLayoutPanel();
+            this.toolStripInicio = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.proyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearNuevoProyectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarEliminarProyectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearNuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnUsuario = new System.Windows.Forms.ToolStripButton();
+            this.btnTaskiller = new System.Windows.Forms.ToolStripButton();
+            this.labelTarea = new System.Windows.Forms.Label();
+            this.buttonAnadirTarea = new System.Windows.Forms.Button();
+            this.dataGridViewTareas = new System.Windows.Forms.DataGridView();
+            this.labelPorComenzar = new System.Windows.Forms.Label();
+            this.labelEnProgreso = new System.Windows.Forms.Label();
+            this.labelEntregado = new System.Windows.Forms.Label();
+            this.labelRevisado = new System.Windows.Forms.Label();
+            this.labelBloqueado = new System.Windows.Forms.Label();
+            this.flowLayoutPanelPorComenzar = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanelEnProgreso = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanelEntregado = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanelRevisado = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanelBloqueado = new System.Windows.Forms.FlowLayoutPanel();
+            this.grid.SuspendLayout();
+            this.toolStripInicio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTareas)).BeginInit();
             this.SuspendLayout();
             // 
-            // flowLayoutPanelListaTareas
+            // grid
             // 
-            this.flowLayoutPanelListaTareas.AutoScroll = true;
-            this.flowLayoutPanelListaTareas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanelListaTareas.Controls.Add(this.groupBoxTarea);
-            this.flowLayoutPanelListaTareas.Controls.Add(this.dataGridViewListasTarea);
-            this.flowLayoutPanelListaTareas.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanelListaTareas.Name = "flowLayoutPanelListaTareas";
-            this.flowLayoutPanelListaTareas.Size = new System.Drawing.Size(476, 969);
-            this.flowLayoutPanelListaTareas.TabIndex = 0;
+            this.grid.ColumnCount = 7;
+            this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14F));
+            this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14F));
+            this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14F));
+            this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14F));
+            this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14F));
+            this.grid.Controls.Add(this.flowLayoutPanelBloqueado, 6, 2);
+            this.grid.Controls.Add(this.flowLayoutPanelRevisado, 5, 2);
+            this.grid.Controls.Add(this.flowLayoutPanelEntregado, 4, 2);
+            this.grid.Controls.Add(this.flowLayoutPanelEnProgreso, 3, 2);
+            this.grid.Controls.Add(this.labelBloqueado, 6, 1);
+            this.grid.Controls.Add(this.labelRevisado, 5, 1);
+            this.grid.Controls.Add(this.labelEntregado, 4, 1);
+            this.grid.Controls.Add(this.labelEnProgreso, 3, 1);
+            this.grid.Controls.Add(this.toolStripInicio, 0, 0);
+            this.grid.Controls.Add(this.labelTarea, 0, 1);
+            this.grid.Controls.Add(this.buttonAnadirTarea, 1, 1);
+            this.grid.Controls.Add(this.dataGridViewTareas, 0, 2);
+            this.grid.Controls.Add(this.labelPorComenzar, 2, 1);
+            this.grid.Controls.Add(this.flowLayoutPanelPorComenzar, 2, 2);
+            this.grid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grid.Location = new System.Drawing.Point(0, 0);
+            this.grid.Name = "grid";
+            this.grid.RowCount = 3;
+            this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.997679F));
+            this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.799371F));
+            this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.20295F));
+            this.grid.Size = new System.Drawing.Size(1634, 969);
+            this.grid.TabIndex = 0;
             // 
-            // groupBoxTarea
+            // toolStripInicio
             // 
-            this.groupBoxTarea.AutoSize = true;
-            this.groupBoxTarea.Controls.Add(this.buttonAñadirMasTarea);
-            this.groupBoxTarea.Controls.Add(this.labelTareas);
-            this.groupBoxTarea.Location = new System.Drawing.Point(3, 3);
-            this.groupBoxTarea.Name = "groupBoxTarea";
-            this.groupBoxTarea.Size = new System.Drawing.Size(456, 121);
-            this.groupBoxTarea.TabIndex = 2;
-            this.groupBoxTarea.TabStop = false;
+            this.grid.SetColumnSpan(this.toolStripInicio, 7);
+            this.toolStripInicio.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripInicio.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStripInicio.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButton1,
+            this.btnUsuario,
+            this.btnTaskiller});
+            this.toolStripInicio.Location = new System.Drawing.Point(0, 0);
+            this.toolStripInicio.Name = "toolStripInicio";
+            this.toolStripInicio.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.toolStripInicio.Size = new System.Drawing.Size(1634, 48);
+            this.toolStripInicio.TabIndex = 5;
+            this.toolStripInicio.Text = "toolStrip1";
             // 
-            // buttonAñadirMasTarea
+            // toolStripDropDownButton1
             // 
-            this.buttonAñadirMasTarea.Location = new System.Drawing.Point(384, 27);
-            this.buttonAñadirMasTarea.Name = "buttonAñadirMasTarea";
-            this.buttonAñadirMasTarea.Size = new System.Drawing.Size(66, 64);
-            this.buttonAñadirMasTarea.TabIndex = 1;
-            this.buttonAñadirMasTarea.Text = "+";
-            this.buttonAñadirMasTarea.UseVisualStyleBackColor = true;
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.inicioToolStripMenuItem,
+            this.proyectosToolStripMenuItem,
+            this.usuariosToolStripMenuItem,
+            this.rolesToolStripMenuItem,
+            this.salirToolStripMenuItem});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(42, 42);
+            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
             // 
-            // labelTareas
+            // inicioToolStripMenuItem
             // 
-            this.labelTareas.AutoSize = true;
-            this.labelTareas.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTareas.Location = new System.Drawing.Point(8, 27);
-            this.labelTareas.Name = "labelTareas";
-            this.labelTareas.Size = new System.Drawing.Size(216, 55);
-            this.labelTareas.TabIndex = 0;
-            this.labelTareas.Text = "TAREAS";
+            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(277, 44);
+            this.inicioToolStripMenuItem.Text = "Inicio";
             // 
-            // dataGridViewListasTarea
+            // proyectosToolStripMenuItem
             // 
-            this.dataGridViewListasTarea.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.dataGridViewListasTarea.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewListasTarea.CausesValidation = false;
-            this.dataGridViewListasTarea.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridViewListasTarea.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewListasTarea.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Estado,
-            this.Editar});
-            this.dataGridViewListasTarea.Location = new System.Drawing.Point(3, 130);
-            this.dataGridViewListasTarea.Name = "dataGridViewListasTarea";
-            this.dataGridViewListasTarea.RowHeadersVisible = false;
-            this.dataGridViewListasTarea.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridViewListasTarea.RowTemplate.Height = 33;
-            this.dataGridViewListasTarea.Size = new System.Drawing.Size(450, 806);
-            this.dataGridViewListasTarea.TabIndex = 1;
+            this.proyectosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearNuevoProyectoToolStripMenuItem,
+            this.modificarEliminarProyectoToolStripMenuItem});
+            this.proyectosToolStripMenuItem.Name = "proyectosToolStripMenuItem";
+            this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(277, 44);
+            this.proyectosToolStripMenuItem.Text = "Proyectos";
             // 
-            // Nombre
+            // crearNuevoProyectoToolStripMenuItem
             // 
-            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 10;
-            this.Nombre.Name = "Nombre";
+            this.crearNuevoProyectoToolStripMenuItem.Name = "crearNuevoProyectoToolStripMenuItem";
+            this.crearNuevoProyectoToolStripMenuItem.Size = new System.Drawing.Size(443, 44);
+            this.crearNuevoProyectoToolStripMenuItem.Text = "Crear nuevo proyecto";
             // 
-            // Estado
+            // modificarEliminarProyectoToolStripMenuItem
             // 
-            this.Estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Estado.HeaderText = "Estado";
-            this.Estado.MinimumWidth = 10;
-            this.Estado.Name = "Estado";
-            this.Estado.Width = 124;
+            this.modificarEliminarProyectoToolStripMenuItem.Name = "modificarEliminarProyectoToolStripMenuItem";
+            this.modificarEliminarProyectoToolStripMenuItem.Size = new System.Drawing.Size(443, 44);
+            this.modificarEliminarProyectoToolStripMenuItem.Text = "Modificar/Eliminar proyecto";
             // 
-            // Editar
+            // usuariosToolStripMenuItem
             // 
-            this.Editar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Editar.HeaderText = "";
-            this.Editar.MinimumWidth = 10;
-            this.Editar.Name = "Editar";
-            this.Editar.Text = "";
-            this.Editar.UseColumnTextForButtonValue = true;
-            this.Editar.Width = 33;
+            this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearNuevoUsuarioToolStripMenuItem});
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(277, 44);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
             // 
-            // labelNombreProyecto
+            // crearNuevoUsuarioToolStripMenuItem
             // 
-            this.labelNombreProyecto.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombreProyecto.Location = new System.Drawing.Point(3, 0);
-            this.labelNombreProyecto.Name = "labelNombreProyecto";
-            this.labelNombreProyecto.Size = new System.Drawing.Size(1155, 55);
-            this.labelNombreProyecto.TabIndex = 1;
-            this.labelNombreProyecto.Text = "(Nombre Proyecto)";
-            this.labelNombreProyecto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.crearNuevoUsuarioToolStripMenuItem.Name = "crearNuevoUsuarioToolStripMenuItem";
+            this.crearNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(362, 44);
+            this.crearNuevoUsuarioToolStripMenuItem.Text = "Crear nuevo usuario";
             // 
-            // groupBoxTareasPorComenzar
+            // rolesToolStripMenuItem
             // 
-            this.groupBoxTareasPorComenzar.Controls.Add(this.flowLayoutPanelTareasPorComenzar);
-            this.groupBoxTareasPorComenzar.Location = new System.Drawing.Point(3, 58);
-            this.groupBoxTareasPorComenzar.Name = "groupBoxTareasPorComenzar";
-            this.groupBoxTareasPorComenzar.Size = new System.Drawing.Size(230, 884);
-            this.groupBoxTareasPorComenzar.TabIndex = 2;
-            this.groupBoxTareasPorComenzar.TabStop = false;
-            this.groupBoxTareasPorComenzar.Text = "Por comenzar";
+            this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(277, 44);
+            this.rolesToolStripMenuItem.Text = "Roles";
             // 
-            // groupBoxEnProgreso
+            // salirToolStripMenuItem
             // 
-            this.groupBoxEnProgreso.Controls.Add(this.flowLayoutPanelTareasEnProgreso);
-            this.groupBoxEnProgreso.Location = new System.Drawing.Point(239, 58);
-            this.groupBoxEnProgreso.Name = "groupBoxEnProgreso";
-            this.groupBoxEnProgreso.Size = new System.Drawing.Size(230, 884);
-            this.groupBoxEnProgreso.TabIndex = 3;
-            this.groupBoxEnProgreso.TabStop = false;
-            this.groupBoxEnProgreso.Text = "En progreso";
+            this.salirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("salirToolStripMenuItem.Image")));
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(277, 44);
+            this.salirToolStripMenuItem.Text = "Salir";
             // 
-            // groupBoxEntregado
+            // btnUsuario
             // 
-            this.groupBoxEntregado.Controls.Add(this.flowLayoutPanelTareasEntregado);
-            this.groupBoxEntregado.Location = new System.Drawing.Point(475, 58);
-            this.groupBoxEntregado.Name = "groupBoxEntregado";
-            this.groupBoxEntregado.Size = new System.Drawing.Size(230, 884);
-            this.groupBoxEntregado.TabIndex = 3;
-            this.groupBoxEntregado.TabStop = false;
-            this.groupBoxEntregado.Text = "Entregado";
+            this.btnUsuario.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnUsuario.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.Image")));
+            this.btnUsuario.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnUsuario.Name = "btnUsuario";
+            this.btnUsuario.Size = new System.Drawing.Size(46, 42);
+            this.btnUsuario.Text = "Usuario";
             // 
-            // groupBoxRevisado
+            // btnTaskiller
             // 
-            this.groupBoxRevisado.Controls.Add(this.flowLayoutPanelTareaRevisado);
-            this.groupBoxRevisado.Location = new System.Drawing.Point(711, 58);
-            this.groupBoxRevisado.Name = "groupBoxRevisado";
-            this.groupBoxRevisado.Size = new System.Drawing.Size(230, 884);
-            this.groupBoxRevisado.TabIndex = 3;
-            this.groupBoxRevisado.TabStop = false;
-            this.groupBoxRevisado.Text = "Revisado";
+            this.btnTaskiller.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnTaskiller.Image = ((System.Drawing.Image)(resources.GetObject("btnTaskiller.Image")));
+            this.btnTaskiller.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnTaskiller.Name = "btnTaskiller";
+            this.btnTaskiller.Size = new System.Drawing.Size(46, 42);
+            this.btnTaskiller.Text = "TaskillerLogo";
             // 
-            // flowLayoutPanelListaEstadoTareas
+            // labelTarea
             // 
-            this.flowLayoutPanelListaEstadoTareas.AutoScroll = true;
-            this.flowLayoutPanelListaEstadoTareas.Controls.Add(this.labelNombreProyecto);
-            this.flowLayoutPanelListaEstadoTareas.Controls.Add(this.groupBoxTareasPorComenzar);
-            this.flowLayoutPanelListaEstadoTareas.Controls.Add(this.groupBoxEnProgreso);
-            this.flowLayoutPanelListaEstadoTareas.Controls.Add(this.groupBoxEntregado);
-            this.flowLayoutPanelListaEstadoTareas.Controls.Add(this.groupBoxRevisado);
-            this.flowLayoutPanelListaEstadoTareas.Controls.Add(this.groupBoxBloqueado);
-            this.flowLayoutPanelListaEstadoTareas.Location = new System.Drawing.Point(482, 0);
-            this.flowLayoutPanelListaEstadoTareas.Name = "flowLayoutPanelListaEstadoTareas";
-            this.flowLayoutPanelListaEstadoTareas.Size = new System.Drawing.Size(1155, 969);
-            this.flowLayoutPanelListaEstadoTareas.TabIndex = 4;
+            this.labelTarea.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelTarea.Location = new System.Drawing.Point(3, 48);
+            this.labelTarea.Name = "labelTarea";
+            this.labelTarea.Size = new System.Drawing.Size(402, 94);
+            this.labelTarea.TabIndex = 6;
+            this.labelTarea.Text = "TAREA";
+            this.labelTarea.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // groupBoxBloqueado
+            // buttonAnadirTarea
             // 
-            this.groupBoxBloqueado.Controls.Add(this.flowLayoutPanelTareasBloqueado);
-            this.groupBoxBloqueado.Location = new System.Drawing.Point(3, 948);
-            this.groupBoxBloqueado.Name = "groupBoxBloqueado";
-            this.groupBoxBloqueado.Size = new System.Drawing.Size(230, 884);
-            this.groupBoxBloqueado.TabIndex = 4;
-            this.groupBoxBloqueado.TabStop = false;
-            this.groupBoxBloqueado.Text = "Bloqueado";
+            this.buttonAnadirTarea.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonAnadirTarea.Location = new System.Drawing.Point(411, 51);
+            this.buttonAnadirTarea.Name = "buttonAnadirTarea";
+            this.buttonAnadirTarea.Size = new System.Drawing.Size(75, 88);
+            this.buttonAnadirTarea.TabIndex = 7;
+            this.buttonAnadirTarea.Text = "+";
+            this.buttonAnadirTarea.UseVisualStyleBackColor = true;
             // 
-            // flowLayoutPanelTareasPorComenzar
+            // dataGridViewTareas
             // 
-            this.flowLayoutPanelTareasPorComenzar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelTareasPorComenzar.Location = new System.Drawing.Point(3, 27);
-            this.flowLayoutPanelTareasPorComenzar.Name = "flowLayoutPanelTareasPorComenzar";
-            this.flowLayoutPanelTareasPorComenzar.Size = new System.Drawing.Size(224, 854);
-            this.flowLayoutPanelTareasPorComenzar.TabIndex = 0;
+            this.dataGridViewTareas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid.SetColumnSpan(this.dataGridViewTareas, 2);
+            this.dataGridViewTareas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewTareas.Location = new System.Drawing.Point(3, 145);
+            this.dataGridViewTareas.Name = "dataGridViewTareas";
+            this.dataGridViewTareas.RowHeadersWidth = 82;
+            this.dataGridViewTareas.RowTemplate.Height = 33;
+            this.dataGridViewTareas.Size = new System.Drawing.Size(483, 821);
+            this.dataGridViewTareas.TabIndex = 8;
             // 
-            // flowLayoutPanelTareasEnProgreso
+            // labelPorComenzar
             // 
-            this.flowLayoutPanelTareasEnProgreso.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelTareasEnProgreso.Location = new System.Drawing.Point(3, 27);
-            this.flowLayoutPanelTareasEnProgreso.Name = "flowLayoutPanelTareasEnProgreso";
-            this.flowLayoutPanelTareasEnProgreso.Size = new System.Drawing.Size(224, 854);
-            this.flowLayoutPanelTareasEnProgreso.TabIndex = 0;
+            this.labelPorComenzar.AutoSize = true;
+            this.labelPorComenzar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelPorComenzar.Location = new System.Drawing.Point(492, 48);
+            this.labelPorComenzar.Name = "labelPorComenzar";
+            this.labelPorComenzar.Size = new System.Drawing.Size(222, 94);
+            this.labelPorComenzar.TabIndex = 9;
+            this.labelPorComenzar.Text = "Por Comenzar";
+            this.labelPorComenzar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // flowLayoutPanelTareasEntregado
+            // labelEnProgreso
             // 
-            this.flowLayoutPanelTareasEntregado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelTareasEntregado.Location = new System.Drawing.Point(3, 27);
-            this.flowLayoutPanelTareasEntregado.Name = "flowLayoutPanelTareasEntregado";
-            this.flowLayoutPanelTareasEntregado.Size = new System.Drawing.Size(224, 854);
-            this.flowLayoutPanelTareasEntregado.TabIndex = 0;
+            this.labelEnProgreso.AutoSize = true;
+            this.labelEnProgreso.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelEnProgreso.Location = new System.Drawing.Point(720, 48);
+            this.labelEnProgreso.Name = "labelEnProgreso";
+            this.labelEnProgreso.Size = new System.Drawing.Size(222, 94);
+            this.labelEnProgreso.TabIndex = 10;
+            this.labelEnProgreso.Text = "En Progreso";
+            this.labelEnProgreso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // flowLayoutPanelTareaRevisado
+            // labelEntregado
             // 
-            this.flowLayoutPanelTareaRevisado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelTareaRevisado.Location = new System.Drawing.Point(3, 27);
-            this.flowLayoutPanelTareaRevisado.Name = "flowLayoutPanelTareaRevisado";
-            this.flowLayoutPanelTareaRevisado.Size = new System.Drawing.Size(224, 854);
-            this.flowLayoutPanelTareaRevisado.TabIndex = 0;
+            this.labelEntregado.AutoSize = true;
+            this.labelEntregado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelEntregado.Location = new System.Drawing.Point(948, 48);
+            this.labelEntregado.Name = "labelEntregado";
+            this.labelEntregado.Size = new System.Drawing.Size(222, 94);
+            this.labelEntregado.TabIndex = 11;
+            this.labelEntregado.Text = "Entregado";
+            this.labelEntregado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // flowLayoutPanelTareasBloqueado
+            // labelRevisado
             // 
-            this.flowLayoutPanelTareasBloqueado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelTareasBloqueado.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.flowLayoutPanelTareasBloqueado.Location = new System.Drawing.Point(3, 27);
-            this.flowLayoutPanelTareasBloqueado.Name = "flowLayoutPanelTareasBloqueado";
-            this.flowLayoutPanelTareasBloqueado.Size = new System.Drawing.Size(224, 854);
-            this.flowLayoutPanelTareasBloqueado.TabIndex = 0;
+            this.labelRevisado.AutoSize = true;
+            this.labelRevisado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelRevisado.Location = new System.Drawing.Point(1176, 48);
+            this.labelRevisado.Name = "labelRevisado";
+            this.labelRevisado.Size = new System.Drawing.Size(222, 94);
+            this.labelRevisado.TabIndex = 12;
+            this.labelRevisado.Text = "Revisado";
+            this.labelRevisado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ListaTareas
+            // labelBloqueado
+            // 
+            this.labelBloqueado.AutoSize = true;
+            this.labelBloqueado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelBloqueado.Location = new System.Drawing.Point(1404, 48);
+            this.labelBloqueado.Name = "labelBloqueado";
+            this.labelBloqueado.Size = new System.Drawing.Size(227, 94);
+            this.labelBloqueado.TabIndex = 13;
+            this.labelBloqueado.Text = "Bloqueado";
+            this.labelBloqueado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // flowLayoutPanelPorComenzar
+            // 
+            this.flowLayoutPanelPorComenzar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelPorComenzar.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanelPorComenzar.Location = new System.Drawing.Point(492, 145);
+            this.flowLayoutPanelPorComenzar.Name = "flowLayoutPanelPorComenzar";
+            this.flowLayoutPanelPorComenzar.Size = new System.Drawing.Size(222, 821);
+            this.flowLayoutPanelPorComenzar.TabIndex = 14;
+            // 
+            // flowLayoutPanelEnProgreso
+            // 
+            this.flowLayoutPanelEnProgreso.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelEnProgreso.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanelEnProgreso.Location = new System.Drawing.Point(720, 145);
+            this.flowLayoutPanelEnProgreso.Name = "flowLayoutPanelEnProgreso";
+            this.flowLayoutPanelEnProgreso.Size = new System.Drawing.Size(222, 821);
+            this.flowLayoutPanelEnProgreso.TabIndex = 15;
+            // 
+            // flowLayoutPanelEntregado
+            // 
+            this.flowLayoutPanelEntregado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelEntregado.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanelEntregado.Location = new System.Drawing.Point(948, 145);
+            this.flowLayoutPanelEntregado.Name = "flowLayoutPanelEntregado";
+            this.flowLayoutPanelEntregado.Size = new System.Drawing.Size(222, 821);
+            this.flowLayoutPanelEntregado.TabIndex = 16;
+            // 
+            // flowLayoutPanelRevisado
+            // 
+            this.flowLayoutPanelRevisado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelRevisado.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanelRevisado.Location = new System.Drawing.Point(1176, 145);
+            this.flowLayoutPanelRevisado.Name = "flowLayoutPanelRevisado";
+            this.flowLayoutPanelRevisado.Size = new System.Drawing.Size(222, 821);
+            this.flowLayoutPanelRevisado.TabIndex = 17;
+            // 
+            // flowLayoutPanelBloqueado
+            // 
+            this.flowLayoutPanelBloqueado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelBloqueado.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanelBloqueado.Location = new System.Drawing.Point(1404, 145);
+            this.flowLayoutPanelBloqueado.Name = "flowLayoutPanelBloqueado";
+            this.flowLayoutPanelBloqueado.Size = new System.Drawing.Size(227, 821);
+            this.flowLayoutPanelBloqueado.TabIndex = 18;
+            // 
+            // FormListaTareas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.ClientSize = new System.Drawing.Size(1634, 969);
-            this.Controls.Add(this.flowLayoutPanelListaEstadoTareas);
-            this.Controls.Add(this.flowLayoutPanelListaTareas);
+            this.Controls.Add(this.grid);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "ListaTareas";
+            this.Name = "FormListaTareas";
             this.Text = "Tareas";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.flowLayoutPanelListaTareas.ResumeLayout(false);
-            this.flowLayoutPanelListaTareas.PerformLayout();
-            this.groupBoxTarea.ResumeLayout(false);
-            this.groupBoxTarea.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListasTarea)).EndInit();
-            this.groupBoxTareasPorComenzar.ResumeLayout(false);
-            this.groupBoxEnProgreso.ResumeLayout(false);
-            this.groupBoxEntregado.ResumeLayout(false);
-            this.groupBoxRevisado.ResumeLayout(false);
-            this.flowLayoutPanelListaEstadoTareas.ResumeLayout(false);
-            this.groupBoxBloqueado.ResumeLayout(false);
+            this.grid.ResumeLayout(false);
+            this.grid.PerformLayout();
+            this.toolStripInicio.ResumeLayout(false);
+            this.toolStripInicio.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTareas)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelListaTareas;
-        private System.Windows.Forms.Label labelTareas;
-        private System.Windows.Forms.DataGridView dataGridViewListasTarea;
-        private System.Windows.Forms.GroupBox groupBoxTarea;
-        private System.Windows.Forms.Button buttonAñadirMasTarea;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.DataGridViewButtonColumn Editar;
-        private System.Windows.Forms.Label labelNombreProyecto;
-        private System.Windows.Forms.GroupBox groupBoxTareasPorComenzar;
-        private System.Windows.Forms.GroupBox groupBoxEnProgreso;
-        private System.Windows.Forms.GroupBox groupBoxEntregado;
-        private System.Windows.Forms.GroupBox groupBoxRevisado;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelListaEstadoTareas;
-        private System.Windows.Forms.GroupBox groupBoxBloqueado;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelTareasPorComenzar;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelTareasEnProgreso;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelTareasEntregado;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelTareaRevisado;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelTareasBloqueado;
+        private System.Windows.Forms.TableLayoutPanel grid;
+        private System.Windows.Forms.ToolStrip toolStripInicio;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem proyectosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearNuevoProyectoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificarEliminarProyectoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearNuevoUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rolesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton btnUsuario;
+        private System.Windows.Forms.ToolStripButton btnTaskiller;
+        private System.Windows.Forms.Label labelTarea;
+        private System.Windows.Forms.Button buttonAnadirTarea;
+        private System.Windows.Forms.DataGridView dataGridViewTareas;
+        private System.Windows.Forms.Label labelPorComenzar;
+        private System.Windows.Forms.Label labelBloqueado;
+        private System.Windows.Forms.Label labelRevisado;
+        private System.Windows.Forms.Label labelEntregado;
+        private System.Windows.Forms.Label labelEnProgreso;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelBloqueado;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelRevisado;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelEntregado;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelEnProgreso;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelPorComenzar;
     }
 }
