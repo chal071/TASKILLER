@@ -39,8 +39,6 @@ namespace TASKILLER
 
             dataGridViewUsuarioDeTarea.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewUsuarioDeTarea.RowHeadersVisible = false;
-            dataGridViewUsuarioDeTarea.DefaultCellStyle.SelectionBackColor = Color.Transparent;
-            dataGridViewUsuarioDeTarea.DefaultCellStyle.SelectionForeColor = Color.Black;
             dataGridViewUsuarioDeTarea.ReadOnly = true;
 
             dataGridViewUsuarioDeTarea.DataSource = usuarios;
