@@ -16,5 +16,15 @@ namespace TASKILLER
         {
             InitializeComponent();
         }
+
+        private void panelCreacionUser_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void labelEdicionUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

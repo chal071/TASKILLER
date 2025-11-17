@@ -72,6 +72,12 @@
     <Compile Include="FormCrearTarea.Designer.cs">
       <DependentUpon>FormCrearTarea.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEdicionUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEdicionUsuarios.Designer.cs">
+      <DependentUpon>FormEdicionUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEditarEliminarProyecto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <Compile Include="Rol.cs" />
     <Compile Include="Usuario.cs" />
+    <EmbeddedResource Include="FormEdicionUsuarios.resx">
+      <DependentUpon>FormEdicionUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEditarEliminarProyecto.resx">
       <DependentUpon>FormEditarEliminarProyecto.cs</DependentUpon>
     </EmbeddedResource>
