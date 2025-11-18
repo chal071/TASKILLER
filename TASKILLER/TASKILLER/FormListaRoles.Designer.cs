@@ -33,6 +33,7 @@
             this.labelListaRoles = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panelListaRolesResp = new System.Windows.Forms.Panel();
+<<<<<<< Updated upstream
             this.toolStripInicio = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,12 +48,20 @@
             this.btnTaskiller = new System.Windows.Forms.ToolStripButton();
             this.panelListaRolesResp.SuspendLayout();
             this.toolStripInicio.SuspendLayout();
+=======
+            this.panelListaRolesResp.SuspendLayout();
+>>>>>>> Stashed changes
             this.SuspendLayout();
             // 
             // flowLayoutPanelListaRoles
             // 
+<<<<<<< Updated upstream
             this.flowLayoutPanelListaRoles.Location = new System.Drawing.Point(59, 149);
             this.flowLayoutPanelListaRoles.Margin = new System.Windows.Forms.Padding(4);
+=======
+            this.flowLayoutPanelListaRoles.AutoScroll = true;
+            this.flowLayoutPanelListaRoles.Location = new System.Drawing.Point(44, 121);
+>>>>>>> Stashed changes
             this.flowLayoutPanelListaRoles.Name = "flowLayoutPanelListaRoles";
             this.flowLayoutPanelListaRoles.Size = new System.Drawing.Size(1171, 320);
             this.flowLayoutPanelListaRoles.TabIndex = 0;
@@ -61,8 +70,12 @@
             // 
             this.labelListaRoles.AutoSize = true;
             this.labelListaRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< Updated upstream
             this.labelListaRoles.Location = new System.Drawing.Point(469, 64);
             this.labelListaRoles.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+=======
+            this.labelListaRoles.Location = new System.Drawing.Point(261, 50);
+>>>>>>> Stashed changes
             this.labelListaRoles.Name = "labelListaRoles";
             this.labelListaRoles.Size = new System.Drawing.Size(385, 69);
             this.labelListaRoles.TabIndex = 1;
@@ -197,12 +210,25 @@
             this.btnTaskiller.Size = new System.Drawing.Size(29, 24);
             this.btnTaskiller.Text = "TaskillerLogo";
             // 
+            // panelListaRolesResp
+            // 
+            this.panelListaRolesResp.Controls.Add(this.labelListaRoles);
+            this.panelListaRolesResp.Controls.Add(this.flowLayoutPanelListaRoles);
+            this.panelListaRolesResp.Location = new System.Drawing.Point(46, 47);
+            this.panelListaRolesResp.Name = "panelListaRolesResp";
+            this.panelListaRolesResp.Size = new System.Drawing.Size(824, 419);
+            this.panelListaRolesResp.TabIndex = 2;
+            // 
             // FormListaRoles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< Updated upstream
             this.ClientSize = new System.Drawing.Size(1643, 889);
             this.Controls.Add(this.toolStripInicio);
+=======
+            this.ClientSize = new System.Drawing.Size(1248, 630);
+>>>>>>> Stashed changes
             this.Controls.Add(this.panelListaRolesResp);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -211,10 +237,12 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelListaRolesResp.ResumeLayout(false);
             this.panelListaRolesResp.PerformLayout();
+<<<<<<< Updated upstream
             this.toolStripInicio.ResumeLayout(false);
             this.toolStripInicio.PerformLayout();
+=======
+>>>>>>> Stashed changes
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -225,6 +253,7 @@
         private System.Windows.Forms.Label labelListaRoles;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel panelListaRolesResp;
+<<<<<<< Updated upstream
         private System.Windows.Forms.ToolStrip toolStripInicio;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
@@ -237,5 +266,7 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton btnUsuario;
         private System.Windows.Forms.ToolStripButton btnTaskiller;
+=======
+>>>>>>> Stashed changes
     }
 }

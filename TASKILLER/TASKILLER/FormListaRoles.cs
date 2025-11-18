@@ -17,15 +17,22 @@ namespace TASKILLER
         public FormListaRoles(Datos datos, Usuario usuario)
         {
             InitializeComponent();
+<<<<<<< Updated upstream
             this.Resize += Form1_Resize;
             labelListaRoles.Font = new Font("Montserrat", 30, FontStyle.Bold);
             this.d = datos;
             this.u = usuario;
+=======
+            this.Resize = Form1_Resize();
+            labelListaRoles.Font = new Font("Montserrat", 30, FontStyle.Bold);
+            this.d = datos;
+>>>>>>> Stashed changes
             foreach (Rol r in d.listaRoles) 
             {
                 TarjetaRol rol = new TarjetaRol();
                 rol.SetDatos(r);
                 flowLayoutPanelListaRoles.Controls.Add(rol);
+<<<<<<< Updated upstream
 
             }
         }
@@ -36,11 +43,22 @@ namespace TASKILLER
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
-        {
+=======
 
+            }
+        }
+        private void Form1_Resize(object sender, EventArgs e)
+>>>>>>> Stashed changes
+        {
+            panelListaRolesResp.Left = (this.ClientSize.Width - panelListaRolesResp.Width) / 2;
+            panelListaRolesResp.Top = (this.ClientSize.Height - panelListaRolesResp.Height) / 2;
         }
 
+<<<<<<< Updated upstream
         private void labelListaRoles_Click(object sender, EventArgs e)
+=======
+        private void panel1_Paint(object sender, PaintEventArgs e)
+>>>>>>> Stashed changes
         {
 
         }

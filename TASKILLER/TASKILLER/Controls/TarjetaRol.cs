@@ -18,6 +18,7 @@ namespace TASKILLER
         }
 
         public void SetDatos(Rol r)
+<<<<<<< Updated upstream:TASKILLER/TASKILLER/Controls/TarjetaRol.cs
         {
             labelRol.Text = r.Nombre;
             LIstBoxAccesoRol.Items.Clear();
@@ -31,7 +32,16 @@ namespace TASKILLER
         }
 
         private void LIstBoxAccesoRol_SelectedIndexChanged(object sender, EventArgs e)
+=======
+>>>>>>> Stashed changes:TASKILLER/TASKILLER/TarjetaRol.cs
         {
+            labelRol.Text = r.Nombre;
+            LIstBoxAccesoRol.Items.Clear();
+            LIstBoxAccesoRol.Items.AddRange(r.Acceso.ToArray());
+
+
+
+
 
         }
     }
