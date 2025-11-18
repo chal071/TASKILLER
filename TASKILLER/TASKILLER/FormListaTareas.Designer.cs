@@ -43,19 +43,6 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnUsuario = new System.Windows.Forms.ToolStripButton();
             this.btnTaskiller = new System.Windows.Forms.ToolStripButton();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
-            this.guardarDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.flowLayoutPanelBloqueado = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanelRevisado = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanelEntregado = new System.Windows.Forms.FlowLayoutPanel();
@@ -71,7 +58,6 @@
             this.flowLayoutPanelPorComenzar = new System.Windows.Forms.FlowLayoutPanel();
             this.grid.SuspendLayout();
             this.toolStripInicio.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTareas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,7 +72,6 @@
             this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14F));
             this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14F));
             this.grid.Controls.Add(this.toolStripInicio, 0, 0);
-            this.grid.Controls.Add(this.toolStrip1, 0, 3);
             this.grid.Controls.Add(this.flowLayoutPanelBloqueado, 6, 2);
             this.grid.Controls.Add(this.flowLayoutPanelRevisado, 5, 2);
             this.grid.Controls.Add(this.flowLayoutPanelEntregado, 4, 2);
@@ -103,11 +88,11 @@
             this.grid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grid.Location = new System.Drawing.Point(0, 0);
             this.grid.Name = "grid";
-            this.grid.RowCount = 4;
+            this.grid.RowCount = 3;
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.997679F));
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.799371F));
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.20295F));
-            this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.grid.Size = new System.Drawing.Size(1634, 969);
             this.grid.TabIndex = 0;
             // 
@@ -123,7 +108,7 @@
             this.toolStripInicio.Location = new System.Drawing.Point(0, 0);
             this.toolStripInicio.Name = "toolStripInicio";
             this.toolStripInicio.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.toolStripInicio.Size = new System.Drawing.Size(1634, 46);
+            this.toolStripInicio.Size = new System.Drawing.Size(1634, 30);
             this.toolStripInicio.TabIndex = 20;
             this.toolStripInicio.Text = "toolStrip1";
             // 
@@ -238,166 +223,54 @@
             this.btnTaskiller.Size = new System.Drawing.Size(46, 40);
             this.btnTaskiller.Text = "TaskillerLogo";
             // 
-            // toolStrip1
-            // 
-            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton2,
-            this.toolStripButton1,
-            this.toolStripButton2});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 936);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(408, 33);
-            this.toolStrip1.TabIndex = 19;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripDropDownButton2
-            // 
-            this.toolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem5,
-            this.toolStripMenuItem7,
-            this.guardarDatosToolStripMenuItem,
-            this.toolStripMenuItem8});
-            this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
-            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(42, 27);
-            this.toolStripDropDownButton2.Text = "toolStripDropDownButton1";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.Image")));
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(376, 44);
-            this.toolStripMenuItem1.Text = "Inicio";
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem3,
-            this.toolStripMenuItem4});
-            this.toolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem2.Image")));
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(376, 44);
-            this.toolStripMenuItem2.Text = "Proyectos";
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(443, 44);
-            this.toolStripMenuItem3.Text = "Crear nuevo proyecto";
-            // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(443, 44);
-            this.toolStripMenuItem4.Text = "Modificar/Eliminar proyecto";
-            // 
-            // toolStripMenuItem5
-            // 
-            this.toolStripMenuItem5.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem6});
-            this.toolStripMenuItem5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem5.Image")));
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(376, 44);
-            this.toolStripMenuItem5.Text = "Usuarios";
-            // 
-            // toolStripMenuItem6
-            // 
-            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(362, 44);
-            this.toolStripMenuItem6.Text = "Crear nuevo usuario";
-            // 
-            // toolStripMenuItem7
-            // 
-            this.toolStripMenuItem7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem7.Image")));
-            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(376, 44);
-            this.toolStripMenuItem7.Text = "Roles";
-            // 
-            // guardarDatosToolStripMenuItem
-            // 
-            this.guardarDatosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("guardarDatosToolStripMenuItem.Image")));
-            this.guardarDatosToolStripMenuItem.Name = "guardarDatosToolStripMenuItem";
-            this.guardarDatosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.guardarDatosToolStripMenuItem.Size = new System.Drawing.Size(376, 44);
-            this.guardarDatosToolStripMenuItem.Text = "Guardar datos";
-            // 
-            // toolStripMenuItem8
-            // 
-            this.toolStripMenuItem8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem8.Image")));
-            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(376, 44);
-            this.toolStripMenuItem8.Text = "Salir";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(46, 27);
-            this.toolStripButton1.Text = "Usuario";
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(46, 27);
-            this.toolStripButton2.Text = "TaskillerLogo";
-            // 
             // flowLayoutPanelBloqueado
             // 
+            this.flowLayoutPanelBloqueado.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanelBloqueado.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelBloqueado.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelBloqueado.Location = new System.Drawing.Point(1404, 140);
+            this.flowLayoutPanelBloqueado.Location = new System.Drawing.Point(1404, 145);
             this.flowLayoutPanelBloqueado.Name = "flowLayoutPanelBloqueado";
-            this.flowLayoutPanelBloqueado.Size = new System.Drawing.Size(227, 793);
+            this.flowLayoutPanelBloqueado.Size = new System.Drawing.Size(227, 821);
             this.flowLayoutPanelBloqueado.TabIndex = 18;
             // 
             // flowLayoutPanelRevisado
             // 
+            this.flowLayoutPanelRevisado.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanelRevisado.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelRevisado.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelRevisado.Location = new System.Drawing.Point(1176, 140);
+            this.flowLayoutPanelRevisado.Location = new System.Drawing.Point(1176, 145);
             this.flowLayoutPanelRevisado.Name = "flowLayoutPanelRevisado";
-            this.flowLayoutPanelRevisado.Size = new System.Drawing.Size(222, 793);
+            this.flowLayoutPanelRevisado.Size = new System.Drawing.Size(222, 821);
             this.flowLayoutPanelRevisado.TabIndex = 17;
             // 
             // flowLayoutPanelEntregado
             // 
+            this.flowLayoutPanelEntregado.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanelEntregado.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelEntregado.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelEntregado.Location = new System.Drawing.Point(948, 140);
+            this.flowLayoutPanelEntregado.Location = new System.Drawing.Point(948, 145);
             this.flowLayoutPanelEntregado.Name = "flowLayoutPanelEntregado";
-            this.flowLayoutPanelEntregado.Size = new System.Drawing.Size(222, 793);
+            this.flowLayoutPanelEntregado.Size = new System.Drawing.Size(222, 821);
             this.flowLayoutPanelEntregado.TabIndex = 16;
             // 
             // flowLayoutPanelEnProgreso
             // 
+            this.flowLayoutPanelEnProgreso.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanelEnProgreso.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelEnProgreso.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelEnProgreso.Location = new System.Drawing.Point(720, 140);
+            this.flowLayoutPanelEnProgreso.Location = new System.Drawing.Point(720, 145);
             this.flowLayoutPanelEnProgreso.Name = "flowLayoutPanelEnProgreso";
-            this.flowLayoutPanelEnProgreso.Size = new System.Drawing.Size(222, 793);
+            this.flowLayoutPanelEnProgreso.Size = new System.Drawing.Size(222, 821);
             this.flowLayoutPanelEnProgreso.TabIndex = 15;
             // 
             // labelBloqueado
             // 
             this.labelBloqueado.AutoSize = true;
+            this.labelBloqueado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.labelBloqueado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelBloqueado.Location = new System.Drawing.Point(1404, 46);
+            this.labelBloqueado.Location = new System.Drawing.Point(1404, 48);
             this.labelBloqueado.Name = "labelBloqueado";
-            this.labelBloqueado.Size = new System.Drawing.Size(227, 91);
+            this.labelBloqueado.Size = new System.Drawing.Size(227, 94);
             this.labelBloqueado.TabIndex = 13;
             this.labelBloqueado.Text = "Bloqueado";
             this.labelBloqueado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -405,10 +278,11 @@
             // labelRevisado
             // 
             this.labelRevisado.AutoSize = true;
+            this.labelRevisado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.labelRevisado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelRevisado.Location = new System.Drawing.Point(1176, 46);
+            this.labelRevisado.Location = new System.Drawing.Point(1176, 48);
             this.labelRevisado.Name = "labelRevisado";
-            this.labelRevisado.Size = new System.Drawing.Size(222, 91);
+            this.labelRevisado.Size = new System.Drawing.Size(222, 94);
             this.labelRevisado.TabIndex = 12;
             this.labelRevisado.Text = "Revisado";
             this.labelRevisado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -416,10 +290,11 @@
             // labelEntregado
             // 
             this.labelEntregado.AutoSize = true;
+            this.labelEntregado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.labelEntregado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelEntregado.Location = new System.Drawing.Point(948, 46);
+            this.labelEntregado.Location = new System.Drawing.Point(948, 48);
             this.labelEntregado.Name = "labelEntregado";
-            this.labelEntregado.Size = new System.Drawing.Size(222, 91);
+            this.labelEntregado.Size = new System.Drawing.Size(222, 94);
             this.labelEntregado.TabIndex = 11;
             this.labelEntregado.Text = "Entregado";
             this.labelEntregado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -427,10 +302,11 @@
             // labelEnProgreso
             // 
             this.labelEnProgreso.AutoSize = true;
+            this.labelEnProgreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.labelEnProgreso.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelEnProgreso.Location = new System.Drawing.Point(720, 46);
+            this.labelEnProgreso.Location = new System.Drawing.Point(720, 48);
             this.labelEnProgreso.Name = "labelEnProgreso";
-            this.labelEnProgreso.Size = new System.Drawing.Size(222, 91);
+            this.labelEnProgreso.Size = new System.Drawing.Size(222, 94);
             this.labelEnProgreso.TabIndex = 10;
             this.labelEnProgreso.Text = "En Progreso";
             this.labelEnProgreso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -438,9 +314,9 @@
             // labelTarea
             // 
             this.labelTarea.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelTarea.Location = new System.Drawing.Point(3, 46);
+            this.labelTarea.Location = new System.Drawing.Point(3, 48);
             this.labelTarea.Name = "labelTarea";
-            this.labelTarea.Size = new System.Drawing.Size(402, 91);
+            this.labelTarea.Size = new System.Drawing.Size(402, 94);
             this.labelTarea.TabIndex = 6;
             this.labelTarea.Text = "TAREA";
             this.labelTarea.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -448,9 +324,9 @@
             // buttonAnadirTarea
             // 
             this.buttonAnadirTarea.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonAnadirTarea.Location = new System.Drawing.Point(411, 49);
+            this.buttonAnadirTarea.Location = new System.Drawing.Point(411, 51);
             this.buttonAnadirTarea.Name = "buttonAnadirTarea";
-            this.buttonAnadirTarea.Size = new System.Drawing.Size(75, 85);
+            this.buttonAnadirTarea.Size = new System.Drawing.Size(75, 88);
             this.buttonAnadirTarea.TabIndex = 7;
             this.buttonAnadirTarea.Text = "+";
             this.buttonAnadirTarea.UseVisualStyleBackColor = true;
@@ -461,32 +337,34 @@
             this.dataGridViewTareas.ColumnHeadersVisible = false;
             this.grid.SetColumnSpan(this.dataGridViewTareas, 2);
             this.dataGridViewTareas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewTareas.Location = new System.Drawing.Point(3, 140);
+            this.dataGridViewTareas.Location = new System.Drawing.Point(3, 145);
             this.dataGridViewTareas.Name = "dataGridViewTareas";
             this.dataGridViewTareas.RowHeadersVisible = false;
             this.dataGridViewTareas.RowHeadersWidth = 82;
             this.dataGridViewTareas.RowTemplate.Height = 33;
-            this.dataGridViewTareas.Size = new System.Drawing.Size(483, 793);
+            this.dataGridViewTareas.Size = new System.Drawing.Size(483, 821);
             this.dataGridViewTareas.TabIndex = 8;
             // 
             // labelPorComenzar
             // 
             this.labelPorComenzar.AutoSize = true;
+            this.labelPorComenzar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.labelPorComenzar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelPorComenzar.Location = new System.Drawing.Point(492, 46);
+            this.labelPorComenzar.Location = new System.Drawing.Point(492, 48);
             this.labelPorComenzar.Name = "labelPorComenzar";
-            this.labelPorComenzar.Size = new System.Drawing.Size(222, 91);
+            this.labelPorComenzar.Size = new System.Drawing.Size(222, 94);
             this.labelPorComenzar.TabIndex = 9;
             this.labelPorComenzar.Text = "Por Comenzar";
             this.labelPorComenzar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // flowLayoutPanelPorComenzar
             // 
+            this.flowLayoutPanelPorComenzar.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanelPorComenzar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelPorComenzar.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelPorComenzar.Location = new System.Drawing.Point(492, 140);
+            this.flowLayoutPanelPorComenzar.Location = new System.Drawing.Point(492, 145);
             this.flowLayoutPanelPorComenzar.Name = "flowLayoutPanelPorComenzar";
-            this.flowLayoutPanelPorComenzar.Size = new System.Drawing.Size(222, 793);
+            this.flowLayoutPanelPorComenzar.Size = new System.Drawing.Size(222, 821);
             this.flowLayoutPanelPorComenzar.TabIndex = 14;
             // 
             // FormListaTareas
@@ -505,8 +383,6 @@
             this.grid.PerformLayout();
             this.toolStripInicio.ResumeLayout(false);
             this.toolStripInicio.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTareas)).EndInit();
             this.ResumeLayout(false);
 
@@ -541,18 +417,5 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton btnUsuario;
         private System.Windows.Forms.ToolStripButton btnTaskiller;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
-        private System.Windows.Forms.ToolStripMenuItem guardarDatosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
     }
 }

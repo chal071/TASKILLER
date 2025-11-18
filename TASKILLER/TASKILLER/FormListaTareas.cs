@@ -98,6 +98,7 @@ namespace TASKILLER
             {
                 var ctrl = new TareaControl(d.listaUsuarios);
                 ctrl.SetDatos(t);
+                ctrl.SetBackColor(Color.FromArgb(255, 192, 192));
                 flowLayoutPanelPorComenzar.Controls.Add(ctrl);
             }
         }
@@ -114,6 +115,7 @@ namespace TASKILLER
             {
                 var ctrl = new TareaControl(d.listaUsuarios);
                 ctrl.SetDatos(t);
+                ctrl.SetBackColor(Color.FromArgb(255, 224, 192));
                 flowLayoutPanelEnProgreso.Controls.Add(ctrl);
             }
         }
@@ -130,6 +132,7 @@ namespace TASKILLER
             {
                 var ctrl = new TareaControl(d.listaUsuarios);
                 ctrl.SetDatos(t);
+                ctrl.SetBackColor(Color.FromArgb(192, 255, 192));
                 flowLayoutPanelEntregado.Controls.Add(ctrl);
             }
         }
@@ -146,6 +149,7 @@ namespace TASKILLER
             {
                 var ctrl = new TareaControl(d.listaUsuarios);
                 ctrl.SetDatos(t);
+                ctrl.SetBackColor(Color.FromArgb(192, 255, 255));
                 flowLayoutPanelRevisado.Controls.Add(ctrl);
             }
         }
@@ -162,6 +166,7 @@ namespace TASKILLER
             {
                 var ctrl = new TareaControl(d.listaUsuarios);
                 ctrl.SetDatos(t);
+                ctrl.SetBackColor(Color.FromArgb(224, 224, 224));
                 flowLayoutPanelBloqueado.Controls.Add(ctrl);
             }
         }

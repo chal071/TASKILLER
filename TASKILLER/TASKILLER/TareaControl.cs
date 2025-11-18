@@ -17,9 +17,9 @@ namespace TASKILLER
         {
             InitializeComponent();
             this.Dock = DockStyle.Top;
-            labelNombreTarea.Font = new Font("Montserrat", 9, FontStyle.Regular);
-            labelFechasTarea.Font = new Font("Montserrat", 9, FontStyle.Regular);
-            dataGridViewUsuarioDeTarea.Font = new Font("Montserrat", 8, FontStyle.Regular);
+            labelNombreTarea.Font = new Font("Montserrat", 10, FontStyle.Regular);
+            labelFechasTarea.Font = new Font("Montserrat", 8, FontStyle.Regular);
+            dataGridViewUsuarioDeTarea.Font = new Font("Montserrat", 10, FontStyle.Regular);
             usuariosGlobal = usuarios;
         }
         
@@ -39,9 +39,12 @@ namespace TASKILLER
 
             dataGridViewUsuarioDeTarea.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewUsuarioDeTarea.RowHeadersVisible = false;
-            dataGridViewUsuarioDeTarea.ReadOnly = true;
-
             dataGridViewUsuarioDeTarea.DataSource = usuarios;
+        }
+
+        public void SetBackColor(Color color)
+        {
+            panelEstado.BackColor = color;
         }
     }
 }
