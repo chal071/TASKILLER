@@ -35,11 +35,14 @@ namespace TASKILLER
             panelListaRolesResp.Top = (this.ClientSize.Height - panelListaRolesResp.Height) / 2;
         }
 
+<<<<<<< Updated upstream
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
+=======
+>>>>>>> Stashed changes
         private void labelListaRoles_Click(object sender, EventArgs e)
         {
 

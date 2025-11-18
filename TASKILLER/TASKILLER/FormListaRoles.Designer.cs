@@ -53,6 +53,11 @@
             // 
             this.flowLayoutPanelListaRoles.Location = new System.Drawing.Point(59, 149);
             this.flowLayoutPanelListaRoles.Margin = new System.Windows.Forms.Padding(4);
+<<<<<<< Updated upstream
+=======
+            this.flowLayoutPanelListaRoles.AutoScroll = true;
+            this.flowLayoutPanelListaRoles.Location = new System.Drawing.Point(44, 121);
+>>>>>>> Stashed changes
             this.flowLayoutPanelListaRoles.Name = "flowLayoutPanelListaRoles";
             this.flowLayoutPanelListaRoles.Size = new System.Drawing.Size(1171, 320);
             this.flowLayoutPanelListaRoles.TabIndex = 0;
@@ -61,8 +66,13 @@
             // 
             this.labelListaRoles.AutoSize = true;
             this.labelListaRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< Updated upstream
             this.labelListaRoles.Location = new System.Drawing.Point(469, 64);
             this.labelListaRoles.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+=======
+            this.labelListaRoles.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelListaRoles.Location = new System.Drawing.Point(261, 50);
+>>>>>>> Stashed changes
             this.labelListaRoles.Name = "labelListaRoles";
             this.labelListaRoles.Size = new System.Drawing.Size(385, 69);
             this.labelListaRoles.TabIndex = 1;

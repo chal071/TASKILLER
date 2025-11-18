@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEdicionUsuarios));
             this.panelEdicionUser = new System.Windows.Forms.Panel();
             this.textBoxNombreUsuarioEdicion = new System.Windows.Forms.TextBox();
             this.labelAdvertenciaEdicionUsuarios = new System.Windows.Forms.Label();
-            this.pictureBoxLOGOEdicion = new System.Windows.Forms.PictureBox();
             this.labelRolUsuarioEdicion = new System.Windows.Forms.Label();
             this.comboBoxRolUsuarioEdicion = new System.Windows.Forms.ComboBox();
             this.labelRepContrasenaUsuarioEdicion = new System.Windows.Forms.Label();
@@ -46,6 +44,7 @@
             this.labelNombreUsuarioEdicion = new System.Windows.Forms.Label();
             this.labelEdicionUsuario = new System.Windows.Forms.Label();
             this.textBoxRepContrasenaUsuarioEdicion = new System.Windows.Forms.TextBox();
+            this.pictureBoxLOGOEdicion = new System.Windows.Forms.PictureBox();
             this.panelEdicionUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLOGOEdicion)).BeginInit();
             this.SuspendLayout();
@@ -91,16 +90,6 @@
             this.labelAdvertenciaEdicionUsuarios.TabIndex = 15;
             this.labelAdvertenciaEdicionUsuarios.Text = "Todos los campos marcados con * son obligatorios para poder completar la creación" +
     " de usuario";
-            // 
-            // pictureBoxLOGOEdicion
-            // 
-            this.pictureBoxLOGOEdicion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLOGOEdicion.BackgroundImage")));
-            this.pictureBoxLOGOEdicion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxLOGOEdicion.Location = new System.Drawing.Point(145, 156);
-            this.pictureBoxLOGOEdicion.Name = "pictureBoxLOGOEdicion";
-            this.pictureBoxLOGOEdicion.Size = new System.Drawing.Size(246, 230);
-            this.pictureBoxLOGOEdicion.TabIndex = 0;
-            this.pictureBoxLOGOEdicion.TabStop = false;
             // 
             // labelRolUsuarioEdicion
             // 
@@ -212,13 +201,22 @@
             this.textBoxRepContrasenaUsuarioEdicion.Size = new System.Drawing.Size(532, 20);
             this.textBoxRepContrasenaUsuarioEdicion.TabIndex = 8;
             // 
+            // pictureBoxLOGOEdicion
+            // 
+            this.pictureBoxLOGOEdicion.Image = global::TASKILLER.Properties.Resources.LOGO;
+            this.pictureBoxLOGOEdicion.InitialImage = global::TASKILLER.Properties.Resources.LOGO;
+            this.pictureBoxLOGOEdicion.Location = new System.Drawing.Point(145, 156);
+            this.pictureBoxLOGOEdicion.Name = "pictureBoxLOGOEdicion";
+            this.pictureBoxLOGOEdicion.Size = new System.Drawing.Size(246, 230);
+            this.pictureBoxLOGOEdicion.TabIndex = 0;
+            this.pictureBoxLOGOEdicion.TabStop = false;
+            // 
             // FormEdicionUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1616, 843);
             this.Controls.Add(this.panelEdicionUser);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormEdicionUsuarios";
             this.Text = "Editar Usuario";
             this.panelEdicionUser.ResumeLayout(false);

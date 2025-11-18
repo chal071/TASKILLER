@@ -176,6 +176,9 @@
     </EmbeddedResource>
     <Compile Include="Clases\Rol.cs" />
     <Compile Include="Clases\Usuario.cs" />
+    <EmbeddedResource Include="FormEdicionUsuarios.resx">
+      <DependentUpon>FormEdicionUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEditarEliminarProyecto.resx">
       <DependentUpon>FormEditarEliminarProyecto.cs</DependentUpon>
     </EmbeddedResource>

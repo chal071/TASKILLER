@@ -19,20 +19,17 @@ namespace TASKILLER
 
         public void SetDatos(Rol r)
         {
-            labelRol.Text = r.Nombre;
             LIstBoxAccesoRol.Items.Clear();
             LIstBoxAccesoRol.Items.AddRange(r.Acceso.ToArray());
-
-            
-
-
-
-
         }
 
         private void LIstBoxAccesoRol_SelectedIndexChanged(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
 
+=======
+            LIstBoxAccesoRol.Items.Clear();
+>>>>>>> Stashed changes
         }
     }
 }
