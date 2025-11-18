@@ -108,7 +108,7 @@
             this.toolStripInicio.Location = new System.Drawing.Point(0, 0);
             this.toolStripInicio.Name = "toolStripInicio";
             this.toolStripInicio.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.toolStripInicio.Size = new System.Drawing.Size(1634, 30);
+            this.toolStripInicio.Size = new System.Drawing.Size(1634, 48);
             this.toolStripInicio.TabIndex = 20;
             this.toolStripInicio.Text = "toolStrip1";
             // 
@@ -125,7 +125,7 @@
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(42, 40);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(42, 42);
             this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
             // 
             // inicioToolStripMenuItem
@@ -211,7 +211,7 @@
             this.btnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.Image")));
             this.btnUsuario.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnUsuario.Name = "btnUsuario";
-            this.btnUsuario.Size = new System.Drawing.Size(46, 40);
+            this.btnUsuario.Size = new System.Drawing.Size(46, 42);
             this.btnUsuario.Text = "Usuario";
             // 
             // btnTaskiller
@@ -220,11 +220,12 @@
             this.btnTaskiller.Image = ((System.Drawing.Image)(resources.GetObject("btnTaskiller.Image")));
             this.btnTaskiller.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnTaskiller.Name = "btnTaskiller";
-            this.btnTaskiller.Size = new System.Drawing.Size(46, 40);
+            this.btnTaskiller.Size = new System.Drawing.Size(46, 42);
             this.btnTaskiller.Text = "TaskillerLogo";
             // 
             // flowLayoutPanelBloqueado
             // 
+            this.flowLayoutPanelBloqueado.AutoScroll = true;
             this.flowLayoutPanelBloqueado.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanelBloqueado.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelBloqueado.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
@@ -235,6 +236,7 @@
             // 
             // flowLayoutPanelRevisado
             // 
+            this.flowLayoutPanelRevisado.AutoScroll = true;
             this.flowLayoutPanelRevisado.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanelRevisado.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelRevisado.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
@@ -245,6 +247,7 @@
             // 
             // flowLayoutPanelEntregado
             // 
+            this.flowLayoutPanelEntregado.AutoScroll = true;
             this.flowLayoutPanelEntregado.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanelEntregado.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelEntregado.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
@@ -255,6 +258,7 @@
             // 
             // flowLayoutPanelEnProgreso
             // 
+            this.flowLayoutPanelEnProgreso.AutoScroll = true;
             this.flowLayoutPanelEnProgreso.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanelEnProgreso.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelEnProgreso.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
@@ -359,6 +363,7 @@
             // 
             // flowLayoutPanelPorComenzar
             // 
+            this.flowLayoutPanelPorComenzar.AutoScroll = true;
             this.flowLayoutPanelPorComenzar.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanelPorComenzar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelPorComenzar.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;

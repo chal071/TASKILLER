@@ -34,9 +34,8 @@
             this.labelNombreTarea = new System.Windows.Forms.Label();
             this.grid = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridViewUsuarioDeTarea = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Icono = new System.Windows.Forms.DataGridViewImageColumn();
             this.panelEstado = new System.Windows.Forms.Panel();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.grid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuarioDeTarea)).BeginInit();
             this.SuspendLayout();
@@ -96,8 +95,6 @@
             this.dataGridViewUsuarioDeTarea.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewUsuarioDeTarea.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUsuarioDeTarea.ColumnHeadersVisible = false;
-            this.dataGridViewUsuarioDeTarea.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Icono});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -118,6 +115,14 @@
             this.dataGridViewUsuarioDeTarea.Size = new System.Drawing.Size(352, 150);
             this.dataGridViewUsuarioDeTarea.TabIndex = 5;
             // 
+            // panelEstado
+            // 
+            this.panelEstado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelEstado.Location = new System.Drawing.Point(3, 283);
+            this.panelEstado.Name = "panelEstado";
+            this.panelEstado.Size = new System.Drawing.Size(352, 27);
+            this.panelEstado.TabIndex = 6;
+            // 
             // dataGridViewImageColumn1
             // 
             this.dataGridViewImageColumn1.FillWeight = 20F;
@@ -127,25 +132,6 @@
             this.dataGridViewImageColumn1.MinimumWidth = 10;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Width = 200;
-            // 
-            // Icono
-            // 
-            this.Icono.FillWeight = 20F;
-            this.Icono.HeaderText = "Icono";
-            this.Icono.Image = global::TASKILLER.Properties.Resources.logo_user_ros;
-            this.Icono.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Icono.MinimumWidth = 10;
-            this.Icono.Name = "Icono";
-            this.Icono.ReadOnly = true;
-            this.Icono.Width = 200;
-            // 
-            // panelEstado
-            // 
-            this.panelEstado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelEstado.Location = new System.Drawing.Point(3, 283);
-            this.panelEstado.Name = "panelEstado";
-            this.panelEstado.Size = new System.Drawing.Size(352, 27);
-            this.panelEstado.TabIndex = 6;
             // 
             // TareaControl
             // 
@@ -171,7 +157,6 @@
         private System.Windows.Forms.Label labelFechasTarea;
         private System.Windows.Forms.DataGridView dataGridViewUsuarioDeTarea;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.DataGridViewImageColumn Icono;
         private System.Windows.Forms.Panel panelEstado;
     }
 }
