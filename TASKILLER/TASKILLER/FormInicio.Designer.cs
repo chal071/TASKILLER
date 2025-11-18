@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInicio));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelInicio = new System.Windows.Forms.Panel();
+            this.labelHaceUnaSemana = new System.Windows.Forms.Label();
+            this.labelHoy = new System.Windows.Forms.Label();
+            this.labelUltimosProyectos = new System.Windows.Forms.Label();
             this.toolStripInicio = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,24 +45,49 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnUsuario = new System.Windows.Forms.ToolStripButton();
             this.btnTaskiller = new System.Windows.Forms.ToolStripButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.panelInicio.SuspendLayout();
             this.toolStripInicio.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelInicio
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.Controls.Add(this.toolStripInicio);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(13, 13);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1685, 1012);
-            this.panel1.TabIndex = 0;
+            this.panelInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelInicio.BackColor = System.Drawing.SystemColors.Control;
+            this.panelInicio.Controls.Add(this.labelHaceUnaSemana);
+            this.panelInicio.Controls.Add(this.labelHoy);
+            this.panelInicio.Controls.Add(this.labelUltimosProyectos);
+            this.panelInicio.Location = new System.Drawing.Point(12, 30);
+            this.panelInicio.Name = "panelInicio";
+            this.panelInicio.Size = new System.Drawing.Size(917, 468);
+            this.panelInicio.TabIndex = 0;
+            // 
+            // labelHaceUnaSemana
+            // 
+            this.labelHaceUnaSemana.AutoSize = true;
+            this.labelHaceUnaSemana.Location = new System.Drawing.Point(76, 271);
+            this.labelHaceUnaSemana.Name = "labelHaceUnaSemana";
+            this.labelHaceUnaSemana.Size = new System.Drawing.Size(117, 16);
+            this.labelHaceUnaSemana.TabIndex = 7;
+            this.labelHaceUnaSemana.Text = "Hace una semana";
+            // 
+            // labelHoy
+            // 
+            this.labelHoy.AutoSize = true;
+            this.labelHoy.Location = new System.Drawing.Point(76, 77);
+            this.labelHoy.Name = "labelHoy";
+            this.labelHoy.Size = new System.Drawing.Size(32, 16);
+            this.labelHoy.TabIndex = 6;
+            this.labelHoy.Text = "Hoy";
+            // 
+            // labelUltimosProyectos
+            // 
+            this.labelUltimosProyectos.AutoSize = true;
+            this.labelUltimosProyectos.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUltimosProyectos.Location = new System.Drawing.Point(58, 19);
+            this.labelUltimosProyectos.Name = "labelUltimosProyectos";
+            this.labelUltimosProyectos.Size = new System.Drawing.Size(221, 16);
+            this.labelUltimosProyectos.TabIndex = 5;
+            this.labelUltimosProyectos.Text = "Últimos proyectos modificados";
             // 
             // toolStripInicio
             // 
@@ -71,8 +99,8 @@
             this.btnTaskiller});
             this.toolStripInicio.Location = new System.Drawing.Point(0, 0);
             this.toolStripInicio.Name = "toolStripInicio";
-            this.toolStripInicio.Size = new System.Drawing.Size(1685, 27);
-            this.toolStripInicio.TabIndex = 8;
+            this.toolStripInicio.Size = new System.Drawing.Size(941, 27);
+            this.toolStripInicio.TabIndex = 9;
             this.toolStripInicio.Text = "toolStrip1";
             // 
             // toolStripDropDownButton1
@@ -129,7 +157,7 @@
             // crearNuevoUsuarioToolStripMenuItem
             // 
             this.crearNuevoUsuarioToolStripMenuItem.Name = "crearNuevoUsuarioToolStripMenuItem";
-            this.crearNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
+            this.crearNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.crearNuevoUsuarioToolStripMenuItem.Text = "Crear nuevo usuario";
             this.crearNuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.crearNuevoUsuarioToolStripMenuItem_Click);
             // 
@@ -178,58 +206,33 @@
             this.btnTaskiller.Size = new System.Drawing.Size(29, 24);
             this.btnTaskiller.Text = "TaskillerLogo";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(129, 379);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 16);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Hace una semana";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(129, 137);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 16);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Hoy";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(99, 107);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(221, 16);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Últimos proyectos modificados";
-            // 
             // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1710, 1037);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(941, 505);
+            this.Controls.Add(this.toolStripInicio);
+            this.Controls.Add(this.panelInicio);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormInicio";
-            this.Text = "TASKILLER - Inici";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Text = "TASKILLER - Inicio";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.panelInicio.ResumeLayout(false);
+            this.panelInicio.PerformLayout();
             this.toolStripInicio.ResumeLayout(false);
             this.toolStripInicio.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panelInicio;
+        private System.Windows.Forms.Label labelHaceUnaSemana;
+        private System.Windows.Forms.Label labelHoy;
+        private System.Windows.Forms.Label labelUltimosProyectos;
         private System.Windows.Forms.ToolStrip toolStripInicio;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
