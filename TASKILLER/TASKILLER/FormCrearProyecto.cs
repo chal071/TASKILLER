@@ -14,13 +14,16 @@ namespace TASKILLER
     public partial class FormCrearProyecto : Form
     {
         private Datos d;
-        public FormCrearProyecto(Datos datos)
+        private Usuario u;
+        public FormCrearProyecto(Datos datos, Usuario usuario)
         {
             InitializeComponent();
             Helpers.AplicarFuente(this, Fuentes.MontserratRegular);
 
             this.Resize += Form1_Resize;
             this.d = datos;
+            this.u = usuario;
+
             cargarLayout();
         }
 

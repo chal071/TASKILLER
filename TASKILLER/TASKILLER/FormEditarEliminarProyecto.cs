@@ -13,12 +13,16 @@ namespace TASKILLER
     public partial class FormEditarEliminarProyecto : Form
     {
         private Datos d;
-        public FormEditarEliminarProyecto(Datos datos)
+        private Proyecto p;
+        private Usuario u;
+        public FormEditarEliminarProyecto(Datos datos, Proyecto proyecto, Usuario usuario)
         {
             InitializeComponent();
             Helpers.AplicarFuente(this, Fuentes.MontserratRegular);
             this.Resize += Form1_Resize;
             this.d = datos;
+            this.p = proyecto;
+            this.u = usuario;
 
             labelCuentanosProyecto.Font = new Font(Fuentes.MontserratBold.FontFamily, 30);
             labelTitulo.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);

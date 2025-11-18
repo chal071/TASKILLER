@@ -13,9 +13,15 @@ namespace TASKILLER
     public partial class FormEditarTarea : Form
     {
         private Datos d;
-        public FormEditarTarea(Datos datos)
+        private Proyecto p;
+        private Tarea t;
+        private Usuario u;
+        public FormEditarTarea(Datos datos, Proyecto proyecto, Tarea tarea, Usuario usuario)
         {
             this.d = datos;
+            this.p = proyecto;
+            this.t = tarea;
+            this.u = usuario;
             InitializeComponent();
             SetFontSize();
         }
