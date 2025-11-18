@@ -35,7 +35,6 @@
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearNuevoProyectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarEliminarProyectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearNuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -109,8 +108,7 @@
             // proyectosToolStripMenuItem
             // 
             this.proyectosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearNuevoProyectoToolStripMenuItem,
-            this.modificarEliminarProyectoToolStripMenuItem});
+            this.crearNuevoProyectoToolStripMenuItem});
             this.proyectosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("proyectosToolStripMenuItem.Image")));
             this.proyectosToolStripMenuItem.Name = "proyectosToolStripMenuItem";
             this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
@@ -120,16 +118,9 @@
             // crearNuevoProyectoToolStripMenuItem
             // 
             this.crearNuevoProyectoToolStripMenuItem.Name = "crearNuevoProyectoToolStripMenuItem";
-            this.crearNuevoProyectoToolStripMenuItem.Size = new System.Drawing.Size(279, 26);
+            this.crearNuevoProyectoToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
             this.crearNuevoProyectoToolStripMenuItem.Text = "Crear nuevo proyecto";
             this.crearNuevoProyectoToolStripMenuItem.Click += new System.EventHandler(this.crearNuevoProyectoToolStripMenuItem_Click);
-            // 
-            // modificarEliminarProyectoToolStripMenuItem
-            // 
-            this.modificarEliminarProyectoToolStripMenuItem.Name = "modificarEliminarProyectoToolStripMenuItem";
-            this.modificarEliminarProyectoToolStripMenuItem.Size = new System.Drawing.Size(279, 26);
-            this.modificarEliminarProyectoToolStripMenuItem.Text = "Modificar/Eliminar proyecto";
-            this.modificarEliminarProyectoToolStripMenuItem.Click += new System.EventHandler(this.modificarEliminarProyectoToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
             // 
@@ -144,7 +135,7 @@
             // crearNuevoUsuarioToolStripMenuItem
             // 
             this.crearNuevoUsuarioToolStripMenuItem.Name = "crearNuevoUsuarioToolStripMenuItem";
-            this.crearNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.crearNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
             this.crearNuevoUsuarioToolStripMenuItem.Text = "Crear nuevo usuario";
             this.crearNuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.crearNuevoUsuarioToolStripMenuItem_Click);
             // 
@@ -250,7 +241,6 @@
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem proyectosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem crearNuevoProyectoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarEliminarProyectoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem crearNuevoUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rolesToolStripMenuItem;

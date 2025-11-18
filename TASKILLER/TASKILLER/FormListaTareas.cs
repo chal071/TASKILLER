@@ -14,11 +14,15 @@ namespace TASKILLER
     public partial class FormListaTareas : Form
     {
         private Datos d;
-        public FormListaTareas(Datos datos)
+        private Proyecto p;
+        private Usuario u;
+        public FormListaTareas(Datos datos, Proyecto proyecto, Usuario usuario)
         {
             InitializeComponent();
             setFontSize();
             this.d = datos;
+            this.p = proyecto;
+            this.u = usuario;
         }
 
 
@@ -72,13 +76,6 @@ namespace TASKILLER
         private void crearNuevoUsuarioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             FormCreacionUsuario f = new FormCreacionUsuario(d);
-            f.Show();
-            this.Hide();
-        }
-
-        private void modificarEliminarProyectoToolStripMenuItem_Click(object sender, System.EventArgs e)
-        {
-            FormEditarEliminarProyecto f = new FormEditarEliminarProyecto(d);
             f.Show();
             this.Hide();
         }

@@ -40,6 +40,7 @@
             this.richTextBoxDescripcion = new System.Windows.Forms.RichTextBox();
             this.labelDescripcion = new System.Windows.Forms.Label();
             this.panelInfo = new System.Windows.Forms.Panel();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.dateTimePickerFechaFinal = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.toolStripInicio = new System.Windows.Forms.ToolStrip();
@@ -47,17 +48,15 @@
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearNuevoProyectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarEliminarProyectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearNuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnUsuario = new System.Windows.Forms.ToolStripButton();
             this.btnTaskiller = new System.Windows.Forms.ToolStripButton();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelInfo.SuspendLayout();
-            this.toolStripInicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            this.toolStripInicio.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelCuentanosProyecto
@@ -98,6 +97,7 @@
             this.buttonCrearProyecto.TabIndex = 6;
             this.buttonCrearProyecto.Text = "Crear proyecto";
             this.buttonCrearProyecto.UseVisualStyleBackColor = true;
+            this.buttonCrearProyecto.Click += new System.EventHandler(this.buttonCrearProyecto_Click);
             // 
             // labelTitulo
             // 
@@ -174,6 +174,17 @@
             this.panelInfo.Size = new System.Drawing.Size(843, 446);
             this.panelInfo.TabIndex = 13;
             // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.BackgroundImage = global::TASKILLER.Properties.Resources.LOGO;
+            this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(176, 157);
+            this.pictureBoxLogo.TabIndex = 15;
+            this.pictureBoxLogo.TabStop = false;
+            // 
             // dateTimePickerFechaFinal
             // 
             this.dateTimePickerFechaFinal.Location = new System.Drawing.Point(535, 173);
@@ -229,8 +240,7 @@
             // proyectosToolStripMenuItem
             // 
             this.proyectosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearNuevoProyectoToolStripMenuItem,
-            this.modificarEliminarProyectoToolStripMenuItem});
+            this.crearNuevoProyectoToolStripMenuItem});
             this.proyectosToolStripMenuItem.Name = "proyectosToolStripMenuItem";
             this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.proyectosToolStripMenuItem.Text = "Proyectos";
@@ -242,13 +252,6 @@
             this.crearNuevoProyectoToolStripMenuItem.Size = new System.Drawing.Size(279, 26);
             this.crearNuevoProyectoToolStripMenuItem.Text = "Crear nuevo proyecto";
             this.crearNuevoProyectoToolStripMenuItem.Click += new System.EventHandler(this.crearNuevoProyectoToolStripMenuItem_Click);
-            // 
-            // modificarEliminarProyectoToolStripMenuItem
-            // 
-            this.modificarEliminarProyectoToolStripMenuItem.Name = "modificarEliminarProyectoToolStripMenuItem";
-            this.modificarEliminarProyectoToolStripMenuItem.Size = new System.Drawing.Size(279, 26);
-            this.modificarEliminarProyectoToolStripMenuItem.Text = "Modificar/Eliminar proyecto";
-            this.modificarEliminarProyectoToolStripMenuItem.Click += new System.EventHandler(this.modificarEliminarProyectoToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
             // 
@@ -262,7 +265,7 @@
             // crearNuevoUsuarioToolStripMenuItem
             // 
             this.crearNuevoUsuarioToolStripMenuItem.Name = "crearNuevoUsuarioToolStripMenuItem";
-            this.crearNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.crearNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
             this.crearNuevoUsuarioToolStripMenuItem.Text = "Crear nuevo usuario";
             this.crearNuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.crearNuevoUsuarioToolStripMenuItem_Click);
             // 
@@ -301,17 +304,6 @@
             this.btnTaskiller.Size = new System.Drawing.Size(29, 24);
             this.btnTaskiller.Text = "TaskillerLogo";
             // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.BackgroundImage = global::TASKILLER.Properties.Resources.LOGO;
-            this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(176, 157);
-            this.pictureBoxLogo.TabIndex = 15;
-            this.pictureBoxLogo.TabStop = false;
-            // 
             // FormCrearProyecto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -327,9 +319,9 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelInfo.ResumeLayout(false);
             this.panelInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.toolStripInicio.ResumeLayout(false);
             this.toolStripInicio.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -354,7 +346,6 @@
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem proyectosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem crearNuevoProyectoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarEliminarProyectoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem crearNuevoUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rolesToolStripMenuItem;

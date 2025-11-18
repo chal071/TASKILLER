@@ -5,10 +5,12 @@ namespace TASKILLER
     public partial class FormInicio : Form
     {
         private Datos d;
-        public FormInicio(Datos datos)
+        private Usuario u;
+        public FormInicio(Datos datos, Usuario usuario)
         {
             InitializeComponent();
             this.d = datos;
+            this.u = usuario;
         }
 
         private void inicioToolStripMenuItem_Click(object sender, System.EventArgs e)
@@ -48,13 +50,6 @@ namespace TASKILLER
         private void crearNuevoUsuarioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             FormCreacionUsuario f = new FormCreacionUsuario(d);
-            f.Show();
-            this.Hide();
-        }
-
-        private void modificarEliminarProyectoToolStripMenuItem_Click(object sender, System.EventArgs e)
-        {
-            FormEditarEliminarProyecto f = new FormEditarEliminarProyecto(d);
             f.Show();
             this.Hide();
         }

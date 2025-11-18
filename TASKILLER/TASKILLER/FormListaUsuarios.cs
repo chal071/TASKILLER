@@ -13,9 +13,11 @@ namespace TASKILLER
     public partial class FormListaUsuarios : Form
     {
         private Datos d;
-        public FormListaUsuarios(Datos datos)
+        private Usuario u;
+        public FormListaUsuarios(Datos datos, Usuario usuario)
         {
             this.d = datos;
+            this.u = usuario;
             InitializeComponent();
             ConfigurarDataGridView();
             CargarUsuarios();
@@ -112,13 +114,6 @@ namespace TASKILLER
         private void crearNuevoUsuarioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             FormCreacionUsuario f = new FormCreacionUsuario(d);
-            f.Show();
-            this.Hide();
-        }
-
-        private void modificarEliminarProyectoToolStripMenuItem_Click(object sender, System.EventArgs e)
-        {
-            FormEditarEliminarProyecto f = new FormEditarEliminarProyecto(d);
             f.Show();
             this.Hide();
         }

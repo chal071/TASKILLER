@@ -13,7 +13,13 @@ namespace TASKILLER
         public FormLogin(Datos datos)
         {
             InitializeComponent();
+            cargarDatos();
             this.d = datos;
+
+        }
+
+        private void cargarDatos()
+        {
 
             labelIniciaSesion.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12, FontStyle.Bold);
             labelConTuCuenta.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12, FontStyle.Regular);
@@ -42,7 +48,7 @@ namespace TASKILLER
                 {
                     if (u.Mail == email && u.Contrasena == password)
                     {
-                        FormInicio f = new FormInicio(d);
+                        FormInicio f = new FormInicio(d, u);
                         f.Show();
                         this.Hide();
                     }

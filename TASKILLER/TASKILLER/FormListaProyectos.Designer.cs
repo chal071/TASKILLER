@@ -30,6 +30,7 @@ namespace TASKILLER
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListaProyectos));
             this.labelListaProyectos = new System.Windows.Forms.Label();
             this.flowLayoutPanelListaProyectos = new System.Windows.Forms.FlowLayoutPanel();
@@ -41,7 +42,6 @@ namespace TASKILLER
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearNuevoProyectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarEliminarProyectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearNuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,6 +49,7 @@ namespace TASKILLER
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnUsuario = new System.Windows.Forms.ToolStripButton();
             this.btnTaskiller = new System.Windows.Forms.ToolStripButton();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.flowLayoutPanelBotonesOrdFil.SuspendLayout();
             this.toolStripInicio.SuspendLayout();
             this.SuspendLayout();
@@ -148,8 +149,7 @@ namespace TASKILLER
             // proyectosToolStripMenuItem
             // 
             this.proyectosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearNuevoProyectoToolStripMenuItem,
-            this.modificarEliminarProyectoToolStripMenuItem});
+            this.crearNuevoProyectoToolStripMenuItem});
             this.proyectosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("proyectosToolStripMenuItem.Image")));
             this.proyectosToolStripMenuItem.Name = "proyectosToolStripMenuItem";
             this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
@@ -159,16 +159,9 @@ namespace TASKILLER
             // crearNuevoProyectoToolStripMenuItem
             // 
             this.crearNuevoProyectoToolStripMenuItem.Name = "crearNuevoProyectoToolStripMenuItem";
-            this.crearNuevoProyectoToolStripMenuItem.Size = new System.Drawing.Size(279, 26);
+            this.crearNuevoProyectoToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
             this.crearNuevoProyectoToolStripMenuItem.Text = "Crear nuevo proyecto";
             this.crearNuevoProyectoToolStripMenuItem.Click += new System.EventHandler(this.crearNuevoProyectoToolStripMenuItem_Click);
-            // 
-            // modificarEliminarProyectoToolStripMenuItem
-            // 
-            this.modificarEliminarProyectoToolStripMenuItem.Name = "modificarEliminarProyectoToolStripMenuItem";
-            this.modificarEliminarProyectoToolStripMenuItem.Size = new System.Drawing.Size(279, 26);
-            this.modificarEliminarProyectoToolStripMenuItem.Text = "Modificar/Eliminar proyecto";
-            this.modificarEliminarProyectoToolStripMenuItem.Click += new System.EventHandler(this.modificarEliminarProyectoToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
             // 
@@ -232,6 +225,12 @@ namespace TASKILLER
             this.btnTaskiller.Size = new System.Drawing.Size(29, 24);
             this.btnTaskiller.Text = "TaskillerLogo";
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // FormListaProyectos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -239,10 +238,10 @@ namespace TASKILLER
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.ClientSize = new System.Drawing.Size(1187, 697);
-            this.Controls.Add(this.toolStripInicio);
             this.Controls.Add(this.flowLayoutPanelListaProyectos);
             this.Controls.Add(this.flowLayoutPanelBotonesOrdFil);
             this.Controls.Add(this.labelListaProyectos);
+            this.Controls.Add(this.toolStripInicio);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormListaProyectos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -268,7 +267,6 @@ namespace TASKILLER
         private ToolStripMenuItem inicioToolStripMenuItem;
         private ToolStripMenuItem proyectosToolStripMenuItem;
         private ToolStripMenuItem crearNuevoProyectoToolStripMenuItem;
-        private ToolStripMenuItem modificarEliminarProyectoToolStripMenuItem;
         private ToolStripMenuItem usuariosToolStripMenuItem;
         private ToolStripMenuItem crearNuevoUsuarioToolStripMenuItem;
         private ToolStripMenuItem rolesToolStripMenuItem;
@@ -276,5 +274,6 @@ namespace TASKILLER
         private ToolStripMenuItem salirToolStripMenuItem;
         private ToolStripButton btnUsuario;
         private ToolStripButton btnTaskiller;
+        private ContextMenuStrip contextMenuStrip1;
     }
 }

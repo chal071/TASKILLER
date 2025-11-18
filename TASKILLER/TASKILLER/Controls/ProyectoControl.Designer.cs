@@ -56,7 +56,7 @@
             // labelFechas
             // 
             this.labelFechas.AutoSize = true;
-            this.labelFechas.Location = new System.Drawing.Point(156, 414);
+            this.labelFechas.Location = new System.Drawing.Point(125, 414);
             this.labelFechas.Name = "labelFechas";
             this.labelFechas.Size = new System.Drawing.Size(159, 16);
             this.labelFechas.TabIndex = 3;
@@ -81,6 +81,7 @@
             this.Controls.Add(this.flowLayoutPanelListaTareas);
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.labelNombre);
+            this.Margin = new System.Windows.Forms.Padding(20, 3, 3, 40);
             this.Name = "ProyectoControl";
             this.Size = new System.Drawing.Size(412, 463);
             this.ResumeLayout(false);

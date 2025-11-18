@@ -13,12 +13,14 @@ namespace TASKILLER
     public partial class FormListaRoles : Form
     {
         private Datos d;
-        public FormListaRoles(Datos datos)
+        private Usuario u;
+        public FormListaRoles(Datos datos, Usuario usuario)
         {
             InitializeComponent();
             this.Resize += Form1_Resize;
             labelListaRoles.Font = new Font("Montserrat", 30, FontStyle.Bold);
             this.d = datos;
+            this.u = usuario;
             foreach (Rol r in d.listaRoles) 
             {
                 TarjetaRol rol = new TarjetaRol();
@@ -80,13 +82,6 @@ namespace TASKILLER
         private void crearNuevoUsuarioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             FormCreacionUsuario f = new FormCreacionUsuario(d);
-            f.Show();
-            this.Hide();
-        }
-
-        private void modificarEliminarProyectoToolStripMenuItem_Click(object sender, System.EventArgs e)
-        {
-            FormEditarEliminarProyecto f = new FormEditarEliminarProyecto(d);
             f.Show();
             this.Hide();
         }
