@@ -25,11 +25,9 @@ namespace TASKILLER
 
         private void LIstBoxAccesoRol_SelectedIndexChanged(object sender, EventArgs e)
         {
-<<<<<<< Updated upstream
-
-=======
+            labelRol.Text = r.Nombre;
             LIstBoxAccesoRol.Items.Clear();
->>>>>>> Stashed changes
+            LIstBoxAccesoRol.Items.AddRange(r.Acceso.ToArray());
         }
     }
 }
