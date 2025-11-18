@@ -1,64 +1,69 @@
 {
   "listaProyectos": [
     {
-      "Id": "b2c3d4e5-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
-      "Titulo": "Desarrollo App Móvil",
-      "Descripcion": "Crear la aplicación móvil multiplataforma para la gestión de tareas de la empresa.",
-      "FechaInicio": "2025-03-01T00:00:00",
-      "FechaFinal": "2025-06-01T00:00:00",
-      "Estado": "Por_Comenzar",
-      "listaUsuarios": [
-        "c3c3f4a5-6d7e-8f9a-0b1c-2d3e4f5a6b7c",
-        "c4d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f"
-      ]
+        "Id": "b2c3d4e5-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+        "Titulo": "Desarrollo App Móvil",
+        "Descripcion": "Crear la aplicación móvil multiplataforma para la gestión de tareas de la empresa.",
+        "FechaInicio": "2025-03-01T00:00:00",
+        "FechaFinal": "2025-06-01T00:00:00",
+        "Estado": "Por_Comenzar",
+        "IdCreador": "c5e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
+        "listaUsuarios": [
+            "c3c3f4a5-6d7e-8f9a-0b1c-2d3e4f5a6b7c",
+            "c4d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f"
+        ]
     },
     {
-      "Id": "6ea0cb71-6e8b-49cf-8a57-0c814d2fdf61",
-      "Titulo": "Plataforma Educativa",
-      "Descripcion": "Portal para cursos en línea y gestión de estudiantes.",
-      "FechaInicio": "2025-01-15T00:00:00",
-      "FechaFinal": "2025-05-30T00:00:00",
-      "Estado": "En_Progreso",
-      "listaUsuarios": [
-        "c1a1e2f3-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
-        "c5e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a"
-      ]
+        "Id": "6ea0cb71-6e8b-49cf-8a57-0c814d2fdf61",
+        "Titulo": "Plataforma Educativa",
+        "Descripcion": "Portal para cursos en línea y gestión de estudiantes.",
+        "FechaInicio": "2025-01-15T00:00:00",
+        "FechaFinal": "2025-05-30T00:00:00",
+        "Estado": "En_Progreso",
+        "IdCreador": "c1a1e2f3-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
+        "listaUsuarios": [
+            "c1a1e2f3-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
+            "c5e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a"
+        ]
     },
     {
-      "Id": "167eca8f-3abb-442a-bb4e-ab11e488ab29",
-      "Titulo": "Sistema de Inventario",
-      "Descripcion": "Gestión interna de productos y stock.",
-      "FechaInicio": "2025-03-01T00:00:00",
-      "FechaFinal": "2025-06-01T00:00:00",
-      "Estado": "Entregado",
-      "listaUsuarios": [
-        "c3c3f4a5-6d7e-8f9a-0b1c-2d3e4f5a6b7c",
-        "c4d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f"
-      ]
+        "Id": "167eca8f-3abb-442a-bb4e-ab11e488ab29",
+        "Titulo": "Sistema de Inventario",
+        "Descripcion": "Gestión interna de productos y stock.",
+        "FechaInicio": "2025-03-01T00:00:00",
+        "FechaFinal": "2025-06-01T00:00:00",
+        "Estado": "Entregado",
+        "IdCreador": "c1a1e2f3-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
+        "listaUsuarios": [
+            "c3c3f4a5-6d7e-8f9a-0b1c-2d3e4f5a6b7c",
+            "c4d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f"
+        ]
     },
     {
-      "Id": "c3d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
-      "Titulo": "Rediseño Web Corporativa",
-      "Descripcion": "Actualizar el sitio web corporativo con nuevo diseño y funcionalidad responsiva.",
-      "FechaInicio": "2025-01-15T00:00:00",
-      "FechaFinal": "2025-05-30T00:00:00",
-      "Estado": "Revisado",
-      "listaUsuarios": [
-        "c1a1e2f3-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
-        "c5e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a"
-      ]
+        "Id": "c3d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
+        "Titulo": "Rediseño Web Corporativa",
+        "Descripcion": "Actualizar el sitio web corporativo con nuevo diseño y funcionalidad responsiva.",
+        "FechaInicio": "2025-01-15T00:00:00",
+        "FechaFinal": "2025-05-30T00:00:00",
+        "Estado": "Revisado",
+        "IdCreador": "c2b2f3a4-5c6d-7e8f-9a0b-1c2d3e4f5a6b",
+        "listaUsuarios": [
+            "c1a1e2f3-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
+            "c5e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a"
+        ]
     },
     {
-      "Id": "d4e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
-      "Titulo": "Dashboard Analítico",
-      "Descripcion": "Herramienta de visualización de datos empresariales.",
-      "FechaInicio": "2025-04-01T00:00:00",
-      "FechaFinal": "2025-08-01T00:00:00",
-      "Estado": "Bloqueado",
-      "listaUsuarios": [
-        "c2b2f3a4-5c6d-7e8f-9a0b-1c2d3e4f5a6b",
-        "c5e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a"
-      ]
+        "Id": "d4e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
+        "Titulo": "Dashboard Analítico",
+        "Descripcion": "Herramienta de visualización de datos empresariales.",
+        "FechaInicio": "2025-04-01T00:00:00",
+        "FechaFinal": "2025-08-01T00:00:00",
+        "Estado": "Bloqueado",
+        "IdCreador": "c2b2f3a4-5c6d-7e8f-9a0b-1c2d3e4f5a6b",
+        "listaUsuarios": [
+            "c2b2f3a4-5c6d-7e8f-9a0b-1c2d3e4f5a6b",
+            "c5e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a"
+        ]
     }
   ],
   "listaTareas": [
@@ -140,13 +145,13 @@
   ],
   "listaUsuarios": [
     {
-      "Id": "c1a1e2f3-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
-      "Nombre": "Laura",
-      "Apellido": "Pepita",
-      "Mail": "laura@empresa.com",
-      "Contrasena": "1234",
-      "Rol": "d0e1f2a3-4b5c-6d7e-8f9a-0b1c2d3e4f5b",
-      "img":"logo_user_azu"
+        "Id": "c1a1e2f3-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
+        "Nombre": "Laura",
+        "Apellido": "Pepita",
+        "Mail": "laura@empresa.com",
+        "Contrasena": "1234",
+        "Rol": "d0e1f2a3-4b5c-6d7e-8f9a-0b1c2d3e4f5b",
+        "img": "logo_user_azu"
     },
     {
       "Id": "c2b2f3a4-5c6d-7e8f-9a0b-1c2d3e4f5a6b",

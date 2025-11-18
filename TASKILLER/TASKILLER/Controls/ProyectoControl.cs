@@ -13,9 +13,15 @@ namespace TASKILLER
 {
     public partial class ProyectoControl : UserControl
     {
-        public ProyectoControl()
+        private Datos d;
+        private Proyecto p;
+        private Usuario u;
+        public ProyectoControl(Datos datos, Proyecto proyecto, Usuario usuario)
         {
             InitializeComponent();
+            this.d = datos;
+            this.p = proyecto;
+            this.u = usuario;
         }
         public void AgregarTareas(List<Tarea> tareas, Proyecto p)
         {
@@ -27,8 +33,7 @@ namespace TASKILLER
                 {
                     TareaProyectoControl tareaControl = new TareaProyectoControl();
                     tareaControl.setDatos(t);
-                    flowLayoutPanelListaTareas.Controls.Add(tareaControl); // <- aquí agregas el control al panel
-
+                    flowLayoutPanelListaTareas.Controls.Add(tareaControl);
                 }
             }
         }
@@ -36,16 +41,45 @@ namespace TASKILLER
 
         public void SetDatos(Proyecto p)
         {
+
+
             labelNombre.Text = p.Titulo;
-            labelFechas.Text = p.FechaInicio + " - " + p.FechaFinal;
-            
-            labelNombre.Font = new Font("Montserrat", 9, FontStyle.Bold);
-            labelFechas.Font = new Font("Montserrat", 9, FontStyle.Regular);
+            labelFechas.Text = p.FechaInicio.ToString("dd/MM/yyyy") + " - " + p.FechaFinal.ToString("dd/MM/yyyy");
+
+            // labelTitulo.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
+
+
+            labelNombre.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
+            labelFechas.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
             labelNombre.MaximumSize = new Size(250, 150);
             labelNombre.BackColor = Color.Pink;
 
             buttonEditar.BackgroundImageLayout = ImageLayout.Zoom;
 
+        }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            contextMenuStripEditar.Show(buttonEditar, 0, buttonEditar.Height);
+        }
+
+        private void ProyectoControl_Click(object sender, EventArgs e)
+        {
+            FormListaTareas f = new FormListaTareas(d, p, u);
+            f.Show();
+            this.Hide();
+                }
+
+        private void flowLayoutPanelListaTareas_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void editarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormEditarEliminarProyecto f = new FormEditarEliminarProyecto(d, p, u);
+            f.Show();
+            this.Hide();
         }
     }
 }

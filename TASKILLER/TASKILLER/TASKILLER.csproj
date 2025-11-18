@@ -232,10 +232,12 @@
   <ItemGroup>
     <Content Include="icon_taskiller.ico" />
     <Content Include="resources\icons\icon_taskiller.ico" />
+    <None Include="resources\img\borrar.png" />
     <Content Include="resources\img\casa.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\img\doc.png" />
+    <None Include="resources\img\editar.png" />
     <Content Include="resources\img\exit.png" />
     <Content Include="resources\img\filtro.png" />
     <Content Include="resources\img\grupo.png" />

@@ -205,7 +205,7 @@
             this.flowLayoutPanelTop.Controls.Add(this.labelCuentanos);
             this.flowLayoutPanelTop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelTop.Location = new System.Drawing.Point(2, 33);
-            this.flowLayoutPanelTop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanelTop.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanelTop.Name = "flowLayoutPanelTop";
             this.flowLayoutPanelTop.Size = new System.Drawing.Size(1085, 120);
             this.flowLayoutPanelTop.TabIndex = 0;
@@ -215,7 +215,7 @@
             this.pictureBoxLogo.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureBoxLogo.Image = global::TASKILLER.Properties.Resources.LOGO;
             this.pictureBoxLogo.Location = new System.Drawing.Point(2, 2);
-            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(208, 149);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -236,7 +236,7 @@
             // 
             this.buttonCrear.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.buttonCrear.Location = new System.Drawing.Point(918, 543);
-            this.buttonCrear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCrear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCrear.Name = "buttonCrear";
             this.buttonCrear.Size = new System.Drawing.Size(169, 60);
             this.buttonCrear.TabIndex = 3;
@@ -255,7 +255,7 @@
             this.tableLayoutPanelLeft.Controls.Add(this.comboBoxPrioridad, 0, 5);
             this.tableLayoutPanelLeft.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelLeft.Location = new System.Drawing.Point(2, 157);
-            this.tableLayoutPanelLeft.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanelLeft.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanelLeft.Name = "tableLayoutPanelLeft";
             this.tableLayoutPanelLeft.RowCount = 6;
             this.tableLayoutPanelLeft.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
@@ -282,7 +282,7 @@
             // 
             this.richTextBoxDescripcion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBoxDescripcion.Location = new System.Drawing.Point(2, 96);
-            this.richTextBoxDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBoxDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBoxDescripcion.Name = "richTextBoxDescripcion";
             this.richTextBoxDescripcion.Size = new System.Drawing.Size(536, 165);
             this.richTextBoxDescripcion.TabIndex = 3;
@@ -313,7 +313,7 @@
             // 
             this.textBoxTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxTitulo.Location = new System.Drawing.Point(2, 31);
-            this.textBoxTitulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxTitulo.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTitulo.Name = "textBoxTitulo";
             this.textBoxTitulo.Size = new System.Drawing.Size(536, 22);
             this.textBoxTitulo.TabIndex = 1;
@@ -323,7 +323,7 @@
             this.comboBoxPrioridad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxPrioridad.FormattingEnabled = true;
             this.comboBoxPrioridad.Location = new System.Drawing.Point(2, 294);
-            this.comboBoxPrioridad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxPrioridad.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxPrioridad.Name = "comboBoxPrioridad";
             this.comboBoxPrioridad.Size = new System.Drawing.Size(536, 24);
             this.comboBoxPrioridad.TabIndex = 5;
@@ -342,7 +342,7 @@
             this.tableLayoutPanelRight.Controls.Add(this.checkedListBoxUsuario, 0, 7);
             this.tableLayoutPanelRight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelRight.Location = new System.Drawing.Point(546, 157);
-            this.tableLayoutPanelRight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanelRight.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanelRight.Name = "tableLayoutPanelRight";
             this.tableLayoutPanelRight.RowCount = 8;
             this.tableLayoutPanelRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -372,7 +372,7 @@
             this.comboBoxEstado.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxEstado.FormattingEnabled = true;
             this.comboBoxEstado.Location = new System.Drawing.Point(2, 182);
-            this.comboBoxEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxEstado.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxEstado.Name = "comboBoxEstado";
             this.comboBoxEstado.Size = new System.Drawing.Size(537, 24);
             this.comboBoxEstado.TabIndex = 4;
@@ -392,7 +392,7 @@
             // 
             this.dateTimePickerFechaFinal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePickerFechaFinal.Location = new System.Drawing.Point(2, 110);
-            this.dateTimePickerFechaFinal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePickerFechaFinal.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerFechaFinal.Name = "dateTimePickerFechaFinal";
             this.dateTimePickerFechaFinal.Size = new System.Drawing.Size(537, 22);
             this.dateTimePickerFechaFinal.TabIndex = 3;
@@ -412,7 +412,7 @@
             // 
             this.dateTimePickerFechaInicio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePickerFechaInicio.Location = new System.Drawing.Point(2, 38);
-            this.dateTimePickerFechaInicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePickerFechaInicio.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerFechaInicio.Name = "dateTimePickerFechaInicio";
             this.dateTimePickerFechaInicio.Size = new System.Drawing.Size(537, 22);
             this.dateTimePickerFechaInicio.TabIndex = 1;
@@ -433,7 +433,7 @@
             this.checkedListBoxUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkedListBoxUsuario.FormattingEnabled = true;
             this.checkedListBoxUsuario.Location = new System.Drawing.Point(2, 254);
-            this.checkedListBoxUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkedListBoxUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.checkedListBoxUsuario.Name = "checkedListBoxUsuario";
             this.checkedListBoxUsuario.Size = new System.Drawing.Size(537, 112);
             this.checkedListBoxUsuario.TabIndex = 7;
@@ -446,7 +446,7 @@
             this.ClientSize = new System.Drawing.Size(1089, 620);
             this.Controls.Add(this.grid);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormCrearTarea";
             this.Text = "Crear nueva tarea";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

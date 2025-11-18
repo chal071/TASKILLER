@@ -96,6 +96,7 @@
             this.buttonEditarProyecto.TabIndex = 15;
             this.buttonEditarProyecto.Text = "Guardar proyecto";
             this.buttonEditarProyecto.UseVisualStyleBackColor = true;
+            this.buttonEditarProyecto.Click += new System.EventHandler(this.buttonEditarProyecto_Click);
             // 
             // dateTimePickerFechaFinal
             // 
@@ -169,6 +170,7 @@
             this.buttonEliminarProyecto.TabIndex = 6;
             this.buttonEliminarProyecto.Text = "Eliminar proyecto";
             this.buttonEliminarProyecto.UseVisualStyleBackColor = true;
+            this.buttonEliminarProyecto.Click += new System.EventHandler(this.buttonEliminarProyecto_Click);
             // 
             // labelFechaFinal
             // 
@@ -292,7 +294,7 @@
             // crearNuevoUsuarioToolStripMenuItem
             // 
             this.crearNuevoUsuarioToolStripMenuItem.Name = "crearNuevoUsuarioToolStripMenuItem";
-            this.crearNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.crearNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
             this.crearNuevoUsuarioToolStripMenuItem.Text = "Crear nuevo usuario";
             this.crearNuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.crearNuevoUsuarioToolStripMenuItem_Click);
             // 

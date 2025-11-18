@@ -28,11 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProyectoControl));
             this.labelNombre = new System.Windows.Forms.Label();
             this.flowLayoutPanelListaTareas = new System.Windows.Forms.FlowLayoutPanel();
             this.labelFechas = new System.Windows.Forms.Label();
+            this.contextMenuStripEditar = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.buttonEditar = new System.Windows.Forms.Button();
+            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStripEditar.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelNombre
@@ -50,26 +55,52 @@
             this.flowLayoutPanelListaTareas.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanelListaTareas.Location = new System.Drawing.Point(26, 68);
             this.flowLayoutPanelListaTareas.Name = "flowLayoutPanelListaTareas";
-            this.flowLayoutPanelListaTareas.Size = new System.Drawing.Size(368, 334);
+            this.flowLayoutPanelListaTareas.Size = new System.Drawing.Size(301, 207);
             this.flowLayoutPanelListaTareas.TabIndex = 2;
+            this.flowLayoutPanelListaTareas.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelListaTareas_Paint);
             // 
             // labelFechas
             // 
             this.labelFechas.AutoSize = true;
-            this.labelFechas.Location = new System.Drawing.Point(125, 414);
+            this.labelFechas.Location = new System.Drawing.Point(92, 290);
             this.labelFechas.Name = "labelFechas";
             this.labelFechas.Size = new System.Drawing.Size(159, 16);
             this.labelFechas.TabIndex = 3;
             this.labelFechas.Text = "Fecha inicio - Fecha Final";
             // 
+            // contextMenuStripEditar
+            // 
+            this.contextMenuStripEditar.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStripEditar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editarToolStripMenuItem,
+            this.eliminarToolStripMenuItem});
+            this.contextMenuStripEditar.Name = "contextMenuStripEditar";
+            this.contextMenuStripEditar.Size = new System.Drawing.Size(215, 84);
+            // 
             // buttonEditar
             // 
             this.buttonEditar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonEditar.BackgroundImage")));
-            this.buttonEditar.Location = new System.Drawing.Point(355, 21);
+            this.buttonEditar.Location = new System.Drawing.Point(285, 21);
             this.buttonEditar.Name = "buttonEditar";
-            this.buttonEditar.Size = new System.Drawing.Size(39, 35);
+            this.buttonEditar.Size = new System.Drawing.Size(42, 35);
             this.buttonEditar.TabIndex = 1;
             this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
+            // 
+            // editarToolStripMenuItem
+            // 
+            this.editarToolStripMenuItem.Image = global::TASKILLER.Properties.Resources.editar;
+            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.editarToolStripMenuItem.Text = "Editar";
+            this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
+            // 
+            // eliminarToolStripMenuItem
+            // 
+            this.eliminarToolStripMenuItem.Image = global::TASKILLER.Properties.Resources.borrar;
+            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
+            this.eliminarToolStripMenuItem.Text = "Eliminar";
             // 
             // ProyectoControl
             // 
@@ -81,9 +112,12 @@
             this.Controls.Add(this.flowLayoutPanelListaTareas);
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.labelNombre);
-            this.Margin = new System.Windows.Forms.Padding(20, 3, 3, 40);
+            this.Margin = new System.Windows.Forms.Padding(15, 3, 0, 0);
+            this.MaximumSize = new System.Drawing.Size(412, 463);
             this.Name = "ProyectoControl";
-            this.Size = new System.Drawing.Size(412, 463);
+            this.Size = new System.Drawing.Size(348, 328);
+            this.Click += new System.EventHandler(this.ProyectoControl_Click);
+            this.contextMenuStripEditar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -95,5 +129,8 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelListaTareas;
         private System.Windows.Forms.Label labelFechas;
         private System.Windows.Forms.Button buttonEditar;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripEditar;
+        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
     }
 }

@@ -79,9 +79,9 @@ namespace TASKILLER
             this.buttonFiltro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonFiltro.Font = new System.Drawing.Font("Sans Serif Collection", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonFiltro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(17)))), ((int)(((byte)(92)))));
-            this.buttonFiltro.Location = new System.Drawing.Point(1114, 3);
+            this.buttonFiltro.Location = new System.Drawing.Point(1145, 3);
             this.buttonFiltro.Name = "buttonFiltro";
-            this.buttonFiltro.Size = new System.Drawing.Size(70, 67);
+            this.buttonFiltro.Size = new System.Drawing.Size(39, 27);
             this.buttonFiltro.TabIndex = 2;
             this.buttonFiltro.UseVisualStyleBackColor = true;
             // 
@@ -90,7 +90,7 @@ namespace TASKILLER
             this.comboBoxOrdenar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.comboBoxOrdenar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxOrdenar.FormattingEnabled = true;
-            this.comboBoxOrdenar.Location = new System.Drawing.Point(845, 3);
+            this.comboBoxOrdenar.Location = new System.Drawing.Point(876, 3);
             this.comboBoxOrdenar.Name = "comboBoxOrdenar";
             this.comboBoxOrdenar.Size = new System.Drawing.Size(263, 39);
             this.comboBoxOrdenar.TabIndex = 3;

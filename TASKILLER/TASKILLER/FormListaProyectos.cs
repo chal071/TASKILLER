@@ -1,6 +1,8 @@
 ﻿
+using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -13,6 +15,8 @@ namespace TASKILLER
         public FormListaProyectos(Datos datos, Usuario usuario)
         {
             InitializeComponent();
+            Helpers.AplicarFuente(this, Fuentes.MontserratRegular);
+
             this.d = datos;
             this.u = usuario;
             cargarLayout();
@@ -25,9 +29,7 @@ namespace TASKILLER
             flowLayoutPanelListaProyectos.Padding = new Padding(30);
             flowLayoutPanelListaProyectos.AutoScrollMargin = new Size(0, 40);
 
-
-
-            labelListaProyectos.Font = new Font("Montserrat", 30, FontStyle.Bold);
+            labelListaProyectos.Font = new Font(Fuentes.MontserratBold.FontFamily, 30);
             labelListaProyectos.Dock = DockStyle.Top;
             labelListaProyectos.AutoSize = false;
             labelListaProyectos.Height = 90;
@@ -39,57 +41,90 @@ namespace TASKILLER
             flowLayoutPanelBotonesOrdFil.Height = 60;
             flowLayoutPanelBotonesOrdFil.Padding = new Padding(0, 0, 30, 10);
 
+            mostrarProyectos();
+        }
 
+        private void mostrarProyectos()
+        {
+            var rolAdmin = d.listaRoles.FirstOrDefault(r => r.Nombre == "Administrador");
+            var rolGestor = d.listaRoles.FirstOrDefault(r => r.Nombre == "Gestor");
 
-            foreach (var p in d.listaProyectos)
+            if (u.Rol == d.listaRoles.FirstOrDefault(r => r.Nombre == "Administrador")?.Id)
             {
-                ProyectoControl tarjeta = new ProyectoControl();
-                tarjeta.SetDatos(p);
+                foreach (var pro in d.listaProyectos)
+                {
+                    ProyectoControl tarjeta = new ProyectoControl(d, pro, u);
+                    tarjeta.SetDatos(pro);
 
-                tarjeta.AgregarTareas(d.listaTareas, p);
-                tarjeta.Margin = new Padding(left: 40, top: 0, right: 0, bottom: 70);
+                    tarjeta.AgregarTareas(d.listaTareas, pro);
+                    tarjeta.Margin = new Padding(left: 25, top: 0, right: 0, bottom: 50);
 
-                flowLayoutPanelListaProyectos.Controls.Add(tarjeta);
+                    flowLayoutPanelListaProyectos.Controls.Add(tarjeta);
+                }
             }
+            else if (u.Rol == d.listaRoles.FirstOrDefault(r => r.Nombre == "Gestor")?.Id)
+            {
+                foreach (var pro in d.listaProyectos)
+                {
+                    if (pro.IdCreador.Equals(u.Id))
+                    {
+                        ProyectoControl tarjeta = new ProyectoControl(d, pro, u);
+                        tarjeta.SetDatos(pro);
+
+                        tarjeta.AgregarTareas(d.listaTareas, pro);
+                        tarjeta.Margin = new Padding(left: 25, top: 0, right: 0, bottom: 50);
+                       
+                        flowLayoutPanelListaProyectos.Controls.Add(tarjeta);
+                    }
+                   
+                }
+            }
+            else
+            {
+                MessageBox.Show("No tienes permisos suficientes", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+
+
         }
 
         private void inicioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormInicio f = new FormInicio(d);
+            FormInicio f = new FormInicio(d, u);
             f.Show();
             this.Hide();
         }
 
         private void proyectosToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormListaProyectos f = new FormListaProyectos(d);
+            FormListaProyectos f = new FormListaProyectos(d, u);
             f.Show();
             this.Hide();
         }
 
         private void usuariosToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormListaUsuarios f = new FormListaUsuarios(d);
+            FormListaUsuarios f = new FormListaUsuarios(d, u);
             f.Show();
             this.Hide();
         }
 
         private void rolesToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormListaRoles f = new FormListaRoles(d);
+            FormListaRoles f = new FormListaRoles(d, u);
             f.Show();
             this.Hide();
         }
 
         private void crearNuevoProyectoToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormCrearProyecto f = new FormCrearProyecto(d);
+            FormCrearProyecto f = new FormCrearProyecto(d, u);
             f.Show();
             this.Hide();
         }
         private void crearNuevoUsuarioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormCreacionUsuario f = new FormCreacionUsuario(d);
+            FormCreacionUsuario f = new FormCreacionUsuario(d, u);
             f.Show();
             this.Hide();
         }
