@@ -5,10 +5,12 @@ namespace TASKILLER
     public partial class FormInicio : Form
     {
         private Datos d;
-        public FormInicio(Datos datos)
+        private Usuario u;
+        public FormInicio(Datos datos, Usuario usuario)
         {
             InitializeComponent();
             this.d = datos;
+            this.u = usuario;
         }
 
         private void inicioToolStripMenuItem_Click(object sender, System.EventArgs e)

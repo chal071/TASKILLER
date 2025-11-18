@@ -216,6 +216,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormInicio";
             this.Text = "TASKILLER - Inici";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.toolStripInicio.ResumeLayout(false);

@@ -13,9 +13,11 @@ namespace TASKILLER
     public partial class FormListaUsuarios : Form
     {
         private Datos d;
-        public FormListaUsuarios(Datos datos)
+        private Usuario u;
+        public FormListaUsuarios(Datos datos, Usuario usuario)
         {
             this.d = datos;
+            this.u = usuario;
             InitializeComponent();
             ConfigurarDataGridView();
             CargarUsuarios();

@@ -9,15 +9,22 @@ namespace TASKILLER
     public partial class FormListaProyectos : Form
     {
         private Datos d;
-        public FormListaProyectos(Datos datos)
+        private Usuario u;
+        public FormListaProyectos(Datos datos, Usuario usuario)
         {
             InitializeComponent();
             this.d = datos;
+            this.u = usuario;
+            cargarLayout();
+        }
+
+        private void cargarLayout()
+        {
             flowLayoutPanelListaProyectos.AutoScroll = true;
             flowLayoutPanelListaProyectos.Dock = DockStyle.Fill;
             flowLayoutPanelListaProyectos.Padding = new Padding(30);
             flowLayoutPanelListaProyectos.AutoScrollMargin = new Size(0, 40);
-         
+
 
 
             labelListaProyectos.Font = new Font("Montserrat", 30, FontStyle.Bold);
@@ -30,7 +37,7 @@ namespace TASKILLER
 
             flowLayoutPanelBotonesOrdFil.Dock = DockStyle.Top;
             flowLayoutPanelBotonesOrdFil.Height = 60;
-            flowLayoutPanelBotonesOrdFil.Padding = new Padding(0,0,30,10);
+            flowLayoutPanelBotonesOrdFil.Padding = new Padding(0, 0, 30, 10);
 
 
 
@@ -40,8 +47,8 @@ namespace TASKILLER
                 tarjeta.SetDatos(p);
 
                 tarjeta.AgregarTareas(d.listaTareas, p);
+                tarjeta.Margin = new Padding(left: 40, top: 0, right: 0, bottom: 70);
 
-                tarjeta.Margin = new Padding(20);
                 flowLayoutPanelListaProyectos.Controls.Add(tarjeta);
             }
         }
