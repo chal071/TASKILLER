@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TASKILLER
 {
@@ -27,7 +22,7 @@ namespace TASKILLER
         public Guid Id { get; set; }
         public String Titulo { get; set; }
         public String Descripcion { get; set; }
-        public Prioridad Prioridad { get; set; } 
+        public Prioridad Prioridad { get; set; }
         public DateTime FechaInicio { get; set; }
         public DateTime FechaFinal { get; set; }
         public List<Guid> listaUsuarios { get; set; }
@@ -38,7 +33,7 @@ namespace TASKILLER
 
         public Tarea() { }
 
-        public Tarea(Guid IdTarea, String Nombre, String Descripcion, Prioridad Prioridad, DateTime 
+        public Tarea(Guid IdTarea, String Nombre, String Descripcion, Prioridad Prioridad, DateTime
             FechaInicio, DateTime FechaFinal, List<Guid> UsuariosAsignados, Guid IdProyecto, Estado Estado)
         {
             this.Id = Guid.NewGuid();
@@ -52,7 +47,7 @@ namespace TASKILLER
             this.Estado = Estado;
         }
 
-        public Tarea(Guid IdTarea, String Nombre, String Descripcion, Prioridad Prioridad, DateTime 
+        public Tarea(Guid IdTarea, String Nombre, String Descripcion, Prioridad Prioridad, DateTime
             FechaInicio, DateTime FechaFinal, List<Guid> UsuariosAsignados, Guid IdProyecto, Estado Estado,
             Guid IdTareaPadre, List<Guid> Subtareas)
         {
