@@ -12,19 +12,39 @@ namespace TASKILLER
 {
     public partial class TareaControl : UserControl
     {
-        public TareaControl()
+        private List<Usuario> usuariosGlobal;
+        public TareaControl(List<Usuario> usuarios)
         {
             InitializeComponent();
-            labelNombreTarea.Font = new Font("Montserrat", 9, FontStyle.Regular);
-            labelFechasTarea.Font = new Font("Montserrat", 9, FontStyle.Regular);
-            dataGridViewUsuarioDeTarea.Font = new Font("Montserrat", 8, FontStyle.Regular);
+            this.Dock = DockStyle.Top;
+            labelNombreTarea.Font = new Font("Montserrat", 10, FontStyle.Regular);
+            labelFechasTarea.Font = new Font("Montserrat", 8, FontStyle.Regular);
+            dataGridViewUsuarioDeTarea.Font = new Font("Montserrat", 10, FontStyle.Regular);
+            usuariosGlobal = usuarios;
         }
-
+        
         public void SetDatos(Tarea t)
         {
             labelNombreTarea.Text = t.Titulo;
-            dataGridViewUsuarioDeTarea.DataSource = t.listaUsuarios.ToList();
-            labelFechasTarea.Text = t.FechaInicio + " - " + t.FechaFinal;
+            labelFechasTarea.Text = $"{t.FechaInicio:dd/MM/yyyy} - {t.FechaFinal:dd/MM/yyyy}";
+
+            var usuarios = t.listaUsuarios
+                   .Select(id => usuariosGlobal.FirstOrDefault(u => u.Id == id))
+                   .Where(u => u != null)
+                   .Select(u => new
+                   {
+                       Nombre = u.Nombre
+                   })
+                   .ToList();
+
+            dataGridViewUsuarioDeTarea.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewUsuarioDeTarea.RowHeadersVisible = false;
+            dataGridViewUsuarioDeTarea.DataSource = usuarios;
+        }
+
+        public void SetBackColor(Color color)
+        {
+            panelEstado.BackColor = color;
         }
     }
 }

@@ -141,8 +141,118 @@
       "Estado": "Revisado",
       "IdTareaPadre": null,
       "Subtareas": null
+    },
+
+    {
+      "Id": "da1b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d",
+      "Titulo": "Pruebas funcionales",
+      "Descripcion": "Validar los flujos principales de la app móvil.",
+      "Prioridad": "ALTA",
+      "FechaInicio": "2025-05-01T00:00:00",
+      "FechaFinal": "2025-05-20T00:00:00",
+      "listaUsuarios": [
+        "c1a1e2f3-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
+        "c5e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a"
+      ],
+      "IdProyecto": "b2c3d4e5-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+      "Estado": "En_Progreso",
+      "IdTareaPadre": null,
+      "Subtareas": null
+    },
+    {
+      "Id": "db2c3d4e-5f6a-7b8c-9d0e-1f2a3b4c5d6e",
+      "Titulo": "Documentación técnica",
+      "Descripcion": "Redacción de la guía de instalación y uso de la plataforma.",
+      "Prioridad": "MEDIA",
+      "FechaInicio": "2025-03-10T00:00:00",
+      "FechaFinal": "2025-04-05T00:00:00",
+      "listaUsuarios": [
+        "c2b2f3a4-5c6d-7e8f-9a0b-1c2d3e4f5a6b"
+      ],
+      "IdProyecto": "6ea0cb71-6e8b-49cf-8a57-0c814d2fdf61",
+      "Estado": "Por_Comenzar",
+      "IdTareaPadre": null,
+      "Subtareas": null
+    },
+    {
+      "Id": "dc3d4e5f-6a7b-8c9d-0e1f-2a3b4c5d6e7f",
+      "Titulo": "Optimizar consultas SQL",
+      "Descripcion": "Mejorar el rendimiento de las consultas del inventario.",
+      "Prioridad": "ALTA",
+      "FechaInicio": "2025-04-01T00:00:00",
+      "FechaFinal": "2025-04-15T00:00:00",
+      "listaUsuarios": [
+        "c3c3f4a5-6d7e-8f9a-0b1c-2d3e4f5a6b7c"
+      ],
+      "IdProyecto": "167eca8f-3abb-442a-bb4e-ab11e488ab29",
+      "Estado": "En_Progreso",
+      "IdTareaPadre": null,
+      "Subtareas": null
+    },
+    {
+      "Id": "dd4e5f6a-7b8c-9d0e-1f2a-3b4c5d6e7f8a",
+      "Titulo": "Tests de usabilidad",
+      "Descripcion": "Realizar pruebas con usuarios para validar el nuevo diseño.",
+      "Prioridad": "MEDIA",
+      "FechaInicio": "2025-05-01T00:00:00",
+      "FechaFinal": "2025-05-25T00:00:00",
+      "listaUsuarios": [
+        "c1a1e2f3-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
+        "c4d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f"
+      ],
+      "IdProyecto": "c3d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
+      "Estado": "Por_Comenzar",
+      "IdTareaPadre": null,
+      "Subtareas": null
+    },
+    {
+      "Id": "de5f6a7b-8c9d-0e1f-2a3b-4c5d6e7f8a9b",
+      "Titulo": "Configurar alertas de KPIs",
+      "Descripcion": "Definir y configurar notificaciones para indicadores críticos.",
+      "Prioridad": "BAJA",
+      "FechaInicio": "2025-06-10T00:00:00",
+      "FechaFinal": "2025-06-25T00:00:00",
+      "listaUsuarios": [
+        "c5e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a"
+      ],
+      "IdProyecto": "d4e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
+      "Estado": "Por_Comenzar",
+      "IdTareaPadre": null,
+      "Subtareas": null
+    },
+    {
+      "Id": "df6a7b8c-9d0e-1f2a-3b4c-5d6e7f8a9b0c",
+      "Titulo": "Revisión de seguridad",
+      "Descripcion": "Auditar roles, permisos y accesos de la plataforma.",
+      "Prioridad": "ALTA",
+      "FechaInicio": "2025-04-20T00:00:00",
+      "FechaFinal": "2025-05-10T00:00:00",
+      "listaUsuarios": [
+        "c2b2f3a4-5c6d-7e8f-9a0b-1c2d3e4f5a6b",
+        "c4d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f"
+      ],
+      "IdProyecto": "6ea0cb71-6e8b-49cf-8a57-0c814d2fdf61",
+      "Estado": "Bloqueado",
+      "IdTareaPadre": null,
+      "Subtareas": null
+    },
+    {
+      "Id": "e0a1b2c3-4d5e-6f7a-8b9c-0d1e2f3a4b5c",
+      "Titulo": "Formación a usuarios finales",
+      "Descripcion": "Sesiones de formación para el equipo interno.",
+      "Prioridad": "MEDIA",
+      "FechaInicio": "2025-05-21T00:00:00",
+      "FechaFinal": "2025-06-01T00:00:00",
+      "listaUsuarios": [
+        "c1a1e2f3-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
+        "c3c3f4a5-6d7e-8f9a-0b1c-2d3e4f5a6b7c"
+      ],
+      "IdProyecto": "b2c3d4e5-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+      "Estado": "Por_Comenzar",
+      "IdTareaPadre": null,
+      "Subtareas": null
     }
-  ],
+],
   "listaUsuarios": [
     {
         "Id": "c1a1e2f3-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
