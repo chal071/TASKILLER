@@ -17,6 +17,7 @@ namespace TASKILLER
         public FormListaTareas(Datos datos)
         {
             InitializeComponent();
+            dataGridViewTareas.CellFormatting += dataGridViewTareas_CellFormatting;
             setFontSize();
             this.d = datos;
             ConfigurarDataGridView();
@@ -31,7 +32,7 @@ namespace TASKILLER
 
         private void setFontSize() 
         {
-            labelTarea.Font = new Font(Fuentes.MontserratBold.FontFamily, 30);
+            labelTarea.Font = new Font(Fuentes.MontserratBold.FontFamily, 25);
             dataGridViewTareas.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
             labelPorComenzar.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
             labelEnProgreso.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
@@ -64,24 +65,90 @@ namespace TASKILLER
         public void JustificarColumnas()
         {
             dataGridViewTareas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewTareas.Columns["Titulo"].FillWeight = 60;
-            dataGridViewTareas.Columns["Estado"].FillWeight = 30;
+            dataGridViewTareas.Columns["ColorEstado"].FillWeight = 10;
+            dataGridViewTareas.Columns["Titulo"].FillWeight = 80;
             dataGridViewTareas.Columns["Editar"].FillWeight = 10;
         }
 
         public void CargarTareas()
         {
+            var lista = d.listaTareas
+                .Select(t => new
+                {
+                    t.Titulo,
+                    t.Estado
+                })
+                .ToList();
 
-            var lista = d.listaTareas.Select(t => new {
-                t.Titulo,
-                t.Estado,
-            }).ToList();
+            dataGridViewTareas.AutoGenerateColumns = false;
+            dataGridViewTareas.Columns.Clear();
+            var colEstadoTexto = new DataGridViewTextBoxColumn
+            {
+                Name = "Estado",
+                HeaderText = "Estado",
+                DataPropertyName = "Estado",
+                Visible = false
+            };
 
+            dataGridViewTareas.Columns.Add(colEstadoTexto);
+
+            var colEstadoColor = new DataGridViewImageColumn
+            {
+                Name = "ColorEstado",
+                HeaderText = "Estado"
+            };
+            dataGridViewTareas.Columns.Add(colEstadoColor);
+
+            var colTitulo = new DataGridViewTextBoxColumn
+            {
+                Name = "Titulo",
+                HeaderText = "Título",
+                DataPropertyName = "Titulo"
+            };
+            dataGridViewTareas.Columns.Add(colTitulo);
+
+            AñadirColumnaBoton();
 
             dataGridViewTareas.DataSource = lista;
 
-            AñadirColumnaBoton();
             JustificarColumnas();
+        }
+
+        private void dataGridViewTareas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dataGridViewTareas.Columns[e.ColumnIndex].Name == "ColorEstado")
+            {
+                var estado = dataGridViewTareas.Rows[e.RowIndex].Cells["Estado"].Value?.ToString();
+
+                Color color = Color.Transparent;
+
+                switch (estado)
+                {
+                    case "Por_Comenzar":
+                        color = Color.FromArgb(255, 192, 192);
+                        break;
+                    case "En_Progreso":
+                        color = Color.FromArgb(255, 224, 192);
+                        break;
+                    case "Revisado":
+                        color = Color.FromArgb(192, 255, 192);
+                        break;
+                    case "Bloqueado":
+                        color = Color.FromArgb(224, 224, 224);
+                        break;
+                    case "Entregado":
+                        color = Color.FromArgb(192, 255, 255);
+                        break;
+                }
+
+                Bitmap bmp = new Bitmap(16, 16);
+                using (Graphics g = Graphics.FromImage(bmp))
+                {
+                    g.Clear(color);
+                }
+
+                e.Value = bmp;
+            }
         }
 
 
@@ -226,6 +293,12 @@ namespace TASKILLER
         private void guardarDatosToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             GestionDatos.GuardarDatos(d);
+        }
+
+        private void buttonAnadirTarea_Click(object sender, EventArgs e)
+        {
+            FormCrearTarea f = new FormCrearTarea(d);
+            f.Show();
         }
     }
 }
