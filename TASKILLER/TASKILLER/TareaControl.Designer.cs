@@ -44,9 +44,9 @@
             // 
             this.labelFechasTarea.AutoSize = true;
             this.labelFechasTarea.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelFechasTarea.Location = new System.Drawing.Point(3, 249);
+            this.labelFechasTarea.Location = new System.Drawing.Point(3, 264);
             this.labelFechasTarea.Name = "labelFechasTarea";
-            this.labelFechasTarea.Size = new System.Drawing.Size(352, 31);
+            this.labelFechasTarea.Size = new System.Drawing.Size(387, 33);
             this.labelFechasTarea.TabIndex = 2;
             this.labelFechasTarea.Text = "labelFechasTarea";
             this.labelFechasTarea.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -56,7 +56,7 @@
             this.labelNombreTarea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelNombreTarea.Location = new System.Drawing.Point(3, 0);
             this.labelNombreTarea.Name = "labelNombreTarea";
-            this.labelNombreTarea.Size = new System.Drawing.Size(352, 93);
+            this.labelNombreTarea.Size = new System.Drawing.Size(387, 99);
             this.labelNombreTarea.TabIndex = 1;
             this.labelNombreTarea.Text = "labelNombreTarea";
             this.labelNombreTarea.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -77,7 +77,7 @@
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.grid.Size = new System.Drawing.Size(358, 313);
+            this.grid.Size = new System.Drawing.Size(393, 331);
             this.grid.TabIndex = 0;
             // 
             // dataGridViewUsuarioDeTarea
@@ -86,7 +86,7 @@
             this.dataGridViewUsuarioDeTarea.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewUsuarioDeTarea.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -100,27 +100,27 @@
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.NullValue = null;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewUsuarioDeTarea.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewUsuarioDeTarea.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewUsuarioDeTarea.Location = new System.Drawing.Point(3, 96);
+            this.dataGridViewUsuarioDeTarea.Location = new System.Drawing.Point(3, 102);
             this.dataGridViewUsuarioDeTarea.Name = "dataGridViewUsuarioDeTarea";
             this.dataGridViewUsuarioDeTarea.ReadOnly = true;
             this.dataGridViewUsuarioDeTarea.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridViewUsuarioDeTarea.RowHeadersVisible = false;
             this.dataGridViewUsuarioDeTarea.RowHeadersWidth = 82;
             this.dataGridViewUsuarioDeTarea.RowTemplate.Height = 33;
-            this.dataGridViewUsuarioDeTarea.Size = new System.Drawing.Size(352, 150);
+            this.dataGridViewUsuarioDeTarea.Size = new System.Drawing.Size(387, 159);
             this.dataGridViewUsuarioDeTarea.TabIndex = 5;
             // 
             // panelEstado
             // 
             this.panelEstado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelEstado.Location = new System.Drawing.Point(3, 283);
+            this.panelEstado.Location = new System.Drawing.Point(3, 300);
             this.panelEstado.Name = "panelEstado";
-            this.panelEstado.Size = new System.Drawing.Size(352, 27);
+            this.panelEstado.Size = new System.Drawing.Size(387, 28);
             this.panelEstado.TabIndex = 6;
             // 
             // dataGridViewImageColumn1
@@ -143,7 +143,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Controls.Add(this.grid);
             this.Name = "TareaControl";
-            this.Size = new System.Drawing.Size(364, 319);
+            this.Size = new System.Drawing.Size(399, 337);
             this.grid.ResumeLayout(false);
             this.grid.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuarioDeTarea)).EndInit();

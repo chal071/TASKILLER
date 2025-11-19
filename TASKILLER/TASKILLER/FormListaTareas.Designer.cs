@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListaTareas));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grid = new System.Windows.Forms.TableLayoutPanel();
             this.toolStripInicio = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -63,14 +65,15 @@
             // 
             // grid
             // 
+            this.grid.BackColor = System.Drawing.Color.White;
             this.grid.ColumnCount = 7;
-            this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14F));
-            this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14F));
-            this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14F));
-            this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14F));
-            this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14F));
+            this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.grid.Controls.Add(this.toolStripInicio, 0, 0);
             this.grid.Controls.Add(this.flowLayoutPanelBloqueado, 6, 2);
             this.grid.Controls.Add(this.flowLayoutPanelRevisado, 5, 2);
@@ -92,7 +95,6 @@
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.997679F));
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.799371F));
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.20295F));
-            this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.grid.Size = new System.Drawing.Size(1634, 969);
             this.grid.TabIndex = 0;
             // 
@@ -226,55 +228,59 @@
             // flowLayoutPanelBloqueado
             // 
             this.flowLayoutPanelBloqueado.AutoScroll = true;
-            this.flowLayoutPanelBloqueado.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanelBloqueado.BackColor = System.Drawing.Color.WhiteSmoke;
             this.flowLayoutPanelBloqueado.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelBloqueado.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelBloqueado.Location = new System.Drawing.Point(1404, 145);
+            this.flowLayoutPanelBloqueado.Location = new System.Drawing.Point(1390, 145);
             this.flowLayoutPanelBloqueado.Name = "flowLayoutPanelBloqueado";
-            this.flowLayoutPanelBloqueado.Size = new System.Drawing.Size(227, 821);
+            this.flowLayoutPanelBloqueado.Size = new System.Drawing.Size(241, 821);
             this.flowLayoutPanelBloqueado.TabIndex = 18;
+            this.flowLayoutPanelBloqueado.WrapContents = false;
             // 
             // flowLayoutPanelRevisado
             // 
             this.flowLayoutPanelRevisado.AutoScroll = true;
-            this.flowLayoutPanelRevisado.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanelRevisado.BackColor = System.Drawing.Color.WhiteSmoke;
             this.flowLayoutPanelRevisado.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelRevisado.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelRevisado.Location = new System.Drawing.Point(1176, 145);
+            this.flowLayoutPanelRevisado.Location = new System.Drawing.Point(1145, 145);
             this.flowLayoutPanelRevisado.Name = "flowLayoutPanelRevisado";
-            this.flowLayoutPanelRevisado.Size = new System.Drawing.Size(222, 821);
+            this.flowLayoutPanelRevisado.Size = new System.Drawing.Size(239, 821);
             this.flowLayoutPanelRevisado.TabIndex = 17;
+            this.flowLayoutPanelRevisado.WrapContents = false;
             // 
             // flowLayoutPanelEntregado
             // 
             this.flowLayoutPanelEntregado.AutoScroll = true;
-            this.flowLayoutPanelEntregado.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanelEntregado.BackColor = System.Drawing.Color.WhiteSmoke;
             this.flowLayoutPanelEntregado.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelEntregado.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelEntregado.Location = new System.Drawing.Point(948, 145);
+            this.flowLayoutPanelEntregado.Location = new System.Drawing.Point(900, 145);
             this.flowLayoutPanelEntregado.Name = "flowLayoutPanelEntregado";
-            this.flowLayoutPanelEntregado.Size = new System.Drawing.Size(222, 821);
+            this.flowLayoutPanelEntregado.Size = new System.Drawing.Size(239, 821);
             this.flowLayoutPanelEntregado.TabIndex = 16;
+            this.flowLayoutPanelEntregado.WrapContents = false;
             // 
             // flowLayoutPanelEnProgreso
             // 
             this.flowLayoutPanelEnProgreso.AutoScroll = true;
-            this.flowLayoutPanelEnProgreso.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanelEnProgreso.BackColor = System.Drawing.Color.WhiteSmoke;
             this.flowLayoutPanelEnProgreso.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelEnProgreso.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelEnProgreso.Location = new System.Drawing.Point(720, 145);
+            this.flowLayoutPanelEnProgreso.Location = new System.Drawing.Point(655, 145);
             this.flowLayoutPanelEnProgreso.Name = "flowLayoutPanelEnProgreso";
-            this.flowLayoutPanelEnProgreso.Size = new System.Drawing.Size(222, 821);
+            this.flowLayoutPanelEnProgreso.Size = new System.Drawing.Size(239, 821);
             this.flowLayoutPanelEnProgreso.TabIndex = 15;
+            this.flowLayoutPanelEnProgreso.WrapContents = false;
             // 
             // labelBloqueado
             // 
             this.labelBloqueado.AutoSize = true;
             this.labelBloqueado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.labelBloqueado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelBloqueado.Location = new System.Drawing.Point(1404, 48);
+            this.labelBloqueado.Location = new System.Drawing.Point(1390, 48);
             this.labelBloqueado.Name = "labelBloqueado";
-            this.labelBloqueado.Size = new System.Drawing.Size(227, 94);
+            this.labelBloqueado.Size = new System.Drawing.Size(241, 94);
             this.labelBloqueado.TabIndex = 13;
             this.labelBloqueado.Text = "Bloqueado";
             this.labelBloqueado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -284,9 +290,9 @@
             this.labelRevisado.AutoSize = true;
             this.labelRevisado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.labelRevisado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelRevisado.Location = new System.Drawing.Point(1176, 48);
+            this.labelRevisado.Location = new System.Drawing.Point(1145, 48);
             this.labelRevisado.Name = "labelRevisado";
-            this.labelRevisado.Size = new System.Drawing.Size(222, 94);
+            this.labelRevisado.Size = new System.Drawing.Size(239, 94);
             this.labelRevisado.TabIndex = 12;
             this.labelRevisado.Text = "Revisado";
             this.labelRevisado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -296,9 +302,9 @@
             this.labelEntregado.AutoSize = true;
             this.labelEntregado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.labelEntregado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelEntregado.Location = new System.Drawing.Point(948, 48);
+            this.labelEntregado.Location = new System.Drawing.Point(900, 48);
             this.labelEntregado.Name = "labelEntregado";
-            this.labelEntregado.Size = new System.Drawing.Size(222, 94);
+            this.labelEntregado.Size = new System.Drawing.Size(239, 94);
             this.labelEntregado.TabIndex = 11;
             this.labelEntregado.Text = "Entregado";
             this.labelEntregado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -308,19 +314,20 @@
             this.labelEnProgreso.AutoSize = true;
             this.labelEnProgreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.labelEnProgreso.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelEnProgreso.Location = new System.Drawing.Point(720, 48);
+            this.labelEnProgreso.Location = new System.Drawing.Point(655, 48);
             this.labelEnProgreso.Name = "labelEnProgreso";
-            this.labelEnProgreso.Size = new System.Drawing.Size(222, 94);
+            this.labelEnProgreso.Size = new System.Drawing.Size(239, 94);
             this.labelEnProgreso.TabIndex = 10;
             this.labelEnProgreso.Text = "En Progreso";
             this.labelEnProgreso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelTarea
             // 
+            this.labelTarea.BackColor = System.Drawing.Color.White;
             this.labelTarea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelTarea.Location = new System.Drawing.Point(3, 48);
             this.labelTarea.Name = "labelTarea";
-            this.labelTarea.Size = new System.Drawing.Size(402, 94);
+            this.labelTarea.Size = new System.Drawing.Size(320, 94);
             this.labelTarea.TabIndex = 6;
             this.labelTarea.Text = "TAREA";
             this.labelTarea.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -328,25 +335,38 @@
             // buttonAnadirTarea
             // 
             this.buttonAnadirTarea.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonAnadirTarea.Location = new System.Drawing.Point(411, 51);
+            this.buttonAnadirTarea.Location = new System.Drawing.Point(329, 51);
             this.buttonAnadirTarea.Name = "buttonAnadirTarea";
             this.buttonAnadirTarea.Size = new System.Drawing.Size(75, 88);
             this.buttonAnadirTarea.TabIndex = 7;
             this.buttonAnadirTarea.Text = "+";
             this.buttonAnadirTarea.UseVisualStyleBackColor = true;
+            this.buttonAnadirTarea.Click += new System.EventHandler(this.buttonAnadirTarea_Click);
             // 
             // dataGridViewTareas
             // 
+            this.dataGridViewTareas.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewTareas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTareas.ColumnHeadersVisible = false;
             this.grid.SetColumnSpan(this.dataGridViewTareas, 2);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTareas.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTareas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewTareas.GridColor = System.Drawing.Color.White;
             this.dataGridViewTareas.Location = new System.Drawing.Point(3, 145);
             this.dataGridViewTareas.Name = "dataGridViewTareas";
             this.dataGridViewTareas.RowHeadersVisible = false;
             this.dataGridViewTareas.RowHeadersWidth = 82;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewTareas.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTareas.RowTemplate.Height = 33;
-            this.dataGridViewTareas.Size = new System.Drawing.Size(483, 821);
+            this.dataGridViewTareas.Size = new System.Drawing.Size(401, 821);
             this.dataGridViewTareas.TabIndex = 8;
             // 
             // labelPorComenzar
@@ -354,9 +374,9 @@
             this.labelPorComenzar.AutoSize = true;
             this.labelPorComenzar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.labelPorComenzar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelPorComenzar.Location = new System.Drawing.Point(492, 48);
+            this.labelPorComenzar.Location = new System.Drawing.Point(410, 48);
             this.labelPorComenzar.Name = "labelPorComenzar";
-            this.labelPorComenzar.Size = new System.Drawing.Size(222, 94);
+            this.labelPorComenzar.Size = new System.Drawing.Size(239, 94);
             this.labelPorComenzar.TabIndex = 9;
             this.labelPorComenzar.Text = "Por Comenzar";
             this.labelPorComenzar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -364,13 +384,14 @@
             // flowLayoutPanelPorComenzar
             // 
             this.flowLayoutPanelPorComenzar.AutoScroll = true;
-            this.flowLayoutPanelPorComenzar.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanelPorComenzar.BackColor = System.Drawing.Color.WhiteSmoke;
             this.flowLayoutPanelPorComenzar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelPorComenzar.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelPorComenzar.Location = new System.Drawing.Point(492, 145);
+            this.flowLayoutPanelPorComenzar.Location = new System.Drawing.Point(410, 145);
             this.flowLayoutPanelPorComenzar.Name = "flowLayoutPanelPorComenzar";
-            this.flowLayoutPanelPorComenzar.Size = new System.Drawing.Size(222, 821);
+            this.flowLayoutPanelPorComenzar.Size = new System.Drawing.Size(239, 821);
             this.flowLayoutPanelPorComenzar.TabIndex = 14;
+            this.flowLayoutPanelPorComenzar.WrapContents = false;
             // 
             // FormListaTareas
             // 
