@@ -14,10 +14,14 @@ namespace TASKILLER
     {
         private Datos d;
         private Tarea tareaPadre;
-        public FormCrearTarea(Datos datos, Tarea tareaPadre = null)
+        private Proyecto p;
+        private Usuario u;
+        public FormCrearTarea(Datos datos, Proyecto proyecto , Usuario usuario ,Tarea tareaPadre = null)
         {
             InitializeComponent();
             this.d = datos;
+            this.p = proyecto;
+            this.u = usuario;
             this.tareaPadre = tareaPadre;
 
             SetFontSize();
@@ -147,7 +151,7 @@ namespace TASKILLER
             }
 
             this.DialogResult = DialogResult.OK;
-            FormListaTareas f = new FormListaTareas(d);
+            FormListaTareas f = new FormListaTareas(d,p,u);
             f.Show();
             this.Close();
         }

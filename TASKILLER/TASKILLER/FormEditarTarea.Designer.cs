@@ -34,6 +34,19 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grid = new System.Windows.Forms.TableLayoutPanel();
+            this.toolStripInicio = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.proyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearNuevoProyectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarEliminarProyectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearNuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.guardarDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnUsuario = new System.Windows.Forms.ToolStripButton();
+            this.btnTaskiller = new System.Windows.Forms.ToolStripButton();
             this.flowLayoutPanelTop = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.labelCuentanos = new System.Windows.Forms.Label();
@@ -106,7 +119,7 @@
             this.toolStripInicio.Location = new System.Drawing.Point(0, 0);
             this.toolStripInicio.Name = "toolStripInicio";
             this.toolStripInicio.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.toolStripInicio.Size = new System.Drawing.Size(1724, 30);
+            this.toolStripInicio.Size = new System.Drawing.Size(1724, 38);
             this.toolStripInicio.TabIndex = 7;
             this.toolStripInicio.Text = "toolStrip1";
             // 
@@ -123,7 +136,7 @@
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(42, 24);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(42, 32);
             this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
             // 
             // inicioToolStripMenuItem
@@ -157,7 +170,6 @@
             this.modificarEliminarProyectoToolStripMenuItem.Name = "modificarEliminarProyectoToolStripMenuItem";
             this.modificarEliminarProyectoToolStripMenuItem.Size = new System.Drawing.Size(443, 44);
             this.modificarEliminarProyectoToolStripMenuItem.Text = "Modificar/Eliminar proyecto";
-            this.modificarEliminarProyectoToolStripMenuItem.Click += new System.EventHandler(this.modificarEliminarProyectoToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
             // 
@@ -209,7 +221,7 @@
             this.btnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.Image")));
             this.btnUsuario.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnUsuario.Name = "btnUsuario";
-            this.btnUsuario.Size = new System.Drawing.Size(46, 24);
+            this.btnUsuario.Size = new System.Drawing.Size(46, 32);
             this.btnUsuario.Text = "Usuario";
             // 
             // btnTaskiller
@@ -218,7 +230,7 @@
             this.btnTaskiller.Image = ((System.Drawing.Image)(resources.GetObject("btnTaskiller.Image")));
             this.btnTaskiller.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnTaskiller.Name = "btnTaskiller";
-            this.btnTaskiller.Size = new System.Drawing.Size(46, 24);
+            this.btnTaskiller.Size = new System.Drawing.Size(46, 32);
             this.btnTaskiller.Text = "TaskillerLogo";
             // 
             // flowLayoutPanelTop
@@ -592,6 +604,7 @@
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem proyectosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem crearNuevoProyectoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificarEliminarProyectoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem crearNuevoUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rolesToolStripMenuItem;

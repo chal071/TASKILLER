@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,8 +17,10 @@ namespace TASKILLER
         private Datos d;
         private ContextMenuStrip menuTarea;
         private Guid tareaSeleccionadaId;
+        private Proyecto p;
+        private Usuario u;
 
-        public FormListaTareas(Datos datos)
+        public FormListaTareas(Datos datos, Proyecto proyecto, Usuario usuario)
         {
             InitializeComponent();
             dataGridViewTareas.CellFormatting += dataGridViewTareas_CellFormatting;
@@ -288,7 +291,7 @@ namespace TASKILLER
             var tarea = d.listaTareas.FirstOrDefault(t => t.Id == tareaSeleccionadaId);
             if (tarea == null) return;
 
-            FormEditarTarea f = new FormEditarTarea(tarea, d);
+            FormEditarTarea f = new FormEditarTarea(tarea, d, p ,u);
             f.Show();
             this.Hide();
             
@@ -322,7 +325,7 @@ namespace TASKILLER
             var tareaPadre = d.listaTareas.FirstOrDefault(t => t.Id == tareaSeleccionadaId);
             if (tareaPadre == null) return;
 
-            FormCrearTarea f = new FormCrearTarea(d, tareaPadre);
+            FormCrearTarea f = new FormCrearTarea(d, p, u, tareaPadre);
             f.Show();
             this.Hide();
         }
@@ -380,7 +383,7 @@ namespace TASKILLER
 
         private void buttonAnadirTarea_Click(object sender, EventArgs e)
         {
-            FormCrearTarea f = new FormCrearTarea(d, null);
+            FormCrearTarea f = new FormCrearTarea(d, p, u, null);
             f.Show();
             this.Hide();
         }

@@ -14,19 +14,24 @@ namespace TASKILLER
     {
         private Datos d;
         private Tarea t;
+        private Usuario u;
+        private Proyecto p;
 
-        public FormEditarTarea(Tarea t, Datos datos)
+        public FormEditarTarea(Tarea t, Datos datos, Proyecto p, Usuario u)
         {
             InitializeComponent();
 
             this.d = datos;
             this.t = t;
+            this.u = u;
+            this.p = p;
 
             SetFontSize();
             CargarDatosDeTarea();
             ConfigurarGrids();
             CargarTareaPadreYSubtareas();
             buttonCrear.Click += buttonCrear_Click;
+            
         }
 
         public void SetFontSize()
@@ -206,7 +211,7 @@ namespace TASKILLER
             t.listaUsuarios = nuevosUsuarios;
 
             this.DialogResult = DialogResult.OK;
-            FormListaTareas f = new FormListaTareas(d);
+            FormListaTareas f = new FormListaTareas(d, p, u);
             f.Show();
             this.Close();
         }
