@@ -45,6 +45,8 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnUsuario = new System.Windows.Forms.ToolStripButton();
             this.btnTaskiller = new System.Windows.Forms.ToolStripButton();
+            this.flowLayoutPanelHoy = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanelWeek = new System.Windows.Forms.FlowLayoutPanel();
             this.panelInicio.SuspendLayout();
             this.toolStripInicio.SuspendLayout();
             this.SuspendLayout();
@@ -53,9 +55,11 @@
             // 
             this.panelInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelInicio.BackColor = System.Drawing.SystemColors.Control;
-            this.panelInicio.Controls.Add(this.labelHaceUnaSemana);
-            this.panelInicio.Controls.Add(this.labelHoy);
             this.panelInicio.Controls.Add(this.labelUltimosProyectos);
+            this.panelInicio.Controls.Add(this.labelHoy);
+            this.panelInicio.Controls.Add(this.labelHaceUnaSemana);
+            this.panelInicio.Controls.Add(this.flowLayoutPanelHoy);
+            this.panelInicio.Controls.Add(this.flowLayoutPanelWeek);
             this.panelInicio.Location = new System.Drawing.Point(12, 30);
             this.panelInicio.Name = "panelInicio";
             this.panelInicio.Size = new System.Drawing.Size(917, 468);
@@ -64,7 +68,7 @@
             // labelHaceUnaSemana
             // 
             this.labelHaceUnaSemana.AutoSize = true;
-            this.labelHaceUnaSemana.Location = new System.Drawing.Point(76, 271);
+            this.labelHaceUnaSemana.Location = new System.Drawing.Point(58, 254);
             this.labelHaceUnaSemana.Name = "labelHaceUnaSemana";
             this.labelHaceUnaSemana.Size = new System.Drawing.Size(117, 16);
             this.labelHaceUnaSemana.TabIndex = 7;
@@ -73,7 +77,7 @@
             // labelHoy
             // 
             this.labelHoy.AutoSize = true;
-            this.labelHoy.Location = new System.Drawing.Point(76, 77);
+            this.labelHoy.Location = new System.Drawing.Point(58, 60);
             this.labelHoy.Name = "labelHoy";
             this.labelHoy.Size = new System.Drawing.Size(32, 16);
             this.labelHoy.TabIndex = 6;
@@ -83,7 +87,7 @@
             // 
             this.labelUltimosProyectos.AutoSize = true;
             this.labelUltimosProyectos.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUltimosProyectos.Location = new System.Drawing.Point(58, 19);
+            this.labelUltimosProyectos.Location = new System.Drawing.Point(51, 12);
             this.labelUltimosProyectos.Name = "labelUltimosProyectos";
             this.labelUltimosProyectos.Size = new System.Drawing.Size(221, 16);
             this.labelUltimosProyectos.TabIndex = 5;
@@ -99,7 +103,7 @@
             this.btnTaskiller});
             this.toolStripInicio.Location = new System.Drawing.Point(0, 0);
             this.toolStripInicio.Name = "toolStripInicio";
-            this.toolStripInicio.Size = new System.Drawing.Size(941, 27);
+            this.toolStripInicio.Size = new System.Drawing.Size(941, 31);
             this.toolStripInicio.TabIndex = 9;
             this.toolStripInicio.Text = "toolStrip1";
             // 
@@ -116,7 +120,7 @@
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(34, 24);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(34, 28);
             this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
             // 
             // inicioToolStripMenuItem
@@ -157,7 +161,7 @@
             // crearNuevoUsuarioToolStripMenuItem
             // 
             this.crearNuevoUsuarioToolStripMenuItem.Name = "crearNuevoUsuarioToolStripMenuItem";
-            this.crearNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.crearNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
             this.crearNuevoUsuarioToolStripMenuItem.Text = "Crear nuevo usuario";
             this.crearNuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.crearNuevoUsuarioToolStripMenuItem_Click);
             // 
@@ -194,7 +198,7 @@
             this.btnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.Image")));
             this.btnUsuario.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnUsuario.Name = "btnUsuario";
-            this.btnUsuario.Size = new System.Drawing.Size(29, 24);
+            this.btnUsuario.Size = new System.Drawing.Size(29, 28);
             this.btnUsuario.Text = "Usuario";
             // 
             // btnTaskiller
@@ -203,8 +207,22 @@
             this.btnTaskiller.Image = ((System.Drawing.Image)(resources.GetObject("btnTaskiller.Image")));
             this.btnTaskiller.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnTaskiller.Name = "btnTaskiller";
-            this.btnTaskiller.Size = new System.Drawing.Size(29, 24);
+            this.btnTaskiller.Size = new System.Drawing.Size(29, 28);
             this.btnTaskiller.Text = "TaskillerLogo";
+            // 
+            // flowLayoutPanelHoy
+            // 
+            this.flowLayoutPanelHoy.Location = new System.Drawing.Point(61, 80);
+            this.flowLayoutPanelHoy.Name = "flowLayoutPanelHoy";
+            this.flowLayoutPanelHoy.Size = new System.Drawing.Size(840, 171);
+            this.flowLayoutPanelHoy.TabIndex = 8;
+            // 
+            // flowLayoutPanelWeek
+            // 
+            this.flowLayoutPanelWeek.Location = new System.Drawing.Point(61, 273);
+            this.flowLayoutPanelWeek.Name = "flowLayoutPanelWeek";
+            this.flowLayoutPanelWeek.Size = new System.Drawing.Size(840, 171);
+            this.flowLayoutPanelWeek.TabIndex = 9;
             // 
             // FormInicio
             // 
@@ -245,6 +263,8 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton btnUsuario;
         private System.Windows.Forms.ToolStripButton btnTaskiller;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelWeek;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelHoy;
     }
 }
 

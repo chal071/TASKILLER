@@ -126,10 +126,10 @@
             // labelTaskiller
             // 
             this.labelTaskiller.AutoSize = true;
-            this.labelTaskiller.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTaskiller.Location = new System.Drawing.Point(12, 228);
+            this.labelTaskiller.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTaskiller.Location = new System.Drawing.Point(30, 231);
             this.labelTaskiller.Name = "labelTaskiller";
-            this.labelTaskiller.Size = new System.Drawing.Size(129, 25);
+            this.labelTaskiller.Size = new System.Drawing.Size(170, 31);
             this.labelTaskiller.TabIndex = 16;
             this.labelTaskiller.Text = "TASKILLER";
             // 
@@ -137,7 +137,7 @@
             // 
             this.labelConTuCuenta.AutoSize = true;
             this.labelConTuCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelConTuCuenta.Location = new System.Drawing.Point(12, 192);
+            this.labelConTuCuenta.Location = new System.Drawing.Point(32, 192);
             this.labelConTuCuenta.Name = "labelConTuCuenta";
             this.labelConTuCuenta.Size = new System.Drawing.Size(156, 25);
             this.labelConTuCuenta.TabIndex = 15;
@@ -156,7 +156,7 @@
             this.labelIniciaSesion.AutoSize = true;
             this.labelIniciaSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelIniciaSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIniciaSesion.Location = new System.Drawing.Point(12, 156);
+            this.labelIniciaSesion.Location = new System.Drawing.Point(32, 153);
             this.labelIniciaSesion.Name = "labelIniciaSesion";
             this.labelIniciaSesion.Size = new System.Drawing.Size(132, 25);
             this.labelIniciaSesion.TabIndex = 13;

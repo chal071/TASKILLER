@@ -12,24 +12,39 @@ namespace TASKILLER
             InitializeComponent();
             this.d = datos;
             Helpers.AplicarFuente(this, Fuentes.MontserratRegular);
-
             this.Resize += Form_Resize;
-            this.d = datos;
             setFontSize();
+            flowLayoutPanelHoy.AutoScroll = true;
+            flowLayoutPanelHoy.Dock = DockStyle.Fill;
+            flowLayoutPanelHoy.Padding = new Padding(20);
+            flowLayoutPanelHoy.AutoScrollMargin = new Size(0, 30);
+
+            foreach (var p in d.listaProyectos)
+            {
+                ProyectoControlInicio tarjeta = new ProyectoControlInicio();
+                tarjeta.SetDatos(p);
+
+                tarjeta.AgregarTareas(d.listaTareas, p);
+
+                tarjeta.Margin = new Padding(20);
+                flowLayoutPanelHoy.Controls.Add(tarjeta);
+            }
         }
+
         private void setFontSize()
         {
             labelUltimosProyectos.Font = new Font(Fuentes.MontserratBold.FontFamily, 30);
             labelHoy.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
             labelHaceUnaSemana.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
         }
+
         private void Form_Resize(object sender, EventArgs e)
         {
             panelInicio.Left = (this.ClientSize.Width - panelInicio.Width) / 2;
             panelInicio.Top = (this.ClientSize.Height - panelInicio.Height) / 2;
-        }
+        }        
 
-        private void inicioToolStripMenuItem_Click(object sender, System.EventArgs e)
+private void inicioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             FormInicio f = new FormInicio(d);
             f.Show();
