@@ -34,9 +34,9 @@
             this.flowLayoutPanelListaTareas = new System.Windows.Forms.FlowLayoutPanel();
             this.labelFechas = new System.Windows.Forms.Label();
             this.contextMenuStripEditar = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.buttonEditar = new System.Windows.Forms.Button();
             this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonEditar = new System.Windows.Forms.Button();
             this.contextMenuStripEditar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,8 +51,8 @@
             // 
             // flowLayoutPanelListaTareas
             // 
-            this.flowLayoutPanelListaTareas.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.flowLayoutPanelListaTareas.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanelListaTareas.AutoScroll = true;
+            this.flowLayoutPanelListaTareas.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanelListaTareas.Location = new System.Drawing.Point(26, 68);
             this.flowLayoutPanelListaTareas.Name = "flowLayoutPanelListaTareas";
             this.flowLayoutPanelListaTareas.Size = new System.Drawing.Size(301, 207);
@@ -77,21 +77,11 @@
             this.contextMenuStripEditar.Name = "contextMenuStripEditar";
             this.contextMenuStripEditar.Size = new System.Drawing.Size(215, 84);
             // 
-            // buttonEditar
-            // 
-            this.buttonEditar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonEditar.BackgroundImage")));
-            this.buttonEditar.Location = new System.Drawing.Point(285, 21);
-            this.buttonEditar.Name = "buttonEditar";
-            this.buttonEditar.Size = new System.Drawing.Size(42, 35);
-            this.buttonEditar.TabIndex = 1;
-            this.buttonEditar.UseVisualStyleBackColor = true;
-            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
-            // 
             // editarToolStripMenuItem
             // 
             this.editarToolStripMenuItem.Image = global::TASKILLER.Properties.Resources.editar;
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
             this.editarToolStripMenuItem.Text = "Editar";
             this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
             // 
@@ -99,14 +89,25 @@
             // 
             this.eliminarToolStripMenuItem.Image = global::TASKILLER.Properties.Resources.borrar;
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
+            this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
+            // 
+            // buttonEditar
+            // 
+            this.buttonEditar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonEditar.BackgroundImage")));
+            this.buttonEditar.Location = new System.Drawing.Point(293, 30);
+            this.buttonEditar.Name = "buttonEditar";
+            this.buttonEditar.Size = new System.Drawing.Size(34, 26);
+            this.buttonEditar.TabIndex = 1;
+            this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // ProyectoControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.labelFechas);
             this.Controls.Add(this.flowLayoutPanelListaTareas);

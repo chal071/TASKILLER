@@ -41,19 +41,11 @@ namespace TASKILLER
 
         public void SetDatos(Proyecto p)
         {
-
-
             labelNombre.Text = p.Titulo;
             labelFechas.Text = p.FechaInicio.ToString("dd/MM/yyyy") + " - " + p.FechaFinal.ToString("dd/MM/yyyy");
-
-            // labelTitulo.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
-
-
-            labelNombre.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
+            labelNombre.Font = new Font(Fuentes.MontserratBold.FontFamily, 16, FontStyle.Bold);
             labelFechas.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
             labelNombre.MaximumSize = new Size(250, 150);
-            labelNombre.BackColor = Color.Pink;
-
             buttonEditar.BackgroundImageLayout = ImageLayout.Zoom;
 
         }
@@ -80,6 +72,25 @@ namespace TASKILLER
             FormEditarEliminarProyecto f = new FormEditarEliminarProyecto(d, p, u);
             f.Show();
             this.Hide();
+        }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var resultado = MessageBox.Show(
+                   "¿Estás seguro de que quieres eliminar este proyecto?",
+                   "Confirmar eliminación",
+                   MessageBoxButtons.YesNo,
+                   MessageBoxIcon.Warning
+               );
+
+            if (resultado == DialogResult.Yes)
+            {
+                d.listaProyectos.Remove(p);
+                MessageBox.Show("Proyecto eliminado correctamente.", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FormListaProyectos fl = new FormListaProyectos(d, u);
+                fl.Show();
+                this.Hide();
+            }
         }
     }
 }

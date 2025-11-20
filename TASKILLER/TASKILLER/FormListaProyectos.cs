@@ -29,7 +29,7 @@ namespace TASKILLER
             flowLayoutPanelListaProyectos.Padding = new Padding(30);
             flowLayoutPanelListaProyectos.AutoScrollMargin = new Size(0, 40);
 
-            labelListaProyectos.Font = new Font(Fuentes.MontserratBold.FontFamily, 30);
+            labelListaProyectos.Font = new Font(Fuentes.MontserratBold.FontFamily, 35, FontStyle.Bold);
             labelListaProyectos.Dock = DockStyle.Top;
             labelListaProyectos.AutoSize = false;
             labelListaProyectos.Height = 90;
