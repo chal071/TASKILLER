@@ -59,8 +59,7 @@ namespace TASKILLER
         {
             FormListaTareas f = new FormListaTareas(d, p, u);
             f.Show();
-            this.Hide();
-                }
+        }
 
         private void flowLayoutPanelListaTareas_Paint(object sender, PaintEventArgs e)
         {
