@@ -23,12 +23,12 @@ namespace TASKILLER
         public FormListaTareas(Datos datos, Proyecto proyecto, Usuario usuario)
         {
             InitializeComponent();
-            dataGridViewTareas.CellFormatting += dataGridViewTareas_CellFormatting;
-            dataGridViewTareas.CellContentClick += dataGridViewTareas_CellContentClick;
-            setFontSize();
             this.d = datos;
             this.p = proyecto;
             this.u = usuario;
+            dataGridViewTareas.CellFormatting += dataGridViewTareas_CellFormatting;
+            dataGridViewTareas.CellContentClick += dataGridViewTareas_CellContentClick;
+            setFontSize();
             ConfigurarDataGridView();
             CargarTareas();
             generarMenuTarea();
@@ -43,6 +43,7 @@ namespace TASKILLER
         private void setFontSize() 
         {
             labelTarea.Font = new Font(Fuentes.MontserratBold.FontFamily, 25);
+            labelTarea.Text = p.Titulo;
             dataGridViewTareas.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
             labelPorComenzar.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
             labelEnProgreso.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
@@ -83,6 +84,7 @@ namespace TASKILLER
         public void CargarTareas()
         {
             var lista = d.listaTareas
+                .Where(t => t.IdProyecto == p.Id)
                 .Select(t => new
                 {
                     t.Id,
@@ -92,6 +94,7 @@ namespace TASKILLER
                 .ToList();
 
             dataGridViewTareas.Columns.Clear();
+
             var colEstadoTexto = new DataGridViewTextBoxColumn
             {
                 Name = "Estado",
@@ -99,7 +102,6 @@ namespace TASKILLER
                 DataPropertyName = "Estado",
                 Visible = false
             };
-
             dataGridViewTareas.Columns.Add(colEstadoTexto);
 
             var colId = new DataGridViewTextBoxColumn
@@ -137,6 +139,7 @@ namespace TASKILLER
                 dataGridViewTareas.Columns["Estado"].Visible = false;
             }
         }
+
 
         private void dataGridViewTareas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -180,9 +183,8 @@ namespace TASKILLER
         {
             flowLayoutPanelPorComenzar.Controls.Clear();
 
-
             var tareasPorComenzar = d.listaTareas
-                .Where(t => t.Estado == Estado.Por_Comenzar)
+                .Where(t => t.IdProyecto == p.Id && t.Estado == Estado.Por_Comenzar)
                 .ToList();
 
             foreach (var t in tareasPorComenzar)
@@ -194,12 +196,13 @@ namespace TASKILLER
             }
         }
 
+
         private void CargarEnProgreso()
         {
             flowLayoutPanelEnProgreso.Controls.Clear();
 
             var tareasEnProgreso = d.listaTareas
-                .Where(t => t.Estado == Estado.En_Progreso)
+                .Where(t => t.IdProyecto == p.Id && t.Estado == Estado.En_Progreso)
                 .ToList();
 
             foreach (var t in tareasEnProgreso)
@@ -211,12 +214,13 @@ namespace TASKILLER
             }
         }
 
+
         private void CargarEntregado()
         {
             flowLayoutPanelEntregado.Controls.Clear();
 
             var tareasEntregado = d.listaTareas
-                .Where(t => t.Estado == Estado.Entregado)
+                .Where(t => t.IdProyecto == p.Id && t.Estado == Estado.Entregado)
                 .ToList();
 
             foreach (var t in tareasEntregado)
@@ -228,12 +232,14 @@ namespace TASKILLER
             }
         }
 
+
+
         private void CargarRevisado()
         {
             flowLayoutPanelRevisado.Controls.Clear();
 
             var tareasRevisado = d.listaTareas
-                .Where(t => t.Estado == Estado.Revisado)
+                .Where(t => t.IdProyecto == p.Id && t.Estado == Estado.Revisado)
                 .ToList();
 
             foreach (var t in tareasRevisado)
@@ -245,12 +251,13 @@ namespace TASKILLER
             }
         }
 
+
         private void CargarBloqueado()
         {
             flowLayoutPanelBloqueado.Controls.Clear();
 
             var tareasBloqueado = d.listaTareas
-                .Where(t => t.Estado == Estado.Bloqueado)
+                .Where(t => t.IdProyecto == p.Id && t.Estado == Estado.Bloqueado)
                 .ToList();
 
             foreach (var t in tareasBloqueado)
@@ -261,6 +268,7 @@ namespace TASKILLER
                 flowLayoutPanelBloqueado.Controls.Add(ctrl);
             }
         }
+
 
         private void generarMenuTarea()
         {

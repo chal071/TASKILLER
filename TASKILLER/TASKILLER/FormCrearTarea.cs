@@ -123,6 +123,7 @@ namespace TASKILLER
                 FechaInicio = dateTimePickerFechaInicio.Value,
                 FechaFinal = dateTimePickerFechaFinal.Value,
                 listaUsuarios = new List<Guid>(),
+                IdProyecto = p.Id,
                 Subtareas = null,
                 IdTareaPadre = tareaPadre?.Id
             };
