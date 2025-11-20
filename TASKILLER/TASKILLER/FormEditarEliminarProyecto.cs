@@ -13,12 +13,22 @@ namespace TASKILLER
     public partial class FormEditarEliminarProyecto : Form
     {
         private Datos d;
-        public FormEditarEliminarProyecto(Datos datos)
+        private Proyecto p;
+        private Usuario u;
+        public FormEditarEliminarProyecto(Datos datos, Proyecto proyecto, Usuario usuario)
         {
             InitializeComponent();
             Helpers.AplicarFuente(this, Fuentes.MontserratRegular);
             this.Resize += Form1_Resize;
             this.d = datos;
+            this.p = proyecto;
+            this.u = usuario;
+            cargarLayout();
+            cargarProyecto();
+        }
+
+        private void cargarLayout()
+        {
 
             labelCuentanosProyecto.Font = new Font(Fuentes.MontserratBold.FontFamily, 30);
             labelTitulo.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
@@ -37,6 +47,14 @@ namespace TASKILLER
             comboBoxEstado.DataSource = Enum.GetValues(typeof(Estado));
 
             panelInfo.Anchor = AnchorStyles.None;
+        }
+        private void cargarProyecto()
+        {
+            textBoxTitulo.Text = p.Titulo;
+            richTextBoxDescripcion.Text = p.Descripcion;
+            dateTimePickerFechaInicio.Text = p.FechaInicio.ToString();
+            dateTimePickerFechaFinal.Text = p.FechaFinal.ToString();
+            comboBoxEstado.Text = p.Estado.ToString();
 
         }
         private void Form1_Resize(object sender, EventArgs e)
@@ -44,59 +62,103 @@ namespace TASKILLER
             panelInfo.Left = (this.ClientSize.Width - panelInfo.Width) / 2;
             panelInfo.Top = (this.ClientSize.Height - panelInfo.Height) / 2;
         }
-
         private void inicioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormInicio f = new FormInicio(d);
+            FormInicio f = new FormInicio(d, u);
             f.Show();
             this.Hide();
         }
-
         private void proyectosToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormListaProyectos f = new FormListaProyectos(d);
+            FormListaProyectos f = new FormListaProyectos(d, u);
             f.Show();
             this.Hide();
         }
-
         private void usuariosToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormListaUsuarios f = new FormListaUsuarios(d);
+            FormListaUsuarios f = new FormListaUsuarios(d, u);
             f.Show();
             this.Hide();
         }
-
         private void rolesToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormListaRoles f = new FormListaRoles(d);
+            FormListaRoles f = new FormListaRoles(d, u);
             f.Show();
             this.Hide();
         }
-
         private void crearNuevoProyectoToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormCrearProyecto f = new FormCrearProyecto(d);
+            FormCrearProyecto f = new FormCrearProyecto(d, u);
             f.Show();
             this.Hide();
         }
-
         private void crearNuevoUsuarioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormCreacionUsuario f = new FormCreacionUsuario(d);
+            FormCreacionUsuario f = new FormCreacionUsuario(d, u);
             f.Show();
             this.Hide();
         }
-
-        private void modificarEliminarProyectoToolStripMenuItem_Click(object sender, System.EventArgs e)
-        {
-            FormEditarEliminarProyecto f = new FormEditarEliminarProyecto(d);
-            f.Show();
-            this.Hide();
-        }
-
         private void salirToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             Application.Exit();
+        }
+        private void guardarDatosToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            GestionDatos.GuardarDatos(d);
+        }
+
+        private void buttonEditarProyecto_Click(object sender, EventArgs e)
+        {
+
+            if (string.IsNullOrEmpty(textBoxTitulo.Text))
+            {
+                MessageBox.Show("El título es obligatorio.");
+                return;
+            }
+
+            if (dateTimePickerFechaInicio.Value >= dateTimePickerFechaFinal.Value)
+            {
+                MessageBox.Show("La fecha de inicio debe ser anterior a la fecha final.");
+                return;
+            }
+
+            if (comboBoxEstado.SelectedItem == null)
+            {
+                MessageBox.Show("Debe seleccionar un estado para el proyecto.");
+                return;
+            }
+
+            d.listaProyectos.Add(p);
+            p.Titulo = textBoxTitulo.Text;
+            p.Descripcion = richTextBoxDescripcion.Text;
+            p.FechaInicio = dateTimePickerFechaInicio.Value;
+            p.FechaFinal = dateTimePickerFechaFinal.Value;
+            p.Estado = (Estado)comboBoxEstado.SelectedItem;
+
+            FormListaProyectos pr = new FormListaProyectos(d, u);
+            pr.Show();
+            this.Hide();
+            return;
+
+        }
+
+        private void buttonEliminarProyecto_Click(object sender, EventArgs e)
+        {
+            var resultado = MessageBox.Show(
+                   "¿Estás seguro de que quieres eliminar este proyecto?",
+                   "Confirmar eliminación",
+                   MessageBoxButtons.YesNo,
+                   MessageBoxIcon.Warning
+               );
+
+            if (resultado == DialogResult.Yes)
+            {
+                d.listaProyectos.Remove(p);
+                MessageBox.Show("Proyecto eliminado correctamente.", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FormListaProyectos fl = new FormListaProyectos(d, u);
+                fl.Show();
+                this.Hide();
+            }
         }
     }
 }

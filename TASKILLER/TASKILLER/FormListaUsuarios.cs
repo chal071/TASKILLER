@@ -13,9 +13,11 @@ namespace TASKILLER
     public partial class FormListaUsuarios : Form
     {
         private Datos d;
-        public FormListaUsuarios(Datos datos)
+        private Usuario u;
+        public FormListaUsuarios(Datos datos, Usuario usuario)
         {
             this.d = datos;
+            this.u = usuario;
             InitializeComponent();
             ConfigurarDataGridView();
             CargarUsuarios();
@@ -77,48 +79,41 @@ namespace TASKILLER
 
         private void inicioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormInicio f = new FormInicio(d);
+            FormInicio f = new FormInicio(d, u);
             f.Show();
             this.Hide();
         }
 
         private void proyectosToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormListaProyectos f = new FormListaProyectos(d);
+            FormListaProyectos f = new FormListaProyectos(d, u);
             f.Show();
             this.Hide();
         }
 
         private void usuariosToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormListaUsuarios f = new FormListaUsuarios(d);
+            FormListaUsuarios f = new FormListaUsuarios(d, u);
             f.Show();
             this.Hide();
         }
 
         private void rolesToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormListaRoles f = new FormListaRoles(d);
+            FormListaRoles f = new FormListaRoles(d, u);
             f.Show();
             this.Hide();
         }
 
         private void crearNuevoProyectoToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormCrearProyecto f = new FormCrearProyecto(d);
+            FormCrearProyecto f = new FormCrearProyecto(d, u);
             f.Show();
             this.Hide();
         }
         private void crearNuevoUsuarioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormCreacionUsuario f = new FormCreacionUsuario(d);
-            f.Show();
-            this.Hide();
-        }
-
-        private void modificarEliminarProyectoToolStripMenuItem_Click(object sender, System.EventArgs e)
-        {
-            FormEditarEliminarProyecto f = new FormEditarEliminarProyecto(d);
+            FormCreacionUsuario f = new FormCreacionUsuario(d, u);
             f.Show();
             this.Hide();
         }
