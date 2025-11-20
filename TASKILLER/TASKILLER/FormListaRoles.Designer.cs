@@ -53,6 +53,7 @@
             // 
             this.flowLayoutPanelListaRoles.Location = new System.Drawing.Point(59, 149);
             this.flowLayoutPanelListaRoles.Margin = new System.Windows.Forms.Padding(4);
+            this.flowLayoutPanelListaRoles.AutoScroll = true;
             this.flowLayoutPanelListaRoles.Name = "flowLayoutPanelListaRoles";
             this.flowLayoutPanelListaRoles.Size = new System.Drawing.Size(1171, 320);
             this.flowLayoutPanelListaRoles.TabIndex = 0;
@@ -61,8 +62,8 @@
             // 
             this.labelListaRoles.AutoSize = true;
             this.labelListaRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelListaRoles.Location = new System.Drawing.Point(469, 64);
             this.labelListaRoles.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelListaRoles.Location = new System.Drawing.Point(261, 50);
             this.labelListaRoles.Name = "labelListaRoles";
             this.labelListaRoles.Size = new System.Drawing.Size(385, 69);
             this.labelListaRoles.TabIndex = 1;
@@ -197,6 +198,15 @@
             this.btnTaskiller.Size = new System.Drawing.Size(29, 24);
             this.btnTaskiller.Text = "TaskillerLogo";
             // 
+            // panelListaRolesResp
+            // 
+            this.panelListaRolesResp.Controls.Add(this.labelListaRoles);
+            this.panelListaRolesResp.Controls.Add(this.flowLayoutPanelListaRoles);
+            this.panelListaRolesResp.Location = new System.Drawing.Point(46, 47);
+            this.panelListaRolesResp.Name = "panelListaRolesResp";
+            this.panelListaRolesResp.Size = new System.Drawing.Size(824, 419);
+            this.panelListaRolesResp.TabIndex = 2;
+            // 
             // FormListaRoles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -214,7 +224,6 @@
             this.toolStripInicio.ResumeLayout(false);
             this.toolStripInicio.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

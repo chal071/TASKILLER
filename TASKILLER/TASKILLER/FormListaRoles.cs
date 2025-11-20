@@ -27,23 +27,16 @@ namespace TASKILLER
                 rol.SetDatos(r);
                 flowLayoutPanelListaRoles.Controls.Add(rol);
 
-            }
+        private void panel1_Paint(object sender, PaintEventArgs e){
         }
+
         private void Form1_Resize(object sender, EventArgs e)
         {
             panelListaRolesResp.Left = (this.ClientSize.Width - panelListaRolesResp.Width) / 2;
             panelListaRolesResp.Top = (this.ClientSize.Height - panelListaRolesResp.Height) / 2;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void labelListaRoles_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void labelListaRoles_Click(object sender, EventArgs e){}
 
         private void inicioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {

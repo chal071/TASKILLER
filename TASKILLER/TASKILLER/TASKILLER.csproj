@@ -63,14 +63,25 @@
     <Compile Include="FormCreacionUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
+<<<<<<< Updated upstream
     <Compile Include="FormCreacionUsuario.Designer.cs">
       <DependentUpon>FormCreacionUsuario.cs</DependentUpon>
+=======
+    <Compile Include="FormCreaciónUsuario.Designer.cs">
+      <DependentUpon>FormCreaciónUsuario.cs</DependentUpon>
+>>>>>>> Stashed changes
     </Compile>
     <Compile Include="FormCrearTarea.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormCrearTarea.Designer.cs">
       <DependentUpon>FormCrearTarea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEdicionUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEdicionUsuarios.Designer.cs">
+      <DependentUpon>FormEdicionUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="FormEditarEliminarProyecto.cs">
       <SubType>Form</SubType>
@@ -154,7 +165,11 @@
     <EmbeddedResource Include="FormCreacionUsuario.resx">
       <DependentUpon>FormCreacionUsuario.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< Updated upstream
     <Compile Include="Controls\TareaControl.cs">
+=======
+    <Compile Include="TareaControl.cs">
+>>>>>>> Stashed changes
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\TareaControl.Designer.cs">
@@ -165,6 +180,9 @@
     </EmbeddedResource>
     <Compile Include="Clases\Rol.cs" />
     <Compile Include="Clases\Usuario.cs" />
+    <EmbeddedResource Include="FormEdicionUsuarios.resx">
+      <DependentUpon>FormEdicionUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEditarEliminarProyecto.resx">
       <DependentUpon>FormEditarEliminarProyecto.cs</DependentUpon>
     </EmbeddedResource>
