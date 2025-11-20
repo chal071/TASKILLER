@@ -19,9 +19,13 @@ namespace TASKILLER
             InitializeComponent();
             this.d = datos;
             this.tareaPadre = tareaPadre;
+
             SetFontSize();
+            ConfigurarTareaPadre();
+
+            buttonCrear.Click += buttonCrear_Click;
         }
-        
+
         public void SetFontSize()
         {
             labelCuentanos.Font = new Font(Fuentes.MontserratBold.FontFamily, 30);
@@ -41,6 +45,8 @@ namespace TASKILLER
             labelUsuarioAsignado.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
             checkedListBoxUsuario.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
             buttonCrear.Font = new Font(Fuentes.MontserratBold.FontFamily, 20);
+            labelTareaPadre.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
+            dataGridViewTareaPadre.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
 
             checkedListBoxUsuario.Items.Clear();
             foreach (Usuario usuario in d.listaUsuarios)
@@ -49,8 +55,104 @@ namespace TASKILLER
             }
             comboBoxPrioridad.DataSource = Enum.GetValues(typeof(Prioridad));
             comboBoxEstado.DataSource = Enum.GetValues(typeof(Estado));
-
         }
+
+        private void ConfigurarTareaPadre()
+        {
+            if (tareaPadre == null)
+            {
+                tableLayoutPanelLeftBottom.Visible = false;
+                return;
+            }
+
+            tableLayoutPanelLeftBottom.Visible = true;
+
+            dataGridViewTareaPadre.AutoGenerateColumns = false;
+            dataGridViewTareaPadre.Columns.Clear();
+
+            dataGridViewTareaPadre.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "Titulo",
+                HeaderText = "Título",
+                DataPropertyName = "Titulo"
+            });
+
+            dataGridViewTareaPadre.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "Estado",
+                HeaderText = "Estado",
+                DataPropertyName = "Estado"
+            });
+
+            dataGridViewTareaPadre.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "Prioridad",
+                HeaderText = "Prioridad",
+                DataPropertyName = "Prioridad"
+            });
+
+            dataGridViewTareaPadre.DataSource = new[]
+            {
+        new
+        {
+            tareaPadre.Titulo,
+            tareaPadre.Estado,
+            tareaPadre.Prioridad
+        }
+            }.ToList();
+
+            dataGridViewTareaPadre.ReadOnly = true;
+            dataGridViewTareaPadre.AllowUserToAddRows = false;
+            dataGridViewTareaPadre.AllowUserToDeleteRows = false;
+            dataGridViewTareaPadre.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void buttonCrear_Click(object sender, EventArgs e)
+        {
+            var nueva = new Tarea
+            {
+                Id = Guid.NewGuid(),
+                Titulo = textBoxTitulo.Text,
+                Descripcion = richTextBoxDescripcion.Text,
+                Prioridad = (Prioridad)comboBoxPrioridad.SelectedItem,
+                Estado = (Estado)comboBoxEstado.SelectedItem,
+                FechaInicio = dateTimePickerFechaInicio.Value,
+                FechaFinal = dateTimePickerFechaFinal.Value,
+                listaUsuarios = new List<Guid>(),
+                Subtareas = null,
+                IdTareaPadre = tareaPadre?.Id
+            };
+
+            for (int i = 0; i < checkedListBoxUsuario.Items.Count; i++)
+            {
+                if (checkedListBoxUsuario.GetItemChecked(i))
+                {
+                    string nombre = checkedListBoxUsuario.Items[i].ToString();
+                    var usuario = d.listaUsuarios.FirstOrDefault(u => u.Nombre == nombre);
+                    if (usuario != null)
+                    {
+                        nueva.listaUsuarios.Add(usuario.Id);
+                    }
+                }
+            }
+
+            d.listaTareas.Add(nueva);
+
+            if (tareaPadre != null)
+            {
+                if (tareaPadre.Subtareas == null)
+                    tareaPadre.Subtareas = new List<Guid>();
+
+                tareaPadre.Subtareas.Add(nueva.Id);
+            }
+
+            this.DialogResult = DialogResult.OK;
+            FormListaTareas f = new FormListaTareas(d);
+            f.Show();
+            this.Close();
+        }
+
+
 
         private void inicioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {

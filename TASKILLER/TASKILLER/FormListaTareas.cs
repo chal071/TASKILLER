@@ -14,8 +14,8 @@ namespace TASKILLER
     public partial class FormListaTareas : Form
     {
         private Datos d;
-        private ContextMenuStrip _menuTarea;
-        private Guid _tareaSeleccionadaId;
+        private ContextMenuStrip menuTarea;
+        private Guid tareaSeleccionadaId;
 
         public FormListaTareas(Datos datos)
         {
@@ -259,10 +259,10 @@ namespace TASKILLER
 
         private void generarMenuTarea()
         {
-            _menuTarea = new ContextMenuStrip();
-            _menuTarea.Items.Add("Modificar", null, MenuModificar_Click);
-            _menuTarea.Items.Add("Eliminar", null, MenuEliminar_Click);
-            _menuTarea.Items.Add("Crear subtarea", null, MenuCrearSubtarea_Click);
+            menuTarea = new ContextMenuStrip();
+            menuTarea.Items.Add("Modificar", null, MenuModificar_Click);
+            menuTarea.Items.Add("Eliminar", null, MenuEliminar_Click);
+            menuTarea.Items.Add("Crear subtarea", null, MenuCrearSubtarea_Click);
         }
 
         private void dataGridViewTareas_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -274,16 +274,16 @@ namespace TASKILLER
                 var idObj = dataGridViewTareas.Rows[e.RowIndex].Cells["Id"].Value;
                 if (idObj == null) return;
 
-                _tareaSeleccionadaId = (Guid)idObj;
+                tareaSeleccionadaId = (Guid)idObj;
 
                 var pos = Cursor.Position;
-                _menuTarea.Show(pos);
+                menuTarea.Show(pos);
             }
         }
 
         private void MenuModificar_Click(object sender, EventArgs e)
         {
-            var tarea = d.listaTareas.FirstOrDefault(t => t.Id == _tareaSeleccionadaId);
+            var tarea = d.listaTareas.FirstOrDefault(t => t.Id == tareaSeleccionadaId);
             if (tarea == null) return;
 
             FormEditarTarea f = new FormEditarTarea(tarea, d);
@@ -295,7 +295,7 @@ namespace TASKILLER
 
         private void MenuEliminar_Click(object sender, EventArgs e)
         {
-            var tarea = d.listaTareas.FirstOrDefault(t => t.Id == _tareaSeleccionadaId);
+            var tarea = d.listaTareas.FirstOrDefault(t => t.Id == tareaSeleccionadaId);
             if (tarea == null) return;
 
             var r = MessageBox.Show("¿Seguro que quieres eliminar esta tarea?",
@@ -307,21 +307,22 @@ namespace TASKILLER
             {
                 d.listaTareas.Remove(tarea);
                 CargarTareas();
+                CargarBloqueado();
+                CargarEnProgreso();
+                CargarEntregado();
+                CargarPorComenzar();
+                CargarRevisado();
             }
         }
 
         private void MenuCrearSubtarea_Click(object sender, EventArgs e)
         {
-            var tareaPadre = d.listaTareas.FirstOrDefault(t => t.Id == _tareaSeleccionadaId);
+            var tareaPadre = d.listaTareas.FirstOrDefault(t => t.Id == tareaSeleccionadaId);
             if (tareaPadre == null) return;
 
-            using (var frm = new FormCrearTarea(d, tareaPadre))
-            {
-                if (frm.ShowDialog() == DialogResult.OK)
-                {
-                    CargarTareas();
-                }
-            }
+            FormCrearTarea f = new FormCrearTarea(d, tareaPadre);
+            f.Show();
+            this.Hide();
         }
 
 
@@ -386,6 +387,7 @@ namespace TASKILLER
         {
             FormCrearTarea f = new FormCrearTarea(d, null);
             f.Show();
+            this.Hide();
         }
     }
 }

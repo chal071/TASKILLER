@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCrearTarea));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grid = new System.Windows.Forms.TableLayoutPanel();
             this.toolStripInicio = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -62,12 +63,17 @@
             this.dateTimePickerFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.labelFechaInicio = new System.Windows.Forms.Label();
             this.checkedListBoxUsuario = new System.Windows.Forms.CheckedListBox();
+            this.tableLayoutPanelLeftBottom = new System.Windows.Forms.TableLayoutPanel();
+            this.labelTareaPadre = new System.Windows.Forms.Label();
+            this.dataGridViewTareaPadre = new System.Windows.Forms.DataGridView();
             this.grid.SuspendLayout();
             this.toolStripInicio.SuspendLayout();
             this.flowLayoutPanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.tableLayoutPanelLeft.SuspendLayout();
             this.tableLayoutPanelRight.SuspendLayout();
+            this.tableLayoutPanelLeftBottom.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTareaPadre)).BeginInit();
             this.SuspendLayout();
             // 
             // grid
@@ -80,6 +86,7 @@
             this.grid.Controls.Add(this.buttonCrear, 1, 3);
             this.grid.Controls.Add(this.tableLayoutPanelLeft, 0, 2);
             this.grid.Controls.Add(this.tableLayoutPanelRight, 1, 2);
+            this.grid.Controls.Add(this.tableLayoutPanelLeftBottom, 0, 3);
             this.grid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grid.Location = new System.Drawing.Point(0, 0);
             this.grid.Margin = new System.Windows.Forms.Padding(0);
@@ -418,6 +425,56 @@
             this.checkedListBoxUsuario.Size = new System.Drawing.Size(805, 170);
             this.checkedListBoxUsuario.TabIndex = 7;
             // 
+            // tableLayoutPanelLeftBottom
+            // 
+            this.tableLayoutPanelLeftBottom.ColumnCount = 1;
+            this.tableLayoutPanelLeftBottom.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelLeftBottom.Controls.Add(this.labelTareaPadre, 0, 0);
+            this.tableLayoutPanelLeftBottom.Controls.Add(this.dataGridViewTareaPadre, 0, 1);
+            this.tableLayoutPanelLeftBottom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanelLeftBottom.Location = new System.Drawing.Point(3, 825);
+            this.tableLayoutPanelLeftBottom.Name = "tableLayoutPanelLeftBottom";
+            this.tableLayoutPanelLeftBottom.RowCount = 3;
+            this.tableLayoutPanelLeftBottom.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanelLeftBottom.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelLeftBottom.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanelLeftBottom.Size = new System.Drawing.Size(811, 141);
+            this.tableLayoutPanelLeftBottom.TabIndex = 7;
+            // 
+            // labelTareaPadre
+            // 
+            this.labelTareaPadre.AutoSize = true;
+            this.labelTareaPadre.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelTareaPadre.Location = new System.Drawing.Point(3, 0);
+            this.labelTareaPadre.Name = "labelTareaPadre";
+            this.labelTareaPadre.Size = new System.Drawing.Size(805, 42);
+            this.labelTareaPadre.TabIndex = 5;
+            this.labelTareaPadre.Text = "TAREA PADRE";
+            // 
+            // dataGridViewTareaPadre
+            // 
+            this.dataGridViewTareaPadre.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewTareaPadre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewTareaPadre.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewTareaPadre.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTareaPadre.ColumnHeadersVisible = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTareaPadre.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewTareaPadre.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewTareaPadre.Location = new System.Drawing.Point(3, 45);
+            this.dataGridViewTareaPadre.Name = "dataGridViewTareaPadre";
+            this.dataGridViewTareaPadre.RowHeadersVisible = false;
+            this.dataGridViewTareaPadre.RowHeadersWidth = 82;
+            this.dataGridViewTareaPadre.RowTemplate.Height = 33;
+            this.dataGridViewTareaPadre.Size = new System.Drawing.Size(805, 64);
+            this.dataGridViewTareaPadre.TabIndex = 6;
+            // 
             // FormCrearTarea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -440,6 +497,9 @@
             this.tableLayoutPanelLeft.PerformLayout();
             this.tableLayoutPanelRight.ResumeLayout(false);
             this.tableLayoutPanelRight.PerformLayout();
+            this.tableLayoutPanelLeftBottom.ResumeLayout(false);
+            this.tableLayoutPanelLeftBottom.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTareaPadre)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -479,5 +539,8 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton btnUsuario;
         private System.Windows.Forms.ToolStripButton btnTaskiller;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelLeftBottom;
+        private System.Windows.Forms.Label labelTareaPadre;
+        private System.Windows.Forms.DataGridView dataGridViewTareaPadre;
     }
 }

@@ -58,6 +58,8 @@
             this.labelDescripcion = new System.Windows.Forms.Label();
             this.textBoxTitulo = new System.Windows.Forms.TextBox();
             this.comboBoxPrioridad = new System.Windows.Forms.ComboBox();
+            this.labelSubtarea = new System.Windows.Forms.Label();
+            this.dataGridViewSubtarea = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanelRight = new System.Windows.Forms.TableLayoutPanel();
             this.labelUsuarioAsignado = new System.Windows.Forms.Label();
             this.comboBoxEstado = new System.Windows.Forms.ComboBox();
@@ -67,18 +69,16 @@
             this.dateTimePickerFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.labelFechaInicio = new System.Windows.Forms.Label();
             this.checkedListBoxUsuario = new System.Windows.Forms.CheckedListBox();
-            this.labelSubtarea = new System.Windows.Forms.Label();
-            this.dataGridViewSubtarea = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanelLeftBottom = new System.Windows.Forms.TableLayoutPanel();
-            this.labelTareaPadre = new System.Windows.Forms.Label();
             this.dataGridViewTareaPadre = new System.Windows.Forms.DataGridView();
+            this.labelTareaPadre = new System.Windows.Forms.Label();
             this.grid.SuspendLayout();
             this.toolStripInicio.SuspendLayout();
             this.flowLayoutPanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.tableLayoutPanelLeft.SuspendLayout();
-            this.tableLayoutPanelRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubtarea)).BeginInit();
+            this.tableLayoutPanelRight.SuspendLayout();
             this.tableLayoutPanelLeftBottom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTareaPadre)).BeginInit();
             this.SuspendLayout();
@@ -357,6 +357,43 @@
             this.comboBoxPrioridad.Size = new System.Drawing.Size(850, 33);
             this.comboBoxPrioridad.TabIndex = 5;
             // 
+            // labelSubtarea
+            // 
+            this.labelSubtarea.AutoSize = true;
+            this.labelSubtarea.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelSubtarea.Location = new System.Drawing.Point(3, 276);
+            this.labelSubtarea.Name = "labelSubtarea";
+            this.labelSubtarea.Size = new System.Drawing.Size(850, 48);
+            this.labelSubtarea.TabIndex = 6;
+            this.labelSubtarea.Text = "SUBTAREA";
+            this.labelSubtarea.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // dataGridViewSubtarea
+            // 
+            this.dataGridViewSubtarea.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewSubtarea.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewSubtarea.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSubtarea.ColumnHeadersVisible = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewSubtarea.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewSubtarea.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewSubtarea.Location = new System.Drawing.Point(3, 327);
+            this.dataGridViewSubtarea.Name = "dataGridViewSubtarea";
+            this.dataGridViewSubtarea.RowHeadersVisible = false;
+            this.dataGridViewSubtarea.RowHeadersWidth = 82;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewSubtarea.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewSubtarea.RowTemplate.Height = 33;
+            this.dataGridViewSubtarea.Size = new System.Drawing.Size(850, 102);
+            this.dataGridViewSubtarea.TabIndex = 7;
+            // 
             // tableLayoutPanelRight
             // 
             this.tableLayoutPanelRight.ColumnCount = 1;
@@ -458,43 +495,6 @@
             this.checkedListBoxUsuario.Size = new System.Drawing.Size(850, 177);
             this.checkedListBoxUsuario.TabIndex = 7;
             // 
-            // labelSubtarea
-            // 
-            this.labelSubtarea.AutoSize = true;
-            this.labelSubtarea.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelSubtarea.Location = new System.Drawing.Point(3, 276);
-            this.labelSubtarea.Name = "labelSubtarea";
-            this.labelSubtarea.Size = new System.Drawing.Size(850, 48);
-            this.labelSubtarea.TabIndex = 6;
-            this.labelSubtarea.Text = "SUBTAREA";
-            this.labelSubtarea.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // dataGridViewSubtarea
-            // 
-            this.dataGridViewSubtarea.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewSubtarea.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewSubtarea.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSubtarea.ColumnHeadersVisible = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewSubtarea.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewSubtarea.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewSubtarea.Location = new System.Drawing.Point(3, 327);
-            this.dataGridViewSubtarea.Name = "dataGridViewSubtarea";
-            this.dataGridViewSubtarea.RowHeadersVisible = false;
-            this.dataGridViewSubtarea.RowHeadersWidth = 82;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewSubtarea.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewSubtarea.RowTemplate.Height = 33;
-            this.dataGridViewSubtarea.Size = new System.Drawing.Size(850, 102);
-            this.dataGridViewSubtarea.TabIndex = 7;
-            // 
             // tableLayoutPanelLeftBottom
             // 
             this.tableLayoutPanelLeftBottom.ColumnCount = 1;
@@ -510,17 +510,6 @@
             this.tableLayoutPanelLeftBottom.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanelLeftBottom.Size = new System.Drawing.Size(856, 148);
             this.tableLayoutPanelLeftBottom.TabIndex = 8;
-            // 
-            // labelTareaPadre
-            // 
-            this.labelTareaPadre.AutoSize = true;
-            this.labelTareaPadre.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelTareaPadre.Location = new System.Drawing.Point(3, 0);
-            this.labelTareaPadre.Name = "labelTareaPadre";
-            this.labelTareaPadre.Size = new System.Drawing.Size(850, 44);
-            this.labelTareaPadre.TabIndex = 0;
-            this.labelTareaPadre.Text = "TAREA PADRE";
-            this.labelTareaPadre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dataGridViewTareaPadre
             // 
@@ -548,6 +537,17 @@
             this.dataGridViewTareaPadre.Size = new System.Drawing.Size(850, 68);
             this.dataGridViewTareaPadre.TabIndex = 8;
             // 
+            // labelTareaPadre
+            // 
+            this.labelTareaPadre.AutoSize = true;
+            this.labelTareaPadre.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelTareaPadre.Location = new System.Drawing.Point(3, 0);
+            this.labelTareaPadre.Name = "labelTareaPadre";
+            this.labelTareaPadre.Size = new System.Drawing.Size(850, 44);
+            this.labelTareaPadre.TabIndex = 0;
+            this.labelTareaPadre.Text = "TAREA PADRE";
+            this.labelTareaPadre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // FormEditarTarea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -567,9 +567,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.tableLayoutPanelLeft.ResumeLayout(false);
             this.tableLayoutPanelLeft.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubtarea)).EndInit();
             this.tableLayoutPanelRight.ResumeLayout(false);
             this.tableLayoutPanelRight.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubtarea)).EndInit();
             this.tableLayoutPanelLeftBottom.ResumeLayout(false);
             this.tableLayoutPanelLeftBottom.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTareaPadre)).EndInit();
