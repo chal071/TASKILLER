@@ -14,14 +14,19 @@ namespace TASKILLER
     public partial class FormListaTareas : Form
     {
         private Datos d;
+        private ContextMenuStrip _menuTarea;
+        private Guid _tareaSeleccionadaId;
+
         public FormListaTareas(Datos datos)
         {
             InitializeComponent();
             dataGridViewTareas.CellFormatting += dataGridViewTareas_CellFormatting;
+            dataGridViewTareas.CellContentClick += dataGridViewTareas_CellContentClick;
             setFontSize();
             this.d = datos;
             ConfigurarDataGridView();
             CargarTareas();
+            generarMenuTarea();
             CargarPorComenzar();
             CargarEnProgreso();
             CargarEntregado();
@@ -44,7 +49,7 @@ namespace TASKILLER
 
         public void ConfigurarDataGridView()
         {
-            dataGridViewTareas.AutoGenerateColumns = true;
+            dataGridViewTareas.AutoGenerateColumns = false;
             dataGridViewTareas.ReadOnly = true;
             dataGridViewTareas.AllowUserToResizeColumns = false;
         }
@@ -75,12 +80,12 @@ namespace TASKILLER
             var lista = d.listaTareas
                 .Select(t => new
                 {
+                    t.Id,
                     t.Titulo,
                     t.Estado
                 })
                 .ToList();
 
-            dataGridViewTareas.AutoGenerateColumns = false;
             dataGridViewTareas.Columns.Clear();
             var colEstadoTexto = new DataGridViewTextBoxColumn
             {
@@ -91,6 +96,15 @@ namespace TASKILLER
             };
 
             dataGridViewTareas.Columns.Add(colEstadoTexto);
+
+            var colId = new DataGridViewTextBoxColumn
+            {
+                Name = "Id",
+                HeaderText = "Id",
+                DataPropertyName = "Id",
+                Visible = false
+            };
+            dataGridViewTareas.Columns.Add(colId);
 
             var colEstadoColor = new DataGridViewImageColumn
             {
@@ -112,6 +126,11 @@ namespace TASKILLER
             dataGridViewTareas.DataSource = lista;
 
             JustificarColumnas();
+
+            if (dataGridViewTareas.Columns["Estado"] != null)
+            {
+                dataGridViewTareas.Columns["Estado"].Visible = false;
+            }
         }
 
         private void dataGridViewTareas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -238,6 +257,74 @@ namespace TASKILLER
             }
         }
 
+        private void generarMenuTarea()
+        {
+            _menuTarea = new ContextMenuStrip();
+            _menuTarea.Items.Add("Modificar", null, MenuModificar_Click);
+            _menuTarea.Items.Add("Eliminar", null, MenuEliminar_Click);
+            _menuTarea.Items.Add("Crear subtarea", null, MenuCrearSubtarea_Click);
+        }
+
+        private void dataGridViewTareas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+
+            if (dataGridViewTareas.Columns[e.ColumnIndex].Name == "Editar")
+            {
+                var idObj = dataGridViewTareas.Rows[e.RowIndex].Cells["Id"].Value;
+                if (idObj == null) return;
+
+                _tareaSeleccionadaId = (Guid)idObj;
+
+                var pos = Cursor.Position;
+                _menuTarea.Show(pos);
+            }
+        }
+
+        private void MenuModificar_Click(object sender, EventArgs e)
+        {
+            var tarea = d.listaTareas.FirstOrDefault(t => t.Id == _tareaSeleccionadaId);
+            if (tarea == null) return;
+
+            FormEditarTarea f = new FormEditarTarea(tarea, d);
+            f.Show();
+            this.Hide();
+            
+          
+        }
+
+        private void MenuEliminar_Click(object sender, EventArgs e)
+        {
+            var tarea = d.listaTareas.FirstOrDefault(t => t.Id == _tareaSeleccionadaId);
+            if (tarea == null) return;
+
+            var r = MessageBox.Show("¿Seguro que quieres eliminar esta tarea?",
+                                    "Confirmar",
+                                    MessageBoxButtons.YesNo,
+                                    MessageBoxIcon.Warning);
+
+            if (r == DialogResult.Yes)
+            {
+                d.listaTareas.Remove(tarea);
+                CargarTareas();
+            }
+        }
+
+        private void MenuCrearSubtarea_Click(object sender, EventArgs e)
+        {
+            var tareaPadre = d.listaTareas.FirstOrDefault(t => t.Id == _tareaSeleccionadaId);
+            if (tareaPadre == null) return;
+
+            using (var frm = new FormCrearTarea(d, tareaPadre))
+            {
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    CargarTareas();
+                }
+            }
+        }
+
+
         private void inicioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             FormInicio f = new FormInicio(d);
@@ -297,7 +384,7 @@ namespace TASKILLER
 
         private void buttonAnadirTarea_Click(object sender, EventArgs e)
         {
-            FormCrearTarea f = new FormCrearTarea(d);
+            FormCrearTarea f = new FormCrearTarea(d, null);
             f.Show();
         }
     }

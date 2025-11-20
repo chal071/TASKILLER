@@ -13,10 +13,12 @@ namespace TASKILLER
     public partial class FormCrearTarea : Form
     {
         private Datos d;
-        public FormCrearTarea(Datos datos)
+        private Tarea tareaPadre;
+        public FormCrearTarea(Datos datos, Tarea tareaPadre = null)
         {
             InitializeComponent();
             this.d = datos;
+            this.tareaPadre = tareaPadre;
             SetFontSize();
         }
         
@@ -100,6 +102,7 @@ namespace TASKILLER
         private void salirToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             Application.Exit();
+            this.Hide();
         }
     }
 
