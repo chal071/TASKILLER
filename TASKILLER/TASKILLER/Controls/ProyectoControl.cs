@@ -57,7 +57,9 @@ namespace TASKILLER
 
         private void ProyectoControl_Click(object sender, EventArgs e)
         {
-            FormListaTareas f = new FormListaTareas(d, p, u);
+            Form padre = this.FindForm();
+            padre.Close();
+            FormListaTareas f = new FormListaTareas(d, p, u);            
             f.Show();
         }
 
@@ -68,9 +70,10 @@ namespace TASKILLER
 
         private void editarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Form padre = this.FindForm();
+            padre.Close();
             FormEditarEliminarProyecto f = new FormEditarEliminarProyecto(d, p, u);
             f.Show();
-            this.Hide();
         }
 
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -86,9 +89,11 @@ namespace TASKILLER
             {
                 d.listaProyectos.Remove(p);
                 MessageBox.Show("Proyecto eliminado correctamente.", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                FormListaProyectos fl = new FormListaProyectos(d, u);
-                fl.Show();
-                this.Hide();
+                Form padre = this.FindForm();
+                padre.Close();
+
+                FormListaProyectos f = new FormListaProyectos(d, u);
+                f.Show();
             }
         }
     }
