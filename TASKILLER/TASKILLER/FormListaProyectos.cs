@@ -90,43 +90,49 @@ namespace TASKILLER
 
         private void inicioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
+            Form padre = this.FindForm();
+            padre.Close();
             FormInicio f = new FormInicio(d, u);
             f.Show();
-            this.Hide();
         }
 
         private void proyectosToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
+            Form padre = this.FindForm();
+            padre.Close();
             FormListaProyectos f = new FormListaProyectos(d, u);
             f.Show();
-            this.Hide();
         }
 
         private void usuariosToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
+            Form padre = this.FindForm();
+            padre.Close();
             FormListaUsuarios f = new FormListaUsuarios(d, u);
             f.Show();
-            this.Hide();
         }
 
         private void rolesToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
+            Form padre = this.FindForm();
+            padre.Close();
             FormListaRoles f = new FormListaRoles(d, u);
             f.Show();
-            this.Hide();
         }
 
         private void crearNuevoProyectoToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
+            Form padre = this.FindForm();
+            padre.Close();
             FormCrearProyecto f = new FormCrearProyecto(d, u);
             f.Show();
-            this.Hide();
         }
         private void crearNuevoUsuarioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
+            Form padre = this.FindForm();
+            padre.Close();
             FormCreacionUsuario f = new FormCreacionUsuario(d, u);
             f.Show();
-            this.Hide();
         }
         private void salirToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
