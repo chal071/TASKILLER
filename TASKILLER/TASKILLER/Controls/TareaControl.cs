@@ -13,7 +13,8 @@ namespace TASKILLER
     public partial class TareaControl : UserControl
     {
         private List<Usuario> usuariosGlobal;
-        public TareaControl(List<Usuario> usuarios)
+        private List<Tarea> tareasGlobal;
+        public TareaControl(List<Usuario> usuarios, List<Tarea> tareasGlobal)
         {
             InitializeComponent();
             this.Dock = DockStyle.Top;
@@ -21,7 +22,9 @@ namespace TASKILLER
             labelFechasTarea.Font = new Font("Montserrat", 9, FontStyle.Regular);
             labelSubtareas.Font = new Font("Montserrat", 9, FontStyle.Regular);
             dataGridViewUsuarioDeTarea.Font = new Font("Montserrat", 10, FontStyle.Regular);
-            usuariosGlobal = usuarios;
+            labelTareaPadre.Font = new Font("Montserrat", 9, FontStyle.Regular);
+            this.usuariosGlobal = usuarios;
+            this.tareasGlobal = tareasGlobal;
         }
 
         public void SetDatos(Tarea t)
@@ -34,7 +37,7 @@ namespace TASKILLER
             if (cantSubtareas > 0)
             {
                 labelSubtareas.Visible = true;
-                labelSubtareas.Text = $"{cantSubtareas} subtareas";
+                labelSubtareas.Text = $"{cantSubtareas} subtareas en activo";
             }
             else
             {
@@ -54,6 +57,45 @@ namespace TASKILLER
             dataGridViewUsuarioDeTarea.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewUsuarioDeTarea.RowHeadersVisible = false;
             dataGridViewUsuarioDeTarea.DataSource = usuarios;
+
+            pictureBoxPerioridad.Visible = true;
+
+            switch (t.Prioridad)
+            {
+               case Prioridad.Alta:
+               pictureBoxPerioridad.Image = Properties.Resources.prioridadAlta;
+               break;
+               case Prioridad.Media:
+               pictureBoxPerioridad.Image = Properties.Resources.prioridadMedia;
+               break;
+               case Prioridad.Baja:
+               pictureBoxPerioridad.Image = Properties.Resources.prioridadBaja;
+               break;
+               default:
+               pictureBoxPerioridad.Visible = false;
+               break;
+            }
+
+            var idTareaPadre = t.IdTareaPadre;
+            if (idTareaPadre != null)
+            {
+                var tareaPadre = tareasGlobal.FirstOrDefault(tarea => tarea.Id == idTareaPadre);
+                if (tareaPadre != null)
+                {
+                    labelTareaPadre.Visible = true;
+                    labelTareaPadre.Text = $"Tarea padre:\n{tareaPadre.Titulo}";
+                }
+                else
+                {
+                    labelTareaPadre.Visible = false;
+                }
+            }
+            else
+            {
+                labelTareaPadre.Visible = false;
+            }
+
+
         }
 
 
