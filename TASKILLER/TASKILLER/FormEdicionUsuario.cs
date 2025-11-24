@@ -12,9 +12,13 @@ namespace TASKILLER
 {
     public partial class FormEdicionUsuario : Form
     {
-        public FormEdicionUsuario()
+        private Datos d;
+        private Usuario u;
+        public FormEdicionUsuario(Datos datos, Usuario usuario)
         {
             InitializeComponent();
+            this.d = datos;
+            this.u = usuario;
         }
 
         private void PanelEdicionUsuario_Paint(object sender, PaintEventArgs e)
