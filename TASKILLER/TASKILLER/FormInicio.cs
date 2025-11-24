@@ -15,19 +15,33 @@ namespace TASKILLER
             this.Resize += Form_Resize;
             setFontSize();
             flowLayoutPanelHoy.AutoScroll = true;
-            flowLayoutPanelHoy.Dock = DockStyle.Fill;
+            flowLayoutPanelHoy.Dock = DockStyle.None;
             flowLayoutPanelHoy.Padding = new Padding(20);
             flowLayoutPanelHoy.AutoScrollMargin = new Size(0, 30);
+
+            foreach (var p in d.listaProyectos)
+            {
+                if (p.FechaFinal.Date == DateTime.Now.Date)
+                    continue;
+                ProyectoControlInicio tarjeta = new ProyectoControlInicio();
+                tarjeta.SetDatos(p);
+
+                tarjeta.Margin = new Padding(10);
+                flowLayoutPanelHoy.Controls.Add(tarjeta);
+            }
+
+            flowLayoutPanelSemana.AutoScroll = true;
+            flowLayoutPanelSemana.Dock = DockStyle.None;
+            flowLayoutPanelSemana.Padding = new Padding(20);
+            flowLayoutPanelSemana.AutoScrollMargin = new Size(0, 30);
 
             foreach (var p in d.listaProyectos)
             {
                 ProyectoControlInicio tarjeta = new ProyectoControlInicio();
                 tarjeta.SetDatos(p);
 
-                tarjeta.AgregarTareas(d.listaTareas, p);
-
-                tarjeta.Margin = new Padding(20);
-                flowLayoutPanelHoy.Controls.Add(tarjeta);
+                tarjeta.Margin = new Padding(10);
+                flowLayoutPanelSemana.Controls.Add(tarjeta);
             }
         }
 

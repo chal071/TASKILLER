@@ -208,6 +208,9 @@
     <EmbeddedResource Include="ProyectoControl.resx">
       <DependentUpon>ProyectoControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProyectoControlInicio.resx">
+      <DependentUpon>ProyectoControlInicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TareaProyectoControl.resx">
       <DependentUpon>TareaProyectoControl.cs</DependentUpon>
     </EmbeddedResource>
