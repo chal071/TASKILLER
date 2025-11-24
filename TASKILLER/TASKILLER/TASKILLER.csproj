@@ -143,6 +143,9 @@
     <Compile Include="ProyectoControl.Designer.cs">
       <DependentUpon>ProyectoControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProyectoControlInicio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Tarea.cs" />
     <Compile Include="TareaProyectoControl.cs">
       <SubType>UserControl</SubType>
