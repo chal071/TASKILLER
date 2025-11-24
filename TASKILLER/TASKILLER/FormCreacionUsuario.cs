@@ -17,7 +17,7 @@ namespace TASKILLER
         public FormCreacionUsuario(Datos datos, Usuario usuario)
         {
             InitializeComponent();
-            this.Resize += Form1_Resize;
+            this.Resize += FormCreacion_Resize;
             this.d = datos;
             this.u= usuario;
 
@@ -38,20 +38,13 @@ namespace TASKILLER
             buttonCrearUsuario.Font = new Font("Montserrat", 15, FontStyle.Bold);
         }
 
-        private void Form1_Resize(object sender, EventArgs e)
+        private void FormCreacion_Resize(object sender, EventArgs e)
         {
             panelCreacionUser.Left = (this.ClientSize.Width - panelCreacionUser.Width) / 2;
             panelCreacionUser.Top = (this.ClientSize.Height - panelCreacionUser.Height) / 2;
         }
 
-        private void panelCreacionUser_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
-        private void FormCreaciónUsuario_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
