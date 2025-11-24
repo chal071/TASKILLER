@@ -42,7 +42,7 @@ namespace TASKILLER
 
         private void setFontSize() 
         {
-            labelTarea.Font = new Font(Fuentes.MontserratBold.FontFamily, 25);
+            labelTarea.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
             labelTarea.Text = p.Titulo;
             dataGridViewTareas.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
             labelPorComenzar.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
