@@ -232,8 +232,6 @@ namespace TASKILLER
         }
 
 
-
-
         private void inicioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             FormInicio f = new FormInicio(d, u);
@@ -282,6 +280,13 @@ namespace TASKILLER
         private void guardarDatosToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             GestionDatos.GuardarDatos(d);
+        }
+
+        private void buttonAnadirTarea_Click(object sender, EventArgs e)
+        {
+            FormCrearTarea f = new FormCrearTarea(d, p, u, null);
+            f.Show();
+            this.Hide();
         }
     }
 
