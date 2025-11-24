@@ -42,7 +42,7 @@
             this.labelCorreoEdicionUsuario = new System.Windows.Forms.Label();
             this.textBoxContrasenaEdicionUsuario = new System.Windows.Forms.TextBox();
             this.labelApellidoEdicionUsuario = new System.Windows.Forms.Label();
-            this.buttonCrearUsuario = new System.Windows.Forms.Button();
+            this.buttonEdicionUsuario = new System.Windows.Forms.Button();
             this.labelNombreEdicionUsuario = new System.Windows.Forms.Label();
             this.labelEdicionUsuario = new System.Windows.Forms.Label();
             this.textBoxRepContrasenaEdicionUsuario = new System.Windows.Forms.TextBox();
@@ -65,7 +65,7 @@
             this.panelEdicionUser.Controls.Add(this.labelCorreoEdicionUsuario);
             this.panelEdicionUser.Controls.Add(this.textBoxContrasenaEdicionUsuario);
             this.panelEdicionUser.Controls.Add(this.labelApellidoEdicionUsuario);
-            this.panelEdicionUser.Controls.Add(this.buttonCrearUsuario);
+            this.panelEdicionUser.Controls.Add(this.buttonEdicionUsuario);
             this.panelEdicionUser.Controls.Add(this.labelNombreEdicionUsuario);
             this.panelEdicionUser.Controls.Add(this.labelEdicionUsuario);
             this.panelEdicionUser.Controls.Add(this.textBoxRepContrasenaEdicionUsuario);
@@ -175,14 +175,14 @@
             this.labelApellidoEdicionUsuario.TabIndex = 10;
             this.labelApellidoEdicionUsuario.Text = "Apellido";
             // 
-            // buttonCrearUsuario
+            // buttonEdicionUsuario
             // 
-            this.buttonCrearUsuario.Location = new System.Drawing.Point(1352, 748);
-            this.buttonCrearUsuario.Name = "buttonCrearUsuario";
-            this.buttonCrearUsuario.Size = new System.Drawing.Size(260, 63);
-            this.buttonCrearUsuario.TabIndex = 6;
-            this.buttonCrearUsuario.Text = "Crear Cuenta";
-            this.buttonCrearUsuario.UseVisualStyleBackColor = true;
+            this.buttonEdicionUsuario.Location = new System.Drawing.Point(1352, 748);
+            this.buttonEdicionUsuario.Name = "buttonEdicionUsuario";
+            this.buttonEdicionUsuario.Size = new System.Drawing.Size(260, 63);
+            this.buttonEdicionUsuario.TabIndex = 6;
+            this.buttonEdicionUsuario.Text = "Crear Cuenta";
+            this.buttonEdicionUsuario.UseVisualStyleBackColor = true;
             // 
             // labelNombreEdicionUsuario
             // 
@@ -241,7 +241,7 @@
         private System.Windows.Forms.Label labelCorreoEdicionUsuario;
         private System.Windows.Forms.TextBox textBoxContrasenaEdicionUsuario;
         private System.Windows.Forms.Label labelApellidoEdicionUsuario;
-        private System.Windows.Forms.Button buttonCrearUsuario;
+        private System.Windows.Forms.Button buttonEdicionUsuario;
         private System.Windows.Forms.Label labelNombreEdicionUsuario;
         private System.Windows.Forms.Label labelEdicionUsuario;
         private System.Windows.Forms.TextBox textBoxRepContrasenaEdicionUsuario;
