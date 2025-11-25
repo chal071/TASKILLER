@@ -8,11 +8,11 @@ namespace TASKILLER
     {
         private Datos d;
         private Usuario u;
-        public FormInicio(Datos datos, Usuario u)
+        public FormInicio(Datos datos, Usuario usuario)
         {
             InitializeComponent();
             this.d = datos;
-            this.u = u;
+            this.u = usuario;
             Helpers.AplicarFuente(this, Fuentes.MontserratRegular);
             this.Resize += Form_Resize;
             setFontSize();
@@ -21,15 +21,16 @@ namespace TASKILLER
             flowLayoutPanelHoy.Padding = new Padding(20);
             flowLayoutPanelHoy.AutoScrollMargin = new Size(0, 30);
 
-            foreach (var p in d.listaProyectos)
+            foreach (var pr in d.listaProyectos)
             {
-                if (p.FechaFinal.Date == DateTime.Now.Date)
-                    continue;
-                ProyectoControlInicio tarjeta = new ProyectoControlInicio(d);
-                tarjeta.SetDatos(p);
+                if (pr.FechaFinal.Date == DateTime.Now.Date)
+                {
+                    ProyectoControlInicio tarjeta = new ProyectoControlInicio(d, pr, u);
+                    tarjeta.SetDatos(pr);
 
-                tarjeta.Margin = new Padding(10);
-                flowLayoutPanelHoy.Controls.Add(tarjeta);
+                    tarjeta.Margin = new Padding(10);
+                    flowLayoutPanelHoy.Controls.Add(tarjeta);
+                }
             }
 
             flowLayoutPanelSemana.AutoScroll = true;
@@ -37,16 +38,17 @@ namespace TASKILLER
             flowLayoutPanelSemana.Padding = new Padding(20);
             flowLayoutPanelSemana.AutoScrollMargin = new Size(0, 30);
 
-            foreach (var p in d.listaProyectos)
+            foreach (var pr in d.listaProyectos)
             {
-                ProyectoControlInicio tarjeta = new ProyectoControlInicio(d);
-                tarjeta.SetDatos(p);
+                if (pr.FechaFinal.Date <= DateTime.Now.Date.AddDays(7))
+                {
+                    ProyectoControlInicio tarjeta = new ProyectoControlInicio(d, pr, u);
+                    tarjeta.SetDatos(pr);
 
-                tarjeta.Margin = new Padding(10);
-                flowLayoutPanelSemana.Controls.Add(tarjeta);
+                    tarjeta.Margin = new Padding(10);
+                    flowLayoutPanelSemana.Controls.Add(tarjeta);
+                }
             }
-
-            this.u = u;
         }
 
         private void setFontSize()
@@ -64,41 +66,41 @@ namespace TASKILLER
 
 private void inicioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormInicio f = new FormInicio(d);
+            FormInicio f = new FormInicio(d, u);
             f.Show();
             this.Hide();
         }
 
         private void proyectosToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormListaProyectos f = new FormListaProyectos(d);
+            FormListaProyectos f = new FormListaProyectos(d, u);
             f.Show();
             this.Hide();
         }
 
         private void usuariosToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormListaUsuarios f = new FormListaUsuarios(d);
+            FormListaUsuarios f = new FormListaUsuarios(d, u);
             f.Show();
             this.Hide();
         }
 
         private void rolesToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormListaRoles f = new FormListaRoles(d);
+            FormListaRoles f = new FormListaRoles(d, u);
             f.Show();
             this.Hide();
         }
 
         private void crearNuevoProyectoToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormCrearProyecto f = new FormCrearProyecto(d);
+            FormCrearProyecto f = new FormCrearProyecto(d, u);
             f.Show();
             this.Hide();
         }
         private void crearNuevoUsuarioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormCreacionUsuario f = new FormCreacionUsuario(d);
+            FormCreacionUsuario f = new FormCreacionUsuario(d, u);
             f.Show();
             this.Hide();
         }

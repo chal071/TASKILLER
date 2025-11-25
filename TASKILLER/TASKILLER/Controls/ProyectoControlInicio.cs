@@ -21,10 +21,12 @@ namespace TASKILLER
         private FlowLayoutPanel flowLayoutPanelNumeroTareas;
         private System.Windows.Forms.Label labelNombre;
 
-        public ProyectoControlInicio(Datos datos)
+        public ProyectoControlInicio(Datos datos, Proyecto proyecto, Usuario usuario)
         {
             InitializeComponent();
             this.d = datos;
+            this.p = proyecto;
+            this.u = usuario;
         }
 
         public void ContarTareas(List<Tarea> tareas, Proyecto p)
@@ -41,7 +43,7 @@ namespace TASKILLER
         public void SetDatos(Proyecto p)
         {
             labelNombre.Text = p.Titulo;
-            labelFechas.Text = p.FechaFinal.ToString();
+            labelFechas.Text = p.FechaFinal.ToString("dd/MM/yyyy");
 
             labelNombre.Font = new Font("Montserrat", 9, FontStyle.Bold);
             labelFechas.Font = new Font("Montserrat", 9, FontStyle.Regular);

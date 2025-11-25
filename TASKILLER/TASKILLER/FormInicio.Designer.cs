@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInicio));
             this.panelInicio = new System.Windows.Forms.Panel();
+            this.labelUltimosProyectos = new System.Windows.Forms.Label();
+            this.labelHoy = new System.Windows.Forms.Label();
+            this.labelHaceUnaSemana = new System.Windows.Forms.Label();
+            this.flowLayoutPanelHoy = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanelSemana = new System.Windows.Forms.FlowLayoutPanel();
             this.toolStripInicio = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,11 +47,6 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnUsuario = new System.Windows.Forms.ToolStripButton();
             this.btnTaskiller = new System.Windows.Forms.ToolStripButton();
-            this.labelUltimosProyectos = new System.Windows.Forms.Label();
-            this.labelHoy = new System.Windows.Forms.Label();
-            this.labelHaceUnaSemana = new System.Windows.Forms.Label();
-            this.flowLayoutPanelHoy = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanelSemana = new System.Windows.Forms.FlowLayoutPanel();
             this.panelInicio.SuspendLayout();
             this.toolStripInicio.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +64,49 @@
             this.panelInicio.Name = "panelInicio";
             this.panelInicio.Size = new System.Drawing.Size(941, 455);
             this.panelInicio.TabIndex = 0;
+            // 
+            // labelUltimosProyectos
+            // 
+            this.labelUltimosProyectos.AutoSize = true;
+            this.labelUltimosProyectos.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUltimosProyectos.Location = new System.Drawing.Point(86, 8);
+            this.labelUltimosProyectos.Name = "labelUltimosProyectos";
+            this.labelUltimosProyectos.Size = new System.Drawing.Size(270, 16);
+            this.labelUltimosProyectos.TabIndex = 10;
+            this.labelUltimosProyectos.Text = "Proyectos con fecha límite temprana...";
+            // 
+            // labelHoy
+            // 
+            this.labelHoy.AutoSize = true;
+            this.labelHoy.Location = new System.Drawing.Point(93, 56);
+            this.labelHoy.Name = "labelHoy";
+            this.labelHoy.Size = new System.Drawing.Size(35, 16);
+            this.labelHoy.TabIndex = 11;
+            this.labelHoy.Text = "Hoy:";
+            // 
+            // labelHaceUnaSemana
+            // 
+            this.labelHaceUnaSemana.AutoSize = true;
+            this.labelHaceUnaSemana.Location = new System.Drawing.Point(86, 248);
+            this.labelHaceUnaSemana.Name = "labelHaceUnaSemana";
+            this.labelHaceUnaSemana.Size = new System.Drawing.Size(166, 16);
+            this.labelHaceUnaSemana.TabIndex = 12;
+            this.labelHaceUnaSemana.Text = "En menos de una semana:";
+            // 
+            // flowLayoutPanelHoy
+            // 
+            this.flowLayoutPanelHoy.BackColor = System.Drawing.SystemColors.Control;
+            this.flowLayoutPanelHoy.Location = new System.Drawing.Point(89, 75);
+            this.flowLayoutPanelHoy.Name = "flowLayoutPanelHoy";
+            this.flowLayoutPanelHoy.Size = new System.Drawing.Size(840, 147);
+            this.flowLayoutPanelHoy.TabIndex = 13;
+            // 
+            // flowLayoutPanelSemana
+            // 
+            this.flowLayoutPanelSemana.Location = new System.Drawing.Point(89, 271);
+            this.flowLayoutPanelSemana.Name = "flowLayoutPanelSemana";
+            this.flowLayoutPanelSemana.Size = new System.Drawing.Size(840, 147);
+            this.flowLayoutPanelSemana.TabIndex = 14;
             // 
             // toolStripInicio
             // 
@@ -181,49 +224,6 @@
             this.btnTaskiller.Name = "btnTaskiller";
             this.btnTaskiller.Size = new System.Drawing.Size(29, 24);
             this.btnTaskiller.Text = "TaskillerLogo";
-            // 
-            // labelUltimosProyectos
-            // 
-            this.labelUltimosProyectos.AutoSize = true;
-            this.labelUltimosProyectos.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUltimosProyectos.Location = new System.Drawing.Point(86, 8);
-            this.labelUltimosProyectos.Name = "labelUltimosProyectos";
-            this.labelUltimosProyectos.Size = new System.Drawing.Size(270, 16);
-            this.labelUltimosProyectos.TabIndex = 10;
-            this.labelUltimosProyectos.Text = "Proyectos con fecha límite temprana...";
-            // 
-            // labelHoy
-            // 
-            this.labelHoy.AutoSize = true;
-            this.labelHoy.Location = new System.Drawing.Point(93, 56);
-            this.labelHoy.Name = "labelHoy";
-            this.labelHoy.Size = new System.Drawing.Size(32, 16);
-            this.labelHoy.TabIndex = 11;
-            this.labelHoy.Text = "Hoy";
-            // 
-            // labelHaceUnaSemana
-            // 
-            this.labelHaceUnaSemana.AutoSize = true;
-            this.labelHaceUnaSemana.Location = new System.Drawing.Point(86, 248);
-            this.labelHaceUnaSemana.Name = "labelHaceUnaSemana";
-            this.labelHaceUnaSemana.Size = new System.Drawing.Size(117, 16);
-            this.labelHaceUnaSemana.TabIndex = 12;
-            this.labelHaceUnaSemana.Text = "Hace una semana";
-            // 
-            // flowLayoutPanelHoy
-            // 
-            this.flowLayoutPanelHoy.BackColor = System.Drawing.SystemColors.Control;
-            this.flowLayoutPanelHoy.Location = new System.Drawing.Point(89, 75);
-            this.flowLayoutPanelHoy.Name = "flowLayoutPanelHoy";
-            this.flowLayoutPanelHoy.Size = new System.Drawing.Size(840, 147);
-            this.flowLayoutPanelHoy.TabIndex = 13;
-            // 
-            // flowLayoutPanelSemana
-            // 
-            this.flowLayoutPanelSemana.Location = new System.Drawing.Point(89, 271);
-            this.flowLayoutPanelSemana.Name = "flowLayoutPanelSemana";
-            this.flowLayoutPanelSemana.Size = new System.Drawing.Size(840, 147);
-            this.flowLayoutPanelSemana.TabIndex = 14;
             // 
             // FormInicio
             // 
