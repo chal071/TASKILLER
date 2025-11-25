@@ -23,7 +23,7 @@ namespace TASKILLER
             {
                 if (p.FechaFinal.Date == DateTime.Now.Date)
                     continue;
-                ProyectoControlInicio tarjeta = new ProyectoControlInicio();
+                ProyectoControlInicio tarjeta = new ProyectoControlInicio(d);
                 tarjeta.SetDatos(p);
 
                 tarjeta.Margin = new Padding(10);
@@ -37,7 +37,7 @@ namespace TASKILLER
 
             foreach (var p in d.listaProyectos)
             {
-                ProyectoControlInicio tarjeta = new ProyectoControlInicio();
+                ProyectoControlInicio tarjeta = new ProyectoControlInicio(d);
                 tarjeta.SetDatos(p);
 
                 tarjeta.Margin = new Padding(10);

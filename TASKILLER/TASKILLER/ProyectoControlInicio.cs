@@ -13,14 +13,18 @@ namespace TASKILLER
 {
     public partial class ProyectoControlInicio : UserControl
     {
+        private Datos d;
+        private Proyecto p;
+        private Usuario u;
         private System.Windows.Forms.Label labelFechas;
         private Button buttonEditar;
         private FlowLayoutPanel flowLayoutPanelNumeroTareas;
         private System.Windows.Forms.Label labelNombre;
 
-        public ProyectoControlInicio()
+        public ProyectoControlInicio(Datos datos)
         {
             InitializeComponent();
+            this.d = datos;
         }
 
         public void ContarTareas(List<Tarea> tareas, Proyecto p)
@@ -37,7 +41,7 @@ namespace TASKILLER
         public void SetDatos(Proyecto p)
         {
             labelNombre.Text = p.Titulo;
-            labelFechas.Text = p.FechaInicio + " - " + p.FechaFinal;
+            labelFechas.Text = p.FechaFinal.ToString();
 
             labelNombre.Font = new Font("Montserrat", 9, FontStyle.Bold);
             labelFechas.Font = new Font("Montserrat", 9, FontStyle.Regular);
@@ -83,6 +87,7 @@ namespace TASKILLER
             this.buttonEditar.Size = new System.Drawing.Size(39, 35);
             this.buttonEditar.TabIndex = 5;
             this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // flowLayoutPanelNumeroTareas
             // 
@@ -104,6 +109,13 @@ namespace TASKILLER
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            FormEditarEliminarProyecto f = new FormEditarEliminarProyecto(d, p, u);
+            f.Show();
+            this.Hide();
         }
     }
 }
