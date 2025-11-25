@@ -7,10 +7,12 @@ namespace TASKILLER
     public partial class FormInicio : Form
     {
         private Datos d;
-        public FormInicio(Datos datos)
+        private Usuario u;
+        public FormInicio(Datos datos, Usuario u)
         {
             InitializeComponent();
             this.d = datos;
+            this.u = u;
             Helpers.AplicarFuente(this, Fuentes.MontserratRegular);
             this.Resize += Form_Resize;
             setFontSize();
@@ -43,6 +45,8 @@ namespace TASKILLER
                 tarjeta.Margin = new Padding(10);
                 flowLayoutPanelSemana.Controls.Add(tarjeta);
             }
+
+            this.u = u;
         }
 
         private void setFontSize()

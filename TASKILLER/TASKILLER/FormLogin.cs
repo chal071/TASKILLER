@@ -45,7 +45,7 @@ namespace TASKILLER
                 {
                     if (u.Mail == email && u.Contrasena == password)
                     {
-                        FormListaProyectos f = new FormListaProyectos(d, u);
+                        FormInicio f = new FormInicio(d, u);
                         f.Show();
                         this.Hide();
                     }
