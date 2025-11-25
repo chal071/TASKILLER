@@ -72,7 +72,7 @@
             this.Controls.Add(this.labelEstado);
             this.Controls.Add(this.labelTituloTarea);
             this.Name = "TareaProyectoControl";
-            this.Size = new System.Drawing.Size(174, 36);
+            this.Size = new System.Drawing.Size(165, 36);
             this.Load += new System.EventHandler(this.TareaProyectoControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPrioridad)).EndInit();
             this.ResumeLayout(false);

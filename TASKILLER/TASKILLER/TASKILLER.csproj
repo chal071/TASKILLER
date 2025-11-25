@@ -232,8 +232,8 @@
   <ItemGroup>
     <Content Include="icon_taskiller.ico" />
     <Content Include="resources\icons\icon_taskiller.ico" />
-    <None Include="resources\prioridadAlta.png" />
     <None Include="resources\prioridadMedia.png" />
+    <None Include="resources\prioridadAlta.png" />
     <None Include="resources\prioridadBaja.png" />
     <None Include="resources\img\borrar.png" />
     <None Include="resources\Image1.png" />

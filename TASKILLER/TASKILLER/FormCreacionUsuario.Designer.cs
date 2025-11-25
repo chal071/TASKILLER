@@ -221,10 +221,10 @@
             this.panelCreacionUser.Controls.Add(this.labelNombreUsuario);
             this.panelCreacionUser.Controls.Add(this.labelCreaUsuario);
             this.panelCreacionUser.Controls.Add(this.textBoxRepContrasenaUsuario);
-            this.panelCreacionUser.Location = new System.Drawing.Point(16, 15);
+            this.panelCreacionUser.Location = new System.Drawing.Point(13, 13);
             this.panelCreacionUser.Margin = new System.Windows.Forms.Padding(4);
             this.panelCreacionUser.Name = "panelCreacionUser";
-            this.panelCreacionUser.Size = new System.Drawing.Size(2396, 1002);
+            this.panelCreacionUser.Size = new System.Drawing.Size(2399, 1004);
             this.panelCreacionUser.TabIndex = 16;
             this.panelCreacionUser.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCreacionUser_Paint);
             // 
