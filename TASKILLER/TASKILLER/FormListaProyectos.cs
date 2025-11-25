@@ -35,15 +35,12 @@ namespace TASKILLER
             labelListaProyectos.Height = 90;
             labelListaProyectos.Padding = new Padding(0, 20, 0, 0);
 
-            buttonFiltro.BackgroundImageLayout = ImageLayout.Zoom;
-
             flowLayoutPanelBotonesOrdFil.Dock = DockStyle.Top;
             flowLayoutPanelBotonesOrdFil.Height = 60;
             flowLayoutPanelBotonesOrdFil.Padding = new Padding(0, 0, 30, 10);
 
             mostrarProyectos();
         }
-
         private void mostrarProyectos()
         {
             var rolAdmin = d.listaRoles.FirstOrDefault(r => r.Nombre == "Administrador");
@@ -87,7 +84,6 @@ namespace TASKILLER
 
 
         }
-
         private void inicioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             Form padre = this.FindForm();
@@ -95,7 +91,6 @@ namespace TASKILLER
             FormInicio f = new FormInicio(d, u);
             f.Show();
         }
-
         private void proyectosToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             Form padre = this.FindForm();
@@ -103,7 +98,6 @@ namespace TASKILLER
             FormListaProyectos f = new FormListaProyectos(d, u);
             f.Show();
         }
-
         private void usuariosToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             Form padre = this.FindForm();
@@ -111,7 +105,6 @@ namespace TASKILLER
             FormListaUsuarios f = new FormListaUsuarios(d, u);
             f.Show();
         }
-
         private void rolesToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             Form padre = this.FindForm();
@@ -119,7 +112,6 @@ namespace TASKILLER
             FormListaRoles f = new FormListaRoles(d, u);
             f.Show();
         }
-
         private void crearNuevoProyectoToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             Form padre = this.FindForm();
@@ -138,7 +130,6 @@ namespace TASKILLER
         {
             Application.Exit();
         }
-
         private void guardarDatosToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             GestionDatos.GuardarDatos(d);
