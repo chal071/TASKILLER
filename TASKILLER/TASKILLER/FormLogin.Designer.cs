@@ -57,9 +57,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 355);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 361);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(534, 267);
+            this.pictureBox2.Size = new System.Drawing.Size(556, 317);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 23;
             this.pictureBox2.TabStop = false;
@@ -70,7 +70,7 @@
             this.buttonIniciarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.buttonIniciarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonIniciarSesion.Location = new System.Drawing.Point(386, 295);
+            this.buttonIniciarSesion.Location = new System.Drawing.Point(427, 303);
             this.buttonIniciarSesion.Name = "buttonIniciarSesion";
             this.buttonIniciarSesion.Size = new System.Drawing.Size(119, 40);
             this.buttonIniciarSesion.TabIndex = 19;
@@ -81,7 +81,7 @@
             // linkLabelCredenciales
             // 
             this.linkLabelCredenciales.AutoSize = true;
-            this.linkLabelCredenciales.Location = new System.Drawing.Point(243, 260);
+            this.linkLabelCredenciales.Location = new System.Drawing.Point(284, 272);
             this.linkLabelCredenciales.Name = "linkLabelCredenciales";
             this.linkLabelCredenciales.Size = new System.Drawing.Size(185, 16);
             this.linkLabelCredenciales.TabIndex = 22;
@@ -92,7 +92,7 @@
             // 
             this.labelPassword.AutoSize = true;
             this.labelPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPassword.Location = new System.Drawing.Point(243, 200);
+            this.labelPassword.Location = new System.Drawing.Point(235, 214);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(90, 16);
             this.labelPassword.TabIndex = 21;
@@ -102,7 +102,7 @@
             // 
             this.labelMail.AutoSize = true;
             this.labelMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMail.Location = new System.Drawing.Point(243, 143);
+            this.labelMail.Location = new System.Drawing.Point(235, 156);
             this.labelMail.Name = "labelMail";
             this.labelMail.Size = new System.Drawing.Size(139, 16);
             this.labelMail.TabIndex = 20;
@@ -110,26 +110,26 @@
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(246, 223);
+            this.textBoxPassword.Location = new System.Drawing.Point(238, 240);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(259, 22);
+            this.textBoxPassword.Size = new System.Drawing.Size(308, 22);
             this.textBoxPassword.TabIndex = 18;
             this.textBoxPassword.UseSystemPasswordChar = true;
             // 
             // textBoxMail
             // 
-            this.textBoxMail.Location = new System.Drawing.Point(246, 166);
+            this.textBoxMail.Location = new System.Drawing.Point(238, 182);
             this.textBoxMail.Name = "textBoxMail";
-            this.textBoxMail.Size = new System.Drawing.Size(259, 22);
+            this.textBoxMail.Size = new System.Drawing.Size(308, 22);
             this.textBoxMail.TabIndex = 17;
             // 
             // labelTaskiller
             // 
             this.labelTaskiller.AutoSize = true;
-            this.labelTaskiller.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTaskiller.Location = new System.Drawing.Point(27, 215);
+            this.labelTaskiller.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTaskiller.Location = new System.Drawing.Point(30, 231);
             this.labelTaskiller.Name = "labelTaskiller";
-            this.labelTaskiller.Size = new System.Drawing.Size(129, 25);
+            this.labelTaskiller.Size = new System.Drawing.Size(170, 31);
             this.labelTaskiller.TabIndex = 16;
             this.labelTaskiller.Text = "TASKILLER";
             // 
@@ -137,7 +137,7 @@
             // 
             this.labelConTuCuenta.AutoSize = true;
             this.labelConTuCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelConTuCuenta.Location = new System.Drawing.Point(27, 179);
+            this.labelConTuCuenta.Location = new System.Drawing.Point(32, 192);
             this.labelConTuCuenta.Name = "labelConTuCuenta";
             this.labelConTuCuenta.Size = new System.Drawing.Size(156, 25);
             this.labelConTuCuenta.TabIndex = 15;
@@ -156,7 +156,7 @@
             this.labelIniciaSesion.AutoSize = true;
             this.labelIniciaSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelIniciaSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIniciaSesion.Location = new System.Drawing.Point(27, 143);
+            this.labelIniciaSesion.Location = new System.Drawing.Point(32, 153);
             this.labelIniciaSesion.Name = "labelIniciaSesion";
             this.labelIniciaSesion.Size = new System.Drawing.Size(132, 25);
             this.labelIniciaSesion.TabIndex = 13;
@@ -165,7 +165,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 9);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(559, 112);
@@ -175,9 +175,10 @@
             // 
             // FormLogin
             // 
+            this.AcceptButton = this.buttonIniciarSesion;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(558, 646);
+            this.ClientSize = new System.Drawing.Size(581, 690);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.buttonIniciarSesion);
             this.Controls.Add(this.linkLabelCredenciales);
