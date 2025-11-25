@@ -54,8 +54,19 @@ namespace TASKILLER
             richTextBoxDescripcion.Text = p.Descripcion;
             dateTimePickerFechaInicio.Text = p.FechaInicio.ToString();
             dateTimePickerFechaFinal.Text = p.FechaFinal.ToString();
-            comboBoxEstado.Text = p.Estado.ToString();
+            switch(p.Estado)
+            {
+                case Estado.Por_Comenzar:
+                    comboBoxEstado.SelectedItem = "Por Comenzar";
+                    break;
+                case Estado.En_Progreso:
+                    comboBoxEstado.SelectedItem = "En Progreso";
+                    break;
+                default:
+                    comboBoxEstado.Text = p.Estado.ToString();
 
+                    break;
+            }
         }
         private void Form1_Resize(object sender, EventArgs e)
         {

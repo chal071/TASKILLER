@@ -79,10 +79,7 @@ namespace TASKILLER
             else
             {
                 MessageBox.Show("No tienes permisos suficientes", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
             }
-
-
         }
         private void inicioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {

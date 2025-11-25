@@ -47,7 +47,6 @@ namespace TASKILLER
             labelFechas.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
             labelNombre.MaximumSize = new Size(250, 150);
             buttonEditar.BackgroundImageLayout = ImageLayout.Zoom;
-
         }
 
         private void buttonEditar_Click(object sender, EventArgs e)
