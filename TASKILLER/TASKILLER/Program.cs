@@ -10,13 +10,17 @@ namespace TASKILLER
 {
     internal static class Program
     {
+        [STAThread]
         private static void Main()
         {   
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Fuentes.CargarFuentes();
             Datos d = GestionDatos.CargarDatos();
-            Application.Run(new FormInicio(d));
-        }       
+            Usuario usuario = new Usuario();
+            Application.Run(new FormLogin(d));
+
+        }
+       
     }
 }

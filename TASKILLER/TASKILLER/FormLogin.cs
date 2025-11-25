@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.IO;
-using Newtonsoft.Json.Linq;
 using System.Windows.Forms;
 
 namespace TASKILLER
@@ -13,12 +10,14 @@ namespace TASKILLER
         public FormLogin(Datos datos)
         {
             InitializeComponent();
+            cargarDatos();
             this.d = datos;
-            setFontSize();            
+
         }
 
-        private void setFontSize()
+        private void cargarDatos()
         {
+
             labelIniciaSesion.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12, FontStyle.Bold);
             labelConTuCuenta.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12, FontStyle.Regular);
             labelTaskiller.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12, FontStyle.Bold);
@@ -29,7 +28,6 @@ namespace TASKILLER
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-
         }
 
         private void ButtonIniciarSesion_Click(object sender, EventArgs e)
@@ -47,7 +45,7 @@ namespace TASKILLER
                 {
                     if (u.Mail == email && u.Contrasena == password)
                     {
-                        FormInicio f = new FormInicio(d);
+                        FormListaProyectos f = new FormListaProyectos(d, u);
                         f.Show();
                         this.Hide();
                     }

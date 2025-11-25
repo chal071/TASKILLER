@@ -13,12 +13,14 @@ namespace TASKILLER
     public partial class FormListaRoles : Form
     {
         private Datos d;
-        public FormListaRoles(Datos datos)
+        private Usuario u;
+        public FormListaRoles(Datos datos, Usuario usuario)
         {
             InitializeComponent();
             this.Resize += Form1_Resize;
             labelListaRoles.Font = new Font("Montserrat", 30, FontStyle.Bold);
             this.d = datos;
+            this.u = usuario;
             foreach (Rol r in d.listaRoles) 
             {
                 TarjetaRol rol = new TarjetaRol();
@@ -45,41 +47,41 @@ namespace TASKILLER
 
         private void inicioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormInicio f = new FormInicio(d);
+            FormInicio f = new FormInicio(d, u);
             f.Show();
             this.Hide();
         }
 
         private void proyectosToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormListaProyectos f = new FormListaProyectos(d);
+            FormListaProyectos f = new FormListaProyectos(d, u);
             f.Show();
             this.Hide();
         }
 
         private void usuariosToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormListaUsuarios f = new FormListaUsuarios(d);
+            FormListaUsuarios f = new FormListaUsuarios(d, u);
             f.Show();
             this.Hide();
         }
 
         private void rolesToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormListaRoles f = new FormListaRoles(d);
+            FormListaRoles f = new FormListaRoles(d, u);
             f.Show();
             this.Hide();
         }
 
         private void crearNuevoProyectoToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormCrearProyecto f = new FormCrearProyecto(d);
+            FormCrearProyecto f = new FormCrearProyecto(d, u);
             f.Show();
             this.Hide();
         }
         private void crearNuevoUsuarioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormCreacionUsuario f = new FormCreacionUsuario(d);
+            FormCreacionUsuario f = new FormCreacionUsuario(d, u);
             f.Show();
             this.Hide();
         }

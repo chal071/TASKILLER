@@ -59,7 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Datos.cs" />
+    <Compile Include="Datos\Datos.cs" />
     <Compile Include="FormCreacionUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +71,12 @@
     </Compile>
     <Compile Include="FormCrearTarea.Designer.cs">
       <DependentUpon>FormCrearTarea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEdicionUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEdicionUsuario.Designer.cs">
+      <DependentUpon>FormEdicionUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="FormEditarEliminarProyecto.cs">
       <SubType>Form</SubType>
@@ -114,9 +120,9 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Fuentes.cs" />
-    <Compile Include="GestionDatos.cs" />
-    <Compile Include="Helpers.cs" />
+    <Compile Include="Helpers\Fuentes.cs" />
+    <Compile Include="Datos\GestionDatos.cs" />
+    <Compile Include="Helpers\Helpers.cs" />
     <Compile Include="FormListaProyectos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,48 +137,43 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Proyecto.cs" />
-    <Compile Include="ProyectoControl.cs">
+    <Compile Include="Clases\Proyecto.cs" />
+    <Compile Include="Controls\ProyectoControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ProyectoControl.Designer.cs">
+    <Compile Include="Controls\ProyectoControl.Designer.cs">
       <DependentUpon>ProyectoControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProyectoControlInicio.cs">
+    <Compile Include="Clases\Tarea.cs" />
+    <Compile Include="Controls\TareaProyectoControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Tarea.cs" />
-    <Compile Include="TareaProyectoControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="TareaProyectoControl.Designer.cs">
+    <Compile Include="Controls\TareaProyectoControl.Designer.cs">
       <DependentUpon>TareaProyectoControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="TarjetaRol.cs">
+    <Compile Include="Controls\TarjetaRol.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TarjetaRol.Designer.cs">
+    <Compile Include="Controls\TarjetaRol.Designer.cs">
       <DependentUpon>TarjetaRol.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormCreacionUsuario.resx">
       <DependentUpon>FormCreacionUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="TareaControl.cs">
+    <Compile Include="Controls\TareaControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TareaControl.Designer.cs">
+    <Compile Include="Controls\TareaControl.Designer.cs">
       <DependentUpon>TareaControl.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormCrearTarea.resx">
       <DependentUpon>FormCrearTarea.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Rol.cs" />
-    <Compile Include="Usuario.cs" />
+    <Compile Include="Clases\Rol.cs" />
+    <Compile Include="Clases\Usuario.cs" />
+    <EmbeddedResource Include="FormEdicionUsuario.resx">
+      <DependentUpon>FormEdicionUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEditarEliminarProyecto.resx">
       <DependentUpon>FormEditarEliminarProyecto.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,23 +202,20 @@
       <DependentUpon>FormListaTareas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProyectoControl.resx">
+    <EmbeddedResource Include="Controls\ProyectoControl.resx">
       <DependentUpon>ProyectoControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProyectoControlInicio.resx">
-      <DependentUpon>ProyectoControlInicio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TareaProyectoControl.resx">
+    <EmbeddedResource Include="Controls\TareaProyectoControl.resx">
       <DependentUpon>TareaProyectoControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TarjetaRol.resx">
+    <EmbeddedResource Include="Controls\TarjetaRol.resx">
       <DependentUpon>TarjetaRol.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TareaControl.resx">
+    <EmbeddedResource Include="Controls\TareaControl.resx">
       <DependentUpon>TareaControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -225,6 +223,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -237,8 +240,22 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="icon_taskiller.ico" />
+    <None Include="resources\agregar.png" />
     <Content Include="resources\icons\icon_taskiller.ico" />
+    <None Include="resources\prioridadAlta.png" />
+    <None Include="resources\prioridadMedia.png" />
+    <None Include="resources\prioridadBaja.png" />
+    <None Include="resources\img\borrar.png" />
+    <None Include="resources\Image1.png" />
+    <Content Include="resources\img\casa.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\img\doc.png" />
+    <None Include="resources\img\editar.png" />
+    <Content Include="resources\img\exit.png" />
     <Content Include="resources\img\filtro.png" />
+    <Content Include="resources\img\grupo.png" />
+    <Content Include="resources\img\guardar-el-archivo.png" />
     <Content Include="resources\img\LOGO.png" />
     <Content Include="resources\img\LOGOTIPO_slogan.png" />
     <Content Include="resources\img\TresPuntos.png" />
@@ -251,6 +268,7 @@
     <Content Include="resources\fonts\Montserrat-SemiBold.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="resources\logo_user_ros.png" />
     <None Include="resources\img\menu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
