@@ -14,9 +14,15 @@ namespace TASKILLER
     {
         private List<Usuario> usuariosGlobal;
         private List<Tarea> tareasGlobal;
+        public Tarea Tarea { get; private set; }
+
         public TareaControl(List<Usuario> usuarios, List<Tarea> tareasGlobal)
         {
             InitializeComponent();
+            this.MouseDown += TareaControl_MouseDown;
+            foreach (Control c in this.Controls)
+                c.MouseDown += TareaControl_MouseDown;
+
             this.Dock = DockStyle.Top;
             labelNombreTarea.Font = new Font("Montserrat", 10, FontStyle.Regular);
             labelFechasTarea.Font = new Font("Montserrat", 9, FontStyle.Regular);
@@ -29,6 +35,7 @@ namespace TASKILLER
 
         public void SetDatos(Tarea t)
         {
+            Tarea = t;
             labelNombreTarea.Text = t.Titulo;
             labelFechasTarea.Text = $"{t.FechaInicio:dd/MM/yyyy} - {t.FechaFinal:dd/MM/yyyy}";
 
@@ -95,7 +102,11 @@ namespace TASKILLER
                 labelTareaPadre.Visible = false;
             }
 
+        }
 
+        private void TareaControl_MouseDown(object sender, MouseEventArgs e)
+        {
+            DoDragDrop(this, DragDropEffects.Move);
         }
 
 

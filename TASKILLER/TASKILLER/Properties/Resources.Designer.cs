@@ -63,6 +63,16 @@ namespace TASKILLER.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap agregar {
+            get {
+                object obj = ResourceManager.GetObject("agregar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap borrar {
             get {
                 object obj = ResourceManager.GetObject("borrar", resourceCulture);
@@ -157,6 +167,16 @@ namespace TASKILLER.Properties {
             get {
                 object obj = ResourceManager.GetObject("TaskillerData", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap TresPuntos {
+            get {
+                object obj = ResourceManager.GetObject("TresPuntos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }
