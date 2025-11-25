@@ -60,18 +60,18 @@ namespace TASKILLER
             dataGridViewTareas.AllowUserToResizeColumns = false;
         }
 
-        public void AñadirColumnaBoton()
+        public void AñadirColumnaIcono()
         {
-            var colBtn = new DataGridViewButtonColumn
+            var colIcon = new DataGridViewImageColumn
             {
                 Name = "Editar",
                 HeaderText = "Editar",
-                Text = "···",
-                UseColumnTextForButtonValue = true
+                Image = Properties.Resources.TresPuntos,
+                ImageLayout = DataGridViewImageCellLayout.Zoom
             };
-            dataGridViewTareas.Columns.Add(colBtn);
-        }
 
+            dataGridViewTareas.Columns.Add(colIcon);
+        }
 
         public void JustificarColumnas()
         {
@@ -128,7 +128,7 @@ namespace TASKILLER
             };
             dataGridViewTareas.Columns.Add(colTitulo);
 
-            AñadirColumnaBoton();
+            AñadirColumnaIcono();
 
             dataGridViewTareas.DataSource = lista;
 
@@ -158,13 +158,13 @@ namespace TASKILLER
                         color = Color.FromArgb(255, 224, 192);
                         break;
                     case "Revisado":
-                        color = Color.FromArgb(192, 255, 192);
+                        color = Color.FromArgb(192, 255, 255);
                         break;
                     case "Bloqueado":
                         color = Color.FromArgb(224, 224, 224);
                         break;
                     case "Entregado":
-                        color = Color.FromArgb(192, 255, 255);
+                        color = Color.FromArgb(192, 255, 192);
                         break;
                 }
 
@@ -269,13 +269,91 @@ namespace TASKILLER
             }
         }
 
+        private void ConfigurarDragDrop()
+        {
+            ConfigurarPanelDragDrop(flowLayoutPanelPorComenzar);
+            ConfigurarPanelDragDrop(flowLayoutPanelEnProgreso);
+            ConfigurarPanelDragDrop(flowLayoutPanelEntregado);
+            ConfigurarPanelDragDrop(flowLayoutPanelRevisado);
+            ConfigurarPanelDragDrop(flowLayoutPanelBloqueado);
+        }
+
+        private void ConfigurarPanelDragDrop(FlowLayoutPanel panel)
+        {
+            panel.AllowDrop = true;
+            panel.DragEnter += Panel_DragEnter;
+            panel.DragDrop += Panel_DragDrop;
+        }
+
+        private void Panel_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(typeof(TareaControl)))
+                e.Effect = DragDropEffects.Move;
+            else
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void Panel_DragDrop(object sender, DragEventArgs e)
+        {
+            var panelDestino = (FlowLayoutPanel)sender;
+            var ctrl = (TareaControl)e.Data.GetData(typeof(TareaControl));
+
+            if (ctrl == null) return;
+
+            if (ctrl.Parent is FlowLayoutPanel oldPanel)
+                oldPanel.Controls.Remove(ctrl);
+
+            panelDestino.Controls.Add(ctrl);
+
+            Estado nuevoEstado;
+
+            if (panelDestino == flowLayoutPanelPorComenzar)
+                nuevoEstado = Estado.Por_Comenzar;
+            else if (panelDestino == flowLayoutPanelEnProgreso)
+                nuevoEstado = Estado.En_Progreso;
+            else if (panelDestino == flowLayoutPanelEntregado)
+                nuevoEstado = Estado.Entregado;
+            else if (panelDestino == flowLayoutPanelRevisado)
+                nuevoEstado = Estado.Revisado;
+            else if (panelDestino == flowLayoutPanelBloqueado)
+                nuevoEstado = Estado.Bloqueado;
+            else
+                return;
+
+            var tarea = ctrl.Tarea;
+            if (tarea != null)
+                tarea.Estado = nuevoEstado;
+
+            switch (nuevoEstado)
+            {
+                case Estado.Por_Comenzar:
+                    ctrl.SetBackColor(Color.FromArgb(255, 192, 192));
+                    break;
+                case Estado.En_Progreso:
+                    ctrl.SetBackColor(Color.FromArgb(255, 224, 192));
+                    break;
+                case Estado.Entregado:
+                    ctrl.SetBackColor(Color.FromArgb(192, 255, 192));
+                    break;
+                case Estado.Revisado:
+                    ctrl.SetBackColor(Color.FromArgb(192, 255, 255));
+                    break;
+                case Estado.Bloqueado:
+                    ctrl.SetBackColor(Color.FromArgb(224, 224, 224));
+                    break;
+            }
+            CargarTareas();
+        }
+
+
+
 
         private void generarMenuTarea()
         {
             menuTarea = new ContextMenuStrip();
-            menuTarea.Items.Add("Modificar", null, MenuModificar_Click);
-            menuTarea.Items.Add("Eliminar", null, MenuEliminar_Click);
-            menuTarea.Items.Add("Crear subtarea", null, MenuCrearSubtarea_Click);
+            menuTarea.Items.Add("Modificar", Properties.Resources.editar, MenuModificar_Click);
+            menuTarea.Items.Add("Eliminar", Properties.Resources.borrar, MenuEliminar_Click);
+            menuTarea.Items.Add("Crear subtarea", Properties.Resources.agregar, MenuCrearSubtarea_Click);
         }
 
         private void dataGridViewTareas_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -394,6 +472,11 @@ namespace TASKILLER
             FormCrearTarea f = new FormCrearTarea(d, p, u, null);
             f.Show();
             this.Hide();
+        }
+
+        private void FormListaTareas_Load(object sender, EventArgs e)
+        {
+            ConfigurarDragDrop();
         }
     }
 }
