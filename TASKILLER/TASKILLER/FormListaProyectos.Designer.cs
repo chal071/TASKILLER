@@ -34,7 +34,6 @@ namespace TASKILLER
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListaProyectos));
             this.labelListaProyectos = new System.Windows.Forms.Label();
             this.flowLayoutPanelListaProyectos = new System.Windows.Forms.FlowLayoutPanel();
-            this.buttonFiltro = new System.Windows.Forms.Button();
             this.comboBoxOrdenar = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanelBotonesOrdFil = new System.Windows.Forms.FlowLayoutPanel();
             this.toolStripInicio = new System.Windows.Forms.ToolStrip();
@@ -73,24 +72,12 @@ namespace TASKILLER
             this.flowLayoutPanelListaProyectos.Size = new System.Drawing.Size(1187, 579);
             this.flowLayoutPanelListaProyectos.TabIndex = 1;
             // 
-            // buttonFiltro
-            // 
-            this.buttonFiltro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonFiltro.BackgroundImage")));
-            this.buttonFiltro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonFiltro.Font = new System.Drawing.Font("Sans Serif Collection", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonFiltro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(17)))), ((int)(((byte)(92)))));
-            this.buttonFiltro.Location = new System.Drawing.Point(1145, 3);
-            this.buttonFiltro.Name = "buttonFiltro";
-            this.buttonFiltro.Size = new System.Drawing.Size(39, 27);
-            this.buttonFiltro.TabIndex = 2;
-            this.buttonFiltro.UseVisualStyleBackColor = true;
-            // 
             // comboBoxOrdenar
             // 
             this.comboBoxOrdenar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.comboBoxOrdenar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxOrdenar.FormattingEnabled = true;
-            this.comboBoxOrdenar.Location = new System.Drawing.Point(876, 3);
+            this.comboBoxOrdenar.Location = new System.Drawing.Point(921, 3);
             this.comboBoxOrdenar.Name = "comboBoxOrdenar";
             this.comboBoxOrdenar.Size = new System.Drawing.Size(263, 39);
             this.comboBoxOrdenar.TabIndex = 3;
@@ -98,7 +85,6 @@ namespace TASKILLER
             // 
             // flowLayoutPanelBotonesOrdFil
             // 
-            this.flowLayoutPanelBotonesOrdFil.Controls.Add(this.buttonFiltro);
             this.flowLayoutPanelBotonesOrdFil.Controls.Add(this.comboBoxOrdenar);
             this.flowLayoutPanelBotonesOrdFil.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanelBotonesOrdFil.Location = new System.Drawing.Point(0, 42);
@@ -259,7 +245,6 @@ namespace TASKILLER
 
         private System.Windows.Forms.Label labelListaProyectos;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelListaProyectos;
-        private System.Windows.Forms.Button buttonFiltro;
         private System.Windows.Forms.ComboBox comboBoxOrdenar;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelBotonesOrdFil;
         private ToolStrip toolStripInicio;
