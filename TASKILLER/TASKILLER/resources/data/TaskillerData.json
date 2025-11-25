@@ -5,7 +5,7 @@
         "Titulo": "Desarrollo App Móvil",
         "Descripcion": "Crear la aplicación móvil multiplataforma para la gestión de tareas de la empresa.",
         "FechaInicio": "2025-03-01T00:00:00",
-        "FechaFinal": "2025-06-01T00:00:00",
+        "FechaFinal": "2025-11-25T00:00:00",
         "Estado": "Por_Comenzar",
         "IdCreador": "c5e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
         "listaUsuarios": [
@@ -18,7 +18,7 @@
         "Titulo": "Plataforma Educativa",
         "Descripcion": "Portal para cursos en línea y gestión de estudiantes.",
         "FechaInicio": "2025-01-15T00:00:00",
-        "FechaFinal": "2025-05-30T00:00:00",
+        "FechaFinal": "2025-11-30T00:00:00",
         "Estado": "En_Progreso",
         "IdCreador": "c1a1e2f3-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
         "listaUsuarios": [
@@ -31,7 +31,7 @@
         "Titulo": "Sistema de Inventario",
         "Descripcion": "Gestión interna de productos y stock.",
         "FechaInicio": "2025-03-01T00:00:00",
-        "FechaFinal": "2025-06-01T00:00:00",
+        "FechaFinal": "2025-12-15T00:00:00",
         "Estado": "Entregado",
         "IdCreador": "c1a1e2f3-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
         "listaUsuarios": [
