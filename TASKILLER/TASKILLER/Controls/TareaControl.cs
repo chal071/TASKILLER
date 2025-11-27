@@ -21,7 +21,9 @@ namespace TASKILLER
             InitializeComponent();
             this.MouseDown += TareaControl_MouseDown;
             foreach (Control c in this.Controls)
+            {
                 c.MouseDown += TareaControl_MouseDown;
+            }
 
             this.Dock = DockStyle.Top;
             labelNombreTarea.Font = new Font("Montserrat", 10, FontStyle.Regular);

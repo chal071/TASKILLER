@@ -298,7 +298,6 @@ namespace TASKILLER
             var panelDestino = (FlowLayoutPanel)sender;
             var ctrl = (TareaControl)e.Data.GetData(typeof(TareaControl));
 
-            if (ctrl == null) return;
 
             if (ctrl.Parent is FlowLayoutPanel oldPanel)
                 oldPanel.Controls.Remove(ctrl);
@@ -318,7 +317,7 @@ namespace TASKILLER
             else if (panelDestino == flowLayoutPanelBloqueado)
                 nuevoEstado = Estado.Bloqueado;
             else
-                return;
+                nuevoEstado = Estado.Por_Comenzar;
 
             var tarea = ctrl.Tarea;
             if (tarea != null)
@@ -358,12 +357,10 @@ namespace TASKILLER
 
         private void dataGridViewTareas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0) return;
 
             if (dataGridViewTareas.Columns[e.ColumnIndex].Name == "Editar")
             {
                 var idObj = dataGridViewTareas.Rows[e.RowIndex].Cells["Id"].Value;
-                if (idObj == null) return;
 
                 tareaSeleccionadaId = (Guid)idObj;
 
@@ -375,7 +372,6 @@ namespace TASKILLER
         private void MenuModificar_Click(object sender, EventArgs e)
         {
             var tarea = d.listaTareas.FirstOrDefault(t => t.Id == tareaSeleccionadaId);
-            if (tarea == null) return;
 
             FormEditarTarea f = new FormEditarTarea(tarea, d, p ,u);
             f.Show();
@@ -387,7 +383,6 @@ namespace TASKILLER
         private void MenuEliminar_Click(object sender, EventArgs e)
         {
             var tarea = d.listaTareas.FirstOrDefault(t => t.Id == tareaSeleccionadaId);
-            if (tarea == null) return;
 
             var r = MessageBox.Show("¿Seguro que quieres eliminar esta tarea?",
                                     "Confirmar",
@@ -409,7 +404,6 @@ namespace TASKILLER
         private void MenuCrearSubtarea_Click(object sender, EventArgs e)
         {
             var tareaPadre = d.listaTareas.FirstOrDefault(t => t.Id == tareaSeleccionadaId);
-            if (tareaPadre == null) return;
 
             FormCrearTarea f = new FormCrearTarea(d, p, u, tareaPadre);
             f.Show();
