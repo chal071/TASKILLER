@@ -31,8 +31,8 @@ namespace TASKILLER
         {
             JObject jDatos = new JObject
             {
-                ["Proyectos"] = JArray.FromObject(d.listaProyectos), ["Tareas"] = JArray.FromObject(d.listaTareas),
-                ["Usuarios"] = JArray.FromObject(d.listaUsuarios), ["Roles"] = JArray.FromObject(d.listaRoles)
+                ["listaProyectos"] = JArray.FromObject(d.listaProyectos), ["listaTareas"] = JArray.FromObject(d.listaTareas),
+                ["listaUsuarios"] = JArray.FromObject(d.listaUsuarios), ["listaRoles"] = JArray.FromObject(d.listaRoles)
             };
 
             File.WriteAllText(path, jDatos.ToString(Formatting.Indented));
