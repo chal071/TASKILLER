@@ -19,6 +19,8 @@ namespace TASKILLER
         private System.Windows.Forms.Label labelFechas;
         private Button buttonEditar;
         private FlowLayoutPanel flowLayoutPanelNumeroTareas;
+        private System.Windows.Forms.Label labelCantidadTareas;
+        private System.Windows.Forms.Label labelNumeroTareas;
         private System.Windows.Forms.Label labelNombre;
 
         public ProyectoControlInicio(Datos datos, Proyecto proyecto, Usuario usuario)
@@ -61,6 +63,9 @@ namespace TASKILLER
             this.labelFechas = new System.Windows.Forms.Label();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.flowLayoutPanelNumeroTareas = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelCantidadTareas = new System.Windows.Forms.Label();
+            this.labelNumeroTareas = new System.Windows.Forms.Label();
+            this.flowLayoutPanelNumeroTareas.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelNombre
@@ -75,7 +80,7 @@ namespace TASKILLER
             // labelFechas
             // 
             this.labelFechas.AutoSize = true;
-            this.labelFechas.Location = new System.Drawing.Point(36, 108);
+            this.labelFechas.Location = new System.Drawing.Point(14, 121);
             this.labelFechas.Name = "labelFechas";
             this.labelFechas.Size = new System.Drawing.Size(77, 16);
             this.labelFechas.TabIndex = 4;
@@ -84,7 +89,7 @@ namespace TASKILLER
             // buttonEditar
             // 
             this.buttonEditar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonEditar.BackgroundImage")));
-            this.buttonEditar.Location = new System.Drawing.Point(182, 15);
+            this.buttonEditar.Location = new System.Drawing.Point(185, 102);
             this.buttonEditar.Name = "buttonEditar";
             this.buttonEditar.Size = new System.Drawing.Size(39, 35);
             this.buttonEditar.TabIndex = 5;
@@ -94,10 +99,30 @@ namespace TASKILLER
             // flowLayoutPanelNumeroTareas
             // 
             this.flowLayoutPanelNumeroTareas.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.flowLayoutPanelNumeroTareas.Location = new System.Drawing.Point(65, 49);
+            this.flowLayoutPanelNumeroTareas.Controls.Add(this.labelCantidadTareas);
+            this.flowLayoutPanelNumeroTareas.Controls.Add(this.labelNumeroTareas);
+            this.flowLayoutPanelNumeroTareas.Location = new System.Drawing.Point(17, 47);
             this.flowLayoutPanelNumeroTareas.Name = "flowLayoutPanelNumeroTareas";
-            this.flowLayoutPanelNumeroTareas.Size = new System.Drawing.Size(89, 41);
+            this.flowLayoutPanelNumeroTareas.Size = new System.Drawing.Size(167, 54);
             this.flowLayoutPanelNumeroTareas.TabIndex = 6;
+            // 
+            // labelCantidadTareas
+            // 
+            this.labelCantidadTareas.AutoSize = true;
+            this.labelCantidadTareas.Location = new System.Drawing.Point(3, 0);
+            this.labelCantidadTareas.Name = "labelCantidadTareas";
+            this.labelCantidadTareas.Size = new System.Drawing.Size(121, 16);
+            this.labelCantidadTareas.TabIndex = 0;
+            this.labelCantidadTareas.Text = "Cantidad de tareas";
+            // 
+            // labelNumeroTareas
+            // 
+            this.labelNumeroTareas.AutoSize = true;
+            this.labelNumeroTareas.Location = new System.Drawing.Point(3, 16);
+            this.labelNumeroTareas.Name = "labelNumeroTareas";
+            this.labelNumeroTareas.Size = new System.Drawing.Size(129, 16);
+            this.labelNumeroTareas.TabIndex = 1;
+            this.labelNumeroTareas.Text = "labelNumeroTareas";
             // 
             // ProyectoControlInicio
             // 
@@ -108,6 +133,8 @@ namespace TASKILLER
             this.Controls.Add(this.labelNombre);
             this.Name = "ProyectoControlInicio";
             this.Size = new System.Drawing.Size(237, 150);
+            this.flowLayoutPanelNumeroTareas.ResumeLayout(false);
+            this.flowLayoutPanelNumeroTareas.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
