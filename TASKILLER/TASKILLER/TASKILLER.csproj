@@ -246,6 +246,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="icon_taskiller.ico" />
+    <None Include="resources\img\usuario.png" />
     <None Include="resources\agregar.png" />
     <Content Include="resources\icons\icon_taskiller.ico" />
     <None Include="resources\prioridadMedia.png" />

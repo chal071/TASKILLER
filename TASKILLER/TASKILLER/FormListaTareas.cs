@@ -51,6 +51,8 @@ namespace TASKILLER
             labelRevisado.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
             labelBloqueado.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
             buttonAnadirTarea.Font = new Font(Fuentes.MontserratBold.FontFamily, 30);
+            toolStripLabelNombre.Text = "Usuario: " + u.Nombre + " " + u.Apellido;
+
         }
 
         public void ConfigurarDataGridView()

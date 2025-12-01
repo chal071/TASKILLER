@@ -21,6 +21,8 @@ namespace TASKILLER
             labelListaRoles.Font = new Font("Montserrat", 30, FontStyle.Bold);
             this.d = datos;
             this.u = usuario;
+            toolStripLabelNombre.Text = "Usuario: " + u.Nombre + " " + u.Apellido;
+
             foreach (Rol r in d.listaRoles) 
             {
                 TarjetaRol rol = new TarjetaRol();

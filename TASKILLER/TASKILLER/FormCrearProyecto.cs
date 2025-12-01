@@ -38,6 +38,7 @@ namespace TASKILLER
             buttonCrearProyecto.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
 
             comboBoxEstado.DataSource = Enum.GetValues(typeof(Estado));
+            toolStripLabelNombre.Text = "Usuario: " + u.Nombre + " " + u.Apellido;
         }
         private void Form1_Resize(object sender, EventArgs e)
         {
@@ -79,6 +80,10 @@ namespace TASKILLER
             FormCreacionUsuario f = new FormCreacionUsuario(d, u);
             f.Show();
             this.Close();
+        }       
+        private void guardarDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionDatos.GuardarDatos(d);
         }
         private void salirToolStripMenuItem_Click(object sender, System.EventArgs e)
         {

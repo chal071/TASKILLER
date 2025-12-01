@@ -47,6 +47,7 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnUsuario = new System.Windows.Forms.ToolStripButton();
             this.btnTaskiller = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabelNombre = new System.Windows.Forms.ToolStripLabel();
             this.panelInicio.SuspendLayout();
             this.toolStripInicio.SuspendLayout();
             this.SuspendLayout();
@@ -115,7 +116,8 @@
             this.toolStripInicio.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1,
             this.btnUsuario,
-            this.btnTaskiller});
+            this.btnTaskiller,
+            this.toolStripLabelNombre});
             this.toolStripInicio.Location = new System.Drawing.Point(0, 0);
             this.toolStripInicio.Name = "toolStripInicio";
             this.toolStripInicio.Size = new System.Drawing.Size(941, 27);
@@ -225,6 +227,14 @@
             this.btnTaskiller.Size = new System.Drawing.Size(29, 24);
             this.btnTaskiller.Text = "TaskillerLogo";
             // 
+            // toolStripLabelNombre
+            // 
+            this.toolStripLabelNombre.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabelNombre.Margin = new System.Windows.Forms.Padding(0, 1, 20, 2);
+            this.toolStripLabelNombre.Name = "toolStripLabelNombre";
+            this.toolStripLabelNombre.Size = new System.Drawing.Size(97, 24);
+            this.toolStripLabelNombre.Text = "Nombre User";
+            // 
             // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -266,6 +276,7 @@
         private System.Windows.Forms.Label labelHaceUnaSemana;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelHoy;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelSemana;
+        private System.Windows.Forms.ToolStripLabel toolStripLabelNombre;
     }
 }
 

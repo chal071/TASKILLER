@@ -40,6 +40,8 @@ namespace TASKILLER
             flowLayoutPanelBotonesOrdFil.Padding = new Padding(0, 0, 30, 10);
 
             mostrarProyectos();
+            toolStripLabelNombre.Text = "Usuario: " + u.Nombre + " " + u.Apellido;
+
         }
         private void mostrarProyectos()
         {
@@ -79,10 +81,7 @@ namespace TASKILLER
             else
             {
                 MessageBox.Show("No tienes permisos suficientes", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
             }
-
-
         }
         private void inicioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
