@@ -22,7 +22,7 @@ namespace TASKILLER
         private System.Windows.Forms.Label labelCantidadTareas;
         private System.Windows.Forms.Label labelPorcentajeCompletado;
         private System.Windows.Forms.Label labelPorcentaje;
-        private GroupBox groupBox1;
+        private GroupBox groupBoxTitulo;
         private System.Windows.Forms.Label labelNombre;
 
         public ProyectoControlInicio(Datos datos, Proyecto proyecto, Usuario usuario)
@@ -40,7 +40,7 @@ namespace TASKILLER
             labelNumeroTareas.Text = ContarTareas(d.listaTareas, p).ToString();
             labelPorcentaje.Text = ((ContarTareasCompletadas(d.listaTareas, p) * 100) / ContarTareas(d.listaTareas, p)).ToString() + " %";
 
-            labelNombre.Font = new Font("Montserrat", 12, FontStyle.Bold);
+            labelNombre.Font = new Font("Montserrat", 9, FontStyle.Bold);
             labelFechas.Font = new Font("Montserrat", 9, FontStyle.Regular);
             labelCantidadTareas.Font = new Font("Montserrat", 9, FontStyle.Regular);
             labelNumeroTareas.Font = new Font("Montserrat", 9, FontStyle.Bold);
@@ -50,6 +50,23 @@ namespace TASKILLER
             labelNombre.ForeColor = Color.White;
 
             buttonEditar.BackgroundImageLayout = ImageLayout.Zoom;
+        }
+
+        private void groupBoxTitulo_Paint(object sender, PaintEventArgs e)
+        {
+            GroupBox box = (GroupBox)sender;
+
+            // Fondo
+            e.Graphics.Clear(ColorTranslator.FromHtml("#e1115c"));
+
+            // Texto
+            TextRenderer.DrawText(e.Graphics, box.Text, box.Font, new Point(10, 15), Color.White);
+
+            // Borde
+            Pen border = new Pen(ColorTranslator.FromHtml("#e1115c"));
+            int textWidth = TextRenderer.MeasureText(box.Text, box.Font).Width;
+
+            e.Graphics.DrawRectangle(border, 1, 10, box.Width - 2, box.Height - 12);
         }
 
         public int ContarTareas(List<Tarea> tareas, Proyecto p)
@@ -93,14 +110,15 @@ namespace TASKILLER
             this.labelCantidadTareas = new System.Windows.Forms.Label();
             this.labelPorcentajeCompletado = new System.Windows.Forms.Label();
             this.labelPorcentaje = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBoxTitulo = new System.Windows.Forms.GroupBox();
+            this.groupBoxTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelNombre
             // 
             this.labelNombre.AutoSize = true;
-            this.labelNombre.BackColor = System.Drawing.Color.Crimson;
-            this.labelNombre.Location = new System.Drawing.Point(14, 15);
+            this.labelNombre.BackColor = System.Drawing.Color.Transparent;
+            this.labelNombre.Location = new System.Drawing.Point(4, 16);
             this.labelNombre.Name = "labelNombre";
             this.labelNombre.Size = new System.Drawing.Size(113, 16);
             this.labelNombre.TabIndex = 1;
@@ -161,14 +179,16 @@ namespace TASKILLER
             this.labelPorcentaje.TabIndex = 7;
             this.labelPorcentaje.Text = "labelPorcentaje";
             // 
-            // groupBox1
+            // groupBoxTitulo
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Crimson;
-            this.groupBox1.Location = new System.Drawing.Point(-1, -1);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(282, 51);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
+            this.groupBoxTitulo.BackColor = System.Drawing.Color.Crimson;
+            this.groupBoxTitulo.Controls.Add(this.labelNombre);
+            this.groupBoxTitulo.Location = new System.Drawing.Point(-1, -1);
+            this.groupBoxTitulo.Name = "groupBoxTitulo";
+            this.groupBoxTitulo.Size = new System.Drawing.Size(282, 51);
+            this.groupBoxTitulo.TabIndex = 9;
+            this.groupBoxTitulo.TabStop = false;
+            this.groupBoxTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBoxTitulo_Paint);
             // 
             // ProyectoControlInicio
             // 
@@ -180,10 +200,12 @@ namespace TASKILLER
             this.Controls.Add(this.labelNumeroTareas);
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.labelFechas);
-            this.Controls.Add(this.labelNombre);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBoxTitulo);
             this.Name = "ProyectoControlInicio";
             this.Size = new System.Drawing.Size(280, 205);
+            this.Click += new System.EventHandler(this.ProyectoControlInicio_Click);
+            this.groupBoxTitulo.ResumeLayout(false);
+            this.groupBoxTitulo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,9 +213,18 @@ namespace TASKILLER
 
         private void buttonEditar_Click(object sender, EventArgs e)
         {
+            Form padre = this.FindForm();
+            padre.Close();
             FormEditarEliminarProyecto f = new FormEditarEliminarProyecto(d, p, u);
             f.Show();
-            this.Hide();
+        }
+
+        private void ProyectoControlInicio_Click(object sender, EventArgs e)
+        {
+            Form padre = this.FindForm();
+            padre.Close();
+            FormListaTareas f = new FormListaTareas(d, p, u);
+            f.Show();
         }
     }
 }
