@@ -23,7 +23,7 @@ namespace TASKILLER
             string json = File.ReadAllText(path);
             JObject jDatos = JObject.Parse(json);
             Datos datos = jDatos.ToObject<Datos>();
-
+                
             return datos;
         }
 

@@ -62,7 +62,7 @@
             // labelFechas
             // 
             this.labelFechas.AutoSize = true;
-            this.labelFechas.Location = new System.Drawing.Point(92, 290);
+            this.labelFechas.Location = new System.Drawing.Point(74, 290);
             this.labelFechas.Name = "labelFechas";
             this.labelFechas.Size = new System.Drawing.Size(159, 16);
             this.labelFechas.TabIndex = 3;
@@ -75,7 +75,7 @@
             this.editarToolStripMenuItem,
             this.eliminarToolStripMenuItem});
             this.contextMenuStripEditar.Name = "contextMenuStripEditar";
-            this.contextMenuStripEditar.Size = new System.Drawing.Size(215, 84);
+            this.contextMenuStripEditar.Size = new System.Drawing.Size(137, 56);
             // 
             // editarToolStripMenuItem
             // 
@@ -89,7 +89,7 @@
             // 
             this.eliminarToolStripMenuItem.Image = global::TASKILLER.Properties.Resources.borrar;
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
