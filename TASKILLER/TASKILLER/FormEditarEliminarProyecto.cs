@@ -43,9 +43,8 @@ namespace TASKILLER
             comboBoxEstado.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
             buttonEditarProyecto.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
             buttonEliminarProyecto.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
-
+            toolStripLabelNombre.Text = "Usuario: " + u.Nombre + " " + u.Apellido;
             comboBoxEstado.DataSource = Enum.GetValues(typeof(Estado));
-
             panelInfo.Anchor = AnchorStyles.None;
         }
         private void cargarProyecto()
@@ -54,8 +53,19 @@ namespace TASKILLER
             richTextBoxDescripcion.Text = p.Descripcion;
             dateTimePickerFechaInicio.Text = p.FechaInicio.ToString();
             dateTimePickerFechaFinal.Text = p.FechaFinal.ToString();
-            comboBoxEstado.Text = p.Estado.ToString();
+            switch(p.Estado)
+            {
+                case Estado.Por_Comenzar:
+                    comboBoxEstado.SelectedItem = "Por Comenzar";
+                    break;
+                case Estado.En_Progreso:
+                    comboBoxEstado.SelectedItem = "En Progreso";
+                    break;
+                default:
+                    comboBoxEstado.Text = p.Estado.ToString();
 
+                    break;
+            }
         }
         private void Form1_Resize(object sender, EventArgs e)
         {

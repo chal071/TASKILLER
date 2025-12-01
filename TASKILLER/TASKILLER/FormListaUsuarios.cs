@@ -32,6 +32,8 @@ namespace TASKILLER
         {
             dataGridViewListaUsuarios.DataSource = null;
             dataGridViewListaUsuarios.Columns.Clear();
+            toolStripLabelNombre.Text = "Usuario: " + u.Nombre + " " + u.Apellido;
+
 
             var lista = d.listaUsuarios.Select(u => new
             {
@@ -106,6 +108,7 @@ namespace TASKILLER
         {
             labelListaDeUsuarios.Font = new Font(Fuentes.MontserratBold.FontFamily, 30);
             dataGridViewListaUsuarios.Font = new Font(Fuentes.MontserratRegular.FontFamily, 20);
+            toolStripLabelNombre.Font = new Font(Fuentes.MontserratRegular.FontFamily, 15);
         }
 
         private void generarMenuUsuario()

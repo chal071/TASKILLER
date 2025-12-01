@@ -53,42 +53,42 @@
             // comboBoxRolUsuario
             // 
             this.comboBoxRolUsuario.FormattingEnabled = true;
-            this.comboBoxRolUsuario.Location = new System.Drawing.Point(953, 585);
+            this.comboBoxRolUsuario.Location = new System.Drawing.Point(747, 503);
             this.comboBoxRolUsuario.Name = "comboBoxRolUsuario";
             this.comboBoxRolUsuario.Size = new System.Drawing.Size(532, 21);
             this.comboBoxRolUsuario.TabIndex = 1;
             // 
             // textBoxNombreUsuario
             // 
-            this.textBoxNombreUsuario.Location = new System.Drawing.Point(953, 140);
+            this.textBoxNombreUsuario.Location = new System.Drawing.Point(747, 58);
             this.textBoxNombreUsuario.Name = "textBoxNombreUsuario";
             this.textBoxNombreUsuario.Size = new System.Drawing.Size(532, 20);
             this.textBoxNombreUsuario.TabIndex = 2;
             // 
             // textBoxApellidoUsuario
             // 
-            this.textBoxApellidoUsuario.Location = new System.Drawing.Point(953, 225);
+            this.textBoxApellidoUsuario.Location = new System.Drawing.Point(747, 143);
             this.textBoxApellidoUsuario.Name = "textBoxApellidoUsuario";
             this.textBoxApellidoUsuario.Size = new System.Drawing.Size(532, 20);
             this.textBoxApellidoUsuario.TabIndex = 3;
             // 
             // textBoxCorreoUsuario
             // 
-            this.textBoxCorreoUsuario.Location = new System.Drawing.Point(953, 311);
+            this.textBoxCorreoUsuario.Location = new System.Drawing.Point(747, 229);
             this.textBoxCorreoUsuario.Name = "textBoxCorreoUsuario";
             this.textBoxCorreoUsuario.Size = new System.Drawing.Size(532, 20);
             this.textBoxCorreoUsuario.TabIndex = 4;
             // 
             // textBoxContrasenaUsuario
             // 
-            this.textBoxContrasenaUsuario.Location = new System.Drawing.Point(953, 401);
+            this.textBoxContrasenaUsuario.Location = new System.Drawing.Point(747, 319);
             this.textBoxContrasenaUsuario.Name = "textBoxContrasenaUsuario";
             this.textBoxContrasenaUsuario.Size = new System.Drawing.Size(532, 20);
             this.textBoxContrasenaUsuario.TabIndex = 5;
             // 
             // buttonCrearUsuario
             // 
-            this.buttonCrearUsuario.Location = new System.Drawing.Point(1352, 748);
+            this.buttonCrearUsuario.Location = new System.Drawing.Point(1019, 620);
             this.buttonCrearUsuario.Name = "buttonCrearUsuario";
             this.buttonCrearUsuario.Size = new System.Drawing.Size(260, 63);
             this.buttonCrearUsuario.TabIndex = 6;
@@ -99,7 +99,7 @@
             // 
             this.labelCreaUsuario.AutoSize = true;
             this.labelCreaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCreaUsuario.Location = new System.Drawing.Point(145, 419);
+            this.labelCreaUsuario.Location = new System.Drawing.Point(25, 337);
             this.labelCreaUsuario.Name = "labelCreaUsuario";
             this.labelCreaUsuario.Size = new System.Drawing.Size(246, 18);
             this.labelCreaUsuario.TabIndex = 7;
@@ -109,7 +109,7 @@
             // 
             this.pictureBoxLOGO.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLOGO.BackgroundImage")));
             this.pictureBoxLOGO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxLOGO.Location = new System.Drawing.Point(145, 156);
+            this.pictureBoxLOGO.Location = new System.Drawing.Point(25, 74);
             this.pictureBoxLOGO.Name = "pictureBoxLOGO";
             this.pictureBoxLOGO.Size = new System.Drawing.Size(246, 230);
             this.pictureBoxLOGO.TabIndex = 0;
@@ -117,7 +117,7 @@
             // 
             // textBoxRepContrasenaUsuario
             // 
-            this.textBoxRepContrasenaUsuario.Location = new System.Drawing.Point(953, 487);
+            this.textBoxRepContrasenaUsuario.Location = new System.Drawing.Point(747, 405);
             this.textBoxRepContrasenaUsuario.Name = "textBoxRepContrasenaUsuario";
             this.textBoxRepContrasenaUsuario.Size = new System.Drawing.Size(532, 20);
             this.textBoxRepContrasenaUsuario.TabIndex = 8;
@@ -125,7 +125,7 @@
             // labelNombreUsuario
             // 
             this.labelNombreUsuario.AutoSize = true;
-            this.labelNombreUsuario.Location = new System.Drawing.Point(950, 105);
+            this.labelNombreUsuario.Location = new System.Drawing.Point(744, 23);
             this.labelNombreUsuario.Name = "labelNombreUsuario";
             this.labelNombreUsuario.Size = new System.Drawing.Size(48, 13);
             this.labelNombreUsuario.TabIndex = 9;
@@ -134,7 +134,7 @@
             // labelApellidoUsuario
             // 
             this.labelApellidoUsuario.AutoSize = true;
-            this.labelApellidoUsuario.Location = new System.Drawing.Point(950, 193);
+            this.labelApellidoUsuario.Location = new System.Drawing.Point(744, 111);
             this.labelApellidoUsuario.Name = "labelApellidoUsuario";
             this.labelApellidoUsuario.Size = new System.Drawing.Size(44, 13);
             this.labelApellidoUsuario.TabIndex = 10;
@@ -143,7 +143,7 @@
             // labelCorreoUsuario
             // 
             this.labelCorreoUsuario.AutoSize = true;
-            this.labelCorreoUsuario.Location = new System.Drawing.Point(950, 281);
+            this.labelCorreoUsuario.Location = new System.Drawing.Point(744, 199);
             this.labelCorreoUsuario.Name = "labelCorreoUsuario";
             this.labelCorreoUsuario.Size = new System.Drawing.Size(98, 13);
             this.labelCorreoUsuario.TabIndex = 11;
@@ -152,7 +152,7 @@
             // labelContrasenaUsuario
             // 
             this.labelContrasenaUsuario.AutoSize = true;
-            this.labelContrasenaUsuario.Location = new System.Drawing.Point(950, 365);
+            this.labelContrasenaUsuario.Location = new System.Drawing.Point(744, 283);
             this.labelContrasenaUsuario.Name = "labelContrasenaUsuario";
             this.labelContrasenaUsuario.Size = new System.Drawing.Size(65, 13);
             this.labelContrasenaUsuario.TabIndex = 12;
@@ -161,7 +161,7 @@
             // labelRepContrasenaUsuario
             // 
             this.labelRepContrasenaUsuario.AutoSize = true;
-            this.labelRepContrasenaUsuario.Location = new System.Drawing.Point(950, 452);
+            this.labelRepContrasenaUsuario.Location = new System.Drawing.Point(744, 370);
             this.labelRepContrasenaUsuario.Name = "labelRepContrasenaUsuario";
             this.labelRepContrasenaUsuario.Size = new System.Drawing.Size(101, 13);
             this.labelRepContrasenaUsuario.TabIndex = 13;
@@ -170,7 +170,7 @@
             // labelRolUsuario
             // 
             this.labelRolUsuario.AutoSize = true;
-            this.labelRolUsuario.Location = new System.Drawing.Point(950, 549);
+            this.labelRolUsuario.Location = new System.Drawing.Point(744, 467);
             this.labelRolUsuario.Name = "labelRolUsuario";
             this.labelRolUsuario.Size = new System.Drawing.Size(113, 13);
             this.labelRolUsuario.TabIndex = 14;
@@ -179,7 +179,7 @@
             // labelAdvertenciaCreacionUsuarios
             // 
             this.labelAdvertenciaCreacionUsuarios.AutoSize = true;
-            this.labelAdvertenciaCreacionUsuarios.Location = new System.Drawing.Point(460, 773);
+            this.labelAdvertenciaCreacionUsuarios.Location = new System.Drawing.Point(25, 670);
             this.labelAdvertenciaCreacionUsuarios.Name = "labelAdvertenciaCreacionUsuarios";
             this.labelAdvertenciaCreacionUsuarios.Size = new System.Drawing.Size(456, 13);
             this.labelAdvertenciaCreacionUsuarios.TabIndex = 15;
@@ -188,7 +188,7 @@
             // 
             // panelCreacionUser
             // 
-            this.panelCreacionUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panelCreacionUser.BackColor = System.Drawing.Color.Transparent;
             this.panelCreacionUser.Controls.Add(this.textBoxNombreUsuario);
             this.panelCreacionUser.Controls.Add(this.labelAdvertenciaCreacionUsuarios);
             this.panelCreacionUser.Controls.Add(this.pictureBoxLOGO);
@@ -208,7 +208,7 @@
             this.panelCreacionUser.Location = new System.Drawing.Point(13, 13);
             this.panelCreacionUser.Margin = new System.Windows.Forms.Padding(4);
             this.panelCreacionUser.Name = "panelCreacionUser";
-            this.panelCreacionUser.Size = new System.Drawing.Size(2399, 1004);
+            this.panelCreacionUser.Size = new System.Drawing.Size(1317, 716);
             this.panelCreacionUser.TabIndex = 16;
             // 
             // FormCreacionUsuario
@@ -216,7 +216,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.ClientSize = new System.Drawing.Size(1443, 838);
+            this.ClientSize = new System.Drawing.Size(1474, 748);
             this.Controls.Add(this.panelCreacionUser);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCreacionUsuario";

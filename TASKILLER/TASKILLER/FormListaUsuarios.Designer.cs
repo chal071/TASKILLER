@@ -44,6 +44,7 @@
             this.btnTaskiller = new System.Windows.Forms.ToolStripButton();
             this.labelListaDeUsuarios = new System.Windows.Forms.Label();
             this.dataGridViewListaUsuarios = new System.Windows.Forms.DataGridView();
+            this.toolStripLabelNombre = new System.Windows.Forms.ToolStripLabel();
             this.tableLayoutPanel.SuspendLayout();
             this.toolStripInicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaUsuarios)).BeginInit();
@@ -74,7 +75,8 @@
             this.toolStripInicio.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1,
             this.btnUsuario,
-            this.btnTaskiller});
+            this.btnTaskiller,
+            this.toolStripLabelNombre});
             this.toolStripInicio.Location = new System.Drawing.Point(0, 0);
             this.toolStripInicio.Name = "toolStripInicio";
             this.toolStripInicio.Size = new System.Drawing.Size(1090, 27);
@@ -211,6 +213,14 @@
             this.dataGridViewListaUsuarios.Size = new System.Drawing.Size(1086, 474);
             this.dataGridViewListaUsuarios.TabIndex = 1;
             // 
+            // toolStripLabelNombre
+            // 
+            this.toolStripLabelNombre.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabelNombre.Margin = new System.Windows.Forms.Padding(0, 1, 20, 2);
+            this.toolStripLabelNombre.Name = "toolStripLabelNombre";
+            this.toolStripLabelNombre.Size = new System.Drawing.Size(97, 24);
+            this.toolStripLabelNombre.Text = "Nombre User";
+            // 
             // FormListaUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -248,5 +258,6 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton btnUsuario;
         private System.Windows.Forms.ToolStripButton btnTaskiller;
+        private System.Windows.Forms.ToolStripLabel toolStripLabelNombre;
     }
 }
