@@ -14,32 +14,40 @@ namespace TASKILLER
     {
         private Datos d;
         private Usuario u;
+        private ContextMenuStrip menuUsuario;
+        private Guid usuarioSeleccionadaId;
         public FormListaUsuarios(Datos datos, Usuario usuario)
         {
             this.d = datos;
             this.u = usuario;
             InitializeComponent();
+            dataGridViewListaUsuarios.CellContentClick += dataGridViewUsuario_CellContentClick;
             ConfigurarDataGridView();
             CargarUsuarios();
+            generarMenuUsuario();
             SetFontsSize();
         }
 
         public void CargarUsuarios()
         {
+            dataGridViewListaUsuarios.DataSource = null;
+            dataGridViewListaUsuarios.Columns.Clear();
 
-            var lista = d.listaUsuarios.Select(u => new {
+            var lista = d.listaUsuarios.Select(u => new
+            {
+                u.Id,
                 u.Nombre,
                 u.Apellido,
                 u.Mail,
                 Rol = d.listaRoles.FirstOrDefault(r => r.Id == u.Rol)?.Nombre
             }).ToList();
 
-           
             dataGridViewListaUsuarios.DataSource = lista;
 
             AñadirColumnaBoton();
             JustificarColumnas();
         }
+
 
         public void ConfigurarDataGridView()
         {
@@ -63,18 +71,89 @@ namespace TASKILLER
         public void JustificarColumnas()
         {
             dataGridViewListaUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewListaUsuarios.Columns["Nombre"].FillWeight = 20;
-            dataGridViewListaUsuarios.Columns["Apellido"].FillWeight = 20;
-            dataGridViewListaUsuarios.Columns["Mail"].FillWeight = 30;
-            dataGridViewListaUsuarios.Columns["Rol"].FillWeight = 20;
-            dataGridViewListaUsuarios.Columns["Editar"].FillWeight = 10;
 
+            var colId = dataGridViewListaUsuarios.Columns["Id"];
+            if (colId != null)
+            {
+                colId.FillWeight = 1;
+                colId.Visible = false;
+            }
+
+            if (dataGridViewListaUsuarios.Columns["Nombre"] != null)
+            {
+                dataGridViewListaUsuarios.Columns["Nombre"].FillWeight = 19;
+            }
+            if (dataGridViewListaUsuarios.Columns["Apellido"] != null)
+            {
+                dataGridViewListaUsuarios.Columns["Apellido"].FillWeight = 20;
+            }
+            if (dataGridViewListaUsuarios.Columns["Mail"] != null)
+            {
+                dataGridViewListaUsuarios.Columns["Mail"].FillWeight = 30;
+            }
+            if (dataGridViewListaUsuarios.Columns["Rol"] != null)
+            {
+                dataGridViewListaUsuarios.Columns["Rol"].FillWeight = 20;
+            }
+            if (dataGridViewListaUsuarios.Columns["Editar"] != null)
+            {
+                dataGridViewListaUsuarios.Columns["Editar"].FillWeight = 10;
+            }
         }
+
 
         public void SetFontsSize()
         {
             labelListaDeUsuarios.Font = new Font(Fuentes.MontserratBold.FontFamily, 30);
             dataGridViewListaUsuarios.Font = new Font(Fuentes.MontserratRegular.FontFamily, 20);
+        }
+
+        private void generarMenuUsuario()
+        {
+            menuUsuario = new ContextMenuStrip();
+            menuUsuario.Items.Add("Modificar", Properties.Resources.editar, MenuModificar_Click);
+            menuUsuario.Items.Add("Eliminar", Properties.Resources.borrar, MenuEliminar_Click);
+        }
+
+        private void dataGridViewUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (dataGridViewListaUsuarios.Columns[e.ColumnIndex].Name == "Editar")
+            {
+                var idObj = dataGridViewListaUsuarios.Rows[e.RowIndex].Cells["Id"].Value;
+
+                usuarioSeleccionadaId = (Guid)idObj;
+
+                var pos = Cursor.Position;
+                menuUsuario.Show(pos);
+            }
+        }
+
+        private void MenuModificar_Click(object sender, EventArgs e)
+        {
+            var usuario = d.listaUsuarios.FirstOrDefault(u => u.Id == usuarioSeleccionadaId);
+
+            FormEdicionUsuario f = new FormEdicionUsuario(usuario, d, u);
+            f.Show();
+            this.Hide();
+
+
+        }
+
+        private void MenuEliminar_Click(object sender, EventArgs e)
+        {
+            var usuario = d.listaUsuarios.FirstOrDefault(u => u.Id == usuarioSeleccionadaId);
+
+            var r = MessageBox.Show("¿Seguro que quieres eliminar este usuario?",
+                                    "Confirmar",
+                                    MessageBoxButtons.YesNo,
+                                    MessageBoxIcon.Warning);
+
+            if (r == DialogResult.Yes)
+            {
+                d.listaUsuarios.Remove(usuario);
+                CargarUsuarios();
+            }
         }
 
         private void inicioToolStripMenuItem_Click(object sender, System.EventArgs e)
