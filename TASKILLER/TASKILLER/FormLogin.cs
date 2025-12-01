@@ -14,7 +14,6 @@ namespace TASKILLER
             this.d = datos;
 
         }
-
         private void cargarDatos()
         {
 

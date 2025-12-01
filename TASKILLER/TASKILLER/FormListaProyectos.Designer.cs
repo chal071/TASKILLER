@@ -30,12 +30,12 @@ namespace TASKILLER
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListaProyectos));
             this.labelListaProyectos = new System.Windows.Forms.Label();
             this.flowLayoutPanelListaProyectos = new System.Windows.Forms.FlowLayoutPanel();
             this.comboBoxOrdenar = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanelBotonesOrdFil = new System.Windows.Forms.FlowLayoutPanel();
+            this.comboBoxtipo = new System.Windows.Forms.ComboBox();
             this.toolStripInicio = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,7 +48,6 @@ namespace TASKILLER
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnUsuario = new System.Windows.Forms.ToolStripButton();
             this.btnTaskiller = new System.Windows.Forms.ToolStripButton();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripLabelNombre = new System.Windows.Forms.ToolStripLabel();
             this.flowLayoutPanelBotonesOrdFil.SuspendLayout();
             this.toolStripInicio.SuspendLayout();
@@ -78,15 +77,24 @@ namespace TASKILLER
             this.comboBoxOrdenar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.comboBoxOrdenar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxOrdenar.FormattingEnabled = true;
-            this.comboBoxOrdenar.Location = new System.Drawing.Point(921, 3);
+            this.comboBoxOrdenar.Items.AddRange(new object[] {
+            "Nombre (A-Z)",
+            "Nombre (Z-A)",
+            "Más antiguos",
+            "Más recientes",
+            "Número de tareas (ascendente)",
+            "Número de tareas (descendente)"});
+            this.comboBoxOrdenar.Location = new System.Drawing.Point(935, 3);
             this.comboBoxOrdenar.Name = "comboBoxOrdenar";
-            this.comboBoxOrdenar.Size = new System.Drawing.Size(263, 39);
+            this.comboBoxOrdenar.Size = new System.Drawing.Size(249, 39);
             this.comboBoxOrdenar.TabIndex = 3;
-            this.comboBoxOrdenar.Text = "Ordenar por ";
+            this.comboBoxOrdenar.Text = "Odernar por";
+            this.comboBoxOrdenar.SelectedIndexChanged += new System.EventHandler(this.comboBoxOrdenar_SelectedIndexChanged);
             // 
             // flowLayoutPanelBotonesOrdFil
             // 
             this.flowLayoutPanelBotonesOrdFil.Controls.Add(this.comboBoxOrdenar);
+            this.flowLayoutPanelBotonesOrdFil.Controls.Add(this.comboBoxtipo);
             this.flowLayoutPanelBotonesOrdFil.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanelBotonesOrdFil.Location = new System.Drawing.Point(0, 42);
             this.flowLayoutPanelBotonesOrdFil.Margin = new System.Windows.Forms.Padding(0, 0, 0, 100);
@@ -94,6 +102,21 @@ namespace TASKILLER
             this.flowLayoutPanelBotonesOrdFil.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.flowLayoutPanelBotonesOrdFil.Size = new System.Drawing.Size(1187, 74);
             this.flowLayoutPanelBotonesOrdFil.TabIndex = 4;
+            // 
+            // comboBoxtipo
+            // 
+            this.comboBoxtipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
+            this.comboBoxtipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxtipo.FormattingEnabled = true;
+            this.comboBoxtipo.Items.AddRange(new object[] {
+            "Asignados",
+            "Creados por mí"});
+            this.comboBoxtipo.Location = new System.Drawing.Point(749, 3);
+            this.comboBoxtipo.Name = "comboBoxtipo";
+            this.comboBoxtipo.Size = new System.Drawing.Size(180, 39);
+            this.comboBoxtipo.TabIndex = 4;
+            this.comboBoxtipo.Text = "Tipo de proyecto";
+            this.comboBoxtipo.SelectedIndexChanged += new System.EventHandler(this.comboBoxtipo_SelectedIndexChanged);
             // 
             // toolStripInicio
             // 
@@ -106,7 +129,7 @@ namespace TASKILLER
             this.toolStripLabelNombre});
             this.toolStripInicio.Location = new System.Drawing.Point(0, 0);
             this.toolStripInicio.Name = "toolStripInicio";
-            this.toolStripInicio.Size = new System.Drawing.Size(1187, 27);
+            this.toolStripInicio.Size = new System.Drawing.Size(1187, 31);
             this.toolStripInicio.TabIndex = 5;
             this.toolStripInicio.Text = "toolStrip1";
             // 
@@ -123,7 +146,7 @@ namespace TASKILLER
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(34, 24);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(34, 28);
             this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
             // 
             // inicioToolStripMenuItem
@@ -201,7 +224,7 @@ namespace TASKILLER
             this.btnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.Image")));
             this.btnUsuario.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnUsuario.Name = "btnUsuario";
-            this.btnUsuario.Size = new System.Drawing.Size(29, 24);
+            this.btnUsuario.Size = new System.Drawing.Size(29, 28);
             this.btnUsuario.Text = "Usuario";
             // 
             // btnTaskiller
@@ -210,21 +233,15 @@ namespace TASKILLER
             this.btnTaskiller.Image = ((System.Drawing.Image)(resources.GetObject("btnTaskiller.Image")));
             this.btnTaskiller.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnTaskiller.Name = "btnTaskiller";
-            this.btnTaskiller.Size = new System.Drawing.Size(29, 24);
+            this.btnTaskiller.Size = new System.Drawing.Size(29, 28);
             this.btnTaskiller.Text = "TaskillerLogo";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // toolStripLabelNombre
             // 
             this.toolStripLabelNombre.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLabelNombre.Margin = new System.Windows.Forms.Padding(0, 1, 20, 2);
             this.toolStripLabelNombre.Name = "toolStripLabelNombre";
-            this.toolStripLabelNombre.Size = new System.Drawing.Size(97, 24);
+            this.toolStripLabelNombre.Size = new System.Drawing.Size(97, 28);
             this.toolStripLabelNombre.Text = "Nombre User";
             // 
             // FormListaProyectos
@@ -269,7 +286,7 @@ namespace TASKILLER
         private ToolStripMenuItem salirToolStripMenuItem;
         private ToolStripButton btnUsuario;
         private ToolStripButton btnTaskiller;
-        private ContextMenuStrip contextMenuStrip1;
         private ToolStripLabel toolStripLabelNombre;
+        private ComboBox comboBoxtipo;
     }
 }

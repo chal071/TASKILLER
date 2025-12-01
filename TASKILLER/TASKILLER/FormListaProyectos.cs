@@ -39,48 +39,73 @@ namespace TASKILLER
             flowLayoutPanelBotonesOrdFil.Height = 60;
             flowLayoutPanelBotonesOrdFil.Padding = new Padding(0, 0, 30, 10);
 
-            mostrarProyectos();
+            mostrarProyectos(d, null);
             toolStripLabelNombre.Text = "Usuario: " + u.Nombre + " " + u.Apellido;
 
         }
-        private void mostrarProyectos()
+        private void mostrarProyectos(Datos dat,string filtro)
         {
-            var rolAdmin = d.listaRoles.FirstOrDefault(r => r.Nombre == "Administrador");
-            var rolGestor = d.listaRoles.FirstOrDefault(r => r.Nombre == "Gestor");
+            flowLayoutPanelListaProyectos.Controls.Clear();
 
-            if (u.Rol == d.listaRoles.FirstOrDefault(r => r.Nombre == "Administrador")?.Id)
+            IEnumerable<Proyecto> proyectosFiltrados = dat.listaProyectos;
+
+            if (filtro == "Asignados")
             {
-                foreach (var pro in d.listaProyectos)
-                {
-                    ProyectoControl tarjeta = new ProyectoControl(d, pro, u);
-                    tarjeta.SetDatos(pro);
-
-                    tarjeta.AgregarTareas(d.listaTareas, pro);
-                    tarjeta.Margin = new Padding(left: 25, top: 0, right: 0, bottom: 50);
-
-                    flowLayoutPanelListaProyectos.Controls.Add(tarjeta);
-                }
+                proyectosFiltrados = dat.listaProyectos
+                    .Where(p => dat.listaTareas.Any(t => t.IdProyecto == p.Id && t.listaUsuarios.Any(uT => uT == u.Id)));
             }
-            else if (u.Rol == d.listaRoles.FirstOrDefault(r => r.Nombre == "Gestor")?.Id)
+            else if (filtro == "Creados por mí")
             {
-                foreach (var pro in d.listaProyectos)
-                {
-                    if (pro.IdCreador.Equals(u.Id))
-                    {
-                        ProyectoControl tarjeta = new ProyectoControl(d, pro, u);
-                        tarjeta.SetDatos(pro);
-
-                        tarjeta.AgregarTareas(d.listaTareas, pro);
-                        tarjeta.Margin = new Padding(left: 25, top: 0, right: 0, bottom: 50);
-                       
-                        flowLayoutPanelListaProyectos.Controls.Add(tarjeta);
-                    }
-                   
-                }
+                proyectosFiltrados = dat.listaProyectos
+                    .Where(p => p.IdCreador == u.Id);
             }
-            else
+            string orden = comboBoxOrdenar.SelectedItem?.ToString() ?? "";
+
+            switch (orden)
             {
-                MessageBox.Show("No tienes permisos suficientes", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                case "Nombre (A-Z)":
+                    proyectosFiltrados = proyectosFiltrados.OrderBy(p => p.Titulo);
+                    break;
+
+                case "Nombre (Z-A)":
+                    proyectosFiltrados = proyectosFiltrados.OrderByDescending(p => p.Titulo);
+                    break;
+
+                case "Más antiguos":
+                    proyectosFiltrados = proyectosFiltrados.OrderBy(p => p.FechaInicio);
+                    break;
+
+                case "Más recientes":
+                    proyectosFiltrados = proyectosFiltrados.OrderByDescending(p => p.FechaInicio);
+                    break;
+
+                case "Número de tareas (ascendente)":
+                    proyectosFiltrados = proyectosFiltrados.OrderBy(p =>
+                        dat.listaTareas.Count(t => t.IdProyecto == p.Id));
+                    break;
+
+                case "Número de tareas (descendente)":
+                    proyectosFiltrados = proyectosFiltrados.OrderByDescending(p =>
+                        dat.listaTareas.Count(t => t.IdProyecto == p.Id));
+                    break;
+            }
+
+
+            foreach (var pro in proyectosFiltrados)
+            {
+                ProyectoControl tarjeta = new ProyectoControl(dat, pro, u);
+                tarjeta.SetDatos(pro);
+
+                tarjeta.AgregarTareas(dat.listaTareas.Where(t => t.IdProyecto == pro.Id).ToList(), pro);
+                tarjeta.Margin = new Padding(left: 25, top: 0, right: 0, bottom: 50);
+
+                flowLayoutPanelListaProyectos.Controls.Add(tarjeta);
+            }
+
+            if (!proyectosFiltrados.Any())
+            {
+                MessageBox.Show("No hay proyectos para mostrar con este filtro.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mostrarProyectos(d, null);
             }
         }
         private void inicioToolStripMenuItem_Click(object sender, System.EventArgs e)
@@ -132,6 +157,18 @@ namespace TASKILLER
         private void guardarDatosToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             GestionDatos.GuardarDatos(d);
+        }
+
+        private void comboBoxtipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string opcion = comboBoxtipo.SelectedItem.ToString();
+            mostrarProyectos(d, opcion);
+        }
+
+        private void comboBoxOrdenar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            mostrarProyectos(d, comboBoxtipo.SelectedItem?.ToString());
+
         }
     }
 }

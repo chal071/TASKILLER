@@ -253,7 +253,6 @@
     <None Include="resources\prioridadAlta.png" />
     <None Include="resources\prioridadBaja.png" />
     <None Include="resources\img\borrar.png" />
-    <None Include="resources\Image1.png" />
     <Content Include="resources\img\casa.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
