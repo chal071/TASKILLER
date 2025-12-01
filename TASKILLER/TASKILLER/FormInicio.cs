@@ -16,6 +16,7 @@ namespace TASKILLER
             Helpers.AplicarFuente(this, Fuentes.MontserratRegular);
             this.Resize += Form_Resize;
             setFontSize();
+            toolStripLabelNombre.Text = "Usuario: " + u.Nombre + " " + u.Apellido;
             flowLayoutPanelHoy.AutoScroll = true;
             flowLayoutPanelHoy.Dock = DockStyle.None;
             flowLayoutPanelHoy.Padding = new Padding(20);

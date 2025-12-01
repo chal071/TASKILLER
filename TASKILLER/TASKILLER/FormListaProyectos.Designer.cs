@@ -49,6 +49,7 @@ namespace TASKILLER
             this.btnUsuario = new System.Windows.Forms.ToolStripButton();
             this.btnTaskiller = new System.Windows.Forms.ToolStripButton();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripLabelNombre = new System.Windows.Forms.ToolStripLabel();
             this.flowLayoutPanelBotonesOrdFil.SuspendLayout();
             this.toolStripInicio.SuspendLayout();
             this.SuspendLayout();
@@ -101,7 +102,8 @@ namespace TASKILLER
             this.toolStripInicio.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1,
             this.btnUsuario,
-            this.btnTaskiller});
+            this.btnTaskiller,
+            this.toolStripLabelNombre});
             this.toolStripInicio.Location = new System.Drawing.Point(0, 0);
             this.toolStripInicio.Name = "toolStripInicio";
             this.toolStripInicio.Size = new System.Drawing.Size(1187, 27);
@@ -217,6 +219,14 @@ namespace TASKILLER
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // toolStripLabelNombre
+            // 
+            this.toolStripLabelNombre.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabelNombre.Margin = new System.Windows.Forms.Padding(0, 1, 20, 2);
+            this.toolStripLabelNombre.Name = "toolStripLabelNombre";
+            this.toolStripLabelNombre.Size = new System.Drawing.Size(97, 24);
+            this.toolStripLabelNombre.Text = "Nombre User";
+            // 
             // FormListaProyectos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -260,5 +270,6 @@ namespace TASKILLER
         private ToolStripButton btnUsuario;
         private ToolStripButton btnTaskiller;
         private ContextMenuStrip contextMenuStrip1;
+        private ToolStripLabel toolStripLabelNombre;
     }
 }

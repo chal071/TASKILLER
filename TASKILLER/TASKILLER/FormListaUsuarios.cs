@@ -26,6 +26,7 @@ namespace TASKILLER
 
         public void CargarUsuarios()
         {
+            toolStripLabelNombre.Text = "Usuario: " + u.Nombre + " " + u.Apellido;
 
             var lista = d.listaUsuarios.Select(u => new {
                 u.Nombre,
@@ -75,6 +76,7 @@ namespace TASKILLER
         {
             labelListaDeUsuarios.Font = new Font(Fuentes.MontserratBold.FontFamily, 30);
             dataGridViewListaUsuarios.Font = new Font(Fuentes.MontserratRegular.FontFamily, 20);
+            toolStripLabelNombre.Font = new Font(Fuentes.MontserratRegular.FontFamily, 15);
         }
 
         private void inicioToolStripMenuItem_Click(object sender, System.EventArgs e)

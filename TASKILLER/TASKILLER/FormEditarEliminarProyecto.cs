@@ -43,9 +43,8 @@ namespace TASKILLER
             comboBoxEstado.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
             buttonEditarProyecto.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
             buttonEliminarProyecto.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
-
+            toolStripLabelNombre.Text = "Usuario: " + u.Nombre + " " + u.Apellido;
             comboBoxEstado.DataSource = Enum.GetValues(typeof(Estado));
-
             panelInfo.Anchor = AnchorStyles.None;
         }
         private void cargarProyecto()

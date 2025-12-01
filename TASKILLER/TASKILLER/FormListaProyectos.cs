@@ -40,6 +40,8 @@ namespace TASKILLER
             flowLayoutPanelBotonesOrdFil.Padding = new Padding(0, 0, 30, 10);
 
             mostrarProyectos();
+            toolStripLabelNombre.Text = "Usuario: " + u.Nombre + " " + u.Apellido;
+
         }
         private void mostrarProyectos()
         {
