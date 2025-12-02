@@ -14,8 +14,9 @@ namespace TASKILLER
     {
         private Datos d;
         private Usuario u;
+        private Usuario UsuarioActual;
 
-        public FormEdicionUsuario(Datos datos, Usuario usuario)
+        public FormEdicionUsuario(Usuario usuarioActual, Datos datos, Usuario usuario)
         {
             InitializeComponent();
             this.d = datos;
