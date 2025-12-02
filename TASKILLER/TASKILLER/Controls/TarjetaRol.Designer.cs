@@ -30,7 +30,7 @@
         {
             this.labelRol = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.LIstBoxAccesoRol = new System.Windows.Forms.ListBox();
+            this.ListBoxAccesoRol = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // labelRol
@@ -43,23 +43,24 @@
             this.labelRol.TabIndex = 4;
             this.labelRol.Text = "Nombre Rol";
             // 
-            // LIstBoxAccesoRol
+            // ListBoxAccesoRol
             // 
-            this.LIstBoxAccesoRol.FormattingEnabled = true;
-            this.LIstBoxAccesoRol.Location = new System.Drawing.Point(18, 52);
-            this.LIstBoxAccesoRol.Name = "LIstBoxAccesoRol";
-            this.LIstBoxAccesoRol.Size = new System.Drawing.Size(249, 251);
-            this.LIstBoxAccesoRol.TabIndex = 5;
-            this.LIstBoxAccesoRol.SelectedIndexChanged += new System.EventHandler(this.LIstBoxAccesoRol_SelectedIndexChanged);
+            this.ListBoxAccesoRol.FormattingEnabled = true;
+            this.ListBoxAccesoRol.Location = new System.Drawing.Point(18, 52);
+            this.ListBoxAccesoRol.Name = "ListBoxAccesoRol";
+            this.ListBoxAccesoRol.Size = new System.Drawing.Size(311, 316);
+            this.ListBoxAccesoRol.TabIndex = 5;
+            this.ListBoxAccesoRol.SelectedIndexChanged += new System.EventHandler(this.LIstBoxAccesoRol_SelectedIndexChanged);
             // 
             // TarjetaRol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.LIstBoxAccesoRol);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(0)))), ((int)(((byte)(110)))));
+            this.Controls.Add(this.ListBoxAccesoRol);
             this.Controls.Add(this.labelRol);
             this.Name = "TarjetaRol";
-            this.Size = new System.Drawing.Size(283, 318);
+            this.Size = new System.Drawing.Size(350, 393);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -68,6 +69,6 @@
         #endregion
         private System.Windows.Forms.Label labelRol;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.ListBox LIstBoxAccesoRol;
+        private System.Windows.Forms.ListBox ListBoxAccesoRol;
     }
 }

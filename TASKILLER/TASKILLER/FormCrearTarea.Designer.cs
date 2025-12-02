@@ -97,8 +97,8 @@
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.grid.Size = new System.Drawing.Size(1089, 620);
+            this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 11F));
+            this.grid.Size = new System.Drawing.Size(817, 504);
             this.grid.TabIndex = 0;
             // 
             // toolStripInicio
@@ -114,7 +114,7 @@
             this.toolStripInicio.Location = new System.Drawing.Point(0, 0);
             this.toolStripInicio.Name = "toolStripInicio";
             this.toolStripInicio.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStripInicio.Size = new System.Drawing.Size(1089, 27);
+            this.toolStripInicio.Size = new System.Drawing.Size(817, 25);
             this.toolStripInicio.TabIndex = 9;
             this.toolStripInicio.Text = "toolStrip1";
             // 
@@ -131,14 +131,14 @@
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(34, 24);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(33, 22);
             this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
             // 
             // inicioToolStripMenuItem
             // 
             this.inicioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("inicioToolStripMenuItem.Image")));
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.inicioToolStripMenuItem.Text = "Inicio";
             this.inicioToolStripMenuItem.Click += new System.EventHandler(this.inicioToolStripMenuItem_Click);
             // 
@@ -148,14 +148,14 @@
             this.crearNuevoProyectoToolStripMenuItem});
             this.proyectosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("proyectosToolStripMenuItem.Image")));
             this.proyectosToolStripMenuItem.Name = "proyectosToolStripMenuItem";
-            this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
+            this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.proyectosToolStripMenuItem.Text = "Proyectos";
             this.proyectosToolStripMenuItem.Click += new System.EventHandler(this.proyectosToolStripMenuItem_Click);
             // 
             // crearNuevoProyectoToolStripMenuItem
             // 
             this.crearNuevoProyectoToolStripMenuItem.Name = "crearNuevoProyectoToolStripMenuItem";
-            this.crearNuevoProyectoToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
+            this.crearNuevoProyectoToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.crearNuevoProyectoToolStripMenuItem.Text = "Crear nuevo proyecto";
             this.crearNuevoProyectoToolStripMenuItem.Click += new System.EventHandler(this.crearNuevoProyectoToolStripMenuItem_Click);
             // 
@@ -165,14 +165,14 @@
             this.crearNuevoUsuarioToolStripMenuItem});
             this.usuariosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("usuariosToolStripMenuItem.Image")));
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // crearNuevoUsuarioToolStripMenuItem
             // 
             this.crearNuevoUsuarioToolStripMenuItem.Name = "crearNuevoUsuarioToolStripMenuItem";
-            this.crearNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
+            this.crearNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.crearNuevoUsuarioToolStripMenuItem.Text = "Crear nuevo usuario";
             this.crearNuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.crearNuevoUsuarioToolStripMenuItem_Click);
             // 
@@ -180,7 +180,7 @@
             // 
             this.rolesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("rolesToolStripMenuItem.Image")));
             this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
-            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.rolesToolStripMenuItem.Text = "Roles";
             this.rolesToolStripMenuItem.Click += new System.EventHandler(this.rolesToolStripMenuItem_Click);
             // 
@@ -189,7 +189,7 @@
             this.guardarDatosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("guardarDatosToolStripMenuItem.Image")));
             this.guardarDatosToolStripMenuItem.Name = "guardarDatosToolStripMenuItem";
             this.guardarDatosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.guardarDatosToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
+            this.guardarDatosToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.guardarDatosToolStripMenuItem.Text = "Guardar datos";
             this.guardarDatosToolStripMenuItem.Click += new System.EventHandler(this.guardarDatosToolStripMenuItem_Click);
             // 
@@ -198,7 +198,7 @@
             this.salirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("salirToolStripMenuItem.Image")));
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -209,7 +209,7 @@
             this.btnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.Image")));
             this.btnUsuario.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnUsuario.Name = "btnUsuario";
-            this.btnUsuario.Size = new System.Drawing.Size(29, 24);
+            this.btnUsuario.Size = new System.Drawing.Size(24, 22);
             this.btnUsuario.Text = "Usuario";
             // 
             // btnTaskiller
@@ -218,7 +218,7 @@
             this.btnTaskiller.Image = ((System.Drawing.Image)(resources.GetObject("btnTaskiller.Image")));
             this.btnTaskiller.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnTaskiller.Name = "btnTaskiller";
-            this.btnTaskiller.Size = new System.Drawing.Size(29, 24);
+            this.btnTaskiller.Size = new System.Drawing.Size(24, 22);
             this.btnTaskiller.Text = "TaskillerLogo";
             // 
             // toolStripLabelNombre
@@ -226,7 +226,7 @@
             this.toolStripLabelNombre.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLabelNombre.Margin = new System.Windows.Forms.Padding(0, 1, 20, 2);
             this.toolStripLabelNombre.Name = "toolStripLabelNombre";
-            this.toolStripLabelNombre.Size = new System.Drawing.Size(97, 24);
+            this.toolStripLabelNombre.Size = new System.Drawing.Size(77, 22);
             this.toolStripLabelNombre.Text = "Nombre User";
             // 
             // flowLayoutPanelTop
@@ -235,10 +235,10 @@
             this.flowLayoutPanelTop.Controls.Add(this.pictureBoxLogo);
             this.flowLayoutPanelTop.Controls.Add(this.labelCuentanos);
             this.flowLayoutPanelTop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelTop.Location = new System.Drawing.Point(2, 33);
+            this.flowLayoutPanelTop.Location = new System.Drawing.Point(2, 27);
             this.flowLayoutPanelTop.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanelTop.Name = "flowLayoutPanelTop";
-            this.flowLayoutPanelTop.Size = new System.Drawing.Size(1085, 120);
+            this.flowLayoutPanelTop.Size = new System.Drawing.Size(813, 96);
             this.flowLayoutPanelTop.TabIndex = 0;
             // 
             // pictureBoxLogo
@@ -248,7 +248,7 @@
             this.pictureBoxLogo.Location = new System.Drawing.Point(2, 2);
             this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(208, 149);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(156, 121);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
@@ -256,20 +256,20 @@
             // labelCuentanos
             // 
             this.labelCuentanos.AutoSize = true;
-            this.labelCuentanos.Location = new System.Drawing.Point(214, 0);
+            this.labelCuentanos.Location = new System.Drawing.Point(162, 0);
             this.labelCuentanos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCuentanos.Name = "labelCuentanos";
-            this.labelCuentanos.Size = new System.Drawing.Size(116, 32);
+            this.labelCuentanos.Size = new System.Drawing.Size(96, 26);
             this.labelCuentanos.TabIndex = 1;
             this.labelCuentanos.Text = "Cuéntanos sobre \r\nesta nueva tarea...";
             // 
             // buttonCrear
             // 
             this.buttonCrear.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.buttonCrear.Location = new System.Drawing.Point(918, 543);
+            this.buttonCrear.Location = new System.Drawing.Point(688, 441);
             this.buttonCrear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCrear.Name = "buttonCrear";
-            this.buttonCrear.Size = new System.Drawing.Size(169, 60);
+            this.buttonCrear.Size = new System.Drawing.Size(127, 49);
             this.buttonCrear.TabIndex = 3;
             this.buttonCrear.Text = "Crear";
             this.buttonCrear.UseVisualStyleBackColor = true;
@@ -285,7 +285,7 @@
             this.tableLayoutPanelLeft.Controls.Add(this.textBoxTitulo, 0, 1);
             this.tableLayoutPanelLeft.Controls.Add(this.comboBoxPrioridad, 0, 5);
             this.tableLayoutPanelLeft.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelLeft.Location = new System.Drawing.Point(2, 157);
+            this.tableLayoutPanelLeft.Location = new System.Drawing.Point(2, 127);
             this.tableLayoutPanelLeft.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanelLeft.Name = "tableLayoutPanelLeft";
             this.tableLayoutPanelLeft.RowCount = 6;
@@ -295,27 +295,27 @@
             this.tableLayoutPanelLeft.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46F));
             this.tableLayoutPanelLeft.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
             this.tableLayoutPanelLeft.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanelLeft.Size = new System.Drawing.Size(540, 368);
+            this.tableLayoutPanelLeft.Size = new System.Drawing.Size(404, 298);
             this.tableLayoutPanelLeft.TabIndex = 4;
             // 
             // labelPrioridad
             // 
             this.labelPrioridad.AutoSize = true;
             this.labelPrioridad.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelPrioridad.Location = new System.Drawing.Point(2, 263);
+            this.labelPrioridad.Location = new System.Drawing.Point(2, 212);
             this.labelPrioridad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPrioridad.Name = "labelPrioridad";
-            this.labelPrioridad.Size = new System.Drawing.Size(536, 29);
+            this.labelPrioridad.Size = new System.Drawing.Size(400, 23);
             this.labelPrioridad.TabIndex = 4;
             this.labelPrioridad.Text = "PRIORIDAD";
             // 
             // richTextBoxDescripcion
             // 
             this.richTextBoxDescripcion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBoxDescripcion.Location = new System.Drawing.Point(2, 96);
+            this.richTextBoxDescripcion.Location = new System.Drawing.Point(2, 77);
             this.richTextBoxDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBoxDescripcion.Name = "richTextBoxDescripcion";
-            this.richTextBoxDescripcion.Size = new System.Drawing.Size(536, 165);
+            this.richTextBoxDescripcion.Size = new System.Drawing.Size(400, 133);
             this.richTextBoxDescripcion.TabIndex = 3;
             this.richTextBoxDescripcion.Text = "";
             // 
@@ -326,37 +326,37 @@
             this.labelTitulo.Location = new System.Drawing.Point(2, 0);
             this.labelTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(536, 29);
+            this.labelTitulo.Size = new System.Drawing.Size(400, 23);
             this.labelTitulo.TabIndex = 0;
             this.labelTitulo.Text = "TÍTULO";
             // 
             // labelDescripcion
             // 
             this.labelDescripcion.AutoSize = true;
-            this.labelDescripcion.Location = new System.Drawing.Point(2, 65);
+            this.labelDescripcion.Location = new System.Drawing.Point(2, 52);
             this.labelDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDescripcion.Name = "labelDescripcion";
-            this.labelDescripcion.Size = new System.Drawing.Size(98, 16);
+            this.labelDescripcion.Size = new System.Drawing.Size(80, 13);
             this.labelDescripcion.TabIndex = 2;
             this.labelDescripcion.Text = "DESCRIPCIÓN";
             // 
             // textBoxTitulo
             // 
             this.textBoxTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxTitulo.Location = new System.Drawing.Point(2, 31);
+            this.textBoxTitulo.Location = new System.Drawing.Point(2, 25);
             this.textBoxTitulo.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTitulo.Name = "textBoxTitulo";
-            this.textBoxTitulo.Size = new System.Drawing.Size(536, 22);
+            this.textBoxTitulo.Size = new System.Drawing.Size(400, 20);
             this.textBoxTitulo.TabIndex = 1;
             // 
             // comboBoxPrioridad
             // 
             this.comboBoxPrioridad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxPrioridad.FormattingEnabled = true;
-            this.comboBoxPrioridad.Location = new System.Drawing.Point(2, 294);
+            this.comboBoxPrioridad.Location = new System.Drawing.Point(2, 237);
             this.comboBoxPrioridad.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxPrioridad.Name = "comboBoxPrioridad";
-            this.comboBoxPrioridad.Size = new System.Drawing.Size(536, 24);
+            this.comboBoxPrioridad.Size = new System.Drawing.Size(400, 21);
             this.comboBoxPrioridad.TabIndex = 5;
             // 
             // tableLayoutPanelRight
@@ -372,7 +372,7 @@
             this.tableLayoutPanelRight.Controls.Add(this.labelFechaInicio, 0, 0);
             this.tableLayoutPanelRight.Controls.Add(this.checkedListBoxUsuario, 0, 7);
             this.tableLayoutPanelRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelRight.Location = new System.Drawing.Point(546, 157);
+            this.tableLayoutPanelRight.Location = new System.Drawing.Point(410, 127);
             this.tableLayoutPanelRight.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanelRight.Name = "tableLayoutPanelRight";
             this.tableLayoutPanelRight.RowCount = 8;
@@ -384,17 +384,17 @@
             this.tableLayoutPanelRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanelRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanelRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanelRight.Size = new System.Drawing.Size(541, 368);
+            this.tableLayoutPanelRight.Size = new System.Drawing.Size(405, 298);
             this.tableLayoutPanelRight.TabIndex = 5;
             // 
             // labelUsuarioAsignado
             // 
             this.labelUsuarioAsignado.AutoSize = true;
             this.labelUsuarioAsignado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelUsuarioAsignado.Location = new System.Drawing.Point(2, 216);
+            this.labelUsuarioAsignado.Location = new System.Drawing.Point(2, 174);
             this.labelUsuarioAsignado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelUsuarioAsignado.Name = "labelUsuarioAsignado";
-            this.labelUsuarioAsignado.Size = new System.Drawing.Size(537, 36);
+            this.labelUsuarioAsignado.Size = new System.Drawing.Size(401, 29);
             this.labelUsuarioAsignado.TabIndex = 6;
             this.labelUsuarioAsignado.Text = "USUARIO ASIGNADO";
             // 
@@ -402,50 +402,50 @@
             // 
             this.comboBoxEstado.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxEstado.FormattingEnabled = true;
-            this.comboBoxEstado.Location = new System.Drawing.Point(2, 182);
+            this.comboBoxEstado.Location = new System.Drawing.Point(2, 147);
             this.comboBoxEstado.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxEstado.Name = "comboBoxEstado";
-            this.comboBoxEstado.Size = new System.Drawing.Size(537, 24);
+            this.comboBoxEstado.Size = new System.Drawing.Size(401, 21);
             this.comboBoxEstado.TabIndex = 4;
             // 
             // labelEstado
             // 
             this.labelEstado.AutoSize = true;
             this.labelEstado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelEstado.Location = new System.Drawing.Point(2, 144);
+            this.labelEstado.Location = new System.Drawing.Point(2, 116);
             this.labelEstado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelEstado.Name = "labelEstado";
-            this.labelEstado.Size = new System.Drawing.Size(537, 36);
+            this.labelEstado.Size = new System.Drawing.Size(401, 29);
             this.labelEstado.TabIndex = 5;
             this.labelEstado.Text = "ESTADO";
             // 
             // dateTimePickerFechaFinal
             // 
             this.dateTimePickerFechaFinal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateTimePickerFechaFinal.Location = new System.Drawing.Point(2, 110);
+            this.dateTimePickerFechaFinal.Location = new System.Drawing.Point(2, 89);
             this.dateTimePickerFechaFinal.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerFechaFinal.Name = "dateTimePickerFechaFinal";
-            this.dateTimePickerFechaFinal.Size = new System.Drawing.Size(537, 22);
+            this.dateTimePickerFechaFinal.Size = new System.Drawing.Size(401, 20);
             this.dateTimePickerFechaFinal.TabIndex = 3;
             // 
             // labelFechaFinal
             // 
             this.labelFechaFinal.AutoSize = true;
             this.labelFechaFinal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelFechaFinal.Location = new System.Drawing.Point(2, 72);
+            this.labelFechaFinal.Location = new System.Drawing.Point(2, 58);
             this.labelFechaFinal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelFechaFinal.Name = "labelFechaFinal";
-            this.labelFechaFinal.Size = new System.Drawing.Size(537, 36);
+            this.labelFechaFinal.Size = new System.Drawing.Size(401, 29);
             this.labelFechaFinal.TabIndex = 2;
             this.labelFechaFinal.Text = "FECHA FINAL";
             // 
             // dateTimePickerFechaInicio
             // 
             this.dateTimePickerFechaInicio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateTimePickerFechaInicio.Location = new System.Drawing.Point(2, 38);
+            this.dateTimePickerFechaInicio.Location = new System.Drawing.Point(2, 31);
             this.dateTimePickerFechaInicio.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerFechaInicio.Name = "dateTimePickerFechaInicio";
-            this.dateTimePickerFechaInicio.Size = new System.Drawing.Size(537, 22);
+            this.dateTimePickerFechaInicio.Size = new System.Drawing.Size(401, 20);
             this.dateTimePickerFechaInicio.TabIndex = 1;
             // 
             // labelFechaInicio
@@ -455,7 +455,7 @@
             this.labelFechaInicio.Location = new System.Drawing.Point(2, 0);
             this.labelFechaInicio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelFechaInicio.Name = "labelFechaInicio";
-            this.labelFechaInicio.Size = new System.Drawing.Size(537, 36);
+            this.labelFechaInicio.Size = new System.Drawing.Size(401, 29);
             this.labelFechaInicio.TabIndex = 0;
             this.labelFechaInicio.Text = "FECHA INICIO";
             // 
@@ -463,10 +463,10 @@
             // 
             this.checkedListBoxUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkedListBoxUsuario.FormattingEnabled = true;
-            this.checkedListBoxUsuario.Location = new System.Drawing.Point(2, 254);
+            this.checkedListBoxUsuario.Location = new System.Drawing.Point(2, 205);
             this.checkedListBoxUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.checkedListBoxUsuario.Name = "checkedListBoxUsuario";
-            this.checkedListBoxUsuario.Size = new System.Drawing.Size(537, 112);
+            this.checkedListBoxUsuario.Size = new System.Drawing.Size(401, 91);
             this.checkedListBoxUsuario.TabIndex = 7;
             // 
             // tableLayoutPanelLeftBottom
@@ -476,22 +476,24 @@
             this.tableLayoutPanelLeftBottom.Controls.Add(this.labelTareaPadre, 0, 0);
             this.tableLayoutPanelLeftBottom.Controls.Add(this.dataGridViewTareaPadre, 0, 1);
             this.tableLayoutPanelLeftBottom.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelLeftBottom.Location = new System.Drawing.Point(3, 530);
+            this.tableLayoutPanelLeftBottom.Location = new System.Drawing.Point(2, 429);
+            this.tableLayoutPanelLeftBottom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanelLeftBottom.Name = "tableLayoutPanelLeftBottom";
             this.tableLayoutPanelLeftBottom.RowCount = 3;
             this.tableLayoutPanelLeftBottom.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanelLeftBottom.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelLeftBottom.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanelLeftBottom.Size = new System.Drawing.Size(538, 87);
+            this.tableLayoutPanelLeftBottom.Size = new System.Drawing.Size(404, 73);
             this.tableLayoutPanelLeftBottom.TabIndex = 7;
             // 
             // labelTareaPadre
             // 
             this.labelTareaPadre.AutoSize = true;
             this.labelTareaPadre.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelTareaPadre.Location = new System.Drawing.Point(3, 0);
+            this.labelTareaPadre.Location = new System.Drawing.Point(2, 0);
+            this.labelTareaPadre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTareaPadre.Name = "labelTareaPadre";
-            this.labelTareaPadre.Size = new System.Drawing.Size(532, 26);
+            this.labelTareaPadre.Size = new System.Drawing.Size(400, 21);
             this.labelTareaPadre.TabIndex = 5;
             this.labelTareaPadre.Text = "TAREA PADRE";
             // 
@@ -511,20 +513,21 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTareaPadre.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTareaPadre.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewTareaPadre.Location = new System.Drawing.Point(3, 29);
+            this.dataGridViewTareaPadre.Location = new System.Drawing.Point(2, 23);
+            this.dataGridViewTareaPadre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewTareaPadre.Name = "dataGridViewTareaPadre";
             this.dataGridViewTareaPadre.RowHeadersVisible = false;
             this.dataGridViewTareaPadre.RowHeadersWidth = 82;
             this.dataGridViewTareaPadre.RowTemplate.Height = 33;
-            this.dataGridViewTareaPadre.Size = new System.Drawing.Size(532, 37);
+            this.dataGridViewTareaPadre.Size = new System.Drawing.Size(400, 32);
             this.dataGridViewTareaPadre.TabIndex = 6;
             // 
             // FormCrearTarea
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.ClientSize = new System.Drawing.Size(1089, 620);
+            this.ClientSize = new System.Drawing.Size(817, 504);
             this.Controls.Add(this.grid);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);

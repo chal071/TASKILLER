@@ -15,19 +15,22 @@ namespace TASKILLER
         public TarjetaRol()
         {
             InitializeComponent();
+            CargarEstilos();
         }
 
         public void SetDatos(Rol r)
         {
             labelRol.Text = r.Nombre;
-            LIstBoxAccesoRol.Items.Clear();
-            LIstBoxAccesoRol.Items.AddRange(r.Acceso.ToArray());
+            ListBoxAccesoRol.Items.Clear();
+            ListBoxAccesoRol.Items.AddRange(r.Acceso.ToArray());
+        }
 
+        private void CargarEstilos()
+        {
+            labelRol.Font = new Font("Montserrat", 20, FontStyle.Bold);
+            labelRol.ForeColor = Color.White;
+            ListBoxAccesoRol.Font = new Font("Montserrat", 12, FontStyle.Bold);
             
-
-
-
-
         }
 
         private void LIstBoxAccesoRol_SelectedIndexChanged(object sender, EventArgs e)

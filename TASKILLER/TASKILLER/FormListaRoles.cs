@@ -22,6 +22,7 @@ namespace TASKILLER
             this.d = datos;
             this.u = usuario;
             toolStripLabelNombre.Text = "Usuario: " + u.Nombre + " " + u.Apellido;
+            CargarEstilos();
 
             foreach (Rol r in d.listaRoles) 
             {
@@ -37,13 +38,10 @@ namespace TASKILLER
             panelListaRolesResp.Top = (this.ClientSize.Height - panelListaRolesResp.Height) / 2;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void CargarEstilos()
         {
-
-        }
-
-        private void labelListaRoles_Click(object sender, EventArgs e)
-        {
+            labelListaRoles.Font = new Font("Montserrat", 50, FontStyle.Bold);
+            labelListaRoles.ForeColor = Color.FromArgb(240, 0, 110);
 
         }
 
@@ -95,6 +93,11 @@ namespace TASKILLER
         private void guardarDatosToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             GestionDatos.GuardarDatos(d);
+        }
+
+        private void FormListaRoles_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
