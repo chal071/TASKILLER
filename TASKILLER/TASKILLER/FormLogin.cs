@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace TASKILLER
@@ -32,20 +33,29 @@ namespace TASKILLER
         {
             String email = textBoxMail.Text;
             String password = textBoxPassword.Text;
+            Rol r = new Rol();
+            r = d.listaRoles.FirstOrDefault(t => t.Nombre == "Base");
 
             if (email.Equals("") || password.Equals(""))
             {
                 MessageBox.Show("Por favor, rellena todos los campos.", "Error de credenciales", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            } 
             else
             {
                 foreach (Usuario u in d.listaUsuarios)
                 {
                     if (u.Mail == email && u.Contrasena == password)
                     {
-                        FormInicio f = new FormInicio(d, u);
-                        f.Show();
-                        this.Hide();
+                        if (u.Rol != r.Id)
+                        {
+                            FormInicio f = new FormInicio(d, u);
+                            f.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No tienes permisos suficientes para acceder a la aplicacion de gestión de proyectos.", "Permisos insuficientes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                 }
             }

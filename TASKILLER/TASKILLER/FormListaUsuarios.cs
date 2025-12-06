@@ -136,28 +136,47 @@ namespace TASKILLER
 
         private void MenuModificar_Click(object sender, EventArgs e)
         {
-            var usuario = d.listaUsuarios.FirstOrDefault(u => u.Id == usuarioSeleccionadaId);
+            Rol rol = new Rol();
+            rol = d.listaRoles.FirstOrDefault(t => t.Nombre == "Administrador");
 
-            FormEdicionUsuario f = new FormEdicionUsuario(usuario, d, u);
-            f.Show();
-            this.Hide();
+            if (u.Rol == rol.Id)
+            {
+                var usuario = d.listaUsuarios.FirstOrDefault(u => u.Id == usuarioSeleccionadaId);
 
-
+                FormEdicionUsuario f = new FormEdicionUsuario(usuario, d, u);
+                f.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("No tienes permisos para modificar usuarios.", "Permisos insuficientes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void MenuEliminar_Click(object sender, EventArgs e)
         {
-            var usuario = d.listaUsuarios.FirstOrDefault(u => u.Id == usuarioSeleccionadaId);
+            Rol rol = new Rol();
+            rol = d.listaRoles.FirstOrDefault(t => t.Nombre == "Administrador");
 
-            var r = MessageBox.Show("¿Seguro que quieres eliminar este usuario?",
-                                    "Confirmar",
-                                    MessageBoxButtons.YesNo,
-                                    MessageBoxIcon.Warning);
-
-            if (r == DialogResult.Yes)
+            if (u.Rol == rol.Id)
             {
-                d.listaUsuarios.Remove(usuario);
-                CargarUsuarios();
+                var usuario = d.listaUsuarios.FirstOrDefault(u => u.Id == usuarioSeleccionadaId);
+
+                var r = MessageBox.Show("¿Seguro que quieres eliminar este usuario?",
+                                        "Confirmar",
+                                        MessageBoxButtons.YesNo,
+                                        MessageBoxIcon.Warning);
+
+                if (r == DialogResult.Yes)
+                {
+                    d.listaUsuarios.Remove(usuario);
+                    MessageBox.Show("Usuario eliminado correctamente.");
+                    CargarUsuarios();
+                }
+            }
+            else
+            {
+                MessageBox.Show("No tienes permisos para eliminar usuarios.", "Permisos insuficientes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -165,41 +184,51 @@ namespace TASKILLER
         {
             FormInicio f = new FormInicio(d, u);
             f.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void proyectosToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             FormListaProyectos f = new FormListaProyectos(d, u);
             f.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void usuariosToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             FormListaUsuarios f = new FormListaUsuarios(d, u);
             f.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void rolesToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             FormListaRoles f = new FormListaRoles(d, u);
             f.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void crearNuevoProyectoToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             FormCrearProyecto f = new FormCrearProyecto(d, u);
             f.Show();
-            this.Hide();
+            this.Close();
         }
         private void crearNuevoUsuarioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormCreacionUsuario f = new FormCreacionUsuario(d, u);
-            f.Show();
-            this.Hide();
+            Rol r = new Rol();
+            r = d.listaRoles.FirstOrDefault(t => t.Nombre == "Administrador");
+
+            if (u.Rol == r.Id)
+            {
+                FormCreacionUsuario f = new FormCreacionUsuario(d, u);
+                f.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("No tienes permisos para crear usuarios.", "Permisos insuficientes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
         private void salirToolStripMenuItem_Click(object sender, System.EventArgs e)
         {

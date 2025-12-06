@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace TASKILLER
@@ -89,9 +90,19 @@ namespace TASKILLER
         }
         private void crearNuevoUsuarioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormCreacionUsuario f = new FormCreacionUsuario(d, u);
-            f.Show();
-            this.Close();
+            Rol r = new Rol();
+            r = d.listaRoles.FirstOrDefault(t => t.Nombre == "Administrador");
+
+            if (u.Rol == r.Id)
+            {
+                FormCreacionUsuario f = new FormCreacionUsuario(d, u);
+                f.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("No tienes permisos para crear usuarios.", "Permisos insuficientes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }       
         private void guardarDatosToolStripMenuItem_Click(object sender, EventArgs e)
         {

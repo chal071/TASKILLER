@@ -27,21 +27,24 @@ namespace TASKILLER
 
         private void CargarEstilos()
         {
-            labelCreaUsuario.Font = new Font("Montserrat", 20, FontStyle.Bold);
-            labelNombreUsuario.Font = new Font("Montserrat", 15, FontStyle.Bold);
-            textBoxNombreUsuario.Font = new Font("Montserrat", 12, FontStyle.Bold);
-            labelApellidoUsuario.Font = new Font("Montserrat", 15, FontStyle.Bold);
-            textBoxApellidoUsuario.Font = new Font("Montserrat", 12, FontStyle.Bold);
-            labelCorreoUsuario.Font = new Font("Montserrat", 15, FontStyle.Bold);
-            textBoxCorreoUsuario.Font = new Font("Montserrat", 12, FontStyle.Bold);
-            labelContrasenaUsuario.Font = new Font("Montserrat", 15, FontStyle.Bold);
-            textBoxContrasenaUsuario.Font = new Font("Montserrat", 12, FontStyle.Bold);
-            labelRepContrasenaUsuario.Font = new Font("Montserrat", 15, FontStyle.Bold);
-            textBoxRepContrasenaUsuario.Font = new Font("Montserrat", 12, FontStyle.Bold);
-            labelRolUsuario.Font = new Font("Montserrat", 15, FontStyle.Bold);
-            comboBoxRolUsuario.Font = new Font("Montserrat", 12, FontStyle.Bold);
-            labelAdvertenciaCreacionUsuarios.Font = new Font("Montserrat", 12, FontStyle.Bold);
-            buttonCrearUsuario.Font = new Font("Montserrat", 15, FontStyle.Bold);
+            labelCreaUsuario.Font = new Font(Fuentes.MontserratBold.FontFamily, 20, FontStyle.Bold);
+            labelNombreUsuario.Font = new Font(Fuentes.MontserratBold.FontFamily, 15, FontStyle.Bold);
+            textBoxNombreUsuario.Font = new Font(Fuentes.MontserratBold.FontFamily, 12);
+            labelApellidoUsuario.Font = new Font(Fuentes.MontserratBold.FontFamily, 15, FontStyle.Bold);
+            textBoxApellidoUsuario.Font = new Font(Fuentes.MontserratBold.FontFamily, 12);
+            labelCorreoUsuario.Font = new Font(Fuentes.MontserratBold.FontFamily, 15, FontStyle.Bold);
+            textBoxCorreoUsuario.Font = new Font(Fuentes.MontserratBold.FontFamily, 12);
+            labelContrasenaUsuario.Font = new Font(Fuentes.MontserratBold.FontFamily, 15, FontStyle.Bold);
+            textBoxContrasenaUsuario.Font = new Font(Fuentes.MontserratBold.FontFamily, 12);
+            labelRepContrasenaUsuario.Font = new Font(Fuentes.MontserratBold.FontFamily, 15, FontStyle.Bold);
+            textBoxRepContrasenaUsuario.Font = new Font(Fuentes.MontserratBold.FontFamily, 12);
+            labelRolUsuario.Font = new Font(Fuentes.MontserratBold.FontFamily, 15, FontStyle.Bold);
+            comboBoxRolUsuario.Font = new Font(Fuentes.MontserratBold.FontFamily, 12);
+            labelAdvertenciaCreacionUsuarios.Font = new Font(Fuentes.MontserratBold.FontFamily, 12);
+            buttonCrearUsuario.Font = new Font(Fuentes.MontserratBold.FontFamily, 15, FontStyle.Bold);
+            toolStripLabelNombre.Text = "Usuario: " + u.Nombre + " " + u.Apellido;
+            toolStripLabelNombre.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
+            toolStripDropDownButton1.Font = new Font(Fuentes.MontserratBold.FontFamily, 12);
         }
 
         private void FormCreacion_Resize(object sender, EventArgs e)
@@ -115,9 +118,59 @@ namespace TASKILLER
             }
     }
 
-        private void panelCreacionUser_Paint(object sender, PaintEventArgs e)
+        private void inicioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
+            this.Close();
+            FormInicio f = new FormInicio(d, u);
+            f.Show();
+        }
+        private void proyectosToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            this.Close();
+            FormListaProyectos f = new FormListaProyectos(d, u);
+            f.Show();
+        }
+        private void usuariosToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            this.Close();
+            FormListaUsuarios f = new FormListaUsuarios(d, u);
+            f.Show();
+        }
+        private void rolesToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            this.Close();
+            FormListaRoles f = new FormListaRoles(d, u);
+            f.Show();
+        }
+        private void crearNuevoProyectoToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            this.Close();
+            FormCrearProyecto f = new FormCrearProyecto(d, u);
+            f.Show();
+        }
+        private void crearNuevoUsuarioToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            Rol r = new Rol();
+            r = d.listaRoles.FirstOrDefault(t => t.Nombre == "Administrador");
 
+            if (u.Rol == r.Id)
+            {
+                FormCreacionUsuario f = new FormCreacionUsuario(d, u);
+                f.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("No tienes permisos para crear usuarios.", "Permisos insuficientes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        private void salirToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            Application.Exit();
+        }
+        private void guardarDatosToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            GestionDatos.GuardarDatos(d);
         }
     }
 }

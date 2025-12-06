@@ -162,6 +162,7 @@
     </Compile>
     <EmbeddedResource Include="FormCreacionUsuario.resx">
       <DependentUpon>FormCreacionUsuario.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Controls\TareaControl.cs">
       <SubType>UserControl</SubType>
@@ -171,20 +172,25 @@
     </Compile>
     <EmbeddedResource Include="FormCrearTarea.resx">
       <DependentUpon>FormCrearTarea.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Clases\Rol.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <EmbeddedResource Include="FormEdicionUsuario.resx">
       <DependentUpon>FormEdicionUsuario.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditarEliminarProyecto.resx">
       <DependentUpon>FormEditarEliminarProyecto.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCrearProyecto.resx">
       <DependentUpon>FormCrearProyecto.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditarTarea.resx">
       <DependentUpon>FormEditarTarea.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.cs</DependentUpon>

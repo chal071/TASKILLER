@@ -27,10 +27,10 @@ namespace TASKILLER
 
         private void CargarEstilos()
         {
-            labelRol.Font = new Font("Montserrat", 20, FontStyle.Bold);
+            labelRol.Font = new Font(Fuentes.MontserratBold.FontFamily, 20, FontStyle.Bold);
             labelRol.ForeColor = Color.White;
-            ListBoxAccesoRol.Font = new Font("Montserrat", 12, FontStyle.Bold);
-            
+            ListBoxAccesoRol.Font = new Font(Fuentes.MontserratBold.FontFamily, 12, FontStyle.Bold);
+
         }
 
         private void LIstBoxAccesoRol_SelectedIndexChanged(object sender, EventArgs e)

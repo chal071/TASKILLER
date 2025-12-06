@@ -145,10 +145,21 @@ namespace TASKILLER
         }
         private void crearNuevoUsuarioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            Form padre = this.FindForm();
-            padre.Close();
-            FormCreacionUsuario f = new FormCreacionUsuario(d, u);
-            f.Show();
+            Rol r = new Rol();
+            r = d.listaRoles.FirstOrDefault(t => t.Nombre == "Administrador");
+
+            if (u.Rol == r.Id)
+            {
+                Form padre = this.FindForm();
+                padre.Close();
+                FormCreacionUsuario f = new FormCreacionUsuario(d, u);
+                f.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("No tienes permisos para crear usuarios.", "Permisos insuficientes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
         private void salirToolStripMenuItem_Click(object sender, System.EventArgs e)
         {

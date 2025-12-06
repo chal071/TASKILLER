@@ -37,30 +37,35 @@
             // 
             this.labelRol.AutoSize = true;
             this.labelRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRol.Location = new System.Drawing.Point(12, 11);
+            this.labelRol.Location = new System.Drawing.Point(16, 14);
+            this.labelRol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRol.Name = "labelRol";
-            this.labelRol.Size = new System.Drawing.Size(158, 31);
+            this.labelRol.Size = new System.Drawing.Size(199, 39);
             this.labelRol.TabIndex = 4;
             this.labelRol.Text = "Nombre Rol";
             // 
             // ListBoxAccesoRol
             // 
             this.ListBoxAccesoRol.FormattingEnabled = true;
-            this.ListBoxAccesoRol.Location = new System.Drawing.Point(18, 52);
+            this.ListBoxAccesoRol.ItemHeight = 16;
+            this.ListBoxAccesoRol.Location = new System.Drawing.Point(24, 64);
+            this.ListBoxAccesoRol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ListBoxAccesoRol.Name = "ListBoxAccesoRol";
-            this.ListBoxAccesoRol.Size = new System.Drawing.Size(311, 316);
+            this.ListBoxAccesoRol.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.ListBoxAccesoRol.Size = new System.Drawing.Size(413, 388);
             this.ListBoxAccesoRol.TabIndex = 5;
             this.ListBoxAccesoRol.SelectedIndexChanged += new System.EventHandler(this.LIstBoxAccesoRol_SelectedIndexChanged);
             // 
             // TarjetaRol
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(0)))), ((int)(((byte)(110)))));
             this.Controls.Add(this.ListBoxAccesoRol);
             this.Controls.Add(this.labelRol);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TarjetaRol";
-            this.Size = new System.Drawing.Size(350, 393);
+            this.Size = new System.Drawing.Size(467, 484);
             this.ResumeLayout(false);
             this.PerformLayout();
 

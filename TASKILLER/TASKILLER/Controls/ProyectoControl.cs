@@ -77,23 +77,33 @@ namespace TASKILLER
 
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var resultado = MessageBox.Show(
-                   "¿Estás seguro de que quieres eliminar este proyecto?",
-                   "Confirmar eliminación",
-                   MessageBoxButtons.YesNo,
-                   MessageBoxIcon.Warning
-               );
+            Rol r = new Rol();
+            r = d.listaRoles.FirstOrDefault(t => t.Nombre == "Administrador");
 
-            if (resultado == DialogResult.Yes)
+            if (u.Rol == r.Id)
             {
-                d.listaProyectos.Remove(p);
-                d.listaTareas.RemoveAll(t => t.IdProyecto == p.Id);
-                MessageBox.Show("Proyecto eliminado correctamente.", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Form padre = this.FindForm();
-                padre.Close();
+                var resultado = MessageBox.Show(
+                       "¿Estás seguro de que quieres eliminar este proyecto?",
+                       "Confirmar eliminación",
+                       MessageBoxButtons.YesNo,
+                       MessageBoxIcon.Warning
+                   );
 
-                FormListaProyectos f = new FormListaProyectos(d, u);
-                f.Show();
+                if (resultado == DialogResult.Yes)
+                {
+                    d.listaProyectos.Remove(p);
+                    d.listaTareas.RemoveAll(t => t.IdProyecto == p.Id);
+                    MessageBox.Show("Proyecto eliminado correctamente.", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Form padre = this.FindForm();
+                    padre.Close();
+
+                    FormListaProyectos f = new FormListaProyectos(d, u);
+                    f.Show();
+                }
+            }
+            else
+            {
+                MessageBox.Show("No tienes permisos para eliminar proyectos.", "Permisos insuficientes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

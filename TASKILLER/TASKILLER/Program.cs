@@ -17,7 +17,6 @@ namespace TASKILLER
             Application.SetCompatibleTextRenderingDefault(false);
             Fuentes.CargarFuentes();
             Datos d = GestionDatos.CargarDatos();
-            Usuario usuario = new Usuario();
             Application.Run(new FormLogin(d));
 
         }

@@ -238,41 +238,51 @@ namespace TASKILLER
         {
             FormInicio f = new FormInicio(d, u);
             f.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void proyectosToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             FormListaProyectos f = new FormListaProyectos(d, u);
             f.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void usuariosToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             FormListaUsuarios f = new FormListaUsuarios(d, u);
             f.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void rolesToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             FormListaRoles f = new FormListaRoles(d, u);
             f.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void crearNuevoProyectoToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             FormCrearProyecto f = new FormCrearProyecto(d, u);
             f.Show();
-            this.Hide();
+            this.Close();
         }
         private void crearNuevoUsuarioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormCreacionUsuario f = new FormCreacionUsuario(d, u);
-            f.Show();
-            this.Hide();
+            Rol r = new Rol();
+            r = d.listaRoles.FirstOrDefault(t => t.Nombre == "Administrador");
+
+            if (u.Rol == r.Id)
+            {
+                FormCreacionUsuario f = new FormCreacionUsuario(d, u);
+                f.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("No tienes permisos para crear usuarios.", "Permisos insuficientes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
         private void salirToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
@@ -288,7 +298,7 @@ namespace TASKILLER
         {
             FormCrearTarea f = new FormCrearTarea(d, p, u, null);
             f.Show();
-            this.Hide();
+            this.Close();
         }
     }
 

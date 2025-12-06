@@ -58,7 +58,6 @@
             this.flowLayoutPanelListaTareas.Name = "flowLayoutPanelListaTareas";
             this.flowLayoutPanelListaTareas.Size = new System.Drawing.Size(301, 207);
             this.flowLayoutPanelListaTareas.TabIndex = 2;
-            this.flowLayoutPanelListaTareas.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelListaTareas_Paint);
             // 
             // labelFechas
             // 
