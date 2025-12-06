@@ -32,7 +32,6 @@
             this.panelLogin = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.buttonIniciarSesion = new System.Windows.Forms.Button();
-            this.linkLabelCredenciales = new System.Windows.Forms.LinkLabel();
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelMail = new System.Windows.Forms.Label();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
@@ -70,23 +69,13 @@
             this.buttonIniciarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.buttonIniciarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonIniciarSesion.Location = new System.Drawing.Point(427, 303);
+            this.buttonIniciarSesion.Location = new System.Drawing.Point(377, 303);
             this.buttonIniciarSesion.Name = "buttonIniciarSesion";
-            this.buttonIniciarSesion.Size = new System.Drawing.Size(119, 40);
+            this.buttonIniciarSesion.Size = new System.Drawing.Size(169, 52);
             this.buttonIniciarSesion.TabIndex = 19;
             this.buttonIniciarSesion.Text = "Iniciar sesión";
             this.buttonIniciarSesion.UseVisualStyleBackColor = false;
             this.buttonIniciarSesion.Click += new System.EventHandler(this.ButtonIniciarSesion_Click);
-            // 
-            // linkLabelCredenciales
-            // 
-            this.linkLabelCredenciales.AutoSize = true;
-            this.linkLabelCredenciales.Location = new System.Drawing.Point(284, 272);
-            this.linkLabelCredenciales.Name = "linkLabelCredenciales";
-            this.linkLabelCredenciales.Size = new System.Drawing.Size(185, 16);
-            this.linkLabelCredenciales.TabIndex = 22;
-            this.linkLabelCredenciales.TabStop = true;
-            this.linkLabelCredenciales.Text = "¿Has olvidado tu contraseña?";
             // 
             // labelPassword
             // 
@@ -181,7 +170,6 @@
             this.ClientSize = new System.Drawing.Size(581, 690);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.buttonIniciarSesion);
-            this.Controls.Add(this.linkLabelCredenciales);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelMail);
             this.Controls.Add(this.textBoxPassword);
@@ -198,7 +186,6 @@
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TASKILLER - Login";
-            this.Load += new System.EventHandler(this.FormLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -211,7 +198,6 @@
         private System.Windows.Forms.Panel panelLogin;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button buttonIniciarSesion;
-        private System.Windows.Forms.LinkLabel linkLabelCredenciales;
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Label labelMail;
         private System.Windows.Forms.TextBox textBoxPassword;

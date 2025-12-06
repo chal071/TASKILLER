@@ -19,7 +19,6 @@ namespace TASKILLER
             toolStripLabelNombre.Text = "Usuario: " + u.Nombre + " " + u.Apellido;
             flowLayoutPanelHoy.AutoScroll = true;
             flowLayoutPanelHoy.Dock = DockStyle.None;
-            flowLayoutPanelHoy.Padding = new Padding(20);
             flowLayoutPanelHoy.AutoScrollMargin = new Size(0, 30);
 
             foreach (var pr in d.listaProyectos)
@@ -36,7 +35,6 @@ namespace TASKILLER
 
             flowLayoutPanelSemana.AutoScroll = true;
             flowLayoutPanelSemana.Dock = DockStyle.None;
-            flowLayoutPanelSemana.Padding = new Padding(20);
             flowLayoutPanelSemana.AutoScrollMargin = new Size(0, 30);
 
             foreach (var pr in d.listaProyectos)
@@ -65,7 +63,7 @@ namespace TASKILLER
             panelInicio.Top = (this.ClientSize.Height - panelInicio.Height) / 2;
         }        
 
-private void inicioToolStripMenuItem_Click(object sender, System.EventArgs e)
+        private void inicioToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             FormInicio f = new FormInicio(d, u);
             f.Show();

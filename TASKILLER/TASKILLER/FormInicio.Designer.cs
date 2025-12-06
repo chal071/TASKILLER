@@ -63,7 +63,7 @@
             this.panelInicio.Controls.Add(this.flowLayoutPanelSemana);
             this.panelInicio.Location = new System.Drawing.Point(0, 30);
             this.panelInicio.Name = "panelInicio";
-            this.panelInicio.Size = new System.Drawing.Size(941, 455);
+            this.panelInicio.Size = new System.Drawing.Size(941, 479);
             this.panelInicio.TabIndex = 0;
             // 
             // labelUltimosProyectos
@@ -88,7 +88,7 @@
             // labelHaceUnaSemana
             // 
             this.labelHaceUnaSemana.AutoSize = true;
-            this.labelHaceUnaSemana.Location = new System.Drawing.Point(86, 248);
+            this.labelHaceUnaSemana.Location = new System.Drawing.Point(86, 263);
             this.labelHaceUnaSemana.Name = "labelHaceUnaSemana";
             this.labelHaceUnaSemana.Size = new System.Drawing.Size(166, 16);
             this.labelHaceUnaSemana.TabIndex = 12;
@@ -99,14 +99,14 @@
             this.flowLayoutPanelHoy.BackColor = System.Drawing.SystemColors.Control;
             this.flowLayoutPanelHoy.Location = new System.Drawing.Point(89, 75);
             this.flowLayoutPanelHoy.Name = "flowLayoutPanelHoy";
-            this.flowLayoutPanelHoy.Size = new System.Drawing.Size(840, 147);
+            this.flowLayoutPanelHoy.Size = new System.Drawing.Size(840, 170);
             this.flowLayoutPanelHoy.TabIndex = 13;
             // 
             // flowLayoutPanelSemana
             // 
-            this.flowLayoutPanelSemana.Location = new System.Drawing.Point(89, 271);
+            this.flowLayoutPanelSemana.Location = new System.Drawing.Point(89, 286);
             this.flowLayoutPanelSemana.Name = "flowLayoutPanelSemana";
-            this.flowLayoutPanelSemana.Size = new System.Drawing.Size(840, 147);
+            this.flowLayoutPanelSemana.Size = new System.Drawing.Size(840, 189);
             this.flowLayoutPanelSemana.TabIndex = 14;
             // 
             // toolStripInicio
@@ -120,7 +120,7 @@
             this.toolStripLabelNombre});
             this.toolStripInicio.Location = new System.Drawing.Point(0, 0);
             this.toolStripInicio.Name = "toolStripInicio";
-            this.toolStripInicio.Size = new System.Drawing.Size(941, 27);
+            this.toolStripInicio.Size = new System.Drawing.Size(941, 31);
             this.toolStripInicio.TabIndex = 9;
             this.toolStripInicio.Text = "toolStrip1";
             // 
@@ -137,8 +137,8 @@
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(34, 24);
-            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(34, 28);
+            this.toolStripDropDownButton1.Text = "MENU";
             // 
             // inicioToolStripMenuItem
             // 
@@ -215,7 +215,7 @@
             this.btnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.Image")));
             this.btnUsuario.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnUsuario.Name = "btnUsuario";
-            this.btnUsuario.Size = new System.Drawing.Size(29, 24);
+            this.btnUsuario.Size = new System.Drawing.Size(29, 28);
             this.btnUsuario.Text = "Usuario";
             // 
             // btnTaskiller
@@ -224,7 +224,7 @@
             this.btnTaskiller.Image = ((System.Drawing.Image)(resources.GetObject("btnTaskiller.Image")));
             this.btnTaskiller.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnTaskiller.Name = "btnTaskiller";
-            this.btnTaskiller.Size = new System.Drawing.Size(29, 24);
+            this.btnTaskiller.Size = new System.Drawing.Size(29, 28);
             this.btnTaskiller.Text = "TaskillerLogo";
             // 
             // toolStripLabelNombre
@@ -232,20 +232,20 @@
             this.toolStripLabelNombre.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLabelNombre.Margin = new System.Windows.Forms.Padding(0, 1, 20, 2);
             this.toolStripLabelNombre.Name = "toolStripLabelNombre";
-            this.toolStripLabelNombre.Size = new System.Drawing.Size(97, 24);
+            this.toolStripLabelNombre.Size = new System.Drawing.Size(97, 28);
             this.toolStripLabelNombre.Text = "Nombre User";
             // 
             // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(941, 484);
+            this.ClientSize = new System.Drawing.Size(941, 549);
             this.Controls.Add(this.toolStripInicio);
             this.Controls.Add(this.panelInicio);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormInicio";
-            this.Text = "TASKILLER - Inicio";
+            this.Text = "Inicio";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelInicio.ResumeLayout(false);
             this.panelInicio.PerformLayout();

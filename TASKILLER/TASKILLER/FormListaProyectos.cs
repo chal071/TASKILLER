@@ -158,13 +158,11 @@ namespace TASKILLER
         {
             GestionDatos.GuardarDatos(d);
         }
-
         private void comboBoxtipo_SelectedIndexChanged(object sender, EventArgs e)
         {
             string opcion = comboBoxtipo.SelectedItem.ToString();
             mostrarProyectos(d, opcion);
         }
-
         private void comboBoxOrdenar_SelectedIndexChanged(object sender, EventArgs e)
         {
             mostrarProyectos(d, comboBoxtipo.SelectedItem?.ToString());

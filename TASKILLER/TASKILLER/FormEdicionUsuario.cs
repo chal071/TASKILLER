@@ -21,6 +21,7 @@ namespace TASKILLER
             InitializeComponent();
             this.d = datos;
             this.u = usuario;
+            this.UsuarioActual = usuarioActual;
 
             this.Resize += FormEdicion_Resize;
 
@@ -66,16 +67,16 @@ namespace TASKILLER
 
         private void CargarDatosUsuario()
         {
-            textBoxNombreEdicionUsuario.Text = u.Nombre;
-            textBoxApellidoEdicionUsuario.Text = u.Apellido;
-            textBoxCorreoEdicionUsuario.Text = u.Mail;
-            textBoxContrasenaEdicionUsuario.Text = u.Contrasena;
-            textBoxRepContrasenaEdicionUsuario.Text = u.Contrasena;
+            textBoxNombreEdicionUsuario.Text = UsuarioActual.Nombre;
+            textBoxApellidoEdicionUsuario.Text = UsuarioActual.Apellido;
+            textBoxCorreoEdicionUsuario.Text = UsuarioActual.Mail;
+            textBoxContrasenaEdicionUsuario.Text = UsuarioActual.Contrasena;
+            textBoxRepContrasenaEdicionUsuario.Text = UsuarioActual.Contrasena;
             
             //rol q ya te el user
-            if (u.Rol != Guid.Empty)
+            if (UsuarioActual.Rol != Guid.Empty)
             {
-                comboBoxRolEdicionUsuario.SelectedValue = u.Rol;
+                comboBoxRolEdicionUsuario.SelectedValue = UsuarioActual.Rol;
             }
         }
 
@@ -100,15 +101,15 @@ namespace TASKILLER
             try
             {
                 //override dades usr
-                u.Nombre = textBoxNombreEdicionUsuario.Text;
-                u.Apellido = textBoxApellidoEdicionUsuario.Text;
-                u.Mail = textBoxCorreoEdicionUsuario.Text;
-                u.Contrasena = textBoxContrasenaEdicionUsuario.Text;
+                UsuarioActual.Nombre = textBoxNombreEdicionUsuario.Text;
+                UsuarioActual.Apellido = textBoxApellidoEdicionUsuario.Text;
+                UsuarioActual.Mail = textBoxCorreoEdicionUsuario.Text;
+                UsuarioActual.Contrasena = textBoxContrasenaEdicionUsuario.Text;
 
                 //actu rol
                 if (comboBoxRolEdicionUsuario.SelectedValue != null)
                 {
-                    u.Rol = (Guid)comboBoxRolEdicionUsuario.SelectedValue;
+                    UsuarioActual.Rol = (Guid)comboBoxRolEdicionUsuario.SelectedValue;
                 }
                 
                 //misj yeyyy

@@ -232,7 +232,7 @@
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(34, 24);
-            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Text = "MENU";
             // 
             // inicioToolStripMenuItem
             // 
@@ -340,7 +340,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormCrearProyecto";
-            this.Text = "Crea tu proyecto!";
+            this.Text = "¡Crea tu proyecto!";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelInfo.ResumeLayout(false);
             this.panelInfo.PerformLayout();

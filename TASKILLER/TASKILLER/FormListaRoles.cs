@@ -23,6 +23,8 @@ namespace TASKILLER
             this.u = usuario;
             toolStripLabelNombre.Text = "Usuario: " + u.Nombre + " " + u.Apellido;
             CargarEstilos();
+            toolStripDropDownButton1.Font = new Font(Fuentes.MontserratBold.FontFamily, 12);
+
 
             foreach (Rol r in d.listaRoles) 
             {

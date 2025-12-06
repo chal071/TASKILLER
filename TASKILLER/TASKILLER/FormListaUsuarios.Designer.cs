@@ -42,9 +42,9 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnUsuario = new System.Windows.Forms.ToolStripButton();
             this.btnTaskiller = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabelNombre = new System.Windows.Forms.ToolStripLabel();
             this.labelListaDeUsuarios = new System.Windows.Forms.Label();
             this.dataGridViewListaUsuarios = new System.Windows.Forms.DataGridView();
-            this.toolStripLabelNombre = new System.Windows.Forms.ToolStripLabel();
             this.tableLayoutPanel.SuspendLayout();
             this.toolStripInicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaUsuarios)).BeginInit();
@@ -97,7 +97,7 @@
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(34, 24);
-            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Text = "MENU";
             // 
             // inicioToolStripMenuItem
             // 
@@ -186,6 +186,14 @@
             this.btnTaskiller.Size = new System.Drawing.Size(29, 24);
             this.btnTaskiller.Text = "TaskillerLogo";
             // 
+            // toolStripLabelNombre
+            // 
+            this.toolStripLabelNombre.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabelNombre.Margin = new System.Windows.Forms.Padding(0, 1, 20, 2);
+            this.toolStripLabelNombre.Name = "toolStripLabelNombre";
+            this.toolStripLabelNombre.Size = new System.Drawing.Size(97, 24);
+            this.toolStripLabelNombre.Text = "Nombre User";
+            // 
             // labelListaDeUsuarios
             // 
             this.labelListaDeUsuarios.AutoSize = true;
@@ -213,14 +221,6 @@
             this.dataGridViewListaUsuarios.Size = new System.Drawing.Size(1086, 474);
             this.dataGridViewListaUsuarios.TabIndex = 1;
             // 
-            // toolStripLabelNombre
-            // 
-            this.toolStripLabelNombre.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripLabelNombre.Margin = new System.Windows.Forms.Padding(0, 1, 20, 2);
-            this.toolStripLabelNombre.Name = "toolStripLabelNombre";
-            this.toolStripLabelNombre.Size = new System.Drawing.Size(97, 24);
-            this.toolStripLabelNombre.Text = "Nombre User";
-            // 
             // FormListaUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -230,7 +230,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormListaUsuarios";
-            this.Text = "FormListaUsuarios";
+            this.Text = "Lista de Usuarios";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();

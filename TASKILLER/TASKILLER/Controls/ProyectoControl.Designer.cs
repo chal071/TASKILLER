@@ -43,7 +43,8 @@
             // labelNombre
             // 
             this.labelNombre.AutoSize = true;
-            this.labelNombre.Location = new System.Drawing.Point(23, 30);
+            this.labelNombre.BackColor = System.Drawing.Color.Transparent;
+            this.labelNombre.Location = new System.Drawing.Point(23, 20);
             this.labelNombre.Name = "labelNombre";
             this.labelNombre.Size = new System.Drawing.Size(113, 16);
             this.labelNombre.TabIndex = 0;

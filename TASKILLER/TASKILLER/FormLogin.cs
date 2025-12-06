@@ -16,13 +16,12 @@ namespace TASKILLER
         }
         private void cargarDatos()
         {
-
             labelIniciaSesion.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12, FontStyle.Bold);
             labelConTuCuenta.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12, FontStyle.Regular);
             labelTaskiller.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12, FontStyle.Bold);
             labelMail.Font = new Font(Fuentes.MontserratRegular.FontFamily, 8, FontStyle.Bold);
             labelPassword.Font = new Font(Fuentes.MontserratRegular.FontFamily, 8, FontStyle.Bold);
-            linkLabelCredenciales.Font = new Font(Fuentes.MontserratRegular.FontFamily, 8, FontStyle.Regular);
+            buttonIniciarSesion.Font = new Font(Fuentes.MontserratRegular.FontFamily, 10, FontStyle.Bold);
         }
 
         private void FormLogin_Load(object sender, EventArgs e)
