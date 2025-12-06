@@ -22,6 +22,8 @@ namespace TASKILLER
             this.d = datos;
             this.u = usuario;
             toolStripLabelNombre.Text = "Usuario: " + u.Nombre + " " + u.Apellido;
+            toolStripDropDownButton1.Font = new Font(Fuentes.MontserratBold.FontFamily, 12);
+
 
             foreach (Rol r in d.listaRoles) 
             {
@@ -35,16 +37,6 @@ namespace TASKILLER
         {
             panelListaRolesResp.Left = (this.ClientSize.Width - panelListaRolesResp.Width) / 2;
             panelListaRolesResp.Top = (this.ClientSize.Height - panelListaRolesResp.Height) / 2;
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void labelListaRoles_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void inicioToolStripMenuItem_Click(object sender, System.EventArgs e)

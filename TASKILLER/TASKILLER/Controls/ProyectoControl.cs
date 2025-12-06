@@ -87,6 +87,7 @@ namespace TASKILLER
             if (resultado == DialogResult.Yes)
             {
                 d.listaProyectos.Remove(p);
+                d.listaTareas.RemoveAll(t => t.IdProyecto == p.Id);
                 MessageBox.Show("Proyecto eliminado correctamente.", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Form padre = this.FindForm();
                 padre.Close();

@@ -36,8 +36,20 @@ namespace TASKILLER
             labelEstado.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
             comboBoxEstado.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
             buttonCrearProyecto.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
+            var estados = new List<object>
+            {
+                new { Texto = "Por Comenzar", Valor = Estado.Por_Comenzar },
+                new { Texto = "En Progreso", Valor = Estado.En_Progreso },
+                new { Texto = "Entregado", Valor = Estado.Entregado },
+                new { Texto = "Revisado", Valor = Estado.Revisado },
+                new { Texto = "Bloqueado", Valor = Estado.Bloqueado },
+            };
 
-            comboBoxEstado.DataSource = Enum.GetValues(typeof(Estado));
+            comboBoxEstado.DataSource = estados;
+            comboBoxEstado.DisplayMember = "Texto";
+            comboBoxEstado.ValueMember = "Valor";
+
+
             toolStripLabelNombre.Text = "Usuario: " + u.Nombre + " " + u.Apellido;
         }
         private void Form1_Resize(object sender, EventArgs e)
@@ -93,11 +105,13 @@ namespace TASKILLER
         {
             Proyecto p = new Proyecto
             {
+                Id = Guid.NewGuid(),
                 Titulo = textBoxTitulo.Text,
                 Descripcion = richTextBoxDescripcion.Text,
                 FechaInicio = dateTimePickerFechaInicio.Value,
                 FechaFinal = dateTimePickerFechaFinal.Value,
-                Estado = (Estado)comboBoxEstado.SelectedItem,
+                IdCreador = u.Id,
+                Estado = (Estado)comboBoxEstado.SelectedValue,
                 listaUsuarios = new List<Guid>()
             };
 

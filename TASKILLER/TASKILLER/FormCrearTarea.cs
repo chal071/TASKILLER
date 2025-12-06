@@ -52,6 +52,7 @@ namespace TASKILLER
             labelTareaPadre.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
             dataGridViewTareaPadre.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
             toolStripLabelNombre.Text = "Usuario: " + u.Nombre + " " + u.Apellido;
+            toolStripDropDownButton1.Font = new Font(Fuentes.MontserratBold.FontFamily, 12);
 
 
             checkedListBoxUsuario.Items.Clear();
@@ -61,6 +62,7 @@ namespace TASKILLER
             }
             comboBoxPrioridad.DataSource = Enum.GetValues(typeof(Prioridad));
             comboBoxEstado.DataSource = Enum.GetValues(typeof(Estado));
+            
         }
 
         private void ConfigurarTareaPadre()
@@ -127,7 +129,7 @@ namespace TASKILLER
                 listaUsuarios = new List<Guid>(),
                 IdProyecto = p.Id,
                 Subtareas = null,
-                IdTareaPadre = tareaPadre?.Id
+                IdTareaPadre = tareaPadre?.Id,
             };
 
             for (int i = 0; i < checkedListBoxUsuario.Items.Count; i++)
@@ -139,6 +141,12 @@ namespace TASKILLER
                     if (usuario != null)
                     {
                         nueva.listaUsuarios.Add(usuario.Id);
+
+                        if (!p.listaUsuarios.Contains(usuario.Id))
+                        {
+                            p.listaUsuarios.Add(usuario.Id);
+                        }
+                       
                     }
                 }
             }

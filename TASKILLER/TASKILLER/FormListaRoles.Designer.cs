@@ -68,7 +68,6 @@
             this.labelListaRoles.Size = new System.Drawing.Size(385, 69);
             this.labelListaRoles.TabIndex = 1;
             this.labelListaRoles.Text = "Lista de roles";
-            this.labelListaRoles.Click += new System.EventHandler(this.labelListaRoles_Click);
             // 
             // panelListaRolesResp
             // 
@@ -110,7 +109,7 @@
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(34, 24);
-            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Text = "MENU";
             // 
             // inicioToolStripMenuItem
             // 
@@ -217,7 +216,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormListaRoles";
-            this.Text = "FormListaRoles";
+            this.Text = "Roles";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelListaRolesResp.ResumeLayout(false);
             this.panelListaRolesResp.PerformLayout();

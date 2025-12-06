@@ -57,6 +57,7 @@ namespace TASKILLER
             labelTareaPadre.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
             dataGridViewTareaPadre.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
             toolStripLabelNombre.Text = "Usuario: " + u.Nombre + " " + u.Apellido;
+            toolStripDropDownButton1.Font = new Font(Fuentes.MontserratBold.FontFamily, 12);
 
             checkedListBoxUsuario.Items.Clear();
             foreach (Usuario usuario in d.listaUsuarios)

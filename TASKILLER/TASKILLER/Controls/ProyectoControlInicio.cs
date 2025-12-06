@@ -40,12 +40,15 @@ namespace TASKILLER
             labelNumeroTareas.Text = ContarTareas(d.listaTareas, p).ToString();
             labelPorcentaje.Text = ((ContarTareasCompletadas(d.listaTareas, p) * 100) / ContarTareas(d.listaTareas, p)).ToString() + " %";
 
-            labelNombre.Font = new Font("Montserrat", 9, FontStyle.Bold);
-            labelFechas.Font = new Font("Montserrat", 9, FontStyle.Regular);
-            labelCantidadTareas.Font = new Font("Montserrat", 9, FontStyle.Regular);
-            labelNumeroTareas.Font = new Font("Montserrat", 9, FontStyle.Bold);
-            labelPorcentajeCompletado.Font = new Font("Montserrat", 9, FontStyle.Regular);
-            labelPorcentaje.Font = new Font("Montserrat", 9, FontStyle.Bold);
+
+
+            labelNombre.Font = new Font(Fuentes.MontserratBold.FontFamily, 10, FontStyle.Bold);
+            labelFechas.Font = new Font(Fuentes.MontserratBold.FontFamily, 9, FontStyle.Regular);
+
+            labelCantidadTareas.Font = new Font(Fuentes.MontserratBold.FontFamily, 10, FontStyle.Regular);
+            labelNumeroTareas.Font = new Font(Fuentes.MontserratBold.FontFamily, 10, FontStyle.Bold);
+            labelPorcentajeCompletado.Font = new Font(Fuentes.MontserratBold.FontFamily, 9, FontStyle.Regular);
+            labelPorcentaje.Font = new Font(Fuentes.MontserratBold.FontFamily, 10, FontStyle.Regular);
             labelNombre.MaximumSize = new Size(250, 150);
             labelNombre.ForeColor = Color.White;
 
@@ -56,13 +59,10 @@ namespace TASKILLER
         {
             GroupBox box = (GroupBox)sender;
 
-            // Fondo
             e.Graphics.Clear(ColorTranslator.FromHtml("#e1115c"));
 
-            // Texto
             TextRenderer.DrawText(e.Graphics, box.Text, box.Font, new Point(10, 15), Color.White);
 
-            // Borde
             Pen border = new Pen(ColorTranslator.FromHtml("#e1115c"));
             int textWidth = TextRenderer.MeasureText(box.Text, box.Font).Width;
 
@@ -118,7 +118,7 @@ namespace TASKILLER
             // 
             this.labelNombre.AutoSize = true;
             this.labelNombre.BackColor = System.Drawing.Color.Transparent;
-            this.labelNombre.Location = new System.Drawing.Point(4, 16);
+            this.labelNombre.Location = new System.Drawing.Point(4, 13);
             this.labelNombre.Name = "labelNombre";
             this.labelNombre.Size = new System.Drawing.Size(113, 16);
             this.labelNombre.TabIndex = 1;
@@ -146,7 +146,7 @@ namespace TASKILLER
             // labelNumeroTareas
             // 
             this.labelNumeroTareas.AutoSize = true;
-            this.labelNumeroTareas.Location = new System.Drawing.Point(20, 78);
+            this.labelNumeroTareas.Location = new System.Drawing.Point(20, 88);
             this.labelNumeroTareas.Name = "labelNumeroTareas";
             this.labelNumeroTareas.Size = new System.Drawing.Size(129, 16);
             this.labelNumeroTareas.TabIndex = 1;
@@ -155,7 +155,7 @@ namespace TASKILLER
             // labelCantidadTareas
             // 
             this.labelCantidadTareas.AutoSize = true;
-            this.labelCantidadTareas.Location = new System.Drawing.Point(20, 53);
+            this.labelCantidadTareas.Location = new System.Drawing.Point(20, 63);
             this.labelCantidadTareas.Name = "labelCantidadTareas";
             this.labelCantidadTareas.Size = new System.Drawing.Size(124, 16);
             this.labelCantidadTareas.TabIndex = 6;
@@ -164,7 +164,7 @@ namespace TASKILLER
             // labelPorcentajeCompletado
             // 
             this.labelPorcentajeCompletado.AutoSize = true;
-            this.labelPorcentajeCompletado.Location = new System.Drawing.Point(20, 108);
+            this.labelPorcentajeCompletado.Location = new System.Drawing.Point(20, 118);
             this.labelPorcentajeCompletado.Name = "labelPorcentajeCompletado";
             this.labelPorcentajeCompletado.Size = new System.Drawing.Size(150, 16);
             this.labelPorcentajeCompletado.TabIndex = 8;
@@ -173,7 +173,7 @@ namespace TASKILLER
             // labelPorcentaje
             // 
             this.labelPorcentaje.AutoSize = true;
-            this.labelPorcentaje.Location = new System.Drawing.Point(20, 133);
+            this.labelPorcentaje.Location = new System.Drawing.Point(20, 143);
             this.labelPorcentaje.Name = "labelPorcentaje";
             this.labelPorcentaje.Size = new System.Drawing.Size(102, 16);
             this.labelPorcentaje.TabIndex = 7;
@@ -185,7 +185,7 @@ namespace TASKILLER
             this.groupBoxTitulo.Controls.Add(this.labelNombre);
             this.groupBoxTitulo.Location = new System.Drawing.Point(-1, -1);
             this.groupBoxTitulo.Name = "groupBoxTitulo";
-            this.groupBoxTitulo.Size = new System.Drawing.Size(282, 51);
+            this.groupBoxTitulo.Size = new System.Drawing.Size(282, 61);
             this.groupBoxTitulo.TabIndex = 9;
             this.groupBoxTitulo.TabStop = false;
             this.groupBoxTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBoxTitulo_Paint);
@@ -201,6 +201,7 @@ namespace TASKILLER
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.labelFechas);
             this.Controls.Add(this.groupBoxTitulo);
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.Name = "ProyectoControlInicio";
             this.Size = new System.Drawing.Size(280, 205);
             this.Click += new System.EventHandler(this.ProyectoControlInicio_Click);

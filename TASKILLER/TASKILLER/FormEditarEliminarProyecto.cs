@@ -44,6 +44,7 @@ namespace TASKILLER
             buttonEditarProyecto.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
             buttonEliminarProyecto.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
             toolStripLabelNombre.Text = "Usuario: " + u.Nombre + " " + u.Apellido;
+            toolStripLabelNombre.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
             comboBoxEstado.DataSource = Enum.GetValues(typeof(Estado));
             panelInfo.Anchor = AnchorStyles.None;
         }
@@ -164,6 +165,8 @@ namespace TASKILLER
             if (resultado == DialogResult.Yes)
             {
                 d.listaProyectos.Remove(p);
+                d.listaTareas.RemoveAll(t => t.IdProyecto == p.Id);
+
                 MessageBox.Show("Proyecto eliminado correctamente.", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FormListaProyectos fl = new FormListaProyectos(d, u);
                 fl.Show();
