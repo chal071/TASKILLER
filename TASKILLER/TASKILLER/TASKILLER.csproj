@@ -252,6 +252,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="icon_taskiller.ico" />
+    <None Include="resources\Data\TaskillerData.json" />
     <None Include="resources\img\usuario.png" />
     <None Include="resources\agregar.png" />
     <Content Include="resources\icons\icon_taskiller.ico" />
@@ -272,9 +273,6 @@
     <Content Include="resources\img\LOGOTIPO_slogan.png" />
     <Content Include="resources\img\TresPuntos.png" />
     <Content Include="resources\fonts\Montserrat-Regular.ttf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="resources\Data\TaskillerData.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\fonts\Montserrat-SemiBold.ttf">

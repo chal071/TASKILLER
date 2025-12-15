@@ -32,6 +32,7 @@ namespace TASKILLER
         public DateTime FechaFinal { get; set; }
         public List<Guid> listaUsuarios { get; set; }
         public Guid IdProyecto { get; set; }
+        public int DuracionMinutos { get; set; }
         public Estado Estado { get; set; }
         public Guid? IdTareaPadre { get; set; }
         public List<Guid> Subtareas { get; set; }
@@ -39,7 +40,7 @@ namespace TASKILLER
         public Tarea() { }
 
         public Tarea(Guid IdTarea, String Nombre, String Descripcion, Prioridad Prioridad, DateTime 
-            FechaInicio, DateTime FechaFinal, List<Guid> UsuariosAsignados, Guid IdProyecto, Estado Estado)
+            FechaInicio, DateTime FechaFinal, List<Guid> UsuariosAsignados, Guid IdProyecto, Estado Estado, int DuracionMinutos)
         {
             this.Id = Guid.NewGuid();
             this.Titulo = Nombre;
@@ -49,12 +50,13 @@ namespace TASKILLER
             this.FechaFinal = FechaFinal;
             this.listaUsuarios = UsuariosAsignados;
             this.IdProyecto = IdProyecto;
+            this.DuracionMinutos = DuracionMinutos;
             this.Estado = Estado;
         }
 
         public Tarea(Guid IdTarea, String Nombre, String Descripcion, Prioridad Prioridad, DateTime 
             FechaInicio, DateTime FechaFinal, List<Guid> UsuariosAsignados, Guid IdProyecto, Estado Estado,
-            Guid IdTareaPadre, List<Guid> Subtareas)
+            Guid IdTareaPadre, List<Guid> Subtareas, int DuracionMinutos)
         {
             this.Id = Guid.NewGuid();
             this.Titulo = Nombre;
@@ -66,6 +68,7 @@ namespace TASKILLER
             this.IdProyecto = IdProyecto;
             this.Estado = Estado;
             this.IdTareaPadre = IdTareaPadre;
+            this.DuracionMinutos = DuracionMinutos;
             this.Subtareas = Subtareas;
         }
     }
