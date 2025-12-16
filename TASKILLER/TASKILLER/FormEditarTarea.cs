@@ -28,10 +28,10 @@ namespace TASKILLER
 
             SetFontSize();
             CargarDatosDeTarea();
-            ConfigurarGrids();
             CargarTareaPadreYSubtareas();
-            buttonCrear.Click += buttonCrear_Click;
-            
+            ConfigurarGrids();
+            dataGridViewSubtarea.CellFormatting += dataGridViewSubtarea_CellFormatting;
+
         }
 
         public void SetFontSize()
@@ -58,6 +58,12 @@ namespace TASKILLER
             dataGridViewTareaPadre.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
             toolStripLabelNombre.Text = "Usuario: " + u.Nombre + " " + u.Apellido;
             toolStripDropDownButton1.Font = new Font(Fuentes.MontserratBold.FontFamily, 12);
+            labelHoraDedicada.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
+            numericUpDownHoras.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
+            labelH.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
+            labelM.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
+            numericUpDownMinutos.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
+            buttonCancelar.Font = new Font(Fuentes.MontserratBold.FontFamily, 20);
 
             checkedListBoxUsuario.Items.Clear();
             foreach (Usuario usuario in d.listaUsuarios)
@@ -79,6 +85,14 @@ namespace TASKILLER
             comboBoxPrioridad.SelectedItem = t.Prioridad;
             comboBoxEstado.SelectedItem = t.Estado;
 
+            int total = t.DuracionMinutos;
+            int horas = total / 60;
+            int minutos = total % 60;
+
+            numericUpDownHoras.Value = horas;
+            numericUpDownMinutos.Value = minutos;
+
+
             for (int i = 0; i < checkedListBoxUsuario.Items.Count; i++)
             {
                 string nombre = checkedListBoxUsuario.Items[i].ToString();
@@ -97,7 +111,6 @@ namespace TASKILLER
                 .Where(x => x.IdTareaPadre == t.Id)
                 .ToList();
 
-            dataGridViewSubtarea.AutoGenerateColumns = false;
             dataGridViewSubtarea.Columns.Clear();
 
 
@@ -113,32 +126,26 @@ namespace TASKILLER
             {
                 Name = "Estado",
                 HeaderText = "Estado",
-                DataPropertyName = "Estado"
+                DataPropertyName = "Estado",
+                Visible = false
             });
 
-
-            dataGridViewSubtarea.Columns.Add(new DataGridViewTextBoxColumn
+            dataGridViewSubtarea.Columns.Add(new DataGridViewImageColumn
             {
-                Name = "Prioridad",
-                HeaderText = "Prioridad",
-                DataPropertyName = "Prioridad"
+                Name = "ColorEstado",
+                HeaderText = "Estado"
             });
+            
+
 
             dataGridViewSubtarea.DataSource = subtareas
                 .Select(x => new
                 {
                     x.Titulo,
                     x.Estado,
-                    x.Prioridad
                 })
                 .ToList();
 
-            dataGridViewSubtarea.ReadOnly = true;
-            dataGridViewSubtarea.AllowUserToAddRows = false;
-            dataGridViewSubtarea.AllowUserToDeleteRows = false;
-
-
-            dataGridViewTareaPadre.AutoGenerateColumns = false;
             dataGridViewTareaPadre.Columns.Clear();
 
             dataGridViewTareaPadre.Columns.Add(new DataGridViewTextBoxColumn
@@ -155,12 +162,6 @@ namespace TASKILLER
                 DataPropertyName = "Estado"
             });
 
-            dataGridViewTareaPadre.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                Name = "Prioridad",
-                HeaderText = "Prioridad",
-                DataPropertyName = "Prioridad"
-            });
 
             if (t.IdTareaPadre != null)
             {
@@ -174,7 +175,6 @@ namespace TASKILLER
                 {
                     padre.Titulo,
                     padre.Estado,
-                    padre.Prioridad
                 }
             }.ToList();
                 }
@@ -184,38 +184,50 @@ namespace TASKILLER
                 dataGridViewTareaPadre.DataSource = null;
             }
 
-            dataGridViewTareaPadre.ReadOnly = true;
-            dataGridViewTareaPadre.AllowUserToAddRows = false;
-            dataGridViewTareaPadre.AllowUserToDeleteRows = false;
+
+        }
+
+        private void dataGridViewSubtarea_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dataGridViewSubtarea.Columns[e.ColumnIndex].Name == "ColorEstado")
+            {
+                var estado = dataGridViewSubtarea.Rows[e.RowIndex].Cells["Estado"].Value?.ToString();
+
+                Color color = Color.Transparent;
+
+                switch (estado)
+                {
+                    case "Por_Comenzar":
+                        color = Color.FromArgb(255, 192, 192);
+                        break;
+                    case "En_Progreso":
+                        color = Color.FromArgb(255, 224, 192);
+                        break;
+                    case "Revisado":
+                        color = Color.FromArgb(192, 255, 255);
+                        break;
+                    case "Bloqueado":
+                        color = Color.FromArgb(224, 224, 224);
+                        break;
+                    case "Entregado":
+                        color = Color.FromArgb(192, 255, 192);
+                        break;
+                }
+
+                Bitmap bmp = new Bitmap(16, 16);
+                using (Graphics g = Graphics.FromImage(bmp))
+                {
+                    g.Clear(color);
+                }
+
+                e.Value = bmp;
+            }
         }
 
 
         private void buttonCrear_Click(object sender, EventArgs e)
         {
-            t.Titulo = textBoxTitulo.Text;
-            t.Descripcion = richTextBoxDescripcion.Text;
-            t.Prioridad = (Prioridad)comboBoxPrioridad.SelectedItem;
-            t.Estado = (Estado)comboBoxEstado.SelectedItem;
-            t.FechaInicio = dateTimePickerFechaInicio.Value;
-            t.FechaFinal = dateTimePickerFechaFinal.Value;
 
-            var nuevosUsuarios = new List<Guid>();
-            for (int i = 0; i < checkedListBoxUsuario.Items.Count; i++)
-            {
-                if (checkedListBoxUsuario.GetItemChecked(i))
-                {
-                    string nombre = checkedListBoxUsuario.Items[i].ToString();
-                    var usuario = d.listaUsuarios.FirstOrDefault(u => u.Nombre == nombre);
-                    if (usuario != null)
-                        nuevosUsuarios.Add(usuario.Id);
-                }
-            }
-            t.listaUsuarios = nuevosUsuarios;
-
-            this.DialogResult = DialogResult.OK;
-            FormListaTareas f = new FormListaTareas(d, p, u);
-            f.Show();
-            this.Close();
         }
 
         private void ConfigurarGrids()
@@ -224,12 +236,15 @@ namespace TASKILLER
             dataGridViewSubtarea.RowHeadersVisible = false;
             dataGridViewSubtarea.AllowUserToAddRows = false;
             dataGridViewSubtarea.AllowUserToDeleteRows = false;
-
+            dataGridViewSubtarea.ReadOnly = true;
+            dataGridViewSubtarea.Columns["ColorEstado"].FillWeight = 10;
+            dataGridViewSubtarea.Columns["Titulo"].FillWeight = 90;
 
             dataGridViewTareaPadre.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewTareaPadre.RowHeadersVisible = false;
             dataGridViewTareaPadre.AllowUserToAddRows = false;
             dataGridViewTareaPadre.AllowUserToDeleteRows = false;
+            dataGridViewTareaPadre.ReadOnly = true;
 
         }
 
@@ -297,6 +312,13 @@ namespace TASKILLER
         private void buttonAnadirTarea_Click(object sender, EventArgs e)
         {
             FormCrearTarea f = new FormCrearTarea(d, p, u, null);
+            f.Show();
+            this.Close();
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            FormListaTareas f = new FormListaTareas(d, p, u);
             f.Show();
             this.Close();
         }

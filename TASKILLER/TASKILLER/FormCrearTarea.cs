@@ -26,8 +26,6 @@ namespace TASKILLER
 
             SetFontSize();
             ConfigurarTareaPadre();
-
-            buttonCrear.Click += buttonCrear_Click;
         }
 
         public void SetFontSize()
@@ -53,6 +51,12 @@ namespace TASKILLER
             dataGridViewTareaPadre.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
             toolStripLabelNombre.Text = "Usuario: " + u.Nombre + " " + u.Apellido;
             toolStripDropDownButton1.Font = new Font(Fuentes.MontserratBold.FontFamily, 12);
+            labelHoraDedicada.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
+            numericUpDownH.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
+            numericUpDownM.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
+            labelH.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
+            labelM.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
+            buttonCancelar.Font = new Font(Fuentes.MontserratBold.FontFamily, 20);
 
 
             checkedListBoxUsuario.Items.Clear();
@@ -117,55 +121,141 @@ namespace TASKILLER
 
         private void buttonCrear_Click(object sender, EventArgs e)
         {
-            var nueva = new Tarea
-            {
-                Id = Guid.NewGuid(),
-                Titulo = textBoxTitulo.Text,
-                Descripcion = richTextBoxDescripcion.Text,
-                Prioridad = (Prioridad)comboBoxPrioridad.SelectedItem,
-                Estado = (Estado)comboBoxEstado.SelectedItem,
-                FechaInicio = dateTimePickerFechaInicio.Value,
-                FechaFinal = dateTimePickerFechaFinal.Value,
-                listaUsuarios = new List<Guid>(),
-                IdProyecto = p.Id,
-                Subtareas = null,
-                IdTareaPadre = tareaPadre?.Id,
-            };
+            string mensajeError;
+            bool valido = ValidarNuevaTarea(out mensajeError);
 
+            if (valido)
+            {
+                var nueva = new Tarea
+                {
+                    Id = Guid.NewGuid(),
+                    Titulo = textBoxTitulo.Text,
+                    Descripcion = richTextBoxDescripcion.Text,
+                    Prioridad = (Prioridad)comboBoxPrioridad.SelectedItem,
+                    Estado = (Estado)comboBoxEstado.SelectedItem,
+                    FechaInicio = dateTimePickerFechaInicio.Value,
+                    FechaFinal = dateTimePickerFechaFinal.Value,
+                    listaUsuarios = new List<Guid>(),
+                    IdProyecto = p.Id,
+                    Subtareas = null,
+                    IdTareaPadre = tareaPadre?.Id,
+                    DuracionMinutos = (int)(numericUpDownH.Value * 60 + numericUpDownM.Value)
+                };
+
+                for (int i = 0; i < checkedListBoxUsuario.Items.Count; i++)
+                {
+                    if (checkedListBoxUsuario.GetItemChecked(i))
+                    {
+                        string nombre = checkedListBoxUsuario.Items[i].ToString();
+                        var usuario = d.listaUsuarios.FirstOrDefault(u => u.Nombre == nombre);
+                        if (usuario != null)
+                        {
+                            nueva.listaUsuarios.Add(usuario.Id);
+
+                            if (!p.listaUsuarios.Contains(usuario.Id))
+                            {
+                                p.listaUsuarios.Add(usuario.Id);
+                            }
+                        }
+                    }
+                }
+
+                d.listaTareas.Add(nueva);
+
+                if (tareaPadre != null)
+                {
+                    if (tareaPadre.Subtareas == null)
+                    {
+                        tareaPadre.Subtareas = new List<Guid>();
+                    }
+
+                    tareaPadre.Subtareas.Add(nueva.Id);
+                }
+
+                this.DialogResult = DialogResult.OK;
+                FormListaTareas f = new FormListaTareas(d, p, u);
+                f.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show(
+                    "No se puede crear la tarea:\n\n" + mensajeError,
+                    "Datos incompletos",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+            }
+        }
+
+
+        private bool ValidarNuevaTarea(out string mensaje)
+        {
+            bool valido = true;
+            StringBuilder sb = new StringBuilder();
+
+            if (string.IsNullOrWhiteSpace(textBoxTitulo.Text))
+            {
+                valido = false;
+                sb.AppendLine("• El título es obligatorio.");
+            }
+
+            if (comboBoxPrioridad.SelectedItem == null)
+            {
+                valido = false;
+                sb.AppendLine("• Debes seleccionar una prioridad.");
+            }
+
+            if (comboBoxEstado.SelectedItem == null)
+            {
+                valido = false;
+                sb.AppendLine("• Debes seleccionar un estado.");
+            }
+
+            DateTime inicio = dateTimePickerFechaInicio.Value;
+            DateTime fin = dateTimePickerFechaFinal.Value;
+
+            if (fin < inicio)
+            {
+                valido = false;
+                sb.AppendLine("• La fecha final no puede ser anterior a la fecha de inicio.");
+            }
+
+            int duracion = (int)(numericUpDownH.Value * 60 + numericUpDownM.Value);
+            if (duracion <= 0)
+            {
+                valido = false;
+                sb.AppendLine("• La duración debe ser mayor que 0.");
+            }
+
+            bool hayUsuario = false;
             for (int i = 0; i < checkedListBoxUsuario.Items.Count; i++)
             {
                 if (checkedListBoxUsuario.GetItemChecked(i))
                 {
-                    string nombre = checkedListBoxUsuario.Items[i].ToString();
-                    var usuario = d.listaUsuarios.FirstOrDefault(u => u.Nombre == nombre);
-                    if (usuario != null)
-                    {
-                        nueva.listaUsuarios.Add(usuario.Id);
-
-                        if (!p.listaUsuarios.Contains(usuario.Id))
-                        {
-                            p.listaUsuarios.Add(usuario.Id);
-                        }
-                       
-                    }
+                    hayUsuario = true;
                 }
             }
 
-            d.listaTareas.Add(nueva);
+            if (hayUsuario == false)
+            {
+                valido = false;
+                sb.AppendLine("• Debes asignar al menos un usuario.");
+            }
 
             if (tareaPadre != null)
             {
-                if (tareaPadre.Subtareas == null)
-                    tareaPadre.Subtareas = new List<Guid>();
-
-                tareaPadre.Subtareas.Add(nueva.Id);
+                if (inicio < tareaPadre.FechaInicio || fin > tareaPadre.FechaFinal)
+                {
+                    valido = false;
+                    sb.AppendLine("• Las fechas deben estar dentro del rango de la tarea padre.");
+                }
             }
 
-            this.DialogResult = DialogResult.OK;
-            FormListaTareas f = new FormListaTareas(d,p,u);
-            f.Show();
-            this.Close();
+            mensaje = sb.ToString().Trim();
+            return valido;
         }
+
 
 
 
@@ -227,6 +317,13 @@ namespace TASKILLER
         private void guardarDatosToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             GestionDatos.GuardarDatos(d);
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            FormListaTareas f = new FormListaTareas(d, p, u);
+            f.Show();
+            this.Close();
         }
     }
 
