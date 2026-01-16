@@ -29,11 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditarTarea));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grid = new System.Windows.Forms.TableLayoutPanel();
+            this.flowLayoutPanelBotton = new System.Windows.Forms.FlowLayoutPanel();
+            this.buttonGuardar = new System.Windows.Forms.Button();
+            this.buttonCancelar = new System.Windows.Forms.Button();
             this.toolStripInicio = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,9 +64,9 @@
             this.dataGridViewSubtarea = new System.Windows.Forms.DataGridView();
             this.labelHoraDedicada = new System.Windows.Forms.Label();
             this.flowLayoutPanelHorasDedicadas = new System.Windows.Forms.FlowLayoutPanel();
-            this.numericUpDownHoras = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownH = new System.Windows.Forms.NumericUpDown();
             this.labelH = new System.Windows.Forms.Label();
-            this.numericUpDownMinutos = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownM = new System.Windows.Forms.NumericUpDown();
             this.labelM = new System.Windows.Forms.Label();
             this.tableLayoutPanelRight = new System.Windows.Forms.TableLayoutPanel();
             this.labelUsuarioAsignado = new System.Windows.Forms.Label();
@@ -77,22 +80,19 @@
             this.tableLayoutPanelLeftBottom = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridViewTareaPadre = new System.Windows.Forms.DataGridView();
             this.labelTareaPadre = new System.Windows.Forms.Label();
-            this.flowLayoutPanelBotton = new System.Windows.Forms.FlowLayoutPanel();
-            this.buttonCrear = new System.Windows.Forms.Button();
-            this.buttonCancelar = new System.Windows.Forms.Button();
             this.grid.SuspendLayout();
+            this.flowLayoutPanelBotton.SuspendLayout();
             this.toolStripInicio.SuspendLayout();
             this.flowLayoutPanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.tableLayoutPanelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubtarea)).BeginInit();
             this.flowLayoutPanelHorasDedicadas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHoras)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinutos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM)).BeginInit();
             this.tableLayoutPanelRight.SuspendLayout();
             this.tableLayoutPanelLeftBottom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTareaPadre)).BeginInit();
-            this.flowLayoutPanelBotton.SuspendLayout();
             this.SuspendLayout();
             // 
             // grid
@@ -119,6 +119,42 @@
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
             this.grid.Size = new System.Drawing.Size(1724, 1016);
             this.grid.TabIndex = 1;
+            // 
+            // flowLayoutPanelBotton
+            // 
+            this.flowLayoutPanelBotton.Controls.Add(this.buttonGuardar);
+            this.flowLayoutPanelBotton.Controls.Add(this.buttonCancelar);
+            this.flowLayoutPanelBotton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelBotton.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanelBotton.Location = new System.Drawing.Point(865, 865);
+            this.flowLayoutPanelBotton.Name = "flowLayoutPanelBotton";
+            this.flowLayoutPanelBotton.Size = new System.Drawing.Size(856, 148);
+            this.flowLayoutPanelBotton.TabIndex = 11;
+            // 
+            // buttonGuardar
+            // 
+            this.buttonGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonGuardar.Location = new System.Drawing.Point(598, 3);
+            this.buttonGuardar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonGuardar.Name = "buttonGuardar";
+            this.buttonGuardar.Size = new System.Drawing.Size(254, 94);
+            this.buttonGuardar.TabIndex = 4;
+            this.buttonGuardar.Text = "Guardar";
+            this.buttonGuardar.UseVisualStyleBackColor = false;
+            this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
+            // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.AutoSize = true;
+            this.buttonCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.buttonCancelar.Location = new System.Drawing.Point(336, 3);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(254, 94);
+            this.buttonCancelar.TabIndex = 5;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = false;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // toolStripInicio
             // 
@@ -150,7 +186,7 @@
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(42, 32);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(42, 29);
             this.toolStripDropDownButton1.Text = "MENU";
             // 
             // inicioToolStripMenuItem
@@ -228,7 +264,7 @@
             this.btnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.Image")));
             this.btnUsuario.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnUsuario.Name = "btnUsuario";
-            this.btnUsuario.Size = new System.Drawing.Size(46, 32);
+            this.btnUsuario.Size = new System.Drawing.Size(46, 29);
             this.btnUsuario.Text = "Usuario";
             // 
             // btnTaskiller
@@ -237,7 +273,7 @@
             this.btnTaskiller.Image = ((System.Drawing.Image)(resources.GetObject("btnTaskiller.Image")));
             this.btnTaskiller.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnTaskiller.Name = "btnTaskiller";
-            this.btnTaskiller.Size = new System.Drawing.Size(46, 32);
+            this.btnTaskiller.Size = new System.Drawing.Size(46, 29);
             this.btnTaskiller.Text = "TASKILLER";
             // 
             // toolStripLabelNombre
@@ -245,7 +281,7 @@
             this.toolStripLabelNombre.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLabelNombre.Margin = new System.Windows.Forms.Padding(0, 1, 20, 2);
             this.toolStripLabelNombre.Name = "toolStripLabelNombre";
-            this.toolStripLabelNombre.Size = new System.Drawing.Size(156, 35);
+            this.toolStripLabelNombre.Size = new System.Drawing.Size(156, 32);
             this.toolStripLabelNombre.Text = "Nombre User";
             // 
             // flowLayoutPanelTop
@@ -383,22 +419,22 @@
             this.dataGridViewSubtarea.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewSubtarea.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewSubtarea.ColumnHeadersVisible = false;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewSubtarea.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewSubtarea.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewSubtarea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewSubtarea.Location = new System.Drawing.Point(3, 321);
             this.dataGridViewSubtarea.Name = "dataGridViewSubtarea";
             this.dataGridViewSubtarea.RowHeadersVisible = false;
             this.dataGridViewSubtarea.RowHeadersWidth = 82;
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewSubtarea.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewSubtarea.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewSubtarea.RowTemplate.Height = 33;
             this.dataGridViewSubtarea.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewSubtarea.Size = new System.Drawing.Size(850, 84);
@@ -416,9 +452,9 @@
             // 
             // flowLayoutPanelHorasDedicadas
             // 
-            this.flowLayoutPanelHorasDedicadas.Controls.Add(this.numericUpDownHoras);
+            this.flowLayoutPanelHorasDedicadas.Controls.Add(this.numericUpDownH);
             this.flowLayoutPanelHorasDedicadas.Controls.Add(this.labelH);
-            this.flowLayoutPanelHorasDedicadas.Controls.Add(this.numericUpDownMinutos);
+            this.flowLayoutPanelHorasDedicadas.Controls.Add(this.numericUpDownM);
             this.flowLayoutPanelHorasDedicadas.Controls.Add(this.labelM);
             this.flowLayoutPanelHorasDedicadas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelHorasDedicadas.Location = new System.Drawing.Point(3, 549);
@@ -426,17 +462,17 @@
             this.flowLayoutPanelHorasDedicadas.Size = new System.Drawing.Size(850, 51);
             this.flowLayoutPanelHorasDedicadas.TabIndex = 9;
             // 
-            // numericUpDownHoras
+            // numericUpDownH
             // 
-            this.numericUpDownHoras.Location = new System.Drawing.Point(3, 3);
-            this.numericUpDownHoras.Maximum = new decimal(new int[] {
+            this.numericUpDownH.Location = new System.Drawing.Point(3, 3);
+            this.numericUpDownH.Maximum = new decimal(new int[] {
             24,
             0,
             0,
             0});
-            this.numericUpDownHoras.Name = "numericUpDownHoras";
-            this.numericUpDownHoras.Size = new System.Drawing.Size(120, 31);
-            this.numericUpDownHoras.TabIndex = 0;
+            this.numericUpDownH.Name = "numericUpDownH";
+            this.numericUpDownH.Size = new System.Drawing.Size(120, 31);
+            this.numericUpDownH.TabIndex = 0;
             // 
             // labelH
             // 
@@ -447,17 +483,17 @@
             this.labelH.TabIndex = 1;
             this.labelH.Text = "h";
             // 
-            // numericUpDownMinutos
+            // numericUpDownM
             // 
-            this.numericUpDownMinutos.Location = new System.Drawing.Point(159, 3);
-            this.numericUpDownMinutos.Maximum = new decimal(new int[] {
+            this.numericUpDownM.Location = new System.Drawing.Point(159, 3);
+            this.numericUpDownM.Maximum = new decimal(new int[] {
             59,
             0,
             0,
             0});
-            this.numericUpDownMinutos.Name = "numericUpDownMinutos";
-            this.numericUpDownMinutos.Size = new System.Drawing.Size(120, 31);
-            this.numericUpDownMinutos.TabIndex = 2;
+            this.numericUpDownM.Name = "numericUpDownM";
+            this.numericUpDownM.Size = new System.Drawing.Size(120, 31);
+            this.numericUpDownM.TabIndex = 2;
             // 
             // labelM
             // 
@@ -592,22 +628,22 @@
             this.dataGridViewTareaPadre.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewTareaPadre.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTareaPadre.ColumnHeadersVisible = false;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTareaPadre.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTareaPadre.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewTareaPadre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewTareaPadre.Location = new System.Drawing.Point(3, 47);
             this.dataGridViewTareaPadre.Name = "dataGridViewTareaPadre";
             this.dataGridViewTareaPadre.RowHeadersVisible = false;
             this.dataGridViewTareaPadre.RowHeadersWidth = 82;
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewTareaPadre.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewTareaPadre.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewTareaPadre.RowTemplate.Height = 33;
             this.dataGridViewTareaPadre.Size = new System.Drawing.Size(850, 68);
             this.dataGridViewTareaPadre.TabIndex = 8;
@@ -623,42 +659,6 @@
             this.labelTareaPadre.Text = "TAREA PADRE";
             this.labelTareaPadre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // flowLayoutPanelBotton
-            // 
-            this.flowLayoutPanelBotton.Controls.Add(this.buttonCrear);
-            this.flowLayoutPanelBotton.Controls.Add(this.buttonCancelar);
-            this.flowLayoutPanelBotton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelBotton.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanelBotton.Location = new System.Drawing.Point(865, 865);
-            this.flowLayoutPanelBotton.Name = "flowLayoutPanelBotton";
-            this.flowLayoutPanelBotton.Size = new System.Drawing.Size(856, 148);
-            this.flowLayoutPanelBotton.TabIndex = 11;
-            // 
-            // buttonCrear
-            // 
-            this.buttonCrear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.buttonCrear.Location = new System.Drawing.Point(598, 3);
-            this.buttonCrear.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonCrear.Name = "buttonCrear";
-            this.buttonCrear.Size = new System.Drawing.Size(254, 94);
-            this.buttonCrear.TabIndex = 4;
-            this.buttonCrear.Text = "Crear";
-            this.buttonCrear.UseVisualStyleBackColor = false;
-            this.buttonCrear.Click += new System.EventHandler(this.buttonCrear_Click);
-            // 
-            // buttonCancelar
-            // 
-            this.buttonCancelar.AutoSize = true;
-            this.buttonCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.buttonCancelar.Location = new System.Drawing.Point(336, 3);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(254, 94);
-            this.buttonCancelar.TabIndex = 5;
-            this.buttonCancelar.Text = "Cancelar";
-            this.buttonCancelar.UseVisualStyleBackColor = false;
-            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
-            // 
             // FormEditarTarea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -671,6 +671,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.grid.ResumeLayout(false);
             this.grid.PerformLayout();
+            this.flowLayoutPanelBotton.ResumeLayout(false);
+            this.flowLayoutPanelBotton.PerformLayout();
             this.toolStripInicio.ResumeLayout(false);
             this.toolStripInicio.PerformLayout();
             this.flowLayoutPanelTop.ResumeLayout(false);
@@ -681,15 +683,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubtarea)).EndInit();
             this.flowLayoutPanelHorasDedicadas.ResumeLayout(false);
             this.flowLayoutPanelHorasDedicadas.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHoras)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinutos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM)).EndInit();
             this.tableLayoutPanelRight.ResumeLayout(false);
             this.tableLayoutPanelRight.PerformLayout();
             this.tableLayoutPanelLeftBottom.ResumeLayout(false);
             this.tableLayoutPanelLeftBottom.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTareaPadre)).EndInit();
-            this.flowLayoutPanelBotton.ResumeLayout(false);
-            this.flowLayoutPanelBotton.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -736,12 +736,12 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabelNombre;
         private System.Windows.Forms.Label labelHoraDedicada;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelHorasDedicadas;
-        private System.Windows.Forms.NumericUpDown numericUpDownHoras;
+        private System.Windows.Forms.NumericUpDown numericUpDownH;
         private System.Windows.Forms.Label labelH;
-        private System.Windows.Forms.NumericUpDown numericUpDownMinutos;
+        private System.Windows.Forms.NumericUpDown numericUpDownM;
         private System.Windows.Forms.Label labelM;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelBotton;
-        private System.Windows.Forms.Button buttonCrear;
+        private System.Windows.Forms.Button buttonGuardar;
         private System.Windows.Forms.Button buttonCancelar;
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCrearTarea));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grid = new System.Windows.Forms.TableLayoutPanel();
             this.toolStripInicio = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -54,6 +54,12 @@
             this.labelDescripcion = new System.Windows.Forms.Label();
             this.textBoxTitulo = new System.Windows.Forms.TextBox();
             this.comboBoxPrioridad = new System.Windows.Forms.ComboBox();
+            this.labelHoraDedicada = new System.Windows.Forms.Label();
+            this.flowLayoutPanelHorasDedicada = new System.Windows.Forms.FlowLayoutPanel();
+            this.numericUpDownH = new System.Windows.Forms.NumericUpDown();
+            this.labelH = new System.Windows.Forms.Label();
+            this.numericUpDownM = new System.Windows.Forms.NumericUpDown();
+            this.labelM = new System.Windows.Forms.Label();
             this.tableLayoutPanelRight = new System.Windows.Forms.TableLayoutPanel();
             this.labelUsuarioAsignado = new System.Windows.Forms.Label();
             this.comboBoxEstado = new System.Windows.Forms.ComboBox();
@@ -66,12 +72,6 @@
             this.tableLayoutPanelLeftBottom = new System.Windows.Forms.TableLayoutPanel();
             this.labelTareaPadre = new System.Windows.Forms.Label();
             this.dataGridViewTareaPadre = new System.Windows.Forms.DataGridView();
-            this.labelHoraDedicada = new System.Windows.Forms.Label();
-            this.flowLayoutPanelHorasDedicada = new System.Windows.Forms.FlowLayoutPanel();
-            this.numericUpDownH = new System.Windows.Forms.NumericUpDown();
-            this.labelH = new System.Windows.Forms.Label();
-            this.numericUpDownM = new System.Windows.Forms.NumericUpDown();
-            this.labelM = new System.Windows.Forms.Label();
             this.flowLayoutPanelBotton = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonCrear = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
@@ -80,12 +80,12 @@
             this.flowLayoutPanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.tableLayoutPanelLeft.SuspendLayout();
-            this.tableLayoutPanelRight.SuspendLayout();
-            this.tableLayoutPanelLeftBottom.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTareaPadre)).BeginInit();
             this.flowLayoutPanelHorasDedicada.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM)).BeginInit();
+            this.tableLayoutPanelRight.SuspendLayout();
+            this.tableLayoutPanelLeftBottom.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTareaPadre)).BeginInit();
             this.flowLayoutPanelBotton.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -126,7 +126,7 @@
             this.toolStripInicio.Location = new System.Drawing.Point(0, 0);
             this.toolStripInicio.Name = "toolStripInicio";
             this.toolStripInicio.Padding = new System.Windows.Forms.Padding(0, 0, 4, 0);
-            this.toolStripInicio.Size = new System.Drawing.Size(1634, 48);
+            this.toolStripInicio.Size = new System.Drawing.Size(1634, 35);
             this.toolStripInicio.TabIndex = 9;
             this.toolStripInicio.Text = "toolStrip1";
             // 
@@ -143,7 +143,7 @@
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(42, 42);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(42, 29);
             this.toolStripDropDownButton1.Text = "MENU";
             // 
             // inicioToolStripMenuItem
@@ -221,7 +221,7 @@
             this.btnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.Image")));
             this.btnUsuario.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnUsuario.Name = "btnUsuario";
-            this.btnUsuario.Size = new System.Drawing.Size(46, 42);
+            this.btnUsuario.Size = new System.Drawing.Size(46, 29);
             this.btnUsuario.Text = "Usuario";
             // 
             // btnTaskiller
@@ -230,7 +230,7 @@
             this.btnTaskiller.Image = ((System.Drawing.Image)(resources.GetObject("btnTaskiller.Image")));
             this.btnTaskiller.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnTaskiller.Name = "btnTaskiller";
-            this.btnTaskiller.Size = new System.Drawing.Size(46, 42);
+            this.btnTaskiller.Size = new System.Drawing.Size(46, 29);
             this.btnTaskiller.Text = "TaskillerLogo";
             // 
             // toolStripLabelNombre
@@ -238,7 +238,7 @@
             this.toolStripLabelNombre.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLabelNombre.Margin = new System.Windows.Forms.Padding(0, 1, 20, 2);
             this.toolStripLabelNombre.Name = "toolStripLabelNombre";
-            this.toolStripLabelNombre.Size = new System.Drawing.Size(156, 45);
+            this.toolStripLabelNombre.Size = new System.Drawing.Size(156, 32);
             this.toolStripLabelNombre.Text = "Nombre User";
             // 
             // flowLayoutPanelTop
@@ -363,6 +363,70 @@
             this.comboBoxPrioridad.Name = "comboBoxPrioridad";
             this.comboBoxPrioridad.Size = new System.Drawing.Size(801, 33);
             this.comboBoxPrioridad.TabIndex = 5;
+            // 
+            // labelHoraDedicada
+            // 
+            this.labelHoraDedicada.AutoSize = true;
+            this.labelHoraDedicada.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelHoraDedicada.Location = new System.Drawing.Point(3, 413);
+            this.labelHoraDedicada.Name = "labelHoraDedicada";
+            this.labelHoraDedicada.Size = new System.Drawing.Size(803, 46);
+            this.labelHoraDedicada.TabIndex = 6;
+            this.labelHoraDedicada.Text = "HORAS DEDICADAS";
+            // 
+            // flowLayoutPanelHorasDedicada
+            // 
+            this.flowLayoutPanelHorasDedicada.Controls.Add(this.numericUpDownH);
+            this.flowLayoutPanelHorasDedicada.Controls.Add(this.labelH);
+            this.flowLayoutPanelHorasDedicada.Controls.Add(this.numericUpDownM);
+            this.flowLayoutPanelHorasDedicada.Controls.Add(this.labelM);
+            this.flowLayoutPanelHorasDedicada.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelHorasDedicada.Location = new System.Drawing.Point(3, 462);
+            this.flowLayoutPanelHorasDedicada.Name = "flowLayoutPanelHorasDedicada";
+            this.flowLayoutPanelHorasDedicada.Size = new System.Drawing.Size(803, 110);
+            this.flowLayoutPanelHorasDedicada.TabIndex = 7;
+            // 
+            // numericUpDownH
+            // 
+            this.numericUpDownH.Location = new System.Drawing.Point(3, 3);
+            this.numericUpDownH.Maximum = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
+            this.numericUpDownH.Name = "numericUpDownH";
+            this.numericUpDownH.Size = new System.Drawing.Size(120, 31);
+            this.numericUpDownH.TabIndex = 0;
+            // 
+            // labelH
+            // 
+            this.labelH.AutoSize = true;
+            this.labelH.Location = new System.Drawing.Point(129, 0);
+            this.labelH.Name = "labelH";
+            this.labelH.Size = new System.Drawing.Size(24, 25);
+            this.labelH.TabIndex = 1;
+            this.labelH.Text = "h";
+            // 
+            // numericUpDownM
+            // 
+            this.numericUpDownM.Increment = new decimal(new int[] {
+            59,
+            0,
+            0,
+            0});
+            this.numericUpDownM.Location = new System.Drawing.Point(159, 3);
+            this.numericUpDownM.Name = "numericUpDownM";
+            this.numericUpDownM.Size = new System.Drawing.Size(120, 31);
+            this.numericUpDownM.TabIndex = 2;
+            // 
+            // labelM
+            // 
+            this.labelM.AutoSize = true;
+            this.labelM.Location = new System.Drawing.Point(285, 0);
+            this.labelM.Name = "labelM";
+            this.labelM.Size = new System.Drawing.Size(29, 25);
+            this.labelM.TabIndex = 3;
+            this.labelM.Text = "m";
             // 
             // tableLayoutPanelRight
             // 
@@ -509,14 +573,14 @@
             this.dataGridViewTareaPadre.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewTareaPadre.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTareaPadre.ColumnHeadersVisible = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTareaPadre.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTareaPadre.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTareaPadre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewTareaPadre.Location = new System.Drawing.Point(4, 45);
             this.dataGridViewTareaPadre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -526,70 +590,6 @@
             this.dataGridViewTareaPadre.RowTemplate.Height = 33;
             this.dataGridViewTareaPadre.Size = new System.Drawing.Size(801, 64);
             this.dataGridViewTareaPadre.TabIndex = 6;
-            // 
-            // labelHoraDedicada
-            // 
-            this.labelHoraDedicada.AutoSize = true;
-            this.labelHoraDedicada.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelHoraDedicada.Location = new System.Drawing.Point(3, 413);
-            this.labelHoraDedicada.Name = "labelHoraDedicada";
-            this.labelHoraDedicada.Size = new System.Drawing.Size(803, 46);
-            this.labelHoraDedicada.TabIndex = 6;
-            this.labelHoraDedicada.Text = "HORAS DEDICADAS";
-            // 
-            // flowLayoutPanelHorasDedicada
-            // 
-            this.flowLayoutPanelHorasDedicada.Controls.Add(this.numericUpDownH);
-            this.flowLayoutPanelHorasDedicada.Controls.Add(this.labelH);
-            this.flowLayoutPanelHorasDedicada.Controls.Add(this.numericUpDownM);
-            this.flowLayoutPanelHorasDedicada.Controls.Add(this.labelM);
-            this.flowLayoutPanelHorasDedicada.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelHorasDedicada.Location = new System.Drawing.Point(3, 462);
-            this.flowLayoutPanelHorasDedicada.Name = "flowLayoutPanelHorasDedicada";
-            this.flowLayoutPanelHorasDedicada.Size = new System.Drawing.Size(803, 110);
-            this.flowLayoutPanelHorasDedicada.TabIndex = 7;
-            // 
-            // numericUpDownH
-            // 
-            this.numericUpDownH.Location = new System.Drawing.Point(3, 3);
-            this.numericUpDownH.Maximum = new decimal(new int[] {
-            24,
-            0,
-            0,
-            0});
-            this.numericUpDownH.Name = "numericUpDownH";
-            this.numericUpDownH.Size = new System.Drawing.Size(120, 31);
-            this.numericUpDownH.TabIndex = 0;
-            // 
-            // labelH
-            // 
-            this.labelH.AutoSize = true;
-            this.labelH.Location = new System.Drawing.Point(129, 0);
-            this.labelH.Name = "labelH";
-            this.labelH.Size = new System.Drawing.Size(24, 25);
-            this.labelH.TabIndex = 1;
-            this.labelH.Text = "h";
-            // 
-            // numericUpDownM
-            // 
-            this.numericUpDownM.Increment = new decimal(new int[] {
-            59,
-            0,
-            0,
-            0});
-            this.numericUpDownM.Location = new System.Drawing.Point(159, 3);
-            this.numericUpDownM.Name = "numericUpDownM";
-            this.numericUpDownM.Size = new System.Drawing.Size(120, 31);
-            this.numericUpDownM.TabIndex = 2;
-            // 
-            // labelM
-            // 
-            this.labelM.AutoSize = true;
-            this.labelM.Location = new System.Drawing.Point(285, 0);
-            this.labelM.Name = "labelM";
-            this.labelM.Size = new System.Drawing.Size(29, 25);
-            this.labelM.TabIndex = 3;
-            this.labelM.Text = "m";
             // 
             // flowLayoutPanelBotton
             // 
@@ -648,15 +648,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.tableLayoutPanelLeft.ResumeLayout(false);
             this.tableLayoutPanelLeft.PerformLayout();
+            this.flowLayoutPanelHorasDedicada.ResumeLayout(false);
+            this.flowLayoutPanelHorasDedicada.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM)).EndInit();
             this.tableLayoutPanelRight.ResumeLayout(false);
             this.tableLayoutPanelRight.PerformLayout();
             this.tableLayoutPanelLeftBottom.ResumeLayout(false);
             this.tableLayoutPanelLeftBottom.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTareaPadre)).EndInit();
-            this.flowLayoutPanelHorasDedicada.ResumeLayout(false);
-            this.flowLayoutPanelHorasDedicada.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownH)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM)).EndInit();
             this.flowLayoutPanelBotton.ResumeLayout(false);
             this.flowLayoutPanelBotton.PerformLayout();
             this.ResumeLayout(false);

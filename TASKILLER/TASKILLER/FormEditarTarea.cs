@@ -51,7 +51,7 @@ namespace TASKILLER
             comboBoxEstado.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
             labelUsuarioAsignado.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
             checkedListBoxUsuario.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
-            buttonCrear.Font = new Font(Fuentes.MontserratBold.FontFamily, 20);
+            buttonGuardar.Font = new Font(Fuentes.MontserratBold.FontFamily, 20);
             labelSubtarea.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
             dataGridViewSubtarea.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
             labelTareaPadre.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
@@ -59,10 +59,10 @@ namespace TASKILLER
             toolStripLabelNombre.Text = "Usuario: " + u.Nombre + " " + u.Apellido;
             toolStripDropDownButton1.Font = new Font(Fuentes.MontserratBold.FontFamily, 12);
             labelHoraDedicada.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
-            numericUpDownHoras.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
+            numericUpDownH.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
             labelH.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
             labelM.Font = new Font(Fuentes.MontserratBold.FontFamily, 15);
-            numericUpDownMinutos.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
+            numericUpDownM.Font = new Font(Fuentes.MontserratRegular.FontFamily, 12);
             buttonCancelar.Font = new Font(Fuentes.MontserratBold.FontFamily, 20);
 
             checkedListBoxUsuario.Items.Clear();
@@ -89,8 +89,8 @@ namespace TASKILLER
             int horas = total / 60;
             int minutos = total % 60;
 
-            numericUpDownHoras.Value = horas;
-            numericUpDownMinutos.Value = minutos;
+            numericUpDownH.Value = horas;
+            numericUpDownM.Value = minutos;
 
 
             for (int i = 0; i < checkedListBoxUsuario.Items.Count; i++)
@@ -106,13 +106,11 @@ namespace TASKILLER
 
         private void CargarTareaPadreYSubtareas()
         {
-
             var subtareas = d.listaTareas
                 .Where(x => x.IdTareaPadre == t.Id)
                 .ToList();
 
             dataGridViewSubtarea.Columns.Clear();
-
 
             dataGridViewSubtarea.Columns.Add(new DataGridViewTextBoxColumn
             {
@@ -120,7 +118,6 @@ namespace TASKILLER
                 HeaderText = "Título",
                 DataPropertyName = "Titulo"
             });
-
 
             dataGridViewSubtarea.Columns.Add(new DataGridViewTextBoxColumn
             {
@@ -135,8 +132,6 @@ namespace TASKILLER
                 Name = "ColorEstado",
                 HeaderText = "Estado"
             });
-            
-
 
             dataGridViewSubtarea.DataSource = subtareas
                 .Select(x => new
@@ -162,14 +157,15 @@ namespace TASKILLER
                 DataPropertyName = "Estado"
             });
 
+            object padreData = null;
 
             if (t.IdTareaPadre != null)
             {
-                var padre = d.listaTareas.FirstOrDefault(x => x.Id == t.IdTareaPadre);
+                Tarea padre = d.listaTareas.FirstOrDefault(x => x.Id == t.IdTareaPadre);
 
                 if (padre != null)
                 {
-                    dataGridViewTareaPadre.DataSource = new[]
+                    padreData = new[]
                     {
                 new
                 {
@@ -179,56 +175,54 @@ namespace TASKILLER
             }.ToList();
                 }
             }
-            else
-            {
-                dataGridViewTareaPadre.DataSource = null;
-            }
 
-
+            dataGridViewTareaPadre.DataSource = padreData;
         }
+
 
         private void dataGridViewSubtarea_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (dataGridViewSubtarea.Columns[e.ColumnIndex].Name == "ColorEstado")
+            bool filaValida = (e.RowIndex >= 0 && e.ColumnIndex >= 0);
+
+            if (filaValida)
             {
-                var estado = dataGridViewSubtarea.Rows[e.RowIndex].Cells["Estado"].Value?.ToString();
-
-                Color color = Color.Transparent;
-
-                switch (estado)
+                if (dataGridViewSubtarea.Columns[e.ColumnIndex].Name == "ColorEstado")
                 {
-                    case "Por_Comenzar":
-                        color = Color.FromArgb(255, 192, 192);
-                        break;
-                    case "En_Progreso":
-                        color = Color.FromArgb(255, 224, 192);
-                        break;
-                    case "Revisado":
-                        color = Color.FromArgb(192, 255, 255);
-                        break;
-                    case "Bloqueado":
-                        color = Color.FromArgb(224, 224, 224);
-                        break;
-                    case "Entregado":
-                        color = Color.FromArgb(192, 255, 192);
-                        break;
-                }
+                    string estado = dataGridViewSubtarea.Rows[e.RowIndex].Cells["Estado"].Value?.ToString();
 
-                Bitmap bmp = new Bitmap(16, 16);
-                using (Graphics g = Graphics.FromImage(bmp))
-                {
-                    g.Clear(color);
-                }
+                    Color color = Color.Transparent;
 
-                e.Value = bmp;
+                    switch (estado)
+                    {
+                        case "Por_Comenzar":
+                            color = Color.FromArgb(255, 192, 192);
+                            break;
+                        case "En_Progreso":
+                            color = Color.FromArgb(255, 224, 192);
+                            break;
+                        case "Revisado":
+                            color = Color.FromArgb(192, 255, 255);
+                            break;
+                        case "Bloqueado":
+                            color = Color.FromArgb(224, 224, 224);
+                            break;
+                        case "Entregado":
+                            color = Color.FromArgb(192, 255, 192);
+                            break;
+                    }
+
+                    Bitmap bmp = new Bitmap(16, 16);
+                    using (Graphics g = Graphics.FromImage(bmp))
+                    {
+                        g.Clear(color);
+                    }
+
+                    e.Value = bmp;
+                }
             }
         }
 
 
-        private void buttonCrear_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void ConfigurarGrids()
         {
@@ -237,16 +231,24 @@ namespace TASKILLER
             dataGridViewSubtarea.AllowUserToAddRows = false;
             dataGridViewSubtarea.AllowUserToDeleteRows = false;
             dataGridViewSubtarea.ReadOnly = true;
-            dataGridViewSubtarea.Columns["ColorEstado"].FillWeight = 10;
-            dataGridViewSubtarea.Columns["Titulo"].FillWeight = 90;
+
+            if (dataGridViewSubtarea.Columns["ColorEstado"] != null)
+            {
+                dataGridViewSubtarea.Columns["ColorEstado"].FillWeight = 10;
+            }
+
+            if (dataGridViewSubtarea.Columns["Titulo"] != null)
+            {
+                dataGridViewSubtarea.Columns["Titulo"].FillWeight = 90;
+            }
 
             dataGridViewTareaPadre.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewTareaPadre.RowHeadersVisible = false;
             dataGridViewTareaPadre.AllowUserToAddRows = false;
             dataGridViewTareaPadre.AllowUserToDeleteRows = false;
             dataGridViewTareaPadre.ReadOnly = true;
-
         }
+
 
 
         private void inicioToolStripMenuItem_Click(object sender, System.EventArgs e)
@@ -322,6 +324,138 @@ namespace TASKILLER
             f.Show();
             this.Close();
         }
+
+        private void buttonGuardar_Click(object sender, EventArgs e)
+        {
+            string mensajeError;
+            bool valido = ValidarEdicionTarea(out mensajeError);
+
+            if (valido)
+            {
+                GuardarCambiosTarea();
+
+                MessageBox.Show(
+                    "Tarea guardada correctamente.",
+                    "Guardar",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+
+                FormListaTareas f = new FormListaTareas(d, p, u);
+                f.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show(
+                    "No se puede guardar la tarea:\n\n" + mensajeError,
+                    "Datos incompletos",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+            }
+
+        }
+
+        private void GuardarCambiosTarea()
+        {
+            DateTime inicio = dateTimePickerFechaInicio.Value;
+            DateTime fin = dateTimePickerFechaFinal.Value;
+
+            int duracion = (int)(numericUpDownH.Value * 60 + numericUpDownM.Value);
+
+            t.Titulo = textBoxTitulo.Text.Trim();
+            t.Descripcion = richTextBoxDescripcion.Text ?? "";
+            t.Prioridad = (Prioridad)comboBoxPrioridad.SelectedItem;
+            t.Estado = (Estado)comboBoxEstado.SelectedItem;
+            t.FechaInicio = inicio;
+            t.FechaFinal = fin;
+            t.DuracionMinutos = duracion;
+
+            List<Guid> nuevosUsuarios = new List<Guid>();
+
+            for (int i = 0; i < checkedListBoxUsuario.Items.Count; i++)
+            {
+                if (checkedListBoxUsuario.GetItemChecked(i))
+                {
+                    string nombre = checkedListBoxUsuario.Items[i].ToString();
+                    Usuario usuario = d.listaUsuarios.FirstOrDefault(x => x.Nombre == nombre);
+
+                    if (usuario != null)
+                    {
+                        nuevosUsuarios.Add(usuario.Id);
+
+                        if (!p.listaUsuarios.Contains(usuario.Id))
+                        {
+                            p.listaUsuarios.Add(usuario.Id);
+                        }
+                    }
+                }
+            }
+
+            t.listaUsuarios = nuevosUsuarios;
+        }
+
+
+        private bool ValidarEdicionTarea(out string mensaje)
+        {
+            bool valido = true;
+            StringBuilder sb = new StringBuilder();
+
+            if (string.IsNullOrWhiteSpace(textBoxTitulo.Text))
+            {
+                valido = false;
+                sb.AppendLine("• El título es obligatorio.");
+            }
+
+            if (comboBoxPrioridad.SelectedItem == null)
+            {
+                valido = false;
+                sb.AppendLine("• Debes seleccionar una prioridad.");
+            }
+
+            if (comboBoxEstado.SelectedItem == null)
+            {
+                valido = false;
+                sb.AppendLine("• Debes seleccionar un estado.");
+            }
+
+            DateTime inicio = dateTimePickerFechaInicio.Value;
+            DateTime fin = dateTimePickerFechaFinal.Value;
+
+            if (fin < inicio)
+            {
+                valido = false;
+                sb.AppendLine("• La fecha final no puede ser anterior a la fecha de inicio.");
+            }
+
+            int duracion = (int)(numericUpDownH.Value * 60 + numericUpDownM.Value);
+            if (duracion <= 0)
+            {
+                valido = false;
+                sb.AppendLine("• La duración debe ser mayor que 0.");
+            }
+
+            bool hayUsuario = false;
+            for (int i = 0; i < checkedListBoxUsuario.Items.Count; i++)
+            {
+                if (checkedListBoxUsuario.GetItemChecked(i))
+                {
+                    hayUsuario = true;
+                }
+            }
+
+            if (hayUsuario == false)
+            {
+                valido = false;
+                sb.AppendLine("• Debes asignar al menos un usuario.");
+            }
+
+            mensaje = sb.ToString().Trim();
+            return valido;
+        }
+
+
     }
 
 

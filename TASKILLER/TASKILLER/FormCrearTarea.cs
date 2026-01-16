@@ -71,52 +71,50 @@ namespace TASKILLER
 
         private void ConfigurarTareaPadre()
         {
-            if (tareaPadre == null)
+            bool hayTareaPadre = (tareaPadre != null);
+            tableLayoutPanelLeftBottom.Visible = hayTareaPadre;
+
+            if (hayTareaPadre)
             {
-                tableLayoutPanelLeftBottom.Visible = false;
-                return;
+                dataGridViewTareaPadre.AutoGenerateColumns = false;
+                dataGridViewTareaPadre.Columns.Clear();
+
+                dataGridViewTareaPadre.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    Name = "Titulo",
+                    HeaderText = "Título",
+                    DataPropertyName = "Titulo"
+                });
+
+                dataGridViewTareaPadre.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    Name = "Estado",
+                    HeaderText = "Estado",
+                    DataPropertyName = "Estado"
+                });
+
+                dataGridViewTareaPadre.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    Name = "Prioridad",
+                    HeaderText = "Prioridad",
+                    DataPropertyName = "Prioridad"
+                });
+
+                dataGridViewTareaPadre.DataSource = new[]
+                {
+            new
+            {
+                tareaPadre.Titulo,
+                tareaPadre.Estado,
+                tareaPadre.Prioridad
             }
+        }.ToList();
 
-            tableLayoutPanelLeftBottom.Visible = true;
-
-            dataGridViewTareaPadre.AutoGenerateColumns = false;
-            dataGridViewTareaPadre.Columns.Clear();
-
-            dataGridViewTareaPadre.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                Name = "Titulo",
-                HeaderText = "Título",
-                DataPropertyName = "Titulo"
-            });
-
-            dataGridViewTareaPadre.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                Name = "Estado",
-                HeaderText = "Estado",
-                DataPropertyName = "Estado"
-            });
-
-            dataGridViewTareaPadre.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                Name = "Prioridad",
-                HeaderText = "Prioridad",
-                DataPropertyName = "Prioridad"
-            });
-
-            dataGridViewTareaPadre.DataSource = new[]
-            {
-        new
-        {
-            tareaPadre.Titulo,
-            tareaPadre.Estado,
-            tareaPadre.Prioridad
-        }
-            }.ToList();
-
-            dataGridViewTareaPadre.ReadOnly = true;
-            dataGridViewTareaPadre.AllowUserToAddRows = false;
-            dataGridViewTareaPadre.AllowUserToDeleteRows = false;
-            dataGridViewTareaPadre.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridViewTareaPadre.ReadOnly = true;
+                dataGridViewTareaPadre.AllowUserToAddRows = false;
+                dataGridViewTareaPadre.AllowUserToDeleteRows = false;
+                dataGridViewTareaPadre.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
         }
 
         private void buttonCrear_Click(object sender, EventArgs e)
@@ -243,14 +241,6 @@ namespace TASKILLER
                 sb.AppendLine("• Debes asignar al menos un usuario.");
             }
 
-            if (tareaPadre != null)
-            {
-                if (inicio < tareaPadre.FechaInicio || fin > tareaPadre.FechaFinal)
-                {
-                    valido = false;
-                    sb.AppendLine("• Las fechas deben estar dentro del rango de la tarea padre.");
-                }
-            }
 
             mensaje = sb.ToString().Trim();
             return valido;
@@ -326,9 +316,4 @@ namespace TASKILLER
             this.Close();
         }
     }
-
-
-
-
-
 }

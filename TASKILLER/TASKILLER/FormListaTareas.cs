@@ -291,40 +291,56 @@ namespace TASKILLER
         private void Panel_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(typeof(TareaControl)))
+            {
                 e.Effect = DragDropEffects.Move;
+            }
             else
+            {
                 e.Effect = DragDropEffects.None;
+            }
         }
+
 
         private void Panel_DragDrop(object sender, DragEventArgs e)
         {
-            var panelDestino = (FlowLayoutPanel)sender;
-            var ctrl = (TareaControl)e.Data.GetData(typeof(TareaControl));
-
+            FlowLayoutPanel panelDestino = (FlowLayoutPanel)sender;
+            TareaControl ctrl = (TareaControl)e.Data.GetData(typeof(TareaControl));
 
             if (ctrl.Parent is FlowLayoutPanel oldPanel)
+            {
                 oldPanel.Controls.Remove(ctrl);
+            }
 
             panelDestino.Controls.Add(ctrl);
 
-            Estado nuevoEstado;
+            Estado nuevoEstado = Estado.Por_Comenzar;
 
             if (panelDestino == flowLayoutPanelPorComenzar)
+            {
                 nuevoEstado = Estado.Por_Comenzar;
+            }
             else if (panelDestino == flowLayoutPanelEnProgreso)
+            {
                 nuevoEstado = Estado.En_Progreso;
+            }
             else if (panelDestino == flowLayoutPanelEntregado)
+            {
                 nuevoEstado = Estado.Entregado;
+            }
             else if (panelDestino == flowLayoutPanelRevisado)
+            {
                 nuevoEstado = Estado.Revisado;
+            }
             else if (panelDestino == flowLayoutPanelBloqueado)
+            {
                 nuevoEstado = Estado.Bloqueado;
-            else
-                nuevoEstado = Estado.Por_Comenzar;
+            }
 
-            var tarea = ctrl.Tarea;
+            Tarea tarea = ctrl.Tarea;
             if (tarea != null)
+            {
                 tarea.Estado = nuevoEstado;
+            }
 
             switch (nuevoEstado)
             {
@@ -344,9 +360,9 @@ namespace TASKILLER
                     ctrl.SetBackColor(Color.FromArgb(224, 224, 224));
                     break;
             }
+
             CargarTareas();
         }
-
 
 
 
@@ -360,58 +376,99 @@ namespace TASKILLER
 
         private void dataGridViewTareas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            bool clickValido = (e.RowIndex >= 0 && e.ColumnIndex >= 0);
 
-            if (dataGridViewTareas.Columns[e.ColumnIndex].Name == "Editar")
+            if (clickValido)
             {
-                var idObj = dataGridViewTareas.Rows[e.RowIndex].Cells["Id"].Value;
+                bool esEditar = (dataGridViewTareas.Columns[e.ColumnIndex].Name == "Editar");
 
-                tareaSeleccionadaId = (Guid)idObj;
+                if (esEditar)
+                {
+                    object idObj = dataGridViewTareas.Rows[e.RowIndex].Cells["Id"].Value;
 
-                var pos = Cursor.Position;
-                menuTarea.Show(pos);
+                    if (idObj is Guid id)
+                    {
+                        tareaSeleccionadaId = id;
+                        Point pos = Cursor.Position;
+                        menuTarea.Show(pos);
+                    }
+                }
             }
         }
+
 
         private void MenuModificar_Click(object sender, EventArgs e)
         {
-            var tarea = d.listaTareas.FirstOrDefault(t => t.Id == tareaSeleccionadaId);
+            Tarea tarea = d.listaTareas.FirstOrDefault(t => t.Id == tareaSeleccionadaId);
 
-            FormEditarTarea f = new FormEditarTarea(tarea, d, p ,u);
-            f.Show();
-            this.Close();
-            
-          
-        }
-
-        private void MenuEliminar_Click(object sender, EventArgs e)
-        {
-            var tarea = d.listaTareas.FirstOrDefault(t => t.Id == tareaSeleccionadaId);
-
-            var r = MessageBox.Show("¿Seguro que quieres eliminar esta tarea?",
-                                    "Confirmar",
-                                    MessageBoxButtons.YesNo,
-                                    MessageBoxIcon.Warning);
-
-            if (r == DialogResult.Yes)
+            if (tarea != null)
             {
-                d.listaTareas.Remove(tarea);
+                FormEditarTarea f = new FormEditarTarea(tarea, d, p, u);
+                f.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show(
+                    "La tarea seleccionada ya no existe o no se ha encontrado.",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
                 CargarTareas();
-                CargarBloqueado();
-                CargarEnProgreso();
-                CargarEntregado();
-                CargarPorComenzar();
-                CargarRevisado();
             }
         }
 
+
+        private void MenuEliminar_Click(object sender, EventArgs e)
+        {
+            Tarea tarea = d.listaTareas.FirstOrDefault(t => t.Id == tareaSeleccionadaId);
+
+            if (tarea != null)
+            {
+                DialogResult r = MessageBox.Show(
+                    "¿Seguro que quieres eliminar esta tarea?",
+                    "Confirmar",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning
+                );
+
+                if (r == DialogResult.Yes)
+                {
+                    d.listaTareas.Remove(tarea);
+                    CargarTareas();
+                    CargarBloqueado();
+                    CargarEnProgreso();
+                    CargarEntregado();
+                    CargarPorComenzar();
+                    CargarRevisado();
+                }
+            }
+        }
+
+
         private void MenuCrearSubtarea_Click(object sender, EventArgs e)
         {
-            var tareaPadre = d.listaTareas.FirstOrDefault(t => t.Id == tareaSeleccionadaId);
+            Tarea tareaPadre = d.listaTareas.FirstOrDefault(t => t.Id == tareaSeleccionadaId);
 
-            FormCrearTarea f = new FormCrearTarea(d, p, u, tareaPadre);
-            f.Show();
-            this.Close();
+            if (tareaPadre != null)
+            {
+                FormCrearTarea f = new FormCrearTarea(d, p, u, tareaPadre);
+                f.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show(
+                    "La tarea padre ya no existe o no se ha encontrado.",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                CargarTareas();
+            }
         }
+
 
 
         private void inicioToolStripMenuItem_Click(object sender, System.EventArgs e)
